@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -203,6 +203,474 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.yvanz.com/2014/11/27/zabbix-create-item.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://statics.yvanz.com/avatar.jpg">
+      <meta itemprop="name" content="Yvan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvanの平行时空">
+      <meta itemprop="description" content="若当初的你，和现在的我，可以重来过">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Yvanの平行时空">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2014/11/27/zabbix-create-item.html" class="post-title-link" itemprop="url">zabbix新建监控项item</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2014-11-27 11:57:38" itemprop="dateCreated datePublished" datetime="2014-11-27T11:57:38+08:00">2014-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/" itemprop="url" rel="index"><span itemprop="name">技术宅</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2014/11/27/zabbix-create-item.html#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/11/27/zabbix-create-item.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>首先我们了解一下什么是zabbix的item（监控项）</p>
+<p>所谓监控项是zabbix收集数据的基础。没有监控项就没有数据，因为一个监控项定义了一组特殊数据，或者说定义了什么样的数据从监控主机发往监控服务端。例如我需要监控一台主机的cpu情况，则监控项就是收集cpu状态并发往服务端的。</p>
+<p>&amp;nbsp;</p>
+<p><strong>新建一个监控项</strong></p>
+<p>所有的监控项都是围绕主机的，所以新建监控项时，我们需要进入主机列表，再点击Items</p>
+<p><img data-src="https://statics.yvanz.com/zabbix-item1.png"></p>
+<p>在跳转后的网页我们可以看到目前hfshangyou主机中已经存在的49个监控项。此时我们可以点击右上角的Create item进入我们的新建页面</p>
+<p><img data-src="https://statics.yvanz.com/zabbix-item2.png"></p>
+<p>为了新建一个测试监控项，我们只需要输入以下信息：</p>
+<p>Name</p>
+<p>&amp;nbsp;&amp;nbsp;输入cpu，这个名字将会在监控项列表中显示</p>
+<p>Key</p>
+<p>&amp;nbsp;&amp;nbsp;我们可以从select中选择，这里选system.cpu.load[<cpu>,<mode>]并删除可选项[<cpu>,<mode>]</p>
+<p>Type of information</p>
+<p>&amp;nbsp;&amp;nbsp;这里选Numeric(float)，该属性定义的是监控数据的格式</p>
+<p>其他的选项就先使用初始数值吧，选择点Add完成新建。点击之后可以看到新的监控项已经存放在监控列表中，并且显示Enable状态时说明新建的监控项是可用的。</p>
+<p><strong>查看数据</strong></p>
+<p>当新的监控项设置好后，你一定很好奇它是否在收集数据。于是我们进入Monitoring→Latest data，设置好过滤条件找出新建了监控项的主机，</p>
+<p>点击在-other-前的+，展开即可看到刚刚新建的监控项，并且可以看到监控数据的变化。并且一段时间之后，我们可以点击Graph查看可视化的数据。</p>
+<p>&amp;nbsp;</p>
+<p>上面使用一个简单的例子让我们更深刻的了解zabbix的监控项，那么接下来开始全面的了解一下新建监控项时所见到的参数及其含义吧，所提及的参数都在上面那张图上。</p>
+<table border="1" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+            <td>
+
+<pre><code>                参数
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                描述
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Name
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                监控项的名字。可以使用以下的宏命令：$1,$2...$9 - 这九个参数对应item key的位置。例如：Free disk space on $1。如果item key为&quot;vfs.fs.size[/,free]&quot;，则可以自动转换成Free disk space on /
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Type
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                Item类型，详见《zabbix的item type解析》
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Key
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                Item key，所支持的item key可以在不同的Type中找到，详见《zabbix的item key解析》。一台主机添加的key必须是唯一的。如果key的所属类型是&#39;Zabbix agent&#39;, &#39;Zabbix agent (active)&#39;, &#39;Simple check&#39; or &#39;Zabbix aggregate&#39;，那么key的值必须被客户端或者服务端所支持
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Host interface
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                选择一个主机接口，这一栏是在为一台主机新建监控项所编辑的
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Type of information
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                数据进行转换后存放在数据库中的类型，如
+
+                Numeric (unsigned) - 64位无符号整数
+
+                Numeric (float) - 浮点数，包括负数，允许MySQL的range:-999999999999.9999 to 999999999999.9999 (double(16,4))
+
+                Character - 小于255字节的字符串
+
+                Log - 日志文件，必须设置成关键字日志
+
+                Text - 无限制文本
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Data type
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                指定所有监控项的预期数据类型：
+
+                Boolean - 布尔值，0表示False，1表示True。不区分大小写。如下为True or False的具体含义：
+
+                TRUE - true, t, yes, y, on, up, running, enabled, available
+
+                FALSE - false, f, no, n, off, down, unused, disabled, unavailable
+
+                另外，任何非零数被认为是True，零被认为是False。
+
+                Octal - 八进制
+
+                Decimal - 十进制
+
+                Hexadecimal - 十六进制，zabbix会自动将其转换成数字
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Units
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                如果设置了单位符号，zabbix会将收到的数值按设置的单位转换并输出。
+
+                默认情况下，如果原始数值超过1000，会先除以1000再显示出来。例如设置的单位为bps并且收到的数值为881764，zabbix会显示成881.764Kbps。如果单位设置成**B** (byte), **Bps** (bytes per second)，则会除以1024。
+
+                如果使用如下的时间单位，则如此转换：
+
+                **Unixtime - **转为&quot;yyyy.mm.dd hh:mm:ss&quot;，必须使用正数
+
+                **Uptime - **转为&quot;hh:mm:ss&quot; 或者&quot;N days, hh:mm:ss&quot;。例如收到的数值为881764秒，则会显示成&quot;10 days, 04:56:04&quot;
+
+                **S** - 转为&quot;yyy mmm ddd hhh mmm sss ms&quot;，参数为秒。例如收到数值为881764，会转换成&quot;10d 4h 56m&quot;。只有三个较高的单位会显示出来，例如&quot;1m 15d 5h&quot; 或者 &quot;2h 4m 46s&quot;，如果没有单位【日】，那么只会显示两个单位时间 - &quot;1m 5h&quot;（不会显示分钟、秒和毫秒），如果返回值小于0.001，则只会显示&quot;&amp;lt; 1ms&quot;。
+
+                禁用单位：ms、RPM、rpm、%
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Use custom multiplier
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                如果勾选该选项，所有接收到的值将乘以该文本框中设置的整数或者浮点数
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Update interval (in sec)
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                数据更新时间（秒）。
+
+                注：如果设置为0，监控数据将永不更新。然而如果Flexible intervals也存在一个非零值，那么该监控项的数据将在灵活更新时间中更新
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Flexible intervals
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                创建额外的更新周期。例如：
+
+                Interval: **10**, Period: **1-5,09:00-18:00** - 在工作日的朝九晚六期间每十秒检查一次监控项
+
+                Interval: **0**, Period: **1-7,00:00-7:00 - **在每天凌晨到早七点禁止检查
+
+                最多设置7个更新周期，如果设置的周期有冲突，则只使用最小区间。在更新周期以外的时间，使用默认的update interval。如果更新周期被设置为0，则监控项的数据不会更新。
+
+                注：该设置对主动客户端无效
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                History storage period
+
+                (in days)
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                在数据库中保存详细历史数据的具体天数，旧数据将被housekeeper删除。
+
+                从zabbix2.2开始，该值可以被Administration →
+
+                General → Housekeeper所覆盖。如果全局设置已存在，则这里会显示告警信息：
+
+                ![](https://statics.yvanz.com/zabbix-item3.png)
+
+                推荐按需设置一个最小值从而减少历史数据在数据库中的开销。若想保留更多的历史记录，可以增大下面的trend值。
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Trend storage period
+
+                (in days)
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                在数据库中聚合（以小时为单位的min，max，avg，count）N天的详细历史数据。旧数据将被housekeeper删除。从zabbix2.2开始，该值可以被覆盖，参考上文。
+
+                注：趋势数据的保存功能无法在非数字类型数据 - character, log and text中使用。
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Store value
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                **As is** - 不做任何处理
+
+                **Delta (speed per second)** - 计算公式为(**value-prev_value**)/(**time-prev_time**)，注释：
+
+                Value - 当前值
+
+                Prev_value - 上次收到的值
+
+                Time - 当前时间戳
+
+                Prev-time - 上次收到的时间戳
+
+                该设置对计算不断增长的数据，其增长速度非常有用。
+
+                注：如果当前值小于上次收到的值，zabbix会忽略更改（即不存储任何值）并等待新的数据。
+
+                **Delta (simple change) **- 计算公式为（**value-pre_value**）**:**
+
+                Value - 当前值
+
+                Pre_value - 上次收到的值
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Show value
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                值映射，映射的值不改变收到的值，只作数据显示用。查看已有的映射表，可以点击show value mappings
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Log time format
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                Type of information选择Log时显示。支持的占位符有：
+
+                *** y**：年（0001-9999）
+
+                *** M**：月（01-12）
+
+                *** d**：日（01-31）
+
+                *** h**：时（00-23）
+
+                *** m**：分（00-59）
+
+                *** s**：秒（00-59）
+
+                若留空则时间戳不被解析
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                New application
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                为新应用取一个名字
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Applications
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                将一个监控项链接到一个或多个现存的应用
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Populates host inventory field
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                数据自动填充到inventory资产清单的相应属性，前提是你的inventory对该主机处于自动模式
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Description
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                对该监控项的描述
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+
+                Enabled
+
+        &lt;/td&gt;
+        &lt;td&gt;
+
+                勾选表启用
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;
+</code></pre>
+</table>
+
+<p>当然，你也可以Clone现有的监控项并重命名保存成新监控项。</p>
+<p>&amp;nbsp;</p>
+<p>这篇文章翻译的着实不满意，蹩脚翻译看着难受的话，可以查看源文档：<a target="_blank" rel="noopener" href="https://www.zabbix.com/documentation/2.4/manual/config/items/item">https://www.zabbix.com/documentation/2.4/manual/config/items/item</a></p>
+<p>当然，这篇文章也花了很多时间编辑，目测还有两篇文章需要用到蹩脚的翻译——《zabbix的item type解析》、《zabbix的item key解析》，心累-。-</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1492,139 +1960,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.yvanz.com/2014/06/25/php-sql-server.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://statics.yvanz.com/avatar.jpg">
-      <meta itemprop="name" content="Yvan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvanの平行时空">
-      <meta itemprop="description" content="若当初的你，和现在的我，可以重来过">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yvanの平行时空">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2014/06/25/php-sql-server.html" class="post-title-link" itemprop="url">PHP连接sql server</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2014-06-25 17:02:06" itemprop="dateCreated datePublished" datetime="2014-06-25T17:02:06+08:00">2014-06-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/" itemprop="url" rel="index"><span itemprop="name">技术宅</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2014/06/25/php-sql-server.html#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/06/25/php-sql-server.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
-<p>化繁为简，先说说Linux平台的php怎么连接：</p>
-<p>首先下载freeTDS，解压安装。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/freetds --with-tdsver=8.0 --enable-msdblib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>配置freeTDS</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/freetds/etc/freetds.conf</span><br></pre></td></tr></table></figure>
-
-<p>在A typical Microsoft server下配置自己的sql server数据库连接，如：</p>
-<blockquote>
-<p>[192.168.0.254]<br>&amp;nbsp;&amp;nbsp;host&#x3D;192.168.0.254<br>&amp;nbsp;&amp;nbsp;port&#x3D;1433<br>&amp;nbsp;&amp;nbsp;tds version&#x3D;8.0</p>
-</blockquote>
-<p>配置完成，使用tsql测试连接是否成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/freetds/bin/tsql -S 192.168.0.254 -U sa</span><br></pre></td></tr></table></figure>
-
-<p>之后输入密码，若显示以下信息则配置成功。</p>
-<blockquote>
-<p>locale is “zh_CN.UTF-8”<br>locale charset is “UTF-8”<br>using default charset “UTF-8”<br>1&gt;</p>
-</blockquote>
-<p>&amp;nbsp;<br>其次设置PHP，这里需要先安装mssql extension，可以在php源码的ext&#x2F;mssql下找到。</p>
-<p>进行编译</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">phpize</span><br><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config --with-mssql=/usr/local/freetds/</span><br></pre></td></tr></table></figure>
-
-<p>将安装好的插件加入php.ini的extension部分，如</p>
-<blockquote>
-<p>extension_dir &#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;lib&#x2F;php&#x2F;extensions&#x2F;no-debug-zts-20121212<br>extension&#x3D;mssql.so</p>
-</blockquote>
-<p>重启Apache或者nginx重新应用php使用最新配置即可。</p>
-<p>接下来可以新建一个db.php测试php是否正常连接sql server</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$mssql</span>=<span class="title function_ invoke__">mssql_connect</span>(<span class="string">&quot;DBhost&quot;</span>,<span class="string">&quot;DBuser&quot;</span>,<span class="string">&quot;DBpasswd&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (<span class="variable">$mssql</span>) &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>连接成功后，若要对数据库进行操作，可使用如下函数：</p>
-<p><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_5c7a517801012etb.html">http://blog.sina.com.cn/s/blog_5c7a517801012etb.html</a></p>
-<p>&amp;nbsp;<br>接着再来看看windows平台，我使用的方法是通过OBDC连接sql server。</p>
-<p>一、编辑php.ini，将;extension&#x3D;php_pdo_odbc.dll前的;去掉，重启Apache或者Nginx，让php启用pdo_odbc。</p>
-<p>二、新建db.php</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$dbhost</span> = <span class="string">&#x27;DBhost&#x27;</span>; </span><br><span class="line"><span class="variable">$dbuser</span> = <span class="string">&#x27;DBuser&#x27;</span>; <span class="comment">//你的mssql用户名 </span></span><br><span class="line"><span class="variable">$dbpass</span> = <span class="string">&#x27;DBpasswd&#x27;</span>; <span class="comment">//你的mssql密码 </span></span><br><span class="line"><span class="variable">$dbname</span> = <span class="string">&#x27;DB&#x27;</span>; <span class="comment">//你的mssql库名 </span></span><br><span class="line"><span class="variable">$connect</span>=@<span class="title function_ invoke__">odbc_connect</span>(<span class="string">&quot;Driver=&#123;SQL Server&#125;;Server=<span class="subst">$dbhost</span>;Database=<span class="subst">$dbname</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbuser</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbpass</span>&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$connect</span>)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>连接成功之后，若要使用数据库，可参加以下函数</p>
-<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/shaobingj126/article/details/5678009">http://blog.csdn.net/shaobingj126/article/details/5678009</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

@@ -3,7 +3,7 @@
   <entry>
     <title>2015，我若忙忙便是晴天</title>
     <url>/2016/01/01/2015-in-busy.html</url>
-    <content><![CDATA[<p>好像《<a href="http://www.yvanz.com/2015/08/01/half-year-note.html">半年记</a>》的时候把很多东西都写掉了。而且八月开始，整个工作节奏都提高了不知道多少个级别，连七夕都在加班，虽然好像那天跟我没什么关系。所以2015的下半年，恐怕一个大写的【忙】足以概括了。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>好像《<a href="http://www.yvanz.com/2015/08/01/half-year-note.html">半年记</a>》的时候把很多东西都写掉了。而且八月开始，整个工作节奏都提高了不知道多少个级别，连七夕都在加班，虽然好像那天跟我没什么关系。所以2015的下半年，恐怕一个大写的【忙】足以概括了。</p>
 <span id="more"></span>
 
 <p>以下大概是流水账吧：</p>
@@ -24,7 +24,7 @@
   <entry>
     <title>2016，好像一点都不6呢</title>
     <url>/2017/01/01/2016-filled-with-trouble.html</url>
-    <content><![CDATA[<p>现在回顾起来，倘若本命年必须遇到一些点儿背的事情的话，那从某种角度来说，2015年重新回来因为自以为的顺风顺水而沾沾自喜却放缓了学习和提高的脚步，大概是最麻痹自己的点儿背吧。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>现在回顾起来，倘若本命年必须遇到一些点儿背的事情的话，那从某种角度来说，2015年重新回来因为自以为的顺风顺水而沾沾自喜却放缓了学习和提高的脚步，大概是最麻痹自己的点儿背吧。</p>
 <span id="more"></span>
 
 <p>而这种点背，带来最直接的后果大概就是年初因为公司变动，当我想跳槽时，挑了几个有模有样的公司投了简历却拿不到offer吧。在那个被现实教训了一顿的当下，甚至联想到那些人到中年，肩上背负巨大责任却突遭不顺畅的职业生涯时，会有怎样的心情去面对这些挫折呢。</p>
@@ -45,7 +45,7 @@
   <entry>
     <title>我的13，等着你的14</title>
     <url>/2013/12/31/1314.html</url>
-    <content><![CDATA[<p>约定好会聊聊自己的故事，想一想，先交待这样的一个故事吧。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>约定好会聊聊自己的故事，想一想，先交待这样的一个故事吧。</p>
 <p>去年刚到上海那会儿，经常在住的地方听到楼上一位女生电话里头跟她男朋友的争吵。只是从这争吵的声音里面，我多听到了一点撕心裂肺。那似乎是一种控诉与虽然不服气但还是抵挡不了既定事实的绝望情绪。控诉着对方为什么变成这个样子；绝望着把两个人的感情经营到如此不堪却毫无回天之力。</p>
 <p>我当初就在幻想，这对情侣一定有过你浓我浓的阶段。那又是什么，让一对情侣之间变得只剩争吵了呢。曾经跟某个人聊到这样的情况，她给我的解答是触碰到原则和底线了吧。</p>
 <p>关于底线，之前找过一句话来安慰自己：“生命里的VIP，总是让你甘愿把自己的原则一再打折”。所以，因为不是什么VIP，才有那些不愉快吧。</p>
@@ -70,7 +70,7 @@
   <entry>
     <title>Git 服务器基于nginx配置http(s)协议</title>
     <url>/2016/06/01/Git-server-with-http(s)-protocol.html</url>
-    <content><![CDATA[<h2 id="Git-HTTP协议简介"><a href="#Git-HTTP协议简介" class="headerlink" title="Git HTTP协议简介"></a>Git HTTP协议简介</h2><p>从git官方文档上看，git实现http(s)协议有两种方式</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Git-HTTP协议简介"><a href="#Git-HTTP协议简介" class="headerlink" title="Git HTTP协议简介"></a>Git HTTP协议简介</h2><p>从git官方文档上看，git实现http(s)协议有两种方式</p>
 <ol>
 <li>智能（Smart）HTTP</li>
 <li>哑（Dump）HTTP</li>
@@ -114,7 +114,7 @@
   <entry>
     <title>vsftp安装配置小记</title>
     <url>/2016/01/04/a-note-with-vsftp.html</url>
-    <content><![CDATA[<p>每次安装ftp服务的时候，我都得折腾很长时间，可是需求本身很简单，配置文件的修改项也很少。所以还是记录一下安装配置流程，假如以后还需要再装呢。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>每次安装ftp服务的时候，我都得折腾很长时间，可是需求本身很简单，配置文件的修改项也很少。所以还是记录一下安装配置流程，假如以后还需要再装呢。</p>
 <p>首先说明一下需求：为服务器安装一个ftp服务，让开发可以看指定目录的日志，禁止从该目录跳转至其他文件夹</p>
 <p>安装ftp</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install vsftpd -y</span><br></pre></td></tr></table></figure>
@@ -142,7 +142,7 @@
   <entry>
     <title>新地球</title>
     <url>/2014/12/01/brave-new-world.html</url>
-    <content><![CDATA[<p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
 <p><embed src="http://www.tudou.com/v/ijKdeiuKNI8/&bid=05&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></p>
 <p>完整歌词</p>
 <blockquote>
@@ -163,7 +163,7 @@
   <entry>
     <title>时间轴归档制作</title>
     <url>/2014/06/06/css-timeline.html</url>
-    <content><![CDATA[<p>当初在筹划建站的时候，无意间发现有人用时间轴的样式做了一个文章归档的页面，顿时觉得十分高大上。于是联系到那位亲几封邮件下来终于也把时间轴归档弄到我的博客来了。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>当初在筹划建站的时候，无意间发现有人用时间轴的样式做了一个文章归档的页面，顿时觉得十分高大上。于是联系到那位亲几封邮件下来终于也把时间轴归档弄到我的博客来了。</p>
 <p>Anyway，先来看看代码吧（以下代码是针对我所使用的Clearision主题修改而来的）</p>
 <ul>
 <li>footer.php添加引入jquery语句（要在script.js引入前引入）</li>
@@ -200,18 +200,18 @@
   <entry>
     <title>浅析电子邮件的发送</title>
     <url>/2014/05/14/email-post.html</url>
-    <content><![CDATA[<p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/1.jpg" alt="1"></p>
 <p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
 <p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
 <p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
-<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#x73;&#101;&#x72;&#x76;&#x69;&#99;&#x65;&#64;&#106;&#x6a;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;">&#x73;&#101;&#x72;&#x76;&#x69;&#99;&#x65;&#64;&#106;&#x6a;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
+<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#115;&#101;&#114;&#118;&#x69;&#99;&#x65;&#x40;&#x6a;&#x6a;&#x6c;&#x69;&#x6e;&#46;&#x63;&#x6f;&#109;">&#115;&#101;&#114;&#118;&#x69;&#99;&#x65;&#x40;&#x6a;&#x6a;&#x6c;&#x69;&#x6e;&#46;&#x63;&#x6f;&#109;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
 <p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
 <p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
 <p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
 <p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
-<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#x73;&#x65;&#114;&#118;&#x69;&#x63;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x65;&#114;&#118;&#x69;&#x63;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#x2e;&#x63;&#x6f;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
+<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#x73;&#x65;&#114;&#118;&#105;&#99;&#101;&#64;&#106;&#x6a;&#x6c;&#x69;&#x6e;&#x2e;&#99;&#111;&#x6d;">&#x73;&#x65;&#114;&#118;&#105;&#99;&#101;&#64;&#106;&#x6a;&#x6c;&#x69;&#x6e;&#x2e;&#99;&#111;&#x6d;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
 <p>尾巴：</p>
 <p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
@@ -230,7 +230,7 @@
   <entry>
     <title>伟大的渺小 —— Ever Cry, Never Life</title>
     <url>/2017/12/29/ever-cry-never-life.html</url>
-    <content><![CDATA[<h2 id="开题"><a href="#开题" class="headerlink" title="开题"></a>开题</h2><p>两年，终于终于林俊杰发新作品了。从官宣开始知道了这张专辑想要传达概念，便在期待着全碟的发行。这次尝试一下根据每首歌对这次的作品做一个简单的介绍。<br>许久没写过这么多字了，见笑见笑。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="开题"><a href="#开题" class="headerlink" title="开题"></a>开题</h2><p>两年，终于终于林俊杰发新作品了。从官宣开始知道了这张专辑想要传达概念，便在期待着全碟的发行。这次尝试一下根据每首歌对这次的作品做一个简单的介绍。<br>许久没写过这么多字了，见笑见笑。</p>
 <span id="more"></span>
 <h2 id="短悟"><a href="#短悟" class="headerlink" title="短悟"></a>短悟</h2><p>打开专辑，首先袭来的是林俊杰少有的 EDM 风格作品。初见歌单时，觉得《圣所》这样一个宗教感很强的名字，会不会只是一段大气的 melody ，为我们走进专辑而做铺陈。毕竟这样的方式，在以前的作品中已经出现过很多次。可是初听这首歌，即被反复且坚定的 Just follow me 所吸引，再细看歌词，显然对我们交待了整张专辑的主旨，“这支离破碎的部落哪里是初衷的圣所。Just follow me 我要带你前往圣所的地方”。<br>紧接着的便是全专的核心曲目——《伟大的渺小》，奠定着这张作品在诉说的中心思想：生活里基于爱的渺小举动，会有伟大的效应。<br>叙事性最强的暗黑三部曲，由起手式《穿越》开头，在沉睡中如重生一般穿越到出道的那个二零零三年，那个走入你我世界的那一年。穿越回这段时间，似乎想用自以为正确的事情来抹去一些犯过的错误。只是这轮回的伤害还是“因为爱我你选择离开我”。不过更绝望的恐怕是面对这样的情况，不想做任何挽回，“就让整个穿越变成一场误会 不能化解”吧。<br>再穿越回二零一六年，也就是这一年，林俊杰停下了脚步，宣布这一年不再有新专辑，取而代之的是一部纪录片和一首主题曲，开始主动 “走出” 你我的世界。然而即使这样内心也不见平复，从穿越梦中痛苦的醒来，夜不能寐的来到《四点四十四》。面对着这些年遭遇的一切，不知道自己是选择墨菲斯的红色药丸去追寻真理还是选择蓝色药丸继续安于现状。<br>一切找不到出口的不安感，甚至想到让别人“将我从悬崖推下”。内心的自己和现实的自己互相博弈，左脑和右脑彼此争吵，弥漫着无力痛苦的气氛。只是突然传来的钢琴声，好似上天指引了一个出口，而林俊杰给出的答案便是《我继续》，决定“抛开过去 跟自己为敌”，此时的歌声，充满着激昂和勇气，真好。<br>拜别三部曲，这张专辑为我们呈上了一首唱腔温暖的《剪云者》。虽然叙述的是一件憾事，可是这样有温度的唱法，让人听着不自觉的会扬起嘴角，神奇。<br>只是没有让我们“轻松”多久，又一首感情浓烈的《黑夜问白天》开始刺痛着我们的内心。作为第二主打，首播伊始众多歌迷就非常好奇是什么样的境遇，可以让林俊杰写出这么掏空自己的一首歌，甚至发布会的时候主持人也当面提问过。只是这些提问都被他逐一“搪塞”过去了。鉴于这样的三缄其口，看来这首歌背后的情绪我们实在是不要再去追问了吧。不过作为情绪的宣泄，就算跑调也好，破音也好，我们去唱这首歌的话，应该会有一种很酣畅的感觉吧，还是蛮期待以后去 KTV 和小伙伴们玩这首歌的。顺便提及一句，感觉这首歌所透露的情感，和他写给张惠妹的《身后》有很多相似之处，这两首歌大概是姐妹篇吧。<br>再来就是插播了他和徒弟们的《丹宁执着》。唔，早早曝光的一首歌，期待一下跨年他和徒弟们同台的表演。<br>摇滚之后是两首伴有悠扬管弦乐音色的歌曲，而且都以波澜大海为背景。只不过《身为风帆》更多的是忧郁心境下的顺其自然，而《小瓶子》则透露着平凡生活里点点滴滴的温暖。<br>最后整张专辑用《Until The Day》做点睛之笔。传达着，生活里面伤痛与幸福周而复始，只要有爱，一切就不会太糟。</p>
 <h2 id="尾巴"><a href="#尾巴" class="headerlink" title="尾巴"></a>尾巴</h2><p>这张专辑应该是林俊杰第二张侧重展示自己内心阴暗和挣扎的作品了，第一次向我们袒露还是十年前的《西界》。不过那一次作为歌迷的我来说，其实并没有太领情这种“掏心掏肺”，记得当初我在 QQ 空间写下了诸如“失望”的言辞。现在想起实在觉得惭愧，或许是我们把他框在了一个固定的区域进而禁锢了他的创作。好在十年过去了，现在的他行走的更在稳健和自信，你看，这张专辑已经鲜有芭乐曲调的作品了。而十年后的我们，也该跟上他变化的脚步了。<br>“未曾长夜哭恸，不足以语人生”，听过了他的《四点四十四》，对这句话便愈发的有共鸣。也许因为实实在在经历过那段日子，所以对人生的感悟才这么深刻吧：人生里面那么多坎坷，实在不应该一直沉溺在不幸的部分，而忘却另一部分美好的东西。<br>希望这张专辑可以给更多人温暖。</p>
@@ -246,7 +246,7 @@
   <entry>
     <title>Messy</title>
     <url>/2016/07/02/everything-seems-in-a-mess.html</url>
-    <content><![CDATA[<p>似乎人人都会敏感本命年，可是我前一个本命年却过的不可思议的顺利。然而过完年回来上班却发现，等待着我的只是一副烂摊子。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>似乎人人都会敏感本命年，可是我前一个本命年却过的不可思议的顺利。然而过完年回来上班却发现，等待着我的只是一副烂摊子。</p>
 <span id="more"></span>
 
 <p>原本在过年前，我还自信满满的规划着今年要做些什么，看起来前景好像很是广阔。只是年后这“改朝换代”的现实，把我打击的似乎一蹶不振。三月底经历着公司内部的人员清洗。当时还在天真的觉得，我如果拥有足够的实力，陪他们一起离职让公司额外产生一些实际的损失，也算是为兄弟们出口气了。可是后来明白，没有什么地方是在缺了一个人之后就转不起来的。我们能做的，大致只有提升自己的能力，在面临山雨欲来风满楼的时候，可以稳妥的找到另一个栖身的地方吧。然而我需要多久才能达到这样的级别呢。</p>
@@ -262,7 +262,7 @@
   <entry>
     <title>Facebook如何实现PB级别数据库自动化备份</title>
     <url>/2015/03/11/facebook-mysql-backup.html</url>
-    <content><![CDATA[<p>Facebook的MySQL数据库，是世界上最庞大的MySQL数据库之一，在不同地区有数千个数据库服务器。因此，备份对他们来说是个巨大的挑战。为了解决这个问题，他们构建了一个高度自动化、非常有效的备份系统，每周移动多个PB的数据。Facebook数据团队的Eric Barrett通过一篇文章分享了他们的做法。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Facebook的MySQL数据库，是世界上最庞大的MySQL数据库之一，在不同地区有数千个数据库服务器。因此，备份对他们来说是个巨大的挑战。为了解决这个问题，他们构建了一个高度自动化、非常有效的备份系统，每周移动多个PB的数据。Facebook数据团队的Eric Barrett通过一篇文章分享了他们的做法。</p>
 <p>他们没有采用大量前载（front-loaded）测试，而是强调快速检测失败，并且进行快速、自动化纠正。部署几百个数据库服务器，只需很少人力干预。使用下面的三个措施，他们做到了有节奏的增长，同时具备支持上十亿用户的灵活性。</p>
 <p>措施1：二进制日志和mysqldump</p>
 <p>第一道防线称为&amp;ldquo;措施1&amp;rdquo;，或&amp;ldquo;机架&amp;rdquo;备份（rack backup），简称RBU。在每个数据库机架上，不论其类型为何，都有两个RBU存储服务器。以RBU作为数据库服务器放在同一个机架中，这可以保证最大的带宽和最小的延迟，它们同时可以作为缓存，在备份的下个措施使用。</p>
@@ -312,7 +312,7 @@
   <entry>
     <title>手游服务器开发技术详解</title>
     <url>/2016/03/09/gameserver-development.html</url>
-    <content><![CDATA[<p>从事游戏服务器开发差不多两年时间，两年间参与了不少项目，学到了很多游戏服务器开发技术，参与过几个不同架构的服务器开发，就随便聊聊游戏服务器开发需要的技术。（以下所指游戏服务器更偏向于手游，因为我对端游和页游开发接触并不多）</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>从事游戏服务器开发差不多两年时间，两年间参与了不少项目，学到了很多游戏服务器开发技术，参与过几个不同架构的服务器开发，就随便聊聊游戏服务器开发需要的技术。（以下所指游戏服务器更偏向于手游，因为我对端游和页游开发接触并不多）</p>
 <p><strong>一.聊聊服务器开发有哪些东西要考虑。</strong></p>
 <p><strong>1.开发语言的选择：</strong></p>
 <p>工欲善其事,必先利其器，选择一门适合的开发语法对后期开发有着事半功倍的作用。</p>
@@ -372,7 +372,7 @@
   <entry>
     <title>你给我听好</title>
     <url>/2014/06/07/gaokao2014.html</url>
-    <content><![CDATA[<iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
 
 <p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
 <p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
@@ -397,7 +397,7 @@
   <entry>
     <title>【草稿】GoAccess安装与使用</title>
     <url>/2014/07/23/goaccess.html</url>
-    <content><![CDATA[<p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
 <p>首先在goaccess官方网站<a href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
 <p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
 <p>现在对下载的源码进行解压并编译</p>
@@ -421,7 +421,7 @@
   <entry>
     <title>无冕歌王——林俊杰</title>
     <url>/2014/06/29/golden-melody-jjlin.html</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p>#无冕歌王林俊杰#第18届、第21届、第22届、第25届，四次冲击金曲奖。第18届的时候或许太年轻。而这些年，我们见证过21届堪称完美的表演却失之交臂，我们体会过22届颁奖时那段被拉长的J音把心吊到嗓子眼的感觉。终于在第25届，我们如愿了。你因我们而在，and we are yours。JJ x JM。你好，歌王@林俊杰</p>
 </blockquote>
 <p>这条微博在今天空闲的时候就酝酿着，大概是颁奖前半小时梳理好的。我抱着最美好的期待写着这条微博，因为熬过这么多年金曲奖，之前每一次的等待之后都告诉自己，不需要这个奖做证明，在我们心里你已经是歌王了。可是好像骗不了自己，每一年的金曲奖我们还是会期待，而且看得到你也在期待，否则你不会在致辞时说到前四年时，略带哽咽的声音。</p>
@@ -446,20 +446,9 @@
       </tags>
   </entry>
   <entry>
-    <title>世界，你好！</title>
-    <url>/2012/11/11/hello-world-1.html</url>
-    <content><![CDATA[<p>Hello world.</p>
-<p>这是使用基于Wordpress搭建的博客发布的第一篇文章。</p>
-<p>——Yvan</p>
-]]></content>
-      <categories>
-        <category>一开始</category>
-      </categories>
-  </entry>
-  <entry>
     <title>半年记</title>
     <url>/2015/08/01/half-year-note.html</url>
-    <content><![CDATA[<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=27560017&amp;auto=1&amp;height=66" width="330"></iframe>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=27560017&amp;auto=1&amp;height=66" width="330"></iframe>
 
 <p>如我六月初申请离职时谈到的，自己总是一个对时间点比较在意的人：上半年的决定，总是希望能在上半年结束掉。所以很感激合肥公司的领导能理解我的固执，在六月的尾巴帮我成功离职了。</p>
 <p>说到这家合肥的公司，我总是抱以最大的期许希望她能成功。因为我希望我的合肥有更多说得上的互联网公司（乐堂就不提了，瞧不上之）；因为我曾参与其中，亲眼见证了一个产品诞生路上的坎坷。我也庆幸自己曾参与于这样一个创业团队，在这里我实实在在的开拓了视野。虽然因为自己个人的原因中途从中掉队，但离开后却不妨碍我祝福她。而最真切的祝福大概就是希望她发展的好到我以后会为我当下的决定后悔吧。</p>
@@ -476,7 +465,7 @@
   <entry>
     <title>转身一世</title>
     <url>/2014/07/27/hanhan.html</url>
-    <content><![CDATA[<iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28815250&amp;auto=1&amp;height=32" width="298"></iframe>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28815250&amp;auto=1&amp;height=32" width="298"></iframe>
 
 <p>那么多的喜欢，还没来得及表达就被丢弃；那么多的道理，回到生活里很快就被忘记。 一部看似叙事性不佳的片子，里面却包含了那么多的故事。一段路一个人，每次还没来得及说再见，就再也不见了。所谓后会无期，或许还可以称之为&amp;mdash;&amp;mdash;转身一世。这部电影让我依稀的想起高二那年写的一个音乐剧。我挑了几个片段穿插在剧本里面，初心是想着把班级生活里面遇到的感动通过那出戏讲出来，另外憧憬一下即将来临的高三，我们会用一种什么样的方式面对。可惜舞台时限，我在剧本里面掐掉了很多细节。而最后，在评委老师的认真关切下，还是因为他们觉得故事性不强被毙，哈哈哈~</p>
 <p>【就走吧，无论去哪，就算你被夺走什么。】</p>
@@ -489,33 +478,20 @@
       </tags>
   </entry>
   <entry>
-    <title>后篇，服务器负载过高</title>
-    <url>/2016/04/22/high-load-be-solved.html</url>
-    <content><![CDATA[<p>虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。</p>
-<p>首先用CPU火焰图绘出CPU的具体调用</p>
-<p> <img data-src="https://statics.yvanz.com/php-fpm_flame.png"><br>这里就看的很明显了，php-fpm栈里面有一个getdents64尤其的亮眼。那么这个getdents64又是何物呢？这里祭出<a href="http://linux.die.net/man/2/getdents64">Linux man page</a>的解释</p>
-<blockquote>
-<p>The system call <strong>getdents</strong>() reads several <em>linux-dirent</em> structures from the directory referred to by the open file descriptor <em>fd</em> into the buffer pointed to by <em>dirp</em>. The argument <em>count</em> specifies the size of that buffer.</p>
-</blockquote>
-<p>可是PHP程序为何会有这么多的对文件的操作呢。现在服务器只处理这个价格的请求，而且运行的这么慢，php-fpm的slowlog里应该有些记录吧，去碰碰运气。</p>
-<blockquote>
-<p> script_filename &#x3D; xxx&#x2F;metals&#x2F;index.php<br> [0x0000000001f98088] read() xxx&#x2F;include&#x2F;cache.php:35<br> [0x0000000001f97b48] delete() xxx&#x2F;include&#x2F;cache.php:50<br> [0x0000000001f97280] check() xxx&#x2F;metals&#x2F;index.php:30</p>
-</blockquote>
-<p>果然slowlog没有让我失望，记录了大量如上的日志。赶紧去文件里所标示的那几行看看代码压压惊，发现这里一直要去缓存目录。于是去缓存目录一探究竟，发现<code>ll</code>执行一下都非常的慢，原来这个文件夹里已经有好几万的文件了，程序到这里来自然非常的慢，也就不难解释火焰图表现的情况了。</p>
-<p>想起来前几天程序里更新了缓存文件的生成机制，又不对老旧的缓存文件做删除，导致文件的累计。所以解决方法自然就是在系统的tmpfs分区新建缓存目录，修改程序配置文件应用新的缓存目录。此时负载立刻下降，但是新缓存目录里并没有生成文件。看样子更新价格的请求只是去缓存目录遍历文件，并不做写入，所以IO一直没有过高，跟我以前遇到的服务器过载的情况也就不一样了。最后设置crontab每天凌晨清空缓存目录，防止新缓存目录出现同样的问题。</p>
+    <title>世界，你好！</title>
+    <url>/2012/11/11/hello-world-1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Hello world.</p>
+<p>这是使用基于Wordpress搭建的博客发布的第一篇文章。</p>
+<p>——Yvan</p>
 ]]></content>
       <categories>
-        <category>技术宅</category>
+        <category>一开始</category>
       </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>运维</tag>
-      </tags>
   </entry>
   <entry>
     <title>带着hexo来问好</title>
     <url>/2016/05/15/hello-world-with-hexo.html</url>
-    <content><![CDATA[<p>早就想从wordpress换成hexo，因为想好好体验一下markdown编辑博客，而且直接用html语法直接实现文章样式的修改。只是一直没有契机。<br>最近因为想给自己的站加上https，所以在阿里云上买了个云主机，顺势把博客也搬到了阿里云。既然有了云主机，索性搭了个hexo环境，尝试把wordpress的文章导入hexo里。不过这两天折腾下来，发现自己原先有一些误区，用牢骚的方式记录一下。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早就想从wordpress换成hexo，因为想好好体验一下markdown编辑博客，而且直接用html语法直接实现文章样式的修改。只是一直没有契机。<br>最近因为想给自己的站加上https，所以在阿里云上买了个云主机，顺势把博客也搬到了阿里云。既然有了云主机，索性搭了个hexo环境，尝试把wordpress的文章导入hexo里。不过这两天折腾下来，发现自己原先有一些误区，用牢骚的方式记录一下。</p>
 <h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><blockquote>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 </blockquote>
@@ -544,9 +520,33 @@
       </tags>
   </entry>
   <entry>
+    <title>后篇，服务器负载过高</title>
+    <url>/2016/04/22/high-load-be-solved.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。</p>
+<p>首先用CPU火焰图绘出CPU的具体调用</p>
+<p> <img data-src="https://statics.yvanz.com/php-fpm_flame.png"><br>这里就看的很明显了，php-fpm栈里面有一个getdents64尤其的亮眼。那么这个getdents64又是何物呢？这里祭出<a href="http://linux.die.net/man/2/getdents64">Linux man page</a>的解释</p>
+<blockquote>
+<p>The system call <strong>getdents</strong>() reads several <em>linux-dirent</em> structures from the directory referred to by the open file descriptor <em>fd</em> into the buffer pointed to by <em>dirp</em>. The argument <em>count</em> specifies the size of that buffer.</p>
+</blockquote>
+<p>可是PHP程序为何会有这么多的对文件的操作呢。现在服务器只处理这个价格的请求，而且运行的这么慢，php-fpm的slowlog里应该有些记录吧，去碰碰运气。</p>
+<blockquote>
+<p> script_filename &#x3D; xxx&#x2F;metals&#x2F;index.php<br> [0x0000000001f98088] read() xxx&#x2F;include&#x2F;cache.php:35<br> [0x0000000001f97b48] delete() xxx&#x2F;include&#x2F;cache.php:50<br> [0x0000000001f97280] check() xxx&#x2F;metals&#x2F;index.php:30</p>
+</blockquote>
+<p>果然slowlog没有让我失望，记录了大量如上的日志。赶紧去文件里所标示的那几行看看代码压压惊，发现这里一直要去缓存目录。于是去缓存目录一探究竟，发现<code>ll</code>执行一下都非常的慢，原来这个文件夹里已经有好几万的文件了，程序到这里来自然非常的慢，也就不难解释火焰图表现的情况了。</p>
+<p>想起来前几天程序里更新了缓存文件的生成机制，又不对老旧的缓存文件做删除，导致文件的累计。所以解决方法自然就是在系统的tmpfs分区新建缓存目录，修改程序配置文件应用新的缓存目录。此时负载立刻下降，但是新缓存目录里并没有生成文件。看样子更新价格的请求只是去缓存目录遍历文件，并不做写入，所以IO一直没有过高，跟我以前遇到的服务器过载的情况也就不一样了。最后设置crontab每天凌晨清空缓存目录，防止新缓存目录出现同样的问题。</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【转载】删除并禁用历史修订功能</title>
     <url>/2014/05/22/hisedit.html</url>
-    <content><![CDATA[<p>此为转载文章，原链接：<a href="http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html">http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此为转载文章，原链接：<a href="http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html">http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html</a></p>
 <p>1.禁用 WordPress 文章修订历史功能</p>
 <p>打开 WordPress 根目录下的 wp-config.php 文件，添加下面的代码即可：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="title function_ invoke__">define</span>(<span class="string">&quot;WP_POST_REVISIONS&quot;</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
@@ -565,9 +565,39 @@
       </tags>
   </entry>
   <entry>
+    <title>开启HTTPS加密连接</title>
+    <url>/2014/09/26/https-connect.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为在弄心脏滴血的漏洞修复，于是兴起试了试网站的https连接，麻溜把步骤记下来。</p>
+<p>首先准备https连接必须要的组件openssl。因为修复漏洞，我直接在<a href="http://www.openssl.org/">官网</a>下载最新版然后源码安装，源码安装三大金刚命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/config --prefix=/usr/local/openssl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕配置成本机命令：重命名已有的openssl命令，并在profile文件夹中添加&#x2F;usr&#x2F;local&#x2F;openssl，同时创建软连到&#x2F;usr&#x2F;bin&#x2F;openssl</p>
+<p>其次修改Apache配置文件：</p>
+<p>启用组件mod_ssl.so和mod_socache_shmcb.so</p>
+<p>启用配置文件conf&#x2F;extra&#x2F;httpd-ssl.conf</p>
+<p>生成ssl证书</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#生成私钥key文件</span></span><br><span class="line">openssl genrsa -des3 -out server.key 1024</span><br><span class="line"><span class="comment">#生成证书签名请求csr文件，并按要求填写相关信息</span></span><br><span class="line">openssl req -new -key server.key -out server.csr</span><br><span class="line"><span class="comment">#自签证。或者省略这一步，将csr文件和key文件提交给权威证书颁发机构</span></span><br><span class="line">openssl x509 -req -days 700 -<span class="keyword">in</span> server.csr -signkey server.key -out server.crt</span><br></pre></td></tr></table></figure>
+
+<p>将生成好的server.crt以及server.key复制到httpd-ssl.conf配置文件中记录的位置。因为我除了servername之外没修改httpd-ssl.conf中其他的设置项，所以复制到了它默认的conf文件夹下。</p>
+<p>准备工作就绪之后重启Apache使上面的配置生效，如此在不出意外的情况下，就能使用HTTPS协议访问网页了。当然，因为我们的网站证书没有注册，所以打开网页的时候IE浏览器会提示网站安全证书存在问题。</p>
+<p>Nginx配置</p>
+<p>将以下放入server段</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line"><span class="comment">#定义证书crt文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate</span> /root/server.crt;</span><br><span class="line"><span class="comment">#定义私钥key文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate_key</span> /root/server.key;</span><br></pre></td></tr></table></figure>
+
+<p><strong>附：<a href="http://netkiller.github.io/cryptography/openssl/format.html">常见SSL证书格式转换</a></strong></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Apache</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>可惜，没如果</title>
     <url>/2014/12/15/if-only.html</url>
-    <content><![CDATA[<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29814898&amp;auto=1&amp;height=66" width="330"></iframe>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29814898&amp;auto=1&amp;height=66" width="330"></iframe>
 
 <p>在那个全碟试听的视频中听到那句“全都怪我 不该沉默时沉默 该勇敢时软弱 如果不是我”时，我就感觉得到，这首歌应该能让我回忆起非常多的画面。嗯，全都怪我，不该沉默时沉默……</p>
 <p>&amp;nbsp;</p>
@@ -605,39 +635,9 @@
       </tags>
   </entry>
   <entry>
-    <title>开启HTTPS加密连接</title>
-    <url>/2014/09/26/https-connect.html</url>
-    <content><![CDATA[<p>今天因为在弄心脏滴血的漏洞修复，于是兴起试了试网站的https连接，麻溜把步骤记下来。</p>
-<p>首先准备https连接必须要的组件openssl。因为修复漏洞，我直接在<a href="http://www.openssl.org/">官网</a>下载最新版然后源码安装，源码安装三大金刚命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/config --prefix=/usr/local/openssl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>安装完毕配置成本机命令：重命名已有的openssl命令，并在profile文件夹中添加&#x2F;usr&#x2F;local&#x2F;openssl，同时创建软连到&#x2F;usr&#x2F;bin&#x2F;openssl</p>
-<p>其次修改Apache配置文件：</p>
-<p>启用组件mod_ssl.so和mod_socache_shmcb.so</p>
-<p>启用配置文件conf&#x2F;extra&#x2F;httpd-ssl.conf</p>
-<p>生成ssl证书</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#生成私钥key文件</span></span><br><span class="line">openssl genrsa -des3 -out server.key 1024</span><br><span class="line"><span class="comment">#生成证书签名请求csr文件，并按要求填写相关信息</span></span><br><span class="line">openssl req -new -key server.key -out server.csr</span><br><span class="line"><span class="comment">#自签证。或者省略这一步，将csr文件和key文件提交给权威证书颁发机构</span></span><br><span class="line">openssl x509 -req -days 700 -<span class="keyword">in</span> server.csr -signkey server.key -out server.crt</span><br></pre></td></tr></table></figure>
-
-<p>将生成好的server.crt以及server.key复制到httpd-ssl.conf配置文件中记录的位置。因为我除了servername之外没修改httpd-ssl.conf中其他的设置项，所以复制到了它默认的conf文件夹下。</p>
-<p>准备工作就绪之后重启Apache使上面的配置生效，如此在不出意外的情况下，就能使用HTTPS协议访问网页了。当然，因为我们的网站证书没有注册，所以打开网页的时候IE浏览器会提示网站安全证书存在问题。</p>
-<p>Nginx配置</p>
-<p>将以下放入server段</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line"><span class="comment">#定义证书crt文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate</span> /root/server.crt;</span><br><span class="line"><span class="comment">#定义私钥key文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate_key</span> /root/server.key;</span><br></pre></td></tr></table></figure>
-
-<p><strong>附：<a href="http://netkiller.github.io/cryptography/openssl/format.html">常见SSL证书格式转换</a></strong></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Apache</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装部署QConf</title>
     <url>/2016/02/12/install-qconf.html</url>
-    <content><![CDATA[<ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
 <li>系统环境</li>
 </ul>
 <p>CentOS 6.4 x64</p>
@@ -680,9 +680,28 @@
       </tags>
   </entry>
   <entry>
+    <title>林俊杰的歌，是自己的年少时光</title>
+    <url>/2015/01/31/jj-memory.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/jj-memory.jpg"><br>&amp;nbsp;</p>
+<blockquote>
+<p>从第一张专辑开始，11分钟听完十一年的24首经典歌曲。一路走来，他都是安静地唱着歌，如今回头看去才恍然发现，原来我的青春里一直都有林俊杰。谢谢你的歌，点缀着我的年少时光</span></p>
+</blockquote>
+<p>最近在微博看到了echo回声APP官博发的一条载有林俊杰歌曲串烧的微博，而且不少朋友都有分享。刚刚好奇的点进去试听，原来十一分钟回忆十一年的感觉就是这样的。于是一个没忍住把原音下载了下来，顺便拿出来分享。希望echo回声以及原创者不要介意。</p>
+<p>echo回声原链：<a href="http://echo.kibey.com/sound/250541">http://echo.kibey.com/sound/250541</a></p>
+<p>echo回声微博链接：<a href="http://weibo.com/5195897697/C218GiAXX">http://weibo.com/5195897697/C218GiAXX</a></p>
+<p>下载链接：<a href="http://pan.baidu.com/s/1o6sm2q2">http://pan.baidu.com/s/1o6sm2q2</a></p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>好书推荐——《高性能Linux服务器构建实战：系统安全、故障排查、自动化运维与集群架构》</title>
     <url>/2014/12/08/linux-server-structure.html</url>
-    <content><![CDATA[<p>今天逛多看的时候发现了这样一本书，感觉挺屌的。内容实用充实，实验性丰富。以下是全书基本结构：</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天逛多看的时候发现了这样一本书，感觉挺屌的。内容实用充实，实验性丰富。以下是全书基本结构：</p>
 <p><span style="color:#0000FF;"><span style="font-size:14px;">&amp;nbsp; &amp;nbsp; </span></span><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">安全运维篇（第1章至第3章）</span></span></p>
 <p><span style="line-height: 20.7999992370605px;"></span>安全运维篇介绍了系统运维中安全应用的三个方面：服务器安全运维、网络安全运维和数据安全运维。</p>
 <p><span style="line-height: 20.7999992370605px;"></span>第1章讲述了Linux服务器安全运维，主要从系统角度介绍了账号安全、远程访问安全、文件系统安全、系统软件安全等的应用与防范，同时介绍了两款系统安全检测软件，最后通过一个实际案例详细介绍了服务器遭受攻击后的处理过程。</p>
@@ -719,7 +738,7 @@
   <entry>
     <title>Linux TCP队列相关参数的总结</title>
     <url>/2015/04/07/linux-tcp-summary.html</url>
-    <content><![CDATA[<p>锋寒 技术保障 基础平台 技术专家</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>锋寒 技术保障 基础平台 技术专家</p>
 <p>&amp;nbsp;</p>
 <p>在Linux上做网络应用的性能优化时，一般都会对TCP相关的内核参数进行调节，特别是和缓冲、队列有关的参数。网上搜到的文章会告诉你需要修改哪些参数，但我们经常是知其然而不知其所以然，每次照抄过来后，可能很快就忘记或混淆了它们的含义。本文尝试总结TCP队列缓冲相关的内核参数，从协议栈的角度梳理它们，希望可以更容易的理解和记忆。注意，本文内容均来源于参考文档，没有去读相关的内核源码做验证，不能保证内容严谨正确。作为Java程序员没读过内核源码是硬伤。</p>
 <p>下面我以server端为视角，从&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">连接建立</span>、&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">数据包接收</span>&amp;nbsp;<wbr />和&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">数据包发送</span>&amp;nbsp;<wbr />这3条路径对参数进行归类梳理。</p>
@@ -849,7 +868,7 @@
   <entry>
     <title>本地YUM源</title>
     <url>/2015/07/16/local-yumrepo.html</url>
-    <content><![CDATA[<p>建立本地YUM源的初衷是按照自己的需求打包rpm包并在内网装机时直接部署。所以先来介绍一下RPM包的打包工具，我选择的是FPM来打包。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>建立本地YUM源的初衷是按照自己的需求打包rpm包并在内网装机时直接部署。所以先来介绍一下RPM包的打包工具，我选择的是FPM来打包。</p>
 <p>FPM on&amp;nbsp;github：<a href="https://github.com/jordansissel/fpm">https://github.com/jordansissel/fpm</a></p>
 <p>FPM安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#FPM基于ruby开发，所以先yum安装ruby以及rubygems</span></span><br><span class="line">yum install ruby rubygems ruby-devel ruby-rdoc rpm-build gcc -y</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除默认RubyGems源并添加使用淘宝的RubyGems源</span></span><br><span class="line">gem sources --remove http://rubygems.org/</span><br><span class="line">gem sources -a https://ruby.taobao.org/</span><br><span class="line">gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://ruby.taobao.org</span><br><span class="line"><span class="comment"># 请确保只有 ruby.taobao.org</span></span><br><span class="line"></span><br><span class="line">gem install fpm  <span class="comment">#使用gem安装fpm</span></span><br></pre></td></tr></table></figure>
@@ -867,28 +886,9 @@
       </tags>
   </entry>
   <entry>
-    <title>林俊杰的歌，是自己的年少时光</title>
-    <url>/2015/01/31/jj-memory.html</url>
-    <content><![CDATA[<p><img data-src="https://statics.yvanz.com/jj-memory.jpg"><br>&amp;nbsp;</p>
-<blockquote>
-<p>从第一张专辑开始，11分钟听完十一年的24首经典歌曲。一路走来，他都是安静地唱着歌，如今回头看去才恍然发现，原来我的青春里一直都有林俊杰。谢谢你的歌，点缀着我的年少时光</span></p>
-</blockquote>
-<p>最近在微博看到了echo回声APP官博发的一条载有林俊杰歌曲串烧的微博，而且不少朋友都有分享。刚刚好奇的点进去试听，原来十一分钟回忆十一年的感觉就是这样的。于是一个没忍住把原音下载了下来，顺便拿出来分享。希望echo回声以及原创者不要介意。</p>
-<p>echo回声原链：<a href="http://echo.kibey.com/sound/250541">http://echo.kibey.com/sound/250541</a></p>
-<p>echo回声微博链接：<a href="http://weibo.com/5195897697/C218GiAXX">http://weibo.com/5195897697/C218GiAXX</a></p>
-<p>下载链接：<a href="http://pan.baidu.com/s/1o6sm2q2">http://pan.baidu.com/s/1o6sm2q2</a></p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LVS详解及基于LVS实现web服务器负载均衡</title>
     <url>/2015/06/02/lvs-info-lvs-web.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>LVS(Linux Virtual Server)Linux虚拟服务器，是一个虚拟的服务器集群系统。本项目在1998年5月由章文嵩博士成立，是中国国内最早出现的自由软件项目之一。通过LVS提供的负载均衡技术和Linux操作系统可实现一个高性能、高可用的服务器群集，从而以低成本实现最优的服务性能。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>LVS(Linux Virtual Server)Linux虚拟服务器，是一个虚拟的服务器集群系统。本项目在1998年5月由章文嵩博士成立，是中国国内最早出现的自由软件项目之一。通过LVS提供的负载均衡技术和Linux操作系统可实现一个高性能、高可用的服务器群集，从而以低成本实现最优的服务性能。</p>
 <h2 id="集群基础"><a href="#集群基础" class="headerlink" title="集群基础"></a>集群基础</h2><h3 id="集群简介"><a href="#集群简介" class="headerlink" title="集群简介"></a>集群简介</h3><p>集群(Cluster)是一组相互独立的、通过高速网络互联的计算机，它们构成了一个组，并以单一系统的模式加以管理。一个客户与集群相互作用时，集群像是一个独立的服务器。集群配置是用于提高可用性和可缩放性。集群系统的主要优点：高可扩展性、高可用性、高性能、高性价比。</p>
 <h3 id="集群类型"><a href="#集群类型" class="headerlink" title="集群类型"></a>集群类型</h3><p>LB：Load Balancing 高可拓展，伸缩集群<br>HA：High Availability 高可用集群<br>HP：High Performance 高性能集群</p>
 <h3 id="集群方案"><a href="#集群方案" class="headerlink" title="集群方案"></a>集群方案</h3><p>LB：<br>硬件级：F5 BIG-IP、Citrix Netscaler、 A10 A10、Array、Redware<br>软件级：lvs (传输层)、haproxy, nginx (应用层)</p>
@@ -989,7 +989,7 @@
   <entry>
     <title>MySQL二进制日志安全删除</title>
     <url>/2014/05/30/mysql-bin-log.html</url>
-    <content><![CDATA[<p>一、Reset master</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一、Reset master</p>
 <p>这个语句可以验证首次配置主机备机是否成功、步骤如下：</p>
 <p>1.&amp;nbsp;启动master和 slave，开启replication (即&amp;nbsp;复制)</p>
 <p>注：replication&amp;nbsp;(复制)&amp;nbsp;也是mysql一个重要的技术</p>
@@ -1039,7 +1039,7 @@
   <entry>
     <title>如何进行MySQL数据库表的故障检测</title>
     <url>/2014/12/04/mysql-error-check.html</url>
-    <content><![CDATA[<p><strong>表的故障检测和修正的一般过程如下：</strong></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>表的故障检测和修正的一般过程如下：</strong></p>
 <p>◆ 检查出错的表。如果该表检查通过，则完成任务，否则必须修复出错的数据库表。</p>
 <p>◆ 在开始修复之前对表文件进行拷贝，以保证数据的安全。</p>
 <p>◆ 开始修复数据库表。</p>
@@ -1098,9 +1098,56 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL主从复制</title>
+    <url>/2014/05/30/mysql-master-slave.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
+<ul>
+<li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
+<p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
+</li>
+<li><p>修改从数据库配置文件my.cnf（or my.ini）</p>
+<p>设置server_id&#x3D;2 重启从服务器MySQL服务</p>
+</li>
+<li><p>在主数据库新建一个用来复制的用户（下划线处可自定义）</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%（此处也可定义为自己的从服务器IP）&#x27;</span>IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;slavepass&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在新建数据快照或者开启复制进程之前，需要定位主服务器二进制日志的坐标</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; FLUSH TABLES WITH READ LOCK;    --对于InnoDB表，该操作还会锁定commit操作</span><br><span class="line">mysql&gt; SHOW MASTER STATUS;    --记录file和position的值。这条命令最好新建一个会话再执行。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>若你的主数据库已经存有数据，并且你希望从服务器同步这些数据。那么你需要新建一个数据快照。一般新建数据快照的方式有两种：MySQLdump；直接拷贝数据文件。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysqldump --all-databases --master-data &gt; dbdump.db --该事例表示将所有数据库导出到一个名为dbdump.db的文件中，附加的 --master-data命令，官方文档解释了一大堆，看着似懂非懂，反正都加上吧-。- 如果你的数据库比较大，那么将原始数据文件直接复制到从服务器比使用mysqldump要效率很多。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>解锁主数据库</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; UNLOCK TABLES;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将主数据库的dump出的文件导入到从服务器</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysql &lt; dbdump.db</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在从服务器开启复制进程</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE;  <span class="comment">--一般情况下是启动不了的，必须先change master to </span></span><br><span class="line">mysql<span class="operator">&gt;</span> CHANGE MASTER <span class="keyword">TO</span></span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_HOST<span class="operator">=</span><span class="string">&#x27;master_host_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_USER<span class="operator">=</span><span class="string">&#x27;replication_user_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;replication_password&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_FILE<span class="operator">=</span><span class="string">&#x27;recorded_log_file_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_POS<span class="operator">=</span>recorded_log_position;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE; </span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> slave status \G <span class="comment">--检查Slave_IO_Running以及Slave_SQL_Running，如果都为yes则主从复制配置成功。若不成功，该命令可以看到相关报错。</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PHP连接sql server</title>
     <url>/2014/06/25/php-sql-server.html</url>
-    <content><![CDATA[<p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
 <p>化繁为简，先说说Linux平台的php怎么连接：</p>
 <p>首先下载freeTDS，解压安装。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/freetds --with-tdsver=8.0 --enable-msdblib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
@@ -1149,56 +1196,9 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL主从复制</title>
-    <url>/2014/05/30/mysql-master-slave.html</url>
-    <content><![CDATA[<p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
-<ul>
-<li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
-<p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
-</li>
-<li><p>修改从数据库配置文件my.cnf（or my.ini）</p>
-<p>设置server_id&#x3D;2 重启从服务器MySQL服务</p>
-</li>
-<li><p>在主数据库新建一个用来复制的用户（下划线处可自定义）</p>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%（此处也可定义为自己的从服务器IP）&#x27;</span>IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;slavepass&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在新建数据快照或者开启复制进程之前，需要定位主服务器二进制日志的坐标</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; FLUSH TABLES WITH READ LOCK;    --对于InnoDB表，该操作还会锁定commit操作</span><br><span class="line">mysql&gt; SHOW MASTER STATUS;    --记录file和position的值。这条命令最好新建一个会话再执行。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>若你的主数据库已经存有数据，并且你希望从服务器同步这些数据。那么你需要新建一个数据快照。一般新建数据快照的方式有两种：MySQLdump；直接拷贝数据文件。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysqldump --all-databases --master-data &gt; dbdump.db --该事例表示将所有数据库导出到一个名为dbdump.db的文件中，附加的 --master-data命令，官方文档解释了一大堆，看着似懂非懂，反正都加上吧-。- 如果你的数据库比较大，那么将原始数据文件直接复制到从服务器比使用mysqldump要效率很多。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>解锁主数据库</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; UNLOCK TABLES;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>将主数据库的dump出的文件导入到从服务器</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysql &lt; dbdump.db</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在从服务器开启复制进程</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE;  <span class="comment">--一般情况下是启动不了的，必须先change master to </span></span><br><span class="line">mysql<span class="operator">&gt;</span> CHANGE MASTER <span class="keyword">TO</span></span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_HOST<span class="operator">=</span><span class="string">&#x27;master_host_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_USER<span class="operator">=</span><span class="string">&#x27;replication_user_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;replication_password&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_FILE<span class="operator">=</span><span class="string">&#x27;recorded_log_file_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_POS<span class="operator">=</span>recorded_log_position;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE; </span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> slave status \G <span class="comment">--检查Slave_IO_Running以及Slave_SQL_Running，如果都为yes则主从复制配置成功。若不成功，该命令可以看到相关报错。</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>系统端口也是稀缺资源呐</title>
     <url>/2016/11/16/port-is-also-a-kind-of-resourse.html</url>
-    <content><![CDATA[<h2 id="直面问题"><a href="#直面问题" class="headerlink" title="直面问题"></a>直面问题</h2><p>上午的时候，公司的一个网站因为激发流量，服务有些不稳定。通过一个监控页面显示memcached已经无法连接，但是memcached进程明明是存活的。于是好奇的<code>telnet</code>了一下，果然有些问题，给我反馈了一个<code>Cannot assign requested address</code>。然而当时也没有多想，单纯的以为端口不通了，索性就重启了memcached，可是发现并没有解决问题。而且看到端口也是在监听状态，并且用本机IP的连接11211端口是可以连通的。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="直面问题"><a href="#直面问题" class="headerlink" title="直面问题"></a>直面问题</h2><p>上午的时候，公司的一个网站因为激发流量，服务有些不稳定。通过一个监控页面显示memcached已经无法连接，但是memcached进程明明是存活的。于是好奇的<code>telnet</code>了一下，果然有些问题，给我反馈了一个<code>Cannot assign requested address</code>。然而当时也没有多想，单纯的以为端口不通了，索性就重启了memcached，可是发现并没有解决问题。而且看到端口也是在监听状态，并且用本机IP的连接11211端口是可以连通的。</p>
 <span id="more"></span>
 
 <p>在思考了一会儿之后，看了一下memcached的tcp状态，发现已经积攒了数万的<code>TIME_WAIT</code>。这下子就能对的上先前的“无法分配响应地址”的错误提示了。结合这个网站的实际环境，因为程序本身强依赖memcached，而且该服务器的session也存放在本地的memcached。所以可能由于访问量突然的激增，导致memcached并发了太多的短连接，并且这些结束的连接需要2MSL（Max Segment Lifetime）才会变成<code>CLOSED</code>状态。如此反复就超过Linux本身的限制了。</p>
@@ -1219,7 +1219,7 @@
   <entry>
     <title>Python脚本内自定义域名解析的IP</title>
     <url>/2016/03/09/python-custom-ip-resolve.html</url>
-    <content><![CDATA[<p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
 <p>由于服务器走公网解析我们域名的话，同样只有一台服务器完成功能。所以我想着是不是在不修改本机hosts的情况下，在Python脚本内实现对域名的解析。带着这个想法，终于在<a href="http://stackoverflow.com/questions/2236498/tell-urllib2-to-use-custom-dns">stackoverflow</a>上找到了可行的答案。</p>
 <p>大致思路是，首先定义一个函数，记录你需要自定义IP的域名，并建立一个httplib.HTTPConnection的子类，在参数传递给socket.create_connection前修改self.host以封装connection方法。然后继承HTTPHandler这个类，用上面的HTTPConnection替换httplib内自带的HTTPConnection，并重写http_open方法；最后把HTTPHandler放到自定义的opener。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> httplib</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">req_host</span>(<span class="params">host</span>):</span><br><span class="line">        <span class="keyword">if</span> host == <span class="string">&#x27;www.***.cn&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&#x27;8.8.8.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPConnection</span>(httplib.HTTPConnection):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">connect</span>(<span class="params">self</span>):</span><br><span class="line">                self.sock = socket.create_connection((req_host(self.host),self.port),self.timeout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPHandler</span>(urllib2.HTTPHandler):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">http_open</span>(<span class="params">self,req</span>):</span><br><span class="line">                <span class="keyword">return</span> self.do_open(MyHTTPConnection,req)</span><br><span class="line"></span><br><span class="line">opener = urllib2.build_opener(MyHTTPHandler)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://&#x27;</span></span><br><span class="line">f = urllib2.urlopen(url)</span><br><span class="line">req = f.read()</span><br><span class="line"><span class="built_in">print</span> req</span><br></pre></td></tr></table></figure>
@@ -1234,7 +1234,7 @@
   <entry>
     <title>Python编码处理小结</title>
     <url>/2016/11/25/python-encoding-note.html</url>
-    <content><![CDATA[<p>经常在coding时被Python的编码报错折腾的半死，然而看到<a href="http://wklken.me/posts/2013/08/31/python-extra-coding-intro.html#ide">wklken</a>写的这篇文章，对编码的思路清晰了不少，赶紧复制过来记录一下。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>经常在coding时被Python的编码报错折腾的半死，然而看到<a href="http://wklken.me/posts/2013/08/31/python-extra-coding-intro.html#ide">wklken</a>写的这篇文章，对编码的思路清晰了不少，赶紧复制过来记录一下。</p>
 <span id="more"></span>
 
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>用python处理中文时，读取文件或消息，http参数等等</p>
@@ -1384,7 +1384,7 @@
   <entry>
     <title>被折腾了一把按键精灵</title>
     <url>/2016/09/22/reboot-app-with-anjianjingling.html</url>
-    <content><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>线上有台Windows服务器，上面跑了一个第三方C&#x2F;S架构的程序。因为这个程序比较矫情，经常与这第三方的通信中断，然后就得手动重启。而重启之后报错几率很大，反复登录得消耗很长时间。所以别人提到是不是可以用按键精灵自动完成输密码登录的操作。当时觉得还是有点为难的，因为输密码那个地方，屏蔽了很多自动输入的方式，不过好在最后找到了解决办法，算是弄出来了。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>线上有台Windows服务器，上面跑了一个第三方C&#x2F;S架构的程序。因为这个程序比较矫情，经常与这第三方的通信中断，然后就得手动重启。而重启之后报错几率很大，反复登录得消耗很长时间。所以别人提到是不是可以用按键精灵自动完成输密码登录的操作。当时觉得还是有点为难的，因为输密码那个地方，屏蔽了很多自动输入的方式，不过好在最后找到了解决办法，算是弄出来了。</p>
 <span id="more"></span>
 
 <p>不过现在这代码断开远程桌面之后就执行不了了，算是一个弊端，而且刚接触手写按键精灵的代码，基本上写的很面向过程，哈哈。想起来高中那几年，要是当初能把按键精灵研究好，当时玩天龙八部也不至于那么乏味枯燥吧。下面直接上码。</p>
@@ -1398,7 +1398,7 @@
   <entry>
     <title>Redis安装和基本配置</title>
     <url>/2015/01/13/redis-installed.html</url>
-    <content><![CDATA[<p>1.下载redis</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1.下载redis</p>
 <p><a href="http://redis.io/download">http://redis.io/download</a></p>
 <p>2.解压</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar xzf redis-2.8.19.tar.gz</span><br></pre></td></tr></table></figure>
@@ -1455,7 +1455,7 @@
   <entry>
     <title>Rewrite</title>
     <url>/2015/02/01/rewrite.html</url>
-    <content><![CDATA[<p>nginx for wordpress</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>nginx for wordpress</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    root   /data/Yvanz;</span><br><span class="line">    index  index.html index.htm index.php;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php?q=<span class="variable">$uri</span>&amp;amp;<span class="variable">$args</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>nginx for thinkphp</p>
@@ -1468,39 +1468,9 @@
       </tags>
   </entry>
   <entry>
-    <title>哎呀，网站又被黑了</title>
-    <url>/2016/04/12/site-be-hacked-again.html</url>
-    <content><![CDATA[<p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
-<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
-<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
-<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
-<blockquote>
-<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
-</blockquote>
-<p>既然知道了原理，那么就好排查问题了。</p>
-<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
-<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
-<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
-<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
-<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
-<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>警告，服务器负载过高</title>
     <url>/2016/04/21/server-with-high-load-average.html</url>
-    <content><![CDATA[<p>这周二开始十一点半，突然zabbix上看到网站集群上每台机器有好几千的并发请求，然后就是噼里啪啦的cpu过载报警。因为我们服务器高峰时的请求不会过一千，所以看到这个报警第一反应就是是不是又被恶意刷了（呃，为什么要说又）。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这周二开始十一点半，突然zabbix上看到网站集群上每台机器有好几千的并发请求，然后就是噼里啪啦的cpu过载报警。因为我们服务器高峰时的请求不会过一千，所以看到这个报警第一反应就是是不是又被恶意刷了（呃，为什么要说又）。</p>
 <p>首先筛了一遍日志，定位几个访问频率比较高的IP，详细看了他们的访问记录，似乎并没有恶意请求的样子，只不过日志里面有一种请求非常之多。服务器的流量也没有过高的起伏，后端数据库的压力也不大。再看一下php-fpm的status，所有进程都被叫起来干活了。</p>
 <p>仔细用top看看服务器负载，发现load average非常高，但是usr态和sys态只是维持在25%左右，内存占用不高，swap也没用多少，IO也没有异常。懵逼三秒钟，再用vmstat看看先</p>
 <p><img data-src="https://statics.yvanz.com/vmstat_info.png"></p>
@@ -1525,7 +1495,7 @@
   <entry>
     <title>为Linux开启两步验证</title>
     <url>/2015/03/03/ssh-google-authentication.html</url>
-    <content><![CDATA[<p>今天又想折腾了，于是着手试了一遍为服务器开启两步验证增强安全性。话不多说，实战开始。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天又想折腾了，于是着手试了一遍为服务器开启两步验证增强安全性。话不多说，实战开始。</p>
 <ul>
 <li>安装依赖包</li>
 </ul>
@@ -1585,9 +1555,39 @@
       </tags>
   </entry>
   <entry>
+    <title>哎呀，网站又被黑了</title>
+    <url>/2016/04/12/site-be-hacked-again.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
+<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
+<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
+<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
+<blockquote>
+<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
+</blockquote>
+<p>既然知道了原理，那么就好排查问题了。</p>
+<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
+<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
+<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
+<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
+<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
+<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Subversion安装配置</title>
     <url>/2014/04/02/subversion.html</url>
-    <content><![CDATA[<p>安装之前先which svn，查找系统中是否有svn命令。若找不到该命令，则欢迎往下看。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安装之前先which svn，查找系统中是否有svn命令。若找不到该命令，则欢迎往下看。</p>
 <p>首先是最简单的svn安装方式，即yum安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install svn -y</span><br></pre></td></tr></table></figure>
 
@@ -1665,28 +1665,9 @@
       </tags>
   </entry>
   <entry>
-    <title>The Fault</title>
-    <url>/2015/08/19/the-fault.html</url>
-    <content><![CDATA[<p><img data-src="https://statics.yvanz.com/the-fault-1.jpg"></p>
-<p>灯光暗灭，前奏响起。那场执念多年的演唱会终于拉开了帷幕。</p>
-<p>如我在开场时发的微博，那天虽然忙碌，可是安心坐下来的时候仍然怀疑他在合肥的演唱会真的能开始了吗，这场景本应存在于梦里才对。</p>
-<p>演唱会当天仍然不可避免的忙碌。虽淡出许久，可是对于安徽的活动总是有些牵挂。而至于这份牵挂的由来，可能要追溯回2010年跟小伙伴们相识的年份吧。那一年的一场商演，我误打误撞的认识了那样的一群人。那时候的安徽分会，也在那群人秉承着的某种意志下建立起来了。</p>
-<p>虽然那一年的商演最后由他的一句“不见不散”，变成了“因病缺席”。可是这一群人却变成了我年少时期几乎所有幸福的源头。于是他们所坚守的“安徽”也渐渐成为了我的执念。</p>
-<p>故事的开头总是美好的，故事的结局也总是被想象的很美好。原本大家约定安排妥当后借着一场活动完美告别。可是因为一些不解与愤慨，最后这场告别以一群人的裸退收场。而当我面对这样一个大家曾经那么用心经营的地方时，心里却满满的惋惜。想着让它茁壮成长下去才对得起他们那么多年那么多的用心吧。虽然刚开始的那半年忍受过多不解，可是最后也算坚持下来了。而且经过这场演唱会的验收，的确现在那些年轻的孩子们已经做的很棒很让人欣慰了。</p>
-<p>记得在这场演唱会只是公布行程的时候，就期待着能在奥体举办。因为他对这座场馆说过太多次的“不见不散”，但最终又因为各种说辞未能如约。甚至这场演唱会在开始前的一个月，都因为主办与经济公司之间的沟通不悦差点夭折，所以格外珍惜着最终的时线。更何况我曾听过从这座场馆里拨出的那么暖心连线的五月天，亲眼见过满场粉海的周杰伦，所以对于能在这里看到紫海便更加执念。</p>
-<p>所谓圆梦与遗憾，大体是人生里面最磨人的小妖精了吧。这场看似圆梦的演唱会，也因为一些遗憾，让我更深刻的纪念着。</p>
-<p><img data-src="https://statics.yvanz.com/the-fault-2.jpg"></p>
-<p>嗯，也谢谢今天所有的生日快乐。Love U U.</p>
-<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850682&amp;auto=1&amp;height=66" width="330"></iframe>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
     <title>微博春晚背后的技术故事</title>
     <url>/2015/04/01/technical-story-behind-the-spring-festival-weibo.html</url>
-    <content><![CDATA[<ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
 <li>前言</li>
 </ul>
 <p>一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。</p>
@@ -1757,9 +1738,28 @@
       </tags>
   </entry>
   <entry>
+    <title>The Fault</title>
+    <url>/2015/08/19/the-fault.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/the-fault-1.jpg"></p>
+<p>灯光暗灭，前奏响起。那场执念多年的演唱会终于拉开了帷幕。</p>
+<p>如我在开场时发的微博，那天虽然忙碌，可是安心坐下来的时候仍然怀疑他在合肥的演唱会真的能开始了吗，这场景本应存在于梦里才对。</p>
+<p>演唱会当天仍然不可避免的忙碌。虽淡出许久，可是对于安徽的活动总是有些牵挂。而至于这份牵挂的由来，可能要追溯回2010年跟小伙伴们相识的年份吧。那一年的一场商演，我误打误撞的认识了那样的一群人。那时候的安徽分会，也在那群人秉承着的某种意志下建立起来了。</p>
+<p>虽然那一年的商演最后由他的一句“不见不散”，变成了“因病缺席”。可是这一群人却变成了我年少时期几乎所有幸福的源头。于是他们所坚守的“安徽”也渐渐成为了我的执念。</p>
+<p>故事的开头总是美好的，故事的结局也总是被想象的很美好。原本大家约定安排妥当后借着一场活动完美告别。可是因为一些不解与愤慨，最后这场告别以一群人的裸退收场。而当我面对这样一个大家曾经那么用心经营的地方时，心里却满满的惋惜。想着让它茁壮成长下去才对得起他们那么多年那么多的用心吧。虽然刚开始的那半年忍受过多不解，可是最后也算坚持下来了。而且经过这场演唱会的验收，的确现在那些年轻的孩子们已经做的很棒很让人欣慰了。</p>
+<p>记得在这场演唱会只是公布行程的时候，就期待着能在奥体举办。因为他对这座场馆说过太多次的“不见不散”，但最终又因为各种说辞未能如约。甚至这场演唱会在开始前的一个月，都因为主办与经济公司之间的沟通不悦差点夭折，所以格外珍惜着最终的时线。更何况我曾听过从这座场馆里拨出的那么暖心连线的五月天，亲眼见过满场粉海的周杰伦，所以对于能在这里看到紫海便更加执念。</p>
+<p>所谓圆梦与遗憾，大体是人生里面最磨人的小妖精了吧。这场看似圆梦的演唱会，也因为一些遗憾，让我更深刻的纪念着。</p>
+<p><img data-src="https://statics.yvanz.com/the-fault-2.jpg"></p>
+<p>嗯，也谢谢今天所有的生日快乐。Love U U.</p>
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850682&amp;auto=1&amp;height=66" width="330"></iframe>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+  </entry>
+  <entry>
     <title>The Old Classmate</title>
     <url>/2014/05/21/the-old-classmate.html</url>
-    <content><![CDATA[<div style="text-align: right;">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
 这大概是一篇观后感吧，记在看了《同桌的你》之后
 </div>
 
@@ -1806,9 +1806,32 @@ Posted at 2014.6.14
       </categories>
   </entry>
   <entry>
+    <title>浪漫血液</title>
+    <url>/2015/01/01/the-romantic.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
+</div>
+&nbsp;
+
+<p>又到了交待这一年的时候了。</p>
+<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
+<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
+<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
+<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
+<div style="text-align: right;">
+——2015，我们值得更幸福
+</div>]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一场值得纪念的战役</title>
     <url>/2016/07/19/this-is-miracle-truly.html</url>
-    <content><![CDATA[<p><img data-src="http://ww4.sinaimg.cn/large/6482d531gw1f5pwcysmz4j20hp0a642d.jpg"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="http://ww4.sinaimg.cn/large/6482d531gw1f5pwcysmz4j20hp0a642d.jpg"></p>
 <p>也许这是林俊杰家第一次与各领域明星粉丝在一场投票争夺战中“厮杀”。起初在看到这场活动的时候，我们内心其实对于能占领几个站点并没有底。因为从历次投票活动中，我们已经见识到韩星粉丝和鲜肉粉丝们的战斗力，只不过以前借由港台这个地区划分，免于正面对决。</p>
 <span id="more"></span>
 
@@ -1828,9 +1851,55 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
+    <title>致父亲</title>
+    <url>/2023/06/18/to-father.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>之前自己曾经在朋友圈转发过这样一条内容，现在这个时日重新再看的话，特别是自己配的那个表情，显得尤其的天真了。</p>
+<p><img data-src="https://statics.yvanz.com/2023/gene.jpeg"></p>
+<p>回想起来，当时看到这么犀利的观点，加上自己的一点小知识分子气焰作祟，便转发到了朋友圈，尤其是即将跨年的时刻。因为我知道总会没有父亲的，只是若干年后的现在，才着实体会到他所说的“接受这一点就更难了”。去年 10 月父亲的复查结果不理想时，我从未去想这件事，可是以后只能去想了。</p>
+<p>我的父亲其实是一位很典型的中国式父亲，还记得 2012 年春节前自己做了一个小手术，在医院里住了大概不到一个星期，期间我的父亲从未来过医院，虽然从小到大的生活习惯让我并没有觉得这种做法有什么问题。他也沉迷这个年纪的中年人普遍的爱好，热衷参与麻将以及各种酒桌，对此我也常常颇有微词。</p>
+<p>他也是一名很典型的中国式男性，出身清苦，却一直为小家努力打拼，早年对待工作也很积极和踏实。我们的家境也的确因为这种踏实，逐渐有点起色，虽不算富，却很知足。只是他并没有多少时光享受这种起色了。</p>
+<p>就是这样一位普通到不能再普通的父亲，在我有限的时光里只见他流过两次泪。一次是在我爷爷的葬礼上，而第二次，便是去年 12 月我去医院看他的时候。而哭的原因，不过是觉得往常我回家的时候，他都能备好我喜欢吃的，而现在只能躺在病床上，再也没有能力做这样的事情了。我的父亲就像一座山一样，平时尽力的保护和“纵容”着我。我自认在亲戚的酒桌上是一个“无礼”的人，父亲在的时候，我总能有各种托词和靠山。只是从今以后，这些世俗的事情我得自己去面对了。</p>
+<p>也是从那之后，每次回家发现他的身体都在肉眼可见的衰弱。12 月底我临走前一天晚上，他还能来我房间跟我闲聊几句。聊天结束时，我看到他已经佝偻的身体从凳子上缓缓站起来，然后两只手借助着转身的惯性，背在身后缓缓的离开了，尽力的保持着优雅。而春节之后，他只能坐在自己的床上跟我道别。直到 2 月份去世前的那周，我吃完午饭准备离开家的时候，他却因为身体的能量已经不能很好的支撑大脑保持清醒，在我告别时，他在那昏昏欲睡，显得有点恍惚。</p>
+<p>对于我而言，多多少少是有些遗憾的。遗憾因为一些限制，并没有让他多多体验我现在的生活，遗憾他治病的过程中，我是不是能陪的更多，贡献的更多。遗憾最后的时候，我没能回到身边，只是前一天晚上通过视频进行了简单的问候。反而好像是他尽力让我不要有太多遗憾，因为去年国庆假期之后，他不顾我们的反对，要来看看我刚换不久的房子，或许当时他就发觉自己的身体不对劲了吧。也的确谢谢他的坚持，否则按照我们想让他复查后再来看看的计划，或许真的就再也不能来了。而他回家时发的圈，也成了他留在朋友圈的最后一条内容。</p>
+<p><img data-src="https://statics.yvanz.com/2023/back-home.jpeg"></p>
+<p>我也不愿意悲伤，尤其是借着回忆写这样的一篇文章，过程本身就是痛苦的。因为行文过程中总是有这样那样的情绪和回忆打断自己的思路。我记得在殡仪馆的时候，其实心里并没有多少波澜。只是觉得躺在那里的那个人，曾经不是很伟岸吗，怎么现在看起来那么瘦小，而一个活生生的人变成一张照片，一块石碑，就是一种结束吗。</p>
+<p>只是不知为何，今早刚睁眼的时候，所有的情绪突然喷涌而出无法自已。哦，大概这就是所谓的“接受这一点就更难了”吧，而这种情绪，对生者是持久的，是绵绵不绝的。</p>
+<p>今年看《流浪地球2》的时候，因为经历过这一切，对数字生命的概念也向往了好久，或多或少的同情图恒宇的行为。可是理性又告诉我，这种看似真实的虚拟生命，或许的确没有意义，而生命的印记能以任意一种形式在数字世界永存，才是真正有意义的事情吧。从这种角度看，Apple 的 Vision Pro 发布的 3D 视频功能，可能最适合普通人的生活。只是，我也不能用这样的产品去记录我与我的父亲了。</p>
+<p>爱是记得，嗯，那就希望用这一篇文章在数字世界永远的做个标记。</p>
+<img style="margin: auto;" data-src="https://statics.yvanz.com/2023/nio-remember.gif">
+
+
+        <div id="aplayer-oWDBTjZx" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-oWDBTjZx"),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+              title: "谢幕",
+              author: "林俊杰",
+              url: "https://statics.yvanz.com/2023/jjlin-hero.m4a",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>牢骚</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>tomcat应用占用CPU过高</title>
     <url>/2016/03/18/tomcat-app-with-high-cpu-utilization.html</url>
-    <content><![CDATA[<p>最近新上了个java应用，部署到服务器上之后发现运行一段时间之后服务器cpu的占用率会很高。排查了一遍之后，发现网上这篇文章的思路可以解决我遇到的问题，遂转载过来留存。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近新上了个java应用，部署到服务器上之后发现运行一段时间之后服务器cpu的占用率会很高。排查了一遍之后，发现网上这篇文章的思路可以解决我遇到的问题，遂转载过来留存。</p>
 <p>【转载】</p>
 <p>一个应用占用CPU很高，除了确实是计算密集型应用之外，通常原因都是出现了死循环。</p>
 <p>以我们最近出现的一个实际故障为例，介绍怎么定位和解决这类问题。</p>
@@ -1869,32 +1938,9 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
-    <title>浪漫血液</title>
-    <url>/2015/01/01/the-romantic.html</url>
-    <content><![CDATA[<div style="text-align: right;">
-<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
-</div>
-&nbsp;
-
-<p>又到了交待这一年的时候了。</p>
-<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
-<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
-<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
-<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
-<div style="text-align: right;">
-——2015，我们值得更幸福
-</div>]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web server常用应用版本号隐藏</title>
     <url>/2014/07/25/version-hidden.html</url>
-    <content><![CDATA[<p>Apache版本号隐藏：</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Apache版本号隐藏：</p>
 <p>1.修改Apache主配置文件httpd.conf，将#Include conf&#x2F;extra&#x2F;httpd-default.conf前的#去掉。</p>
 <p>2.修改extra&#x2F;httpd-default.conf，找到</p>
 <p>ServerTokens Full修改成ServerTokens Prod</p>
@@ -1911,129 +1957,9 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
-    <title>You are hacked</title>
-    <url>/2014/08/08/you-are-hacked.html</url>
-    <content><![CDATA[<p>大家好我又来科（zhuang）普（bility）了。偶然林俊杰官网的密码泄露风波四起，想想有必要聊聊这方面的问题。</p>
-<p>首先我们生活在一个怎样的网络世界呢？来看个链接吧。</p>
-<p><a href="http://www.wooyun.org/bugs/">http://www.wooyun.org/bugs/</a></p>
-<p>wooyuu所为何物？他们官方的介绍是这样的</p>
-<blockquote>
-<p>WooYun是一个位于厂商和安全研究者之间的安全问题反馈平台，在对安全问题进行反馈处理跟进的同时，为互联网安全研究者提供一个公益、学习、交流和研究的平台。其名字来源于目前互联网上的“云”，在这个不做“云”不好意思和人家打招呼的时代，网络安全相关的，无论是技术还是思路都会有点黑色的感觉，所以自然出现了乌云。</p>
-<p>你可以叫他乌云，或者巫云，或者我晕，但是我们坚信它是汇聚互联网安全研究者力量的，将带来暴风雨清洗一切的乌云。</p>
-</blockquote>
-<p>如果你点进链接大致浏览一遍，你就会发现几乎所有常用的互联网应用，都多多少少被爆过漏洞。这里不是想说网站存在漏洞是理所当然，而是想解释网站存在漏洞这个可能性在所难免，攻与防往往是相对发展的。加上互联网发达的今天，所谓的黑客技术门槛已然有所降低，有些零基础的有心之人拿着下载到的工具在线搜寻漏洞，然后根据漏洞再进行入侵已经变得不像想象中的那么困难。</p>
-<p>在这里我应该可以拿图举证：</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked1.jpg" alt="hacked1"></p>
-<p>这是我某一天例行检查服务器日志的时候看到的记录，这里有位仁兄在凌晨12点半的时候花了一个多小时的时间通过各种方式想找到我们服务器的漏洞（这大半夜的不睡觉想必也是蛮拼的），虽然无功而返，可是能发现漏洞信息交换的便捷，当某一个系统组件被爆出漏洞时，这些人就会根据自己掌握的这些信息在互联网上广撒网，如果网站的运维人员不及时跟进相关的漏洞信息，就容易让有心之人得逞。所以这需要网站背后的公司或个人进行持续的资金与人力投入，成本可谓大大的。</p>
-<p>接下来进入正题。</p>
-<p>虽然我不知道黑林俊杰官网的人是出于什么目的，但是大致有以下几个方面：</p>
-<ol>
-<li><p>对于自己所掌握的技术的自豪感，驱使有些人想通过拿下别人的网站获得自我认同。</p>
-</li>
-<li><p>增加自己手中用户数据库的内容</p>
-</li>
-<li><p>帮助网站寻找漏洞并提供解决方案，升级网站安全性</p>
-</li>
-</ol>
-<p>这里就主要说说第二点吧。不出意外的情况下，国内各种黑客的手中都有一些记录了别人账号和密码等敏感信息的数据库，他们拿着这些隐私数据能做很多事情，比如进你的网银花你的钱，用你的微信勾搭你的妹子（以上场景纯属虚构，如有雷同我不负责&#x3D;。&#x3D;）。如果顺利拿到林俊杰官网的用户数据，可以增加自己的数据库内容，因为很多用户的习惯是所有网站都使用相同的用户名和密码，如果顺利，黑客们就能用拿到的林俊杰官网的数据去撞库，测试他们想要的网站的信息。所以一再强调，我们要养成密码分级以及勤改密码的好习惯。</p>
-<p>比如你会遇到这样的场景：我一个很久很久没用的QQ号，为什么今天登陆上去被提示密码错误？没错啦，大致就是你的一些信息在别的地方被别人窃取，然后试出了你QQ的密码然后被修改了。</p>
-<p>更多密码泄露的原因可以点这里了解：<a href="http://blog.unnoo.com/?p=2181">http://blog.unnoo.com/?p=2181</a></p>
-<p>最后，据说林俊杰官网泄露的数据是去年关站维护之前被拿到的数据，里面只包括用户名和密码。理论上不必有太大的恐慌。不过因为关站维护之后更新官网网站程序，用的数据库包含了旧官网的数据，所以维护好之后的新官网我们可以用之前注册的账号密码进行登陆。具体猜测可见我去年的一条微博，链接为<a href="http://weibo.com/1686295857/Al296qPTI" title="http://weibo.com/1686295857/Al296qPTI">http://weibo.com/1686295857/Al296qPTI</a></p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked3.jpg" alt="hacked3"></p>
-<p>大概也是因为知道旧官网有被拖库吧，所以新官网开放之后，在我们登陆网站进入会员中心，时常提示修改密码，不知道各位还有没有印象。<br>&amp;nbsp;</p>
-<p>题外话：</p>
-<p>国内的环境是当有网站被爆出漏洞，一般容易开启某些不相关人员的嘲讽模式，可是嘲讽从来都不能解决问题，因为某一天你所依附的网络也有可能被入侵，被拖库，毕竟一般人用的网站程序，都是别人写好公布在网上的。</p>
-<p>如果你不作为，那么在那些有所作为的黑客面前，你将一无所有。这里的“你”包括所有互联网用户以及网站维护人员，peace~</p>
-<p>（本文如有技术逻辑错误，欢迎拍砖）</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>装逼遭雷劈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信红包系统设计 &amp; 优化</title>
-    <url>/2015/04/01/weixin-red-envelope.html</url>
-    <content><![CDATA[<p>编者按：经过2014年一年的酝酿，2015微信红包总量创下历史新高，峰值1400万次&#x2F;秒，8.1亿次每分钟，微信红包收发达10.1亿次，系统整体运行平稳, 在这里我分享下微信红包背后的技术。</p>
-<ul>
-<li>核心功能&amp;目标</li>
-</ul>
-<p>首先，了解下微信红包的4个逻辑：摇&#x2F;发&#x2F;抢&#x2F;拆。看似简单，实现可不简单再review下微信红包要实现目标：</p>
-<p>摇：摇的流畅</p>
-<p>快：抢的要快</p>
-<p>爽：拆的爽</p>
-<p>稳：能分享出去</p>
-<ul>
-<li>系统难点：</li>
-</ul>
-<p>1.中国运营商网络环境复杂，覆盖面广，春节期间网络吃紧，容易出现网络故障</p>
-<p>2.在尖峰摇时如何避免服务雪崩</p>
-<p>3.在服务资源有限时，如何提供柔性服务</p>
-<p>4.如何构造有损服务</p>
-<p>5.如何构造set模型</p>
-<p>6.如何解决并发抢</p>
-<p>7.如何实现实现数据一致性</p>
-<ul>
-<li>系统整体架构图</li>
-</ul>
-<p><img data-src="http://djt.qq.com/upload/public/common/2015/03/images/150327153526716.png?nothumb=false"></p>
-<ul>
-<li>跨区域网络解决方案</li>
-</ul>
-<p>微信客户端分布全球，接入点较多，用户资料靠近接入点，可以加速用户资料访问，但是红包的业务逻辑层并不全网分布，业务逻辑层访问数据层比较多，数据层有状态强一致性问题，只能同用一个数据副本，比如上海用户与深圳用户在同个群里，抢同一个红包，如果订单数据在上海与深圳都有，在抢的时候，无法保证数据同步，可用性低，所以，设计系统时，一定要梳理清楚系统间的调用关系，优化接入层的业务逻辑，把网络耗时降到最小，系统吞吐量才能提升。</p>
-<p>跨区域网络问题，在物理实施上，也需要有备份绕行的能力，这个可以在系统的底层框架中实现，当指定专线出现故障时，快速切换网络，恢复服务</p>
-<ul>
-<li>如何构建有损服务</li>
-</ul>
-<p>什么是有损服务？选择性牺牲一部分数据一致性和完整性从而保证核心功能绝大多数运行，经过一段时间窗口，数据一致性与完整性能得以恢复，这也是腾讯的一直运营策略，在有限资源前提下，量力而为，满足用户的核心需求</p>
-<p>比如，春晚摇一摇，我们的核心点是摇&#x2F;拆&#x2F;分享，那系统的资源优先需要保证这些服务的响应，任何关联系统出现异常的时候马上进行系统降级，防止引起系统雪崩。</p>
-<p>系统降级可以分为两个方面，一是把核心功能调用链路简化，减少依赖，通过辅助轻量化的服务实现，确保最短关键路径的可行，比方说在接入层置入摇红包逻辑，将每秒千万级请求转化为每秒万级的红包请求，再传到红包服务的后端逻辑，降低雪崩的可能性。</p>
-<ul>
-<li>柔性服务.打造好的产品体验</li>
-</ul>
-<p>柔性可用是在有损服务价值观支持下的方法，重点在于实际上会结合用户使用场景，根据资源消耗，调整产品策略，设计几个级别不同的用户体验场景，保证尽可能成功返回关键数据，并正常接受请求，绝不轻易倒下。</p>
-<p>比如，红包的核心功能拆，拆完需要记录用户头像昵称，转帐资金划转，同时输出同个订单下其它拆记录，拆过程这些操作都可能失败，但是核心操作获取红包是成功的，此时，我们至少可以告诉用户抢到金额，不至于让用户焦急等待，不断重试，未完成的操作(头像补全与资金转帐)，可以通异步补尝方式重试。这样解决了用户的问题，也缓解了系统压力。</p>
-<ul>
-<li>如何构造set模型</li>
-</ul>
-<p>Set模块就像一个集装箱，把各模块标准化，模块化，规模化，它为海量服务运营，特别是设备管理、网络架构，提供了宏观运营支撑框架，从而极大提高了海量服务运营效率。</p>
-<p>微信红包的set模块，以拆服务为例，从接入层开始，数据开始sticky，按订单号路由，即按单号分set，同一个set尽可能在一个IDC 里，减少模块间调用的耗时，在同一个set内，逻辑层任何一台机器，调用方可实时摘除，如果是数据层发生故障，先在接入层，把新产生的红包订单号屏蔽有故障对应的set编号，比如，set1 数据库出现故障，为了避免在故障的set1 上继续产生新的支付请求，在订单生成器直接跳过set1的单号规则，把新请求导致其它set, 只有未抢完的部分红包，会提示故障，稍后恢复，阻止了故障引发的进一步恶化，在故障db上的数据，通过备机与业务逻辑层的数据核对，完成数据一致性的修复。</p>
-<ul>
-<li>如何解决并发抢</li>
-</ul>
-<p>群里红包的规则是金额随机抢，在一个大群发一个红包出去，抢并发请求量高，在同一个资源上操作，需要增加锁操作，避免一个抢总数超过发送红包总数，众所周所，mysql的加锁操作，很多抢在一个锁上等，性能损耗大，吞吐量下降，对于海量服务的操作，是不能满足要求。</p>
-<p>在set模块的基础上，我们把发&#x2F;抢的资源请求都会落到同一个资源set，在最外层，cache红包的状态，如果红包已经被抢完了，即刻返回，如果红包未接完，对于一个红包进去抢环节还有限流，这是第一级保护，通过一致性hash算法，一一个单到dao层都会路由到同一个机器的同一个进程，dao到mysql在现一个连接上完成抢操作，把并发抢修改成串行化，mysql可以无锁等待，性能明显提升。</p>
-<ul>
-<li>如何实现数据一致性</li>
-</ul>
-<p>谈到分布式系统，先回顾CAP理论</p>
-<p>C：Consistency数据一致更新，所有变动都是同步的</p>
-<p>A：高可用，好的响应性能</p>
-<p>P: 分区容忍，可靠性</p>
-<p>在我们的系统设计中，同样碰到这个问题，无法同时满足三个因子，移动互联网系统，高可用性是必要要求，数据分区也是分布式系统的条件，所以，我们设计系统时，只能尽量保证数据一致性，只要一定时间窗口内，完成数据一致，让用户满意。</p>
-<p>微信红包的数据有几份，订单数据，用户数据，还有对应的cache数据，</p>
-<p>N：数据副本份数红包有三份</p>
-<p>R: 一次需读取的副本红包一次从一个副本可以全部读取需要数据</p>
-<p>W: 一次写入数据2份实时写，一分异步化</p>
-<p>R(1) + W(2) &lt;&#x3D;N从公式算出，我们的数据模型也是弱一致性</p>
-<p>用户数据是异步更新，更新失败，通过消息中心，异步重试，根据DB资源负载设置调用方的调用阀值，除了实时重试，我们还有准实时数据核对，保证数据最终一致性。</p>
-<p>&amp;nbsp;</p>
-<p>原文链接：<a href="http://djt.qq.com/article/view/1349">http://djt.qq.com/article/view/1349</a></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>转载学习</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>10张图带你深入理解Docker容器和镜像</title>
     <url>/2016/08/19/visualizing-docker-containers-and-images.html</url>
-    <content><![CDATA[<p>**转载地址：<a href="http://dockone.io/article/783">http://dockone.io/article/783</a> **</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>**转载地址：<a href="http://dockone.io/article/783">http://dockone.io/article/783</a> **</p>
 <p>【编者的话】本文用图文并茂的方式介绍了容器、镜像的区别和Docker每个命令后面的技术细节，能够很好的帮助读者深入理解Docker。</p>
 <span id="more"></span>
 
@@ -2120,9 +2046,129 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
+    <title>微信红包系统设计 &amp; 优化</title>
+    <url>/2015/04/01/weixin-red-envelope.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>编者按：经过2014年一年的酝酿，2015微信红包总量创下历史新高，峰值1400万次&#x2F;秒，8.1亿次每分钟，微信红包收发达10.1亿次，系统整体运行平稳, 在这里我分享下微信红包背后的技术。</p>
+<ul>
+<li>核心功能&amp;目标</li>
+</ul>
+<p>首先，了解下微信红包的4个逻辑：摇&#x2F;发&#x2F;抢&#x2F;拆。看似简单，实现可不简单再review下微信红包要实现目标：</p>
+<p>摇：摇的流畅</p>
+<p>快：抢的要快</p>
+<p>爽：拆的爽</p>
+<p>稳：能分享出去</p>
+<ul>
+<li>系统难点：</li>
+</ul>
+<p>1.中国运营商网络环境复杂，覆盖面广，春节期间网络吃紧，容易出现网络故障</p>
+<p>2.在尖峰摇时如何避免服务雪崩</p>
+<p>3.在服务资源有限时，如何提供柔性服务</p>
+<p>4.如何构造有损服务</p>
+<p>5.如何构造set模型</p>
+<p>6.如何解决并发抢</p>
+<p>7.如何实现实现数据一致性</p>
+<ul>
+<li>系统整体架构图</li>
+</ul>
+<p><img data-src="http://djt.qq.com/upload/public/common/2015/03/images/150327153526716.png?nothumb=false"></p>
+<ul>
+<li>跨区域网络解决方案</li>
+</ul>
+<p>微信客户端分布全球，接入点较多，用户资料靠近接入点，可以加速用户资料访问，但是红包的业务逻辑层并不全网分布，业务逻辑层访问数据层比较多，数据层有状态强一致性问题，只能同用一个数据副本，比如上海用户与深圳用户在同个群里，抢同一个红包，如果订单数据在上海与深圳都有，在抢的时候，无法保证数据同步，可用性低，所以，设计系统时，一定要梳理清楚系统间的调用关系，优化接入层的业务逻辑，把网络耗时降到最小，系统吞吐量才能提升。</p>
+<p>跨区域网络问题，在物理实施上，也需要有备份绕行的能力，这个可以在系统的底层框架中实现，当指定专线出现故障时，快速切换网络，恢复服务</p>
+<ul>
+<li>如何构建有损服务</li>
+</ul>
+<p>什么是有损服务？选择性牺牲一部分数据一致性和完整性从而保证核心功能绝大多数运行，经过一段时间窗口，数据一致性与完整性能得以恢复，这也是腾讯的一直运营策略，在有限资源前提下，量力而为，满足用户的核心需求</p>
+<p>比如，春晚摇一摇，我们的核心点是摇&#x2F;拆&#x2F;分享，那系统的资源优先需要保证这些服务的响应，任何关联系统出现异常的时候马上进行系统降级，防止引起系统雪崩。</p>
+<p>系统降级可以分为两个方面，一是把核心功能调用链路简化，减少依赖，通过辅助轻量化的服务实现，确保最短关键路径的可行，比方说在接入层置入摇红包逻辑，将每秒千万级请求转化为每秒万级的红包请求，再传到红包服务的后端逻辑，降低雪崩的可能性。</p>
+<ul>
+<li>柔性服务.打造好的产品体验</li>
+</ul>
+<p>柔性可用是在有损服务价值观支持下的方法，重点在于实际上会结合用户使用场景，根据资源消耗，调整产品策略，设计几个级别不同的用户体验场景，保证尽可能成功返回关键数据，并正常接受请求，绝不轻易倒下。</p>
+<p>比如，红包的核心功能拆，拆完需要记录用户头像昵称，转帐资金划转，同时输出同个订单下其它拆记录，拆过程这些操作都可能失败，但是核心操作获取红包是成功的，此时，我们至少可以告诉用户抢到金额，不至于让用户焦急等待，不断重试，未完成的操作(头像补全与资金转帐)，可以通异步补尝方式重试。这样解决了用户的问题，也缓解了系统压力。</p>
+<ul>
+<li>如何构造set模型</li>
+</ul>
+<p>Set模块就像一个集装箱，把各模块标准化，模块化，规模化，它为海量服务运营，特别是设备管理、网络架构，提供了宏观运营支撑框架，从而极大提高了海量服务运营效率。</p>
+<p>微信红包的set模块，以拆服务为例，从接入层开始，数据开始sticky，按订单号路由，即按单号分set，同一个set尽可能在一个IDC 里，减少模块间调用的耗时，在同一个set内，逻辑层任何一台机器，调用方可实时摘除，如果是数据层发生故障，先在接入层，把新产生的红包订单号屏蔽有故障对应的set编号，比如，set1 数据库出现故障，为了避免在故障的set1 上继续产生新的支付请求，在订单生成器直接跳过set1的单号规则，把新请求导致其它set, 只有未抢完的部分红包，会提示故障，稍后恢复，阻止了故障引发的进一步恶化，在故障db上的数据，通过备机与业务逻辑层的数据核对，完成数据一致性的修复。</p>
+<ul>
+<li>如何解决并发抢</li>
+</ul>
+<p>群里红包的规则是金额随机抢，在一个大群发一个红包出去，抢并发请求量高，在同一个资源上操作，需要增加锁操作，避免一个抢总数超过发送红包总数，众所周所，mysql的加锁操作，很多抢在一个锁上等，性能损耗大，吞吐量下降，对于海量服务的操作，是不能满足要求。</p>
+<p>在set模块的基础上，我们把发&#x2F;抢的资源请求都会落到同一个资源set，在最外层，cache红包的状态，如果红包已经被抢完了，即刻返回，如果红包未接完，对于一个红包进去抢环节还有限流，这是第一级保护，通过一致性hash算法，一一个单到dao层都会路由到同一个机器的同一个进程，dao到mysql在现一个连接上完成抢操作，把并发抢修改成串行化，mysql可以无锁等待，性能明显提升。</p>
+<ul>
+<li>如何实现数据一致性</li>
+</ul>
+<p>谈到分布式系统，先回顾CAP理论</p>
+<p>C：Consistency数据一致更新，所有变动都是同步的</p>
+<p>A：高可用，好的响应性能</p>
+<p>P: 分区容忍，可靠性</p>
+<p>在我们的系统设计中，同样碰到这个问题，无法同时满足三个因子，移动互联网系统，高可用性是必要要求，数据分区也是分布式系统的条件，所以，我们设计系统时，只能尽量保证数据一致性，只要一定时间窗口内，完成数据一致，让用户满意。</p>
+<p>微信红包的数据有几份，订单数据，用户数据，还有对应的cache数据，</p>
+<p>N：数据副本份数红包有三份</p>
+<p>R: 一次需读取的副本红包一次从一个副本可以全部读取需要数据</p>
+<p>W: 一次写入数据2份实时写，一分异步化</p>
+<p>R(1) + W(2) &lt;&#x3D;N从公式算出，我们的数据模型也是弱一致性</p>
+<p>用户数据是异步更新，更新失败，通过消息中心，异步重试，根据DB资源负载设置调用方的调用阀值，除了实时重试，我们还有准实时数据核对，保证数据最终一致性。</p>
+<p>&amp;nbsp;</p>
+<p>原文链接：<a href="http://djt.qq.com/article/view/1349">http://djt.qq.com/article/view/1349</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>转载学习</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>You are hacked</title>
+    <url>/2014/08/08/you-are-hacked.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>大家好我又来科（zhuang）普（bility）了。偶然林俊杰官网的密码泄露风波四起，想想有必要聊聊这方面的问题。</p>
+<p>首先我们生活在一个怎样的网络世界呢？来看个链接吧。</p>
+<p><a href="http://www.wooyun.org/bugs/">http://www.wooyun.org/bugs/</a></p>
+<p>wooyuu所为何物？他们官方的介绍是这样的</p>
+<blockquote>
+<p>WooYun是一个位于厂商和安全研究者之间的安全问题反馈平台，在对安全问题进行反馈处理跟进的同时，为互联网安全研究者提供一个公益、学习、交流和研究的平台。其名字来源于目前互联网上的“云”，在这个不做“云”不好意思和人家打招呼的时代，网络安全相关的，无论是技术还是思路都会有点黑色的感觉，所以自然出现了乌云。</p>
+<p>你可以叫他乌云，或者巫云，或者我晕，但是我们坚信它是汇聚互联网安全研究者力量的，将带来暴风雨清洗一切的乌云。</p>
+</blockquote>
+<p>如果你点进链接大致浏览一遍，你就会发现几乎所有常用的互联网应用，都多多少少被爆过漏洞。这里不是想说网站存在漏洞是理所当然，而是想解释网站存在漏洞这个可能性在所难免，攻与防往往是相对发展的。加上互联网发达的今天，所谓的黑客技术门槛已然有所降低，有些零基础的有心之人拿着下载到的工具在线搜寻漏洞，然后根据漏洞再进行入侵已经变得不像想象中的那么困难。</p>
+<p>在这里我应该可以拿图举证：</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked1.jpg" alt="hacked1"></p>
+<p>这是我某一天例行检查服务器日志的时候看到的记录，这里有位仁兄在凌晨12点半的时候花了一个多小时的时间通过各种方式想找到我们服务器的漏洞（这大半夜的不睡觉想必也是蛮拼的），虽然无功而返，可是能发现漏洞信息交换的便捷，当某一个系统组件被爆出漏洞时，这些人就会根据自己掌握的这些信息在互联网上广撒网，如果网站的运维人员不及时跟进相关的漏洞信息，就容易让有心之人得逞。所以这需要网站背后的公司或个人进行持续的资金与人力投入，成本可谓大大的。</p>
+<p>接下来进入正题。</p>
+<p>虽然我不知道黑林俊杰官网的人是出于什么目的，但是大致有以下几个方面：</p>
+<ol>
+<li><p>对于自己所掌握的技术的自豪感，驱使有些人想通过拿下别人的网站获得自我认同。</p>
+</li>
+<li><p>增加自己手中用户数据库的内容</p>
+</li>
+<li><p>帮助网站寻找漏洞并提供解决方案，升级网站安全性</p>
+</li>
+</ol>
+<p>这里就主要说说第二点吧。不出意外的情况下，国内各种黑客的手中都有一些记录了别人账号和密码等敏感信息的数据库，他们拿着这些隐私数据能做很多事情，比如进你的网银花你的钱，用你的微信勾搭你的妹子（以上场景纯属虚构，如有雷同我不负责&#x3D;。&#x3D;）。如果顺利拿到林俊杰官网的用户数据，可以增加自己的数据库内容，因为很多用户的习惯是所有网站都使用相同的用户名和密码，如果顺利，黑客们就能用拿到的林俊杰官网的数据去撞库，测试他们想要的网站的信息。所以一再强调，我们要养成密码分级以及勤改密码的好习惯。</p>
+<p>比如你会遇到这样的场景：我一个很久很久没用的QQ号，为什么今天登陆上去被提示密码错误？没错啦，大致就是你的一些信息在别的地方被别人窃取，然后试出了你QQ的密码然后被修改了。</p>
+<p>更多密码泄露的原因可以点这里了解：<a href="http://blog.unnoo.com/?p=2181">http://blog.unnoo.com/?p=2181</a></p>
+<p>最后，据说林俊杰官网泄露的数据是去年关站维护之前被拿到的数据，里面只包括用户名和密码。理论上不必有太大的恐慌。不过因为关站维护之后更新官网网站程序，用的数据库包含了旧官网的数据，所以维护好之后的新官网我们可以用之前注册的账号密码进行登陆。具体猜测可见我去年的一条微博，链接为<a href="http://weibo.com/1686295857/Al296qPTI" title="http://weibo.com/1686295857/Al296qPTI">http://weibo.com/1686295857/Al296qPTI</a></p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked3.jpg" alt="hacked3"></p>
+<p>大概也是因为知道旧官网有被拖库吧，所以新官网开放之后，在我们登陆网站进入会员中心，时常提示修改密码，不知道各位还有没有印象。<br>&amp;nbsp;</p>
+<p>题外话：</p>
+<p>国内的环境是当有网站被爆出漏洞，一般容易开启某些不相关人员的嘲讽模式，可是嘲讽从来都不能解决问题，因为某一天你所依附的网络也有可能被入侵，被拖库，毕竟一般人用的网站程序，都是别人写好公布在网上的。</p>
+<p>如果你不作为，那么在那些有所作为的黑客面前，你将一无所有。这里的“你”包括所有互联网用户以及网站维护人员，peace~</p>
+<p>（本文如有技术逻辑错误，欢迎拍砖）</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>装逼遭雷劈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>zabbix用户管理</title>
     <url>/2014/11/25/zabbix-adduser.html</url>
-    <content><![CDATA[<p><strong><span style="font-size:12px;">全文翻译自zabbix官方文档</span><a href="https://www.zabbix.com/documentation/2.4/manual/quickstart/login">https://www.zabbix.com/documentation/2.4/manual/quickstart/login</a></strong></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong><span style="font-size:12px;">全文翻译自zabbix官方文档</span><a href="https://www.zabbix.com/documentation/2.4/manual/quickstart/login">https://www.zabbix.com/documentation/2.4/manual/quickstart/login</a></strong></p>
 <p><strong><span style="font-size:12px;">并有删改编辑</span></strong></p>
 <p>&amp;nbsp;</p>
 <p>在这一节，我们将了解如何登陆并且在zabbix中设置一个系统账户。</p>
@@ -2218,113 +2264,9 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
-    <title>zabbix服务端与客户端安装</title>
-    <url>/2014/10/24/zabbix-ins.html</url>
-    <content><![CDATA[<p>zabbix的使用，是基于LAMP或者LNMP架构运行的，所以在安装zabbix之前必须先安装好Apache&#x2F;Nginx、MySQL以及PHP。其中Apache&#x2F;Nginx和MySQL的安装没有什么特别的，这里只梳理一下PHP的安装。</p>
-<p>下载php源码并解压缩，然后yum安装所需组件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install gd-devel libjpeg-devel libpng-devel libxml2-devel bzip2-devel libcurl-devel -y</span><br></pre></td></tr></table></figure>
-
-<p><strong>编译安装php</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir=/usr/local/iconv --with-freetype-dir=/usr/local --with-jpeg-dir=/usr/local --with-png-dir=/usr/local --with-zlib --with-libxml-dir=/usr/local --enable-xml --disable-rpath --enable-bcmath --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-fpm --enable-mbstring --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --with-xmlrpc --enable-zip --enable-mysqlnd --enable-wddx --enable-ftp --enable-calendar --with-libdir=lib64 --with-gettext --enable-sockets --with-apxs2=/usr/local/apache2/bin/apxs </span><br><span class="line">make &amp;&amp; make install </span><br><span class="line"><span class="built_in">cp</span> php.ini-production /usr/local/php/etc/php.ini</span><br></pre></td></tr></table></figure>
-
-<p>注：因为我的系统是64位，所以我在后面的参数中添加了–with-libdir&#x3D;lib64，并且我使用Apache与php搭配，所以还添加了Apache的参数–with-apxs2&#x3D;&#x2F;usr&#x2F;local&#x2F;apache2&#x2F;bin&#x2F;apxs</p>
-<p>按照zabbix要求配置php.ini，修改如下参数。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">memory_limit=128MB</span><br><span class="line">post_max_size=16MB</span><br><span class="line">upload_max_filesize=2M</span><br><span class="line">max_execution_time=300</span><br><span class="line">max_input_time=300</span><br><span class="line">always_populate_raw_post_data = -1（如果php版本是5.6.0及以上，这一项也需要修改）</span><br><span class="line">date.timezone=Asia/Shanghai</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装zabbix_server</strong></p>
-<p>下载zabbix源码压缩包并解压。</p>
-<p>创建zabbix用户</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">groupadd zabbix</span><br><span class="line">useradd -g zabbix zabbix</span><br></pre></td></tr></table></figure>
-
-<p>创建zabbix相关MySQL库（只有zabbix_server以及zabbix_proxy需要创建数据库）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot</span><br><span class="line">mysql&gt; create database zabbix character <span class="built_in">set</span> utf8 collate utf8_bin;</span><br><span class="line">mysql&gt; grant all privileges on zabbix.* to zabbix@localhost identified by <span class="string">&quot;zabbix&quot;</span>;</span><br><span class="line">mysql&gt; <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<p>进入zabbix源码的database&#x2F;mysql&#x2F;目录，按如下顺序导入三个sql文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot zabbix &lt; schema.sql</span><br><span class="line">mysql -uroot zabbix &lt; images.sql</span><br><span class="line">mysql -uroot zabbix &lt; data.sql</span><br></pre></td></tr></table></figure>
-
-<p>注：如果配置安装的是zabbix_server，则按照上述顺序导入sql文件，若安装的是zabbix_proxy，则只需要导入第一个文件schema.sql</p>
-<p>返回zabbix源码根目录，输入以下编译条件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/zabbix --enable-server --enable-agent --enable-proxy --with-mysql --with-net-snmp --with-libcurl</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>注：若只开启zabbix的server功能，可以在编译条件中删除–enable-agent –enable-proxy，上面我只是做演示用，具体还是以实际应用环境为主。</p>
-<p>安装好zabbix_server，便可以进sbin目录下运行zabbix_server。我在运行的时候还报了个错error while loading shared libraries: libmysqlclient.so.18。于是我妥妥的在MySQL的lib目录下找到了libmysqlclient.so.18，并软连到&#x2F;usr&#x2F;lib64，暂时解决。</p>
-<p><strong>安装zabbix_agent（Linux）</strong></p>
-<p>下载zabbix源码压缩包并解压。</p>
-<p>创建zabbix用户</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">useradd zabbix</span><br></pre></td></tr></table></figure>
-
-<p>进入zabbix源码根目录，输入以下编译条件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/zabbix --enable-agent</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>编辑zabbix_agentd.conf，根据实际情况修改Server、ServerActive的IP以及Hostname</p>
-<p>运行客户端</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sbin/zabbix_agentd</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装zabbix_agente（Windows）</strong></p>
-<p>下载Zabbix pre-compiled agents中的windows平台客户端</p>
-<p>解压至监控主机C盘根目录</p>
-<p>复制解压目录中conf&#x2F;下的zabbix_agentd.win.conf到C盘根目录并改名zabbix_agentd.conf（路径可自定义）</p>
-<p>打开命令行，进入刚刚解压的zabbix_agent的目录，根据自己的操作系统，选择进入bin&#x2F;win32或者bin&#x2F;win64</p>
-<p>如果确定使用默认的配置文件路径，则直接输入命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --install</span><br></pre></td></tr></table></figure>
-
-<p>若需要自定义zabbix_agentd.conf的路径，则安装命令为</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --config&lt;你的配置文件路径&gt; --install</span><br></pre></td></tr></table></figure>
-
-<p>安装成功后可以运行命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --start</span><br></pre></td></tr></table></figure>
-
-<p>运行agent服务，或者在windows服务面板中开启该服务。</p>
-<p>若需要卸载该服务，则运行命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --uninstall</span><br></pre></td></tr></table></figure>
-
-<p>至于zabbix_agentd.conf配置文件的编辑，则与上面Linux下的编辑内容一致。</p>
-<p><strong>安装zabbix web interface</strong></p>
-<p>因为zabbix的前端文件是用php写的，所以需要用支持php的web服务器，我选用的是Apache。所谓安装就是将zabbix源码根目录中frontends&#x2F;php下的所有文件复制到Apache的网站根目录，我偷了个懒，直接复制到Apache下htdocs了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r frontends/php /usr/local/apache/htdocs</span><br></pre></td></tr></table></figure>
-
-<p>复制完成后，在浏览器输入服务器的ip地址，开始在网页上跑一遍安装向导</p>
-<p><img data-src="https://statics.yvanz.com/zabbix1.png"></p>
-<p>第二步</p>
-<p>确定所有的软件先决条件是达标的。</p>
-<p><img data-src="https://statics.yvanz.com/zabbix2.png"></p>
-<p>第三步</p>
-<p>输入数据库的详细连接信息并连接成功（zabbix数据库必须是新建完成的）</p>
-<p><img data-src="https://statics.yvanz.com/zabbix3.png"></p>
-<p>第四步</p>
-<p>输入zabbix服务器的详细信息</p>
-<p><img data-src="https://statics.yvanz.com/zabbix4.png"></p>
-<p>第五步</p>
-<p>再次确认刚刚输入的信息</p>
-<p><img data-src="https://statics.yvanz.com/zabbix5.png"></p>
-<p>第六步</p>
-<p>Download the configuration file，然后上传至zabbix网页下conf&#x2F;文件夹中，比如我的zabbix网页存放在&#x2F;usr&#x2F;local&#x2F;apache&#x2F;htdocs&#x2F;，那么就需要将下载下来的文件存放至&#x2F;usr&#x2F;local&#x2F; apache&#x2F;htdocs&#x2F;conf&#x2F;</p>
-<p><img data-src="https://statics.yvanz.com/zabbix6.png"></p>
-<p>第七步</p>
-<p>完成安装。</p>
-<p><img data-src="https://statics.yvanz.com/zabbix7.png"></p>
-<p>第八步</p>
-<p>zabbix前端安装完毕，现在可以使用默认用户和密码登录了</p>
-<p>Username：Admin</p>
-<p>Password：zabbix</p>
-<p><img data-src="https://statics.yvanz.com/zabbix8.png"></p>
-<p><img data-src="https://statics.yvanz.com/zabbix9.1.png"></p>
-<p>更新启动脚本</p>
-<p>安装完毕后，按需在客户端和服务端复制启动脚本至&#x2F;etc&#x2F;init.d</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> zabbix源码目录/misc/init.d/fedora/core/zabbix_server /etc/init.d/zabbix_server</span><br><span class="line"><span class="built_in">cp</span> zabbix源码目录/misc/init.d/fedora/core/zabbix_agentd /etc/init.d/zabbix_agentd</span><br><span class="line"></span><br><span class="line">\<span class="comment">#给这两个文件加可执行权限</span></span><br><span class="line"><span class="built_in">chmod</span> +x /etc/init.d/zabbix_server</span><br><span class="line"><span class="built_in">chmod</span> +x /etc/init.d/zabbix_agentd</span><br><span class="line"></span><br><span class="line">\<span class="comment">#修改脚本文件的BASEDIR为zabbix实际安装目录并启动</span></span><br><span class="line">service zabbix_server start</span><br><span class="line">service zabbix_agentd start</span><br><span class="line">\<span class="comment">#加入开机启动项</span></span><br><span class="line">chkconfig zabbix_server on</span><br><span class="line">chkconfig zabbix_agentd on</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>zabbix</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>zabbix新建监控项item</title>
     <url>/2014/11/27/zabbix-create-item.html</url>
-    <content><![CDATA[<p>首先我们了解一下什么是zabbix的item（监控项）</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先我们了解一下什么是zabbix的item（监控项）</p>
 <p>所谓监控项是zabbix收集数据的基础。没有监控项就没有数据，因为一个监控项定义了一组特殊数据，或者说定义了什么样的数据从监控主机发往监控服务端。例如我需要监控一台主机的cpu情况，则监控项就是收集cpu状态并发往服务端的。</p>
 <p>&amp;nbsp;</p>
 <p><strong>新建一个监控项</strong></p>
@@ -2711,9 +2653,113 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
+    <title>zabbix服务端与客户端安装</title>
+    <url>/2014/10/24/zabbix-ins.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>zabbix的使用，是基于LAMP或者LNMP架构运行的，所以在安装zabbix之前必须先安装好Apache&#x2F;Nginx、MySQL以及PHP。其中Apache&#x2F;Nginx和MySQL的安装没有什么特别的，这里只梳理一下PHP的安装。</p>
+<p>下载php源码并解压缩，然后yum安装所需组件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install gd-devel libjpeg-devel libpng-devel libxml2-devel bzip2-devel libcurl-devel -y</span><br></pre></td></tr></table></figure>
+
+<p><strong>编译安装php</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir=/usr/local/iconv --with-freetype-dir=/usr/local --with-jpeg-dir=/usr/local --with-png-dir=/usr/local --with-zlib --with-libxml-dir=/usr/local --enable-xml --disable-rpath --enable-bcmath --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-fpm --enable-mbstring --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --with-xmlrpc --enable-zip --enable-mysqlnd --enable-wddx --enable-ftp --enable-calendar --with-libdir=lib64 --with-gettext --enable-sockets --with-apxs2=/usr/local/apache2/bin/apxs </span><br><span class="line">make &amp;&amp; make install </span><br><span class="line"><span class="built_in">cp</span> php.ini-production /usr/local/php/etc/php.ini</span><br></pre></td></tr></table></figure>
+
+<p>注：因为我的系统是64位，所以我在后面的参数中添加了–with-libdir&#x3D;lib64，并且我使用Apache与php搭配，所以还添加了Apache的参数–with-apxs2&#x3D;&#x2F;usr&#x2F;local&#x2F;apache2&#x2F;bin&#x2F;apxs</p>
+<p>按照zabbix要求配置php.ini，修改如下参数。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">memory_limit=128MB</span><br><span class="line">post_max_size=16MB</span><br><span class="line">upload_max_filesize=2M</span><br><span class="line">max_execution_time=300</span><br><span class="line">max_input_time=300</span><br><span class="line">always_populate_raw_post_data = -1（如果php版本是5.6.0及以上，这一项也需要修改）</span><br><span class="line">date.timezone=Asia/Shanghai</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装zabbix_server</strong></p>
+<p>下载zabbix源码压缩包并解压。</p>
+<p>创建zabbix用户</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">groupadd zabbix</span><br><span class="line">useradd -g zabbix zabbix</span><br></pre></td></tr></table></figure>
+
+<p>创建zabbix相关MySQL库（只有zabbix_server以及zabbix_proxy需要创建数据库）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot</span><br><span class="line">mysql&gt; create database zabbix character <span class="built_in">set</span> utf8 collate utf8_bin;</span><br><span class="line">mysql&gt; grant all privileges on zabbix.* to zabbix@localhost identified by <span class="string">&quot;zabbix&quot;</span>;</span><br><span class="line">mysql&gt; <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>进入zabbix源码的database&#x2F;mysql&#x2F;目录，按如下顺序导入三个sql文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot zabbix &lt; schema.sql</span><br><span class="line">mysql -uroot zabbix &lt; images.sql</span><br><span class="line">mysql -uroot zabbix &lt; data.sql</span><br></pre></td></tr></table></figure>
+
+<p>注：如果配置安装的是zabbix_server，则按照上述顺序导入sql文件，若安装的是zabbix_proxy，则只需要导入第一个文件schema.sql</p>
+<p>返回zabbix源码根目录，输入以下编译条件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/zabbix --enable-server --enable-agent --enable-proxy --with-mysql --with-net-snmp --with-libcurl</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>注：若只开启zabbix的server功能，可以在编译条件中删除–enable-agent –enable-proxy，上面我只是做演示用，具体还是以实际应用环境为主。</p>
+<p>安装好zabbix_server，便可以进sbin目录下运行zabbix_server。我在运行的时候还报了个错error while loading shared libraries: libmysqlclient.so.18。于是我妥妥的在MySQL的lib目录下找到了libmysqlclient.so.18，并软连到&#x2F;usr&#x2F;lib64，暂时解决。</p>
+<p><strong>安装zabbix_agent（Linux）</strong></p>
+<p>下载zabbix源码压缩包并解压。</p>
+<p>创建zabbix用户</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">useradd zabbix</span><br></pre></td></tr></table></figure>
+
+<p>进入zabbix源码根目录，输入以下编译条件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/zabbix --enable-agent</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>编辑zabbix_agentd.conf，根据实际情况修改Server、ServerActive的IP以及Hostname</p>
+<p>运行客户端</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sbin/zabbix_agentd</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装zabbix_agente（Windows）</strong></p>
+<p>下载Zabbix pre-compiled agents中的windows平台客户端</p>
+<p>解压至监控主机C盘根目录</p>
+<p>复制解压目录中conf&#x2F;下的zabbix_agentd.win.conf到C盘根目录并改名zabbix_agentd.conf（路径可自定义）</p>
+<p>打开命令行，进入刚刚解压的zabbix_agent的目录，根据自己的操作系统，选择进入bin&#x2F;win32或者bin&#x2F;win64</p>
+<p>如果确定使用默认的配置文件路径，则直接输入命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --install</span><br></pre></td></tr></table></figure>
+
+<p>若需要自定义zabbix_agentd.conf的路径，则安装命令为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --config&lt;你的配置文件路径&gt; --install</span><br></pre></td></tr></table></figure>
+
+<p>安装成功后可以运行命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --start</span><br></pre></td></tr></table></figure>
+
+<p>运行agent服务，或者在windows服务面板中开启该服务。</p>
+<p>若需要卸载该服务，则运行命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">zabbix_agentd.exe --uninstall</span><br></pre></td></tr></table></figure>
+
+<p>至于zabbix_agentd.conf配置文件的编辑，则与上面Linux下的编辑内容一致。</p>
+<p><strong>安装zabbix web interface</strong></p>
+<p>因为zabbix的前端文件是用php写的，所以需要用支持php的web服务器，我选用的是Apache。所谓安装就是将zabbix源码根目录中frontends&#x2F;php下的所有文件复制到Apache的网站根目录，我偷了个懒，直接复制到Apache下htdocs了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r frontends/php /usr/local/apache/htdocs</span><br></pre></td></tr></table></figure>
+
+<p>复制完成后，在浏览器输入服务器的ip地址，开始在网页上跑一遍安装向导</p>
+<p><img data-src="https://statics.yvanz.com/zabbix1.png"></p>
+<p>第二步</p>
+<p>确定所有的软件先决条件是达标的。</p>
+<p><img data-src="https://statics.yvanz.com/zabbix2.png"></p>
+<p>第三步</p>
+<p>输入数据库的详细连接信息并连接成功（zabbix数据库必须是新建完成的）</p>
+<p><img data-src="https://statics.yvanz.com/zabbix3.png"></p>
+<p>第四步</p>
+<p>输入zabbix服务器的详细信息</p>
+<p><img data-src="https://statics.yvanz.com/zabbix4.png"></p>
+<p>第五步</p>
+<p>再次确认刚刚输入的信息</p>
+<p><img data-src="https://statics.yvanz.com/zabbix5.png"></p>
+<p>第六步</p>
+<p>Download the configuration file，然后上传至zabbix网页下conf&#x2F;文件夹中，比如我的zabbix网页存放在&#x2F;usr&#x2F;local&#x2F;apache&#x2F;htdocs&#x2F;，那么就需要将下载下来的文件存放至&#x2F;usr&#x2F;local&#x2F; apache&#x2F;htdocs&#x2F;conf&#x2F;</p>
+<p><img data-src="https://statics.yvanz.com/zabbix6.png"></p>
+<p>第七步</p>
+<p>完成安装。</p>
+<p><img data-src="https://statics.yvanz.com/zabbix7.png"></p>
+<p>第八步</p>
+<p>zabbix前端安装完毕，现在可以使用默认用户和密码登录了</p>
+<p>Username：Admin</p>
+<p>Password：zabbix</p>
+<p><img data-src="https://statics.yvanz.com/zabbix8.png"></p>
+<p><img data-src="https://statics.yvanz.com/zabbix9.1.png"></p>
+<p>更新启动脚本</p>
+<p>安装完毕后，按需在客户端和服务端复制启动脚本至&#x2F;etc&#x2F;init.d</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> zabbix源码目录/misc/init.d/fedora/core/zabbix_server /etc/init.d/zabbix_server</span><br><span class="line"><span class="built_in">cp</span> zabbix源码目录/misc/init.d/fedora/core/zabbix_agentd /etc/init.d/zabbix_agentd</span><br><span class="line"></span><br><span class="line">\<span class="comment">#给这两个文件加可执行权限</span></span><br><span class="line"><span class="built_in">chmod</span> +x /etc/init.d/zabbix_server</span><br><span class="line"><span class="built_in">chmod</span> +x /etc/init.d/zabbix_agentd</span><br><span class="line"></span><br><span class="line">\<span class="comment">#修改脚本文件的BASEDIR为zabbix实际安装目录并启动</span></span><br><span class="line">service zabbix_server start</span><br><span class="line">service zabbix_agentd start</span><br><span class="line">\<span class="comment">#加入开机启动项</span></span><br><span class="line">chkconfig zabbix_server on</span><br><span class="line">chkconfig zabbix_agentd on</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>zabbix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用zabbix监控磁盘IO</title>
     <url>/2014/11/27/zabbix-io-monitor.html</url>
-    <content><![CDATA[<p>zabbix默认的磁盘监控中没有磁盘IO方面的监控，于是我在网上找到这样一个模版，可以实现对磁盘IO的监控。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>zabbix默认的磁盘监控中没有磁盘IO方面的监控，于是我在网上找到这样一个模版，可以实现对磁盘IO的监控。</p>
 <p>首先编辑zabbix安装目录下etc&#x2F;zabbix_agentd.conf，添加如下内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##IO monitor</span></span><br><span class="line">UserParameter=custom.vfs.dev.read.ops[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$4&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.read.ms[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$7&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.write.ops[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$8&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.write.ms[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$11&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.io.active[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$12&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.io.ms[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$13&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.read.sectors[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$6&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.write.sectors[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$10&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 
@@ -2740,7 +2786,7 @@ Posted at 2014.6.14
   <entry>
     <title>zabbix新建主机</title>
     <url>/2014/11/25/zabbix-nhost.html</url>
-    <content><![CDATA[<p><span style="font-size:12px;"><strong>全文翻译自zabbix官方文档</strong></span><a href="https://www.zabbix.com/documentation/2.4/manual/quickstart/host">https://www.zabbix.com/documentation/2.4/manual/quickstart/host</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="font-size:12px;"><strong>全文翻译自zabbix官方文档</strong></span><a href="https://www.zabbix.com/documentation/2.4/manual/quickstart/host">https://www.zabbix.com/documentation/2.4/manual/quickstart/host</a></p>
 <p><span style="font-size:12px;"><strong>并有删改编辑</strong></span></p>
 <p>&amp;nbsp;</p>
 <p>在本文中，我们将了解如何新建一台主机。</p>
@@ -2954,7 +3000,7 @@ Posted at 2014.6.14
   <entry>
     <title>zabbix邮件告警设置</title>
     <url>/2015/05/09/zabbix-post-a-mail.html</url>
-    <content><![CDATA[<p>好久没更关于zabbix的东西了，今天完善了一下内网zabbix监控的邮件告警功能。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>好久没更关于zabbix的东西了，今天完善了一下内网zabbix监控的邮件告警功能。</p>
 <p>这里就不赘述使用服务器自带邮件发信了，直接介绍使用maix联合自有常用邮箱实现发送邮件的功能。</p>
 <ul>
 <li>配置发信功能</li>
@@ -3007,7 +3053,7 @@ Posted at 2014.6.14
   <entry>
     <title>zabbix批量添加web监控</title>
     <url>/2016/12/12/zabbix-web-monitor-in-batches.html</url>
-    <content><![CDATA[<p>最近有那么一批的域名希望添加到zabbix的Web scenarios。想着每个域名还得添加告警触发器，这样工作重复性就大了。所以利用zabbix的API，写了一个批量添加的脚本。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近有那么一批的域名希望添加到zabbix的Web scenarios。想着每个域名还得添加告警触发器，这样工作重复性就大了。所以利用zabbix的API，写了一个批量添加的脚本。</p>
 <span id="more"></span>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="keyword">from</span> pyzabbix <span class="keyword">import</span> ZabbixAPI</span><br><span class="line"></span><br><span class="line">server_name_in_zabbix = <span class="string">&#x27;my server&#x27;</span></span><br><span class="line">hostid =   <span class="comment"># This is what host you want to add the scenarios</span></span><br><span class="line">applicationid =    <span class="comment"># This is what application you want to add</span></span><br><span class="line">retries = <span class="number">1</span></span><br><span class="line">delay = <span class="number">10</span></span><br><span class="line">status = <span class="number">200</span></span><br><span class="line">the_string_required = <span class="string">&#x27;Copyright&#x27;</span></span><br><span class="line">agent = <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.8 (KHTML, like Gecko) Chrome/17.0.940.0 Safari/535.8&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auth</span>():</span><br><span class="line">    zapi = ZabbixAPI(<span class="string">&quot;http://zabbix url&quot;</span>)</span><br><span class="line">    zapi.login(<span class="string">&quot;my username&quot;</span>, <span class="string">&quot;my secret&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> zapi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_host_name</span>(<span class="params">login_zabbix</span>):</span><br><span class="line">    host_dict = login_zabbix.host.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>: server_name_in_zabbix&#125;)[<span class="number">0</span>]</span><br><span class="line">    host_name = host_dict.get(<span class="string">&#x27;host&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> host_name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_host_id</span>(<span class="params">login_zabbix</span>):</span><br><span class="line">    host_dict = login_zabbix.host.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>:server_name_in_zabbix&#125;)[<span class="number">0</span>]</span><br><span class="line">    hostid = host_dict.get(<span class="string">&quot;hostid&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> hostid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_url</span>(<span class="params">login_zabbix, host_name</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;your file&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> url <span class="keyword">in</span> f:</span><br><span class="line">            monitor_url = url</span><br><span class="line">            name = monitor_url.split(<span class="string">&#x27;//&#x27;</span>)[-<span class="number">1</span>].split(<span class="string">&#x27;\n&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            create_web_scenarios(login_zabbix, host_name, monitor_url=monitor_url, name=name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_web_scenarios</span>(<span class="params">login_zabbix, host_name, monitor_url, name</span>):</span><br><span class="line">    request = login_zabbix.httptest.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>: name&#125;)</span><br><span class="line">    <span class="keyword">if</span> request:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;&quot;&#123;&#125;&quot; is exist&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">        create_trigger(login_zabbix, host_name, name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        login_zabbix.httptest.create(&#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: name,</span><br><span class="line">            <span class="string">&quot;agent&quot;</span>: agent,</span><br><span class="line">            <span class="string">&quot;hostid&quot;</span>: hostid,</span><br><span class="line">            <span class="string">&quot;applicationid&quot;</span>: applicationid,</span><br><span class="line">            <span class="string">&quot;delay&quot;</span>: delay,</span><br><span class="line">            <span class="string">&quot;retries&quot;</span>: retries,</span><br><span class="line">            <span class="string">&quot;steps&quot;</span>: [&#123;</span><br><span class="line">                <span class="string">&#x27;name&#x27;</span>: name+<span class="string">&#x27; index&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;url&#x27;</span>: monitor_url,</span><br><span class="line">                <span class="string">&#x27;required&#x27;</span>: the_string_required,</span><br><span class="line">                <span class="string">&#x27;status_codes&#x27;</span>: status,</span><br><span class="line">                <span class="string">&#x27;no&#x27;</span>: <span class="string">&#x27;1&#x27;</span>&#125;]</span><br><span class="line">        &#125;)</span><br><span class="line">        create_trigger(login_zabbix, host_name, name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_trigger</span>(<span class="params">login_zabbix, host_name, name</span>):</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; http code got an exception&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.rspcode[%s,%s index].last()&#125;&gt;400&quot;</span> % (host_name, name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; response slow now&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.time[%s,%s index,resp].count(2m,10,&quot;</span>gt<span class="string">&quot;)&#125;&gt;5&quot;</span> % (host_name, name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; seems error&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.error[%s].str(required pattern,3)&#125;=1&quot;</span> % (host_name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    login_zabbix = auth()</span><br><span class="line">    host_name = get_host_name(login_zabbix)</span><br><span class="line">    <span class="comment"># host_id = get_host_id(login_zabbix)</span></span><br><span class="line">    get_url(login_zabbix, host_name)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Everything is done,please check on your zabbix server&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>

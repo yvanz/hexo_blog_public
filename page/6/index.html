@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -203,6 +203,137 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.yvanz.com/2014/06/25/php-sql-server.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://statics.yvanz.com/avatar.jpg">
+      <meta itemprop="name" content="Yvan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvanの平行时空">
+      <meta itemprop="description" content="若当初的你，和现在的我，可以重来过">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Yvanの平行时空">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2014/06/25/php-sql-server.html" class="post-title-link" itemprop="url">PHP连接sql server</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2014-06-25 17:02:06" itemprop="dateCreated datePublished" datetime="2014-06-25T17:02:06+08:00">2014-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AE%85/" itemprop="url" rel="index"><span itemprop="name">技术宅</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2014/06/25/php-sql-server.html#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/06/25/php-sql-server.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
+<p>化繁为简，先说说Linux平台的php怎么连接：</p>
+<p>首先下载freeTDS，解压安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/freetds --with-tdsver=8.0 --enable-msdblib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>配置freeTDS</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/freetds/etc/freetds.conf</span><br></pre></td></tr></table></figure>
+
+<p>在A typical Microsoft server下配置自己的sql server数据库连接，如：</p>
+<blockquote>
+<p>[192.168.0.254]<br>&amp;nbsp;&amp;nbsp;host&#x3D;192.168.0.254<br>&amp;nbsp;&amp;nbsp;port&#x3D;1433<br>&amp;nbsp;&amp;nbsp;tds version&#x3D;8.0</p>
+</blockquote>
+<p>配置完成，使用tsql测试连接是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/freetds/bin/tsql -S 192.168.0.254 -U sa</span><br></pre></td></tr></table></figure>
+
+<p>之后输入密码，若显示以下信息则配置成功。</p>
+<blockquote>
+<p>locale is “zh_CN.UTF-8”<br>locale charset is “UTF-8”<br>using default charset “UTF-8”<br>1&gt;</p>
+</blockquote>
+<p>&amp;nbsp;<br>其次设置PHP，这里需要先安装mssql extension，可以在php源码的ext&#x2F;mssql下找到。</p>
+<p>进行编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">phpize</span><br><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config --with-mssql=/usr/local/freetds/</span><br></pre></td></tr></table></figure>
+
+<p>将安装好的插件加入php.ini的extension部分，如</p>
+<blockquote>
+<p>extension_dir &#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;lib&#x2F;php&#x2F;extensions&#x2F;no-debug-zts-20121212<br>extension&#x3D;mssql.so</p>
+</blockquote>
+<p>重启Apache或者nginx重新应用php使用最新配置即可。</p>
+<p>接下来可以新建一个db.php测试php是否正常连接sql server</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$mssql</span>=<span class="title function_ invoke__">mssql_connect</span>(<span class="string">&quot;DBhost&quot;</span>,<span class="string">&quot;DBuser&quot;</span>,<span class="string">&quot;DBpasswd&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (<span class="variable">$mssql</span>) &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>连接成功后，若要对数据库进行操作，可使用如下函数：</p>
+<p><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_5c7a517801012etb.html">http://blog.sina.com.cn/s/blog_5c7a517801012etb.html</a></p>
+<p>&amp;nbsp;<br>接着再来看看windows平台，我使用的方法是通过OBDC连接sql server。</p>
+<p>一、编辑php.ini，将;extension&#x3D;php_pdo_odbc.dll前的;去掉，重启Apache或者Nginx，让php启用pdo_odbc。</p>
+<p>二、新建db.php</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$dbhost</span> = <span class="string">&#x27;DBhost&#x27;</span>; </span><br><span class="line"><span class="variable">$dbuser</span> = <span class="string">&#x27;DBuser&#x27;</span>; <span class="comment">//你的mssql用户名 </span></span><br><span class="line"><span class="variable">$dbpass</span> = <span class="string">&#x27;DBpasswd&#x27;</span>; <span class="comment">//你的mssql密码 </span></span><br><span class="line"><span class="variable">$dbname</span> = <span class="string">&#x27;DB&#x27;</span>; <span class="comment">//你的mssql库名 </span></span><br><span class="line"><span class="variable">$connect</span>=@<span class="title function_ invoke__">odbc_connect</span>(<span class="string">&quot;Driver=&#123;SQL Server&#125;;Server=<span class="subst">$dbhost</span>;Database=<span class="subst">$dbname</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbuser</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbpass</span>&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$connect</span>)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>连接成功之后，若要使用数据库，可参加以下函数</p>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/shaobingj126/article/details/5678009">http://blog.csdn.net/shaobingj126/article/details/5678009</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1000,13 +1131,13 @@ Posted at 2014.6.14
 <p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
 <p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
 <p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
-<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#x73;&#101;&#x72;&#x76;&#x69;&#99;&#x65;&#64;&#106;&#x6a;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;">&#x73;&#101;&#x72;&#x76;&#x69;&#99;&#x65;&#64;&#106;&#x6a;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
+<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#115;&#101;&#114;&#118;&#x69;&#99;&#x65;&#x40;&#x6a;&#x6a;&#x6c;&#x69;&#x6e;&#46;&#x63;&#x6f;&#109;">&#115;&#101;&#114;&#118;&#x69;&#99;&#x65;&#x40;&#x6a;&#x6a;&#x6c;&#x69;&#x6e;&#46;&#x63;&#x6f;&#109;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
 <p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
 <p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
 <p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
 <p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
-<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#x73;&#x65;&#114;&#118;&#x69;&#x63;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x65;&#114;&#118;&#x69;&#x63;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#x2e;&#x63;&#x6f;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
+<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#x73;&#x65;&#114;&#118;&#105;&#99;&#101;&#64;&#106;&#x6a;&#x6c;&#x69;&#x6e;&#x2e;&#99;&#111;&#x6d;">&#x73;&#x65;&#114;&#118;&#105;&#99;&#101;&#64;&#106;&#x6a;&#x6c;&#x69;&#x6e;&#x2e;&#99;&#111;&#x6d;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
 <p>尾巴：</p>
 <p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
@@ -1300,102 +1431,8 @@ Posted at 2014.6.14
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.yvanz.com/2012/11/11/hello-world-1.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://statics.yvanz.com/avatar.jpg">
-      <meta itemprop="name" content="Yvan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvanの平行时空">
-      <meta itemprop="description" content="若当初的你，和现在的我，可以重来过">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yvanの平行时空">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2012/11/11/hello-world-1.html" class="post-title-link" itemprop="url">世界，你好！</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2012-11-11 19:47:31" itemprop="dateCreated datePublished" datetime="2012-11-11T19:47:31+08:00">2012-11-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E4%B8%80%E5%BC%80%E5%A7%8B/" itemprop="url" rel="index"><span itemprop="name">一开始</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2012/11/11/hello-world-1.html#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2012/11/11/hello-world-1.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Hello world.</p>
-<p>这是使用基于Wordpress搭建的博客发布的第一篇文章。</p>
-<p>——Yvan</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
