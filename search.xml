@@ -140,6 +140,27 @@
       </tags>
   </entry>
   <entry>
+    <title>新地球</title>
+    <url>/2014/12/01/brave-new-world.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
+<p><embed src="http://www.tudou.com/v/ijKdeiuKNI8/&bid=05&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></p>
+<p>完整歌词</p>
+<blockquote>
+<p>是一种蓝色的哀愁<br>我醒在荒凉的地球<br>纽约在海底的角落<br>阳光把大地变沙漠</p>
+<p><em>Rap：变了味道 人们才开始哀悼 讽刺的是空气很好 烟囱在水里无声飘摇 没了情调 人们为三餐奔跑</em><br><em>一切的爱恨都在自寻烦恼</em></p>
+<p>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
+<p>灰色的土地很枯燥<br>人们的娱乐好无聊<br>转圈圈不停转圈圈 然后摔倒<br>地平线眺望地平线 默默祈祷<br>没有飓风就好</p>
+<p>新地球他们跑不了 像是个圈套 只能庸庸碌碌到老<br>新地球 他们的监牢 只是眼神 悲伤难以去掉<br>新地球 从头来一遭 过去的错误不能一起重弹老调<br>新地球 我只想回到<br>那一年 那年 被遗忘的小岛<br>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>时间轴归档制作</title>
     <url>/2014/06/06/css-timeline.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>当初在筹划建站的时候，无意间发现有人用时间轴的样式做了一个文章归档的页面，顿时觉得十分高大上。于是联系到那位亲几封邮件下来终于也把时间轴归档弄到我的博客来了。</p>
@@ -177,36 +198,6 @@
       </categories>
   </entry>
   <entry>
-    <title>浅析电子邮件的发送</title>
-    <url>/2014/05/14/email-post.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/1.jpg" alt="1"></p>
-<p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
-<p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
-<p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
-<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#x73;&#x65;&#114;&#118;&#x69;&#99;&#101;&#x40;&#x6a;&#106;&#x6c;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x65;&#114;&#118;&#x69;&#99;&#101;&#x40;&#x6a;&#106;&#x6c;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
-<p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
-<p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
-<p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
-<p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
-<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#115;&#x65;&#x72;&#x76;&#105;&#99;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#46;&#x63;&#x6f;&#109;">&#115;&#x65;&#x72;&#x76;&#105;&#99;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#46;&#x63;&#x6f;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
-<p>尾巴：</p>
-<p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
-<p>而我这么做的目的只有一个，那就是尽量保证入会的歌迷，在基本的邮件操作上是没有问题的，否则之后因为邮件发送不到位导致无法正常参加活动，最后责怪我们暗箱操作或者其他阴谋论指责，我个人是受不了的。</p>
-<p>最后尤其想要吐槽的就是，当事人觉得只要有组织就一定会有猫腻，只要有组织就有贪污。而我所在的某分支组织，目前为止的几年中，其表现可能会颠覆您的这种世界观。</p>
-<p>没办法，谁叫my big is always so high。哦，翻译过来就是我的逼格总是如此の高</p>
-<p>Peace~</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>装逼遭雷劈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Messy</title>
     <url>/2016/07/02/everything-seems-in-a-mess.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>似乎人人都会敏感本命年，可是我前一个本命年却过的不可思议的顺利。然而过完年回来上班却发现，等待着我的只是一副烂摊子。</p>
@@ -223,24 +214,33 @@
       </categories>
   </entry>
   <entry>
-    <title>新地球</title>
-    <url>/2014/12/01/brave-new-world.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
-<p><embed src="http://www.tudou.com/v/ijKdeiuKNI8/&bid=05&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></p>
-<p>完整歌词</p>
-<blockquote>
-<p>是一种蓝色的哀愁<br>我醒在荒凉的地球<br>纽约在海底的角落<br>阳光把大地变沙漠</p>
-<p><em>Rap：变了味道 人们才开始哀悼 讽刺的是空气很好 烟囱在水里无声飘摇 没了情调 人们为三餐奔跑</em><br><em>一切的爱恨都在自寻烦恼</em></p>
-<p>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
-<p>灰色的土地很枯燥<br>人们的娱乐好无聊<br>转圈圈不停转圈圈 然后摔倒<br>地平线眺望地平线 默默祈祷<br>没有飓风就好</p>
-<p>新地球他们跑不了 像是个圈套 只能庸庸碌碌到老<br>新地球 他们的监牢 只是眼神 悲伤难以去掉<br>新地球 从头来一遭 过去的错误不能一起重弹老调<br>新地球 我只想回到<br>那一年 那年 被遗忘的小岛<br>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
-</blockquote>
+    <title>浅析电子邮件的发送</title>
+    <url>/2014/05/14/email-post.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/1.jpg" alt="1"></p>
+<p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
+<p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
+<p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
+<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#115;&#101;&#x72;&#x76;&#105;&#x63;&#x65;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;">&#115;&#101;&#x72;&#x76;&#105;&#x63;&#x65;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
+<p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
+<p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
+<p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
+<p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
+<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#115;&#101;&#x72;&#x76;&#x69;&#x63;&#101;&#x40;&#106;&#x6a;&#108;&#105;&#x6e;&#46;&#x63;&#111;&#109;">&#115;&#101;&#x72;&#x76;&#x69;&#x63;&#101;&#x40;&#106;&#x6a;&#108;&#105;&#x6e;&#46;&#x63;&#111;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
+<p>尾巴：</p>
+<p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
+<p>而我这么做的目的只有一个，那就是尽量保证入会的歌迷，在基本的邮件操作上是没有问题的，否则之后因为邮件发送不到位导致无法正常参加活动，最后责怪我们暗箱操作或者其他阴谋论指责，我个人是受不了的。</p>
+<p>最后尤其想要吐槽的就是，当事人觉得只要有组织就一定会有猫腻，只要有组织就有贪污。而我所在的某分支组织，目前为止的几年中，其表现可能会颠覆您的这种世界观。</p>
+<p>没办法，谁叫my big is always so high。哦，翻译过来就是我的逼格总是如此の高</p>
+<p>Peace~</p>
 ]]></content>
       <categories>
-        <category>文艺范</category>
+        <category>技术宅</category>
       </categories>
       <tags>
-        <tag>林俊杰</tag>
+        <tag>装逼遭雷劈</tag>
       </tags>
   </entry>
   <entry>
@@ -310,55 +310,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【草稿】GoAccess安装与使用</title>
-    <url>/2014/07/23/goaccess.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
-<p>首先在goaccess官方网站<a href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
-<p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
-<p>现在对下载的源码进行解压并编译</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --enable-geoip --enable-utf8 --没有安装geoip的话可以不选enable-geoip</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">安装完毕可以直接使用goaccess命令查看Apache日志，一般配合如下参数</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">goaccess -a -f &lt;日志文件路径&gt;</span><br></pre></td></tr></table></figure>
-
-<p>更多参数可以参见man goaccess或者<a href="http://goaccess.io/man">http://goaccess.io/man</a></p>
-<p>当然goaccess最吸引我的是可以生成html、csv、jscon之类的文件。直接在读取数据的时候导出成html等格式便可，如</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">goaccess -a -f &amp;lt;日志文件路径&amp;gt; &amp;gt; test.html</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的前提是必须设置好goaccess日志格式，配置文件默认路径为&#x2F;usr&#x2F;local&#x2F;etc&#x2F;goaccess.conf。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#date-format %d/%b/%Y</span></span><br><span class="line"><span class="comment">#log-format %h %^[%d:%^] &quot;%r&quot; %s %b</span></span><br><span class="line"><span class="comment">##删除上述两行前面#并保存即可</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>GoAccess</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你给我听好</title>
-    <url>/2014/06/07/gaokao2014.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
-
-<p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
-<p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
-<p>嗯？为什么今天家里没人？为什么我看的电视里放着一部电影？我就算看电视也应该在看喜羊羊的啊。不过我没有追究完这么多为什么，因为我似乎被电影的剧情吸引了。说起来也奇怪，这其实是一部在我觉得很老套的文艺片，里面女主对男主爱的死去活来，只不过男主感受不到。这样的情节不应该引起我的注意才对。</p>
-<p>而冗杂的电影里面，我现在只记得女主最后实在忍受不了跟男主争吵的桥段，大意不过是在控诉为何自己付出那么多却得不到自己想要的关心和爱护。</p>
-<p>或许是在看别人故事的缘故吧，我好像大致能懂这对纠结情侣之间的问题：其实看得出男主对女主是有感情的，相处的时候男主做的很多细节也体现了对女主的关心。可是男主比较委婉，不曾将这些细节和盘托出，所以女主也就没有切身的体会到被爱。而女主则比较简单直接，没有那么多委婉。她觉得什么方式是好的，就在用什么方式对待男主，时刻希望男主能感觉到她就在身边。可是这种自以为的方式，不过是她自己最能接受的方式罢了。换句话说就是，当别人用她的这种方式来关心她时，她才能感觉的到自己是有人爱护的。</p>
-<p>所以其实两个人都没有错的吧，不过是频段不一样，加上两个人在沟通之前都想表达自己其实更在乎对方，可没想到的是，这些话到了嘴边却变成了谁更伤害对方的现实。</p>
-<p>而这一切的美中不足，大概就是还没等我看到结局，就被开门声吵醒了。原来那部电影是个梦，我在看喜羊羊的时候睡着了……更悲催的是趁家里没人偷看电视这一行径被抓个现行又挨批了。只不过这时候我似乎想通了之前的问题：其实长辈们没错，他们教育我的时候有自己的既定立场，因为他们已经替我们经历过了未来我们可能经历过的事，所以有那些教育我的角度。理虽明白，可是我亦只有一个一生，我虽然希望能顺着长辈们的好意，按着他们的期望走下去，但其实我更想把我的一生定义成我想要的样子。也许未来的某个桥段我会出现差错，可是这出戏演起来，经历的更多我才能收获的更多吧。当然我也相信，等到我年纪老迈之时，可能对晚辈也会“指指点点”，因为我们总是用自以为最好的方式要求着别人。无他，这是表达爱意的一种方式。</p>
-<hr>
-<p>此段文与作文主体无关：</p>
-<p>写这作文不过是突发奇想，希望把我理解的安徽高考今年的作文题跟大家交流一下。而关于作文本身，希望轻吐槽，毕竟从09年到现在，时代也有点久远了，而且虽然努力回忆我高考时的心态来写这作文，可是好像引那样的故事也不太合适，哈哈。</p>
-<p>其实我还是很怀念那段高考时光的。因为好像全世界对我们都很关心，很宽容。印象最深的是有一次在后期冲刺阶段，我买了一本书之后打车回学校，司机看我拿着复习材料便问：“快高考了吧”。我简单的回了一句“是的”，笑一笑，便没了下文。没想到的是这位司机蜀黍在送我到学校之后很关心的叫我好好加油，别太累。还有一次便是考英语那天下午，我从家准备打车去考场，在招出租的时候有点争抢的意味，结果司机阿姨说带我吧，先把我送到考场要紧。</p>
-<p>当然最怀念的还是那段时间朋友们的鼓励和陪伴，也因为舍不得，所以甚至把当年六月份的短信都保留了下来发到了空间的日志上面。链接应该在<a href="http://user.qzone.qq.com/494732898/blog/1246375900">这里</a></p>
-<p>而远离高考这么多年，对我改变最大的应该是喜欢上了用笔在纸上写字的感觉。虽然当年作为母语是汉语的我，整个高中的语文考试几乎没及格过，唯一记得及格的就是高考的语文考试，但这不妨碍我现在喜欢那种笔尖在纸上婆娑的样子。唯一的缺点就是字略丑影响美感，哈哈。有图有真相~</p>
-<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019-759x1024.jpg" alt="IMG_20140607_205019"></a></p>
-<p>Peace.</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
     <title>手游服务器开发技术详解</title>
     <url>/2016/03/09/gameserver-development.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>从事游戏服务器开发差不多两年时间，两年间参与了不少项目，学到了很多游戏服务器开发技术，参与过几个不同架构的服务器开发，就随便聊聊游戏服务器开发需要的技术。（以下所指游戏服务器更偏向于手游，因为我对端游和页游开发接触并不多）</p>
@@ -419,6 +370,55 @@
       </tags>
   </entry>
   <entry>
+    <title>你给我听好</title>
+    <url>/2014/06/07/gaokao2014.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
+
+<p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
+<p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
+<p>嗯？为什么今天家里没人？为什么我看的电视里放着一部电影？我就算看电视也应该在看喜羊羊的啊。不过我没有追究完这么多为什么，因为我似乎被电影的剧情吸引了。说起来也奇怪，这其实是一部在我觉得很老套的文艺片，里面女主对男主爱的死去活来，只不过男主感受不到。这样的情节不应该引起我的注意才对。</p>
+<p>而冗杂的电影里面，我现在只记得女主最后实在忍受不了跟男主争吵的桥段，大意不过是在控诉为何自己付出那么多却得不到自己想要的关心和爱护。</p>
+<p>或许是在看别人故事的缘故吧，我好像大致能懂这对纠结情侣之间的问题：其实看得出男主对女主是有感情的，相处的时候男主做的很多细节也体现了对女主的关心。可是男主比较委婉，不曾将这些细节和盘托出，所以女主也就没有切身的体会到被爱。而女主则比较简单直接，没有那么多委婉。她觉得什么方式是好的，就在用什么方式对待男主，时刻希望男主能感觉到她就在身边。可是这种自以为的方式，不过是她自己最能接受的方式罢了。换句话说就是，当别人用她的这种方式来关心她时，她才能感觉的到自己是有人爱护的。</p>
+<p>所以其实两个人都没有错的吧，不过是频段不一样，加上两个人在沟通之前都想表达自己其实更在乎对方，可没想到的是，这些话到了嘴边却变成了谁更伤害对方的现实。</p>
+<p>而这一切的美中不足，大概就是还没等我看到结局，就被开门声吵醒了。原来那部电影是个梦，我在看喜羊羊的时候睡着了……更悲催的是趁家里没人偷看电视这一行径被抓个现行又挨批了。只不过这时候我似乎想通了之前的问题：其实长辈们没错，他们教育我的时候有自己的既定立场，因为他们已经替我们经历过了未来我们可能经历过的事，所以有那些教育我的角度。理虽明白，可是我亦只有一个一生，我虽然希望能顺着长辈们的好意，按着他们的期望走下去，但其实我更想把我的一生定义成我想要的样子。也许未来的某个桥段我会出现差错，可是这出戏演起来，经历的更多我才能收获的更多吧。当然我也相信，等到我年纪老迈之时，可能对晚辈也会“指指点点”，因为我们总是用自以为最好的方式要求着别人。无他，这是表达爱意的一种方式。</p>
+<hr>
+<p>此段文与作文主体无关：</p>
+<p>写这作文不过是突发奇想，希望把我理解的安徽高考今年的作文题跟大家交流一下。而关于作文本身，希望轻吐槽，毕竟从09年到现在，时代也有点久远了，而且虽然努力回忆我高考时的心态来写这作文，可是好像引那样的故事也不太合适，哈哈。</p>
+<p>其实我还是很怀念那段高考时光的。因为好像全世界对我们都很关心，很宽容。印象最深的是有一次在后期冲刺阶段，我买了一本书之后打车回学校，司机看我拿着复习材料便问：“快高考了吧”。我简单的回了一句“是的”，笑一笑，便没了下文。没想到的是这位司机蜀黍在送我到学校之后很关心的叫我好好加油，别太累。还有一次便是考英语那天下午，我从家准备打车去考场，在招出租的时候有点争抢的意味，结果司机阿姨说带我吧，先把我送到考场要紧。</p>
+<p>当然最怀念的还是那段时间朋友们的鼓励和陪伴，也因为舍不得，所以甚至把当年六月份的短信都保留了下来发到了空间的日志上面。链接应该在<a href="http://user.qzone.qq.com/494732898/blog/1246375900">这里</a></p>
+<p>而远离高考这么多年，对我改变最大的应该是喜欢上了用笔在纸上写字的感觉。虽然当年作为母语是汉语的我，整个高中的语文考试几乎没及格过，唯一记得及格的就是高考的语文考试，但这不妨碍我现在喜欢那种笔尖在纸上婆娑的样子。唯一的缺点就是字略丑影响美感，哈哈。有图有真相~</p>
+<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019-759x1024.jpg" alt="IMG_20140607_205019"></a></p>
+<p>Peace.</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【草稿】GoAccess安装与使用</title>
+    <url>/2014/07/23/goaccess.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
+<p>首先在goaccess官方网站<a href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
+<p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
+<p>现在对下载的源码进行解压并编译</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --enable-geoip --enable-utf8 --没有安装geoip的话可以不选enable-geoip</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">安装完毕可以直接使用goaccess命令查看Apache日志，一般配合如下参数</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">goaccess -a -f &lt;日志文件路径&gt;</span><br></pre></td></tr></table></figure>
+
+<p>更多参数可以参见man goaccess或者<a href="http://goaccess.io/man">http://goaccess.io/man</a></p>
+<p>当然goaccess最吸引我的是可以生成html、csv、jscon之类的文件。直接在读取数据的时候导出成html等格式便可，如</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">goaccess -a -f &amp;lt;日志文件路径&amp;gt; &amp;gt; test.html</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的前提是必须设置好goaccess日志格式，配置文件默认路径为&#x2F;usr&#x2F;local&#x2F;etc&#x2F;goaccess.conf。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#date-format %d/%b/%Y</span></span><br><span class="line"><span class="comment">#log-format %h %^[%d:%^] &quot;%r&quot; %s %b</span></span><br><span class="line"><span class="comment">##删除上述两行前面#并保存即可</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>GoAccess</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>无冕歌王——林俊杰</title>
     <url>/2014/06/29/golden-melody-jjlin.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -446,14 +446,20 @@
       </tags>
   </entry>
   <entry>
-    <title>世界，你好！</title>
-    <url>/2012/11/11/hello-world-1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Hello world.</p>
-<p>这是使用基于Wordpress搭建的博客发布的第一篇文章。</p>
-<p>——Yvan</p>
+    <title>半年记</title>
+    <url>/2015/08/01/half-year-note.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=27560017&amp;auto=1&amp;height=66" width="330"></iframe>
+
+<p>如我六月初申请离职时谈到的，自己总是一个对时间点比较在意的人：上半年的决定，总是希望能在上半年结束掉。所以很感激合肥公司的领导能理解我的固执，在六月的尾巴帮我成功离职了。</p>
+<p>说到这家合肥的公司，我总是抱以最大的期许希望她能成功。因为我希望我的合肥有更多说得上的互联网公司（乐堂就不提了，瞧不上之）；因为我曾参与其中，亲眼见证了一个产品诞生路上的坎坷。我也庆幸自己曾参与于这样一个创业团队，在这里我实实在在的开拓了视野。虽然因为自己个人的原因中途从中掉队，但离开后却不妨碍我祝福她。而最真切的祝福大概就是希望她发展的好到我以后会为我当下的决定后悔吧。</p>
+<p>每天无事可做但工资尚可的上半年，自己陷入了一个很惶恐的心境。而从合肥离职后，算是结束了这样的生活。可能自己生来就是工作狂吧，竟发现13年在上海时，每天自己留下来加班的生活是最让自己热血沸腾的时候。所以赋闲下来之后，当上海的领导来找我时，我犹豫了一些日子最终答应了重新回来折腾一番。</p>
+<p>回来的这段时间，果不其然有满满的工作安排，尤记得入职第一天面临扑面而来的任务时，内心亢奋的感觉，用一句话比喻就像是天晴了雨停了感觉自己又行了。就像后来调侃似的说，在这里两个星期做的事情，完全相当于在合肥待两年做的事情。只不过这里的忙碌也剥夺了平时学习的时间和热情，而且在推进工作计划过程中还会因为一些突发事件打乱自己的节奏。目前更多的是感觉自己像个消防员，工作起来还是很被动，没办法专注于自己的计划。希望接下来能适应这种节奏，然后看能不能改变公司现在面临的这种尴尬，不能总想着灭火才是。而对于另一个回来的原因，希望自己能如当初跟朋友聊天时所说的那样，保留好最初的想法，希望不会因为冲动而坏了念想。</p>
+<p>寡欢清淡的上半年，和可想而知充实到死的下半年。这样的本命年还真的是让人印象深刻，也希望下一个本命年能因为现在的决定而变得更不一样。</p>
+<p>2015.08.01</p>
+<p>于上海</p>
 ]]></content>
       <categories>
-        <category>一开始</category>
+        <category>文艺范</category>
       </categories>
   </entry>
   <entry>
@@ -470,6 +476,17 @@
       <tags>
         <tag>牢骚</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>世界，你好！</title>
+    <url>/2012/11/11/hello-world-1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Hello world.</p>
+<p>这是使用基于Wordpress搭建的博客发布的第一篇文章。</p>
+<p>——Yvan</p>
+]]></content>
+      <categories>
+        <category>一开始</category>
+      </categories>
   </entry>
   <entry>
     <title>带着hexo来问好</title>
@@ -503,44 +520,6 @@
       </tags>
   </entry>
   <entry>
-    <title>半年记</title>
-    <url>/2015/08/01/half-year-note.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=27560017&amp;auto=1&amp;height=66" width="330"></iframe>
-
-<p>如我六月初申请离职时谈到的，自己总是一个对时间点比较在意的人：上半年的决定，总是希望能在上半年结束掉。所以很感激合肥公司的领导能理解我的固执，在六月的尾巴帮我成功离职了。</p>
-<p>说到这家合肥的公司，我总是抱以最大的期许希望她能成功。因为我希望我的合肥有更多说得上的互联网公司（乐堂就不提了，瞧不上之）；因为我曾参与其中，亲眼见证了一个产品诞生路上的坎坷。我也庆幸自己曾参与于这样一个创业团队，在这里我实实在在的开拓了视野。虽然因为自己个人的原因中途从中掉队，但离开后却不妨碍我祝福她。而最真切的祝福大概就是希望她发展的好到我以后会为我当下的决定后悔吧。</p>
-<p>每天无事可做但工资尚可的上半年，自己陷入了一个很惶恐的心境。而从合肥离职后，算是结束了这样的生活。可能自己生来就是工作狂吧，竟发现13年在上海时，每天自己留下来加班的生活是最让自己热血沸腾的时候。所以赋闲下来之后，当上海的领导来找我时，我犹豫了一些日子最终答应了重新回来折腾一番。</p>
-<p>回来的这段时间，果不其然有满满的工作安排，尤记得入职第一天面临扑面而来的任务时，内心亢奋的感觉，用一句话比喻就像是天晴了雨停了感觉自己又行了。就像后来调侃似的说，在这里两个星期做的事情，完全相当于在合肥待两年做的事情。只不过这里的忙碌也剥夺了平时学习的时间和热情，而且在推进工作计划过程中还会因为一些突发事件打乱自己的节奏。目前更多的是感觉自己像个消防员，工作起来还是很被动，没办法专注于自己的计划。希望接下来能适应这种节奏，然后看能不能改变公司现在面临的这种尴尬，不能总想着灭火才是。而对于另一个回来的原因，希望自己能如当初跟朋友聊天时所说的那样，保留好最初的想法，希望不会因为冲动而坏了念想。</p>
-<p>寡欢清淡的上半年，和可想而知充实到死的下半年。这样的本命年还真的是让人印象深刻，也希望下一个本命年能因为现在的决定而变得更不一样。</p>
-<p>2015.08.01</p>
-<p>于上海</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>【转载】删除并禁用历史修订功能</title>
-    <url>/2014/05/22/hisedit.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此为转载文章，原链接：<a href="http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html">http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html</a></p>
-<p>1.禁用 WordPress 文章修订历史功能</p>
-<p>打开 WordPress 根目录下的 wp-config.php 文件，添加下面的代码即可：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="title function_ invoke__">define</span>(<span class="string">&quot;WP_POST_REVISIONS&quot;</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
-
-<p>2.删除 WordPress 已有的文章修订记录</p>
-<p>上面也说过，WordPress 文章的修订记录，都是被写入了数据库，所以我们需要删除MySQL数据库中有关的语句SQL 如下（直接删除即可）：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_postmeta <span class="keyword">WHERE</span> post_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type <span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_term_relationships <span class="keyword">WHERE</span> object_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>OK，搞定了，操作完上面的两部，以后在wordpress写文，将不会产生历史修订，所以数据库也不会变的庞大！</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Wordpress</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>后篇，服务器负载过高</title>
     <url>/2016/04/22/high-load-be-solved.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。</p>
@@ -562,6 +541,27 @@
       <tags>
         <tag>Linux</tag>
         <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【转载】删除并禁用历史修订功能</title>
+    <url>/2014/05/22/hisedit.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此为转载文章，原链接：<a href="http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html">http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html</a></p>
+<p>1.禁用 WordPress 文章修订历史功能</p>
+<p>打开 WordPress 根目录下的 wp-config.php 文件，添加下面的代码即可：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="title function_ invoke__">define</span>(<span class="string">&quot;WP_POST_REVISIONS&quot;</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<p>2.删除 WordPress 已有的文章修订记录</p>
+<p>上面也说过，WordPress 文章的修订记录，都是被写入了数据库，所以我们需要删除MySQL数据库中有关的语句SQL 如下（直接删除即可）：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_postmeta <span class="keyword">WHERE</span> post_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type <span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_term_relationships <span class="keyword">WHERE</span> object_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>OK，搞定了，操作完上面的两部，以后在wordpress写文，将不会产生历史修订，所以数据库也不会变的庞大！</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Wordpress</tag>
       </tags>
   </entry>
   <entry>
@@ -736,6 +736,26 @@
       </tags>
   </entry>
   <entry>
+    <title>本地YUM源</title>
+    <url>/2015/07/16/local-yumrepo.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>建立本地YUM源的初衷是按照自己的需求打包rpm包并在内网装机时直接部署。所以先来介绍一下RPM包的打包工具，我选择的是FPM来打包。</p>
+<p>FPM on&amp;nbsp;github：<a href="https://github.com/jordansissel/fpm">https://github.com/jordansissel/fpm</a></p>
+<p>FPM安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#FPM基于ruby开发，所以先yum安装ruby以及rubygems</span></span><br><span class="line">yum install ruby rubygems ruby-devel ruby-rdoc rpm-build gcc -y</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除默认RubyGems源并添加使用淘宝的RubyGems源</span></span><br><span class="line">gem sources --remove http://rubygems.org/</span><br><span class="line">gem sources -a https://ruby.taobao.org/</span><br><span class="line">gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://ruby.taobao.org</span><br><span class="line"><span class="comment"># 请确保只有 ruby.taobao.org</span></span><br><span class="line"></span><br><span class="line">gem install fpm  <span class="comment">#使用gem安装fpm</span></span><br></pre></td></tr></table></figure>
+
+<p>FPM使用编译好的软件目录打包RPM，所以在打包之前，需要先编译好软件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FPM常用打包命令解析（更多命令请fpm --<span class="built_in">help</span>）：</span><br><span class="line">fpm -s <span class="built_in">dir</span> \  <span class="comment">#定义导入的是何种类型</span></span><br><span class="line">-t rpm \  <span class="comment">#定义输出的包是何种类型</span></span><br><span class="line">-n smm-nginx \  <span class="comment">#定义包的名称</span></span><br><span class="line">-v 1.8.0 \  <span class="comment">#定义版本信息</span></span><br><span class="line">--iteration 1 \  <span class="comment">#定义周期版本号</span></span><br><span class="line">-d <span class="string">&#x27;pcre &gt;= 7.8&#x27;</span> \  <span class="comment">#定义依赖，可多次使用该参数</span></span><br><span class="line">-d <span class="string">&#x27;pcre-static &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;pcre-devel &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-perl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-static &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-devel &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl098e &gt;= 0.9.8e&#x27;</span> \</span><br><span class="line">-m  \  <span class="comment">#定义维护者，一般留邮箱</span></span><br><span class="line">--vendor SMM IT \  <span class="comment">#定义RPM包的提供者</span></span><br><span class="line">--description SMM Nginx Version \  <span class="comment">#定义包的描述</span></span><br><span class="line">--url http://www.smm.cn \  <span class="comment">#定义链接</span></span><br><span class="line">--before-install pre-nginx.sh \  <span class="comment">#定义安装前运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--after-remove \  <span class="comment">#定义卸载后运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--rpm-init nginx \  <span class="comment">#定义安装后需要键入系统服务的运行脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">/usr/local/webserver/nginx/  <span class="comment">#定义编译后的程序路径</span></span><br></pre></td></tr></table></figure>
+
+<p>有了自定义的RPM之后，就可以自建本地yum源了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install createrepo -y</span><br><span class="line">createrepo -p -d -o /yum/Packages/ /yum/Packages/   <span class="comment">#新建源</span></span><br><span class="line">createrepo --update /yum/Packages   <span class="comment">#更新源</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LVS详解及基于LVS实现web服务器负载均衡</title>
     <url>/2015/06/02/lvs-info-lvs-web.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>LVS(Linux Virtual Server)Linux虚拟服务器，是一个虚拟的服务器集群系统。本项目在1998年5月由章文嵩博士成立，是中国国内最早出现的自由软件项目之一。通过LVS提供的负载均衡技术和Linux操作系统可实现一个高性能、高可用的服务器群集，从而以低成本实现最优的服务性能。</p>
@@ -837,26 +857,6 @@
       </tags>
   </entry>
   <entry>
-    <title>本地YUM源</title>
-    <url>/2015/07/16/local-yumrepo.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>建立本地YUM源的初衷是按照自己的需求打包rpm包并在内网装机时直接部署。所以先来介绍一下RPM包的打包工具，我选择的是FPM来打包。</p>
-<p>FPM on&amp;nbsp;github：<a href="https://github.com/jordansissel/fpm">https://github.com/jordansissel/fpm</a></p>
-<p>FPM安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#FPM基于ruby开发，所以先yum安装ruby以及rubygems</span></span><br><span class="line">yum install ruby rubygems ruby-devel ruby-rdoc rpm-build gcc -y</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除默认RubyGems源并添加使用淘宝的RubyGems源</span></span><br><span class="line">gem sources --remove http://rubygems.org/</span><br><span class="line">gem sources -a https://ruby.taobao.org/</span><br><span class="line">gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://ruby.taobao.org</span><br><span class="line"><span class="comment"># 请确保只有 ruby.taobao.org</span></span><br><span class="line"></span><br><span class="line">gem install fpm  <span class="comment">#使用gem安装fpm</span></span><br></pre></td></tr></table></figure>
-
-<p>FPM使用编译好的软件目录打包RPM，所以在打包之前，需要先编译好软件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FPM常用打包命令解析（更多命令请fpm --<span class="built_in">help</span>）：</span><br><span class="line">fpm -s <span class="built_in">dir</span> \  <span class="comment">#定义导入的是何种类型</span></span><br><span class="line">-t rpm \  <span class="comment">#定义输出的包是何种类型</span></span><br><span class="line">-n smm-nginx \  <span class="comment">#定义包的名称</span></span><br><span class="line">-v 1.8.0 \  <span class="comment">#定义版本信息</span></span><br><span class="line">--iteration 1 \  <span class="comment">#定义周期版本号</span></span><br><span class="line">-d <span class="string">&#x27;pcre &gt;= 7.8&#x27;</span> \  <span class="comment">#定义依赖，可多次使用该参数</span></span><br><span class="line">-d <span class="string">&#x27;pcre-static &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;pcre-devel &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-perl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-static &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-devel &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl098e &gt;= 0.9.8e&#x27;</span> \</span><br><span class="line">-m  \  <span class="comment">#定义维护者，一般留邮箱</span></span><br><span class="line">--vendor SMM IT \  <span class="comment">#定义RPM包的提供者</span></span><br><span class="line">--description SMM Nginx Version \  <span class="comment">#定义包的描述</span></span><br><span class="line">--url http://www.smm.cn \  <span class="comment">#定义链接</span></span><br><span class="line">--before-install pre-nginx.sh \  <span class="comment">#定义安装前运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--after-remove \  <span class="comment">#定义卸载后运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--rpm-init nginx \  <span class="comment">#定义安装后需要键入系统服务的运行脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">/usr/local/webserver/nginx/  <span class="comment">#定义编译后的程序路径</span></span><br></pre></td></tr></table></figure>
-
-<p>有了自定义的RPM之后，就可以自建本地yum源了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install createrepo -y</span><br><span class="line">createrepo -p -d -o /yum/Packages/ /yum/Packages/   <span class="comment">#新建源</span></span><br><span class="line">createrepo --update /yum/Packages   <span class="comment">#更新源</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL二进制日志安全删除</title>
     <url>/2014/05/30/mysql-bin-log.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一、Reset master</p>
@@ -907,50 +907,64 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL主从复制</title>
-    <url>/2014/05/30/mysql-master-slave.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
-<ul>
-<li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
-<p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
-</li>
-<li><p>修改从数据库配置文件my.cnf（or my.ini）</p>
-<p>设置server_id&#x3D;2 重启从服务器MySQL服务</p>
-</li>
-<li><p>在主数据库新建一个用来复制的用户（下划线处可自定义）</p>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%（此处也可定义为自己的从服务器IP）&#x27;</span>IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;slavepass&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+    <title>如何进行MySQL数据库表的故障检测</title>
+    <url>/2014/12/04/mysql-error-check.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>表的故障检测和修正的一般过程如下：</strong></p>
+<p>◆ 检查出错的表。如果该表检查通过，则完成任务，否则必须修复出错的数据库表。</p>
+<p>◆ 在开始修复之前对表文件进行拷贝，以保证数据的安全。</p>
+<p>◆ 开始修复数据库表。</p>
+<p>◆ 如果修复失败，从数据库的备份或更新日志中恢复数据。</p>
+<p>在使用myisamchk或isamchk检查或修复表之前，应该<strong>首先注意：</strong></p>
+<p>◆ 建立数据库备份和使用更新日志，以防修复失败，丢失数据。</p>
+<p>◆ 仔细阅读本章内容以后再进行操作，尤其是不应该在阅读&amp;ldquo;避免与MySQL服务器交互作用&amp;rdquo;之前进行操作。因为，在你没有足够的知识之前贸然操作，可能会引起严重的后果。</p>
+<p>◆ 如果你在Unix平台上对表进行维护时，应该首先注册到专用的帐户 mysql，以避免对表读写访问产生所有权的问题，以及破坏数据库目录的所有权限。</p>
+<p><strong>数据库表的维护工具</strong></p>
+<p>MySQL的myisanchk和isamchk实用程序很类似，基本上它们具有同样的使用方法。它们之间的主要区别时所使用的表的类型。为了检查&#x2F;修复MyISAM表(.MYI和.MYD)，你应该使用myisamchk实用程序。为了检查&#x2F;修复ISAM表(.ISM和.ISD)，你应该使用isamchk实用程序。</p>
+<p>&amp;nbsp;◆ 为了使用任一个使用程序，应指明你要检查或修复的表，myisamchk和isamchk的使用方法为：&amp;nbsp;</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk options tbl_name </span><br><span class="line">shell&gt; isamchk options tbl_name</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>在新建数据快照或者开启复制进程之前，需要定位主服务器二进制日志的坐标</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; FLUSH TABLES WITH READ LOCK;    --对于InnoDB表，该操作还会锁定commit操作</span><br><span class="line">mysql&gt; SHOW MASTER STATUS;    --记录file和position的值。这条命令最好新建一个会话再执行。</span><br></pre></td></tr></table></figure>
+<p> ◆ 你也能指定一个名字作为一个索引文件(用&amp;ldquo; .MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;后缀)，它允许你通过使用模式&amp;ldquo;*.MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;指定在一个目录所有的表。例如，如果你在一个数据库目录，你可以这样在目录下检查所有的表：如果你愿意，你可以在命令行命名几个表。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk *.MYI</span><br><span class="line">shell&gt; isamchk *.ISM</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>若你的主数据库已经存有数据，并且你希望从服务器同步这些数据。那么你需要新建一个数据快照。一般新建数据快照的方式有两种：MySQLdump；直接拷贝数据文件。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysqldump --all-databases --master-data &gt; dbdump.db --该事例表示将所有数据库导出到一个名为dbdump.db的文件中，附加的 --master-data命令，官方文档解释了一大堆，看着似懂非懂，反正都加上吧-。- 如果你的数据库比较大，那么将原始数据文件直接复制到从服务器比使用mysqldump要效率很多。</span><br></pre></td></tr></table></figure>
+<p>◆ 如果你不在数据库目录下，你可指定目录的路径：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk options /path/to/database_dir/*.MYI</span><br><span class="line">shell&gt; isamchk options /path/to/database_dir/*.ISM</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>解锁主数据库</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; UNLOCK TABLES;</span><br></pre></td></tr></table></figure>
+<p>◆ 你甚至可以通过为MySQL数据目录的路径指定一个通配符来作用于所有的数据库中的所有表：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk options /path/to/datadir/*/*.MYI</span><br><span class="line">shell&gt; isamchk options /path/to/database_dir/*/*.ISM</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>将主数据库的dump出的文件导入到从服务器</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysql &lt; dbdump.db</span><br></pre></td></tr></table></figure>
+<p>这个方法无法在windows平台下使用。注意，不论是myisamchk还是isamchk都不对表所在的位置做任何判断，因此，应该或者在包含表文件的目录运行程序，或者指定表的路径名。这允许你将表文件拷贝到另一个目录中并用该拷贝进行操作。</p>
+<p><strong>检查数据库表</strong></p>
+<p>myisamchk和isamchk提供了表的检查方法，这些方法在彻底检查表的程度方面有差异。</p>
+<p><strong>标准的方法检查表</strong></p>
+<p>通常用标准的方法就足够了。对表使用标准的方法进行检查，不使用任何选项直接调用即可，或用-s或–silent选项的任何一个：</p>
+<p>myisamchk tbl_name isamchk tbl_name</p>
+<p>这能找出所有错误的99.99%。它不能找出的是仅仅涉及数据文件的损坏(这很不常见)。</p>
+<p><strong>完全彻底的数据检查</strong></p>
+<p>为了执行扩充检查，使用–extend-check或-e选项，这个选项检查数据：&amp;nbsp;</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myisamchk -e tbl_name</span><br><span class="line">isamchk -e tbl_name</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>在从服务器开启复制进程</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE;  <span class="comment">--一般情况下是启动不了的，必须先change master to </span></span><br><span class="line">mysql<span class="operator">&gt;</span> CHANGE MASTER <span class="keyword">TO</span></span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_HOST<span class="operator">=</span><span class="string">&#x27;master_host_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_USER<span class="operator">=</span><span class="string">&#x27;replication_user_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;replication_password&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_FILE<span class="operator">=</span><span class="string">&#x27;recorded_log_file_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_POS<span class="operator">=</span>recorded_log_position;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE; </span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> slave status \G <span class="comment">--检查Slave_IO_Running以及Slave_SQL_Running，如果都为yes则主从复制配置成功。若不成功，该命令可以看到相关报错。</span></span><br></pre></td></tr></table></figure>]]></content>
+<p>它做一个完全彻底的数据检查(-e意思是&amp;ldquo;扩展检查&amp;rdquo;)。它对每一行做每个键的读检查以证实他们确实指向正确的行。这在一个有很多键的大表上可能花很长时间。myisamchk通常将在它发现第一个错误以后停止。如果你想要获得更多的信息，你能增加–verbose(-v)选项。这使得myisamchk或isamchk继续一直到最多20个错误。在一般使用中，一个简单的标准检查(没有除表名以外的参数)就足够了。</p>
+<p>&amp;nbsp;</p>
+<p><strong>中等程度的检查</strong></p>
+<p>指定选项–medium-check或-m</p>
+<p>myisamchk -m tbl_name</p>
+<p>中等程度的检查不如扩展检查彻底，但速度快一些。其意义不大，较少使用。</p>
+<p>如果对于–extend-check检查不报告错误，则可以肯定表是完好的。如果你仍然感觉表有问题，那原因肯定在其它地方。应重新检查人和好像有问题的查询以验证查询是正确书写的。如果你认为问题可能是MySQL服务器的原因，应该考虑整理一份故障报告或者升级到新的版本上。</p>
+<p><strong>可能有用的检查选项：</strong></p>
+<p>1.-i或&amp;mdash;information 打印统计信息,例如：</p>
+<p>myisamchk -e -i tbl_name</p>
+<p>象前面的命令一样，但是-i选项告诉myisamchk还打印出一些统计信息。</p>
+<p>2.-C, –check-only-changed</p>
+<p>只检查上一次检查后被修改的表</p>
+<p>&amp;nbsp;</p>
+<p>原文链接：<a href="http://linux.cn/article-138-1-rel.html">http://linux.cn/article-138-1-rel.html</a></p>
+]]></content>
       <categories>
         <category>技术宅</category>
       </categories>
       <tags>
         <tag>MySQL</tag>
+        <tag>转载学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1084,64 +1098,50 @@
       </tags>
   </entry>
   <entry>
-    <title>如何进行MySQL数据库表的故障检测</title>
-    <url>/2014/12/04/mysql-error-check.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>表的故障检测和修正的一般过程如下：</strong></p>
-<p>◆ 检查出错的表。如果该表检查通过，则完成任务，否则必须修复出错的数据库表。</p>
-<p>◆ 在开始修复之前对表文件进行拷贝，以保证数据的安全。</p>
-<p>◆ 开始修复数据库表。</p>
-<p>◆ 如果修复失败，从数据库的备份或更新日志中恢复数据。</p>
-<p>在使用myisamchk或isamchk检查或修复表之前，应该<strong>首先注意：</strong></p>
-<p>◆ 建立数据库备份和使用更新日志，以防修复失败，丢失数据。</p>
-<p>◆ 仔细阅读本章内容以后再进行操作，尤其是不应该在阅读&amp;ldquo;避免与MySQL服务器交互作用&amp;rdquo;之前进行操作。因为，在你没有足够的知识之前贸然操作，可能会引起严重的后果。</p>
-<p>◆ 如果你在Unix平台上对表进行维护时，应该首先注册到专用的帐户 mysql，以避免对表读写访问产生所有权的问题，以及破坏数据库目录的所有权限。</p>
-<p><strong>数据库表的维护工具</strong></p>
-<p>MySQL的myisanchk和isamchk实用程序很类似，基本上它们具有同样的使用方法。它们之间的主要区别时所使用的表的类型。为了检查&#x2F;修复MyISAM表(.MYI和.MYD)，你应该使用myisamchk实用程序。为了检查&#x2F;修复ISAM表(.ISM和.ISD)，你应该使用isamchk实用程序。</p>
-<p>&amp;nbsp;◆ 为了使用任一个使用程序，应指明你要检查或修复的表，myisamchk和isamchk的使用方法为：&amp;nbsp;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk options tbl_name </span><br><span class="line">shell&gt; isamchk options tbl_name</span><br></pre></td></tr></table></figure>
+    <title>MySQL主从复制</title>
+    <url>/2014/05/30/mysql-master-slave.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
+<ul>
+<li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
+<p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
+</li>
+<li><p>修改从数据库配置文件my.cnf（or my.ini）</p>
+<p>设置server_id&#x3D;2 重启从服务器MySQL服务</p>
+</li>
+<li><p>在主数据库新建一个用来复制的用户（下划线处可自定义）</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%（此处也可定义为自己的从服务器IP）&#x27;</span>IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;slavepass&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
-<p> ◆ 你也能指定一个名字作为一个索引文件(用&amp;ldquo; .MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;后缀)，它允许你通过使用模式&amp;ldquo;*.MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;指定在一个目录所有的表。例如，如果你在一个数据库目录，你可以这样在目录下检查所有的表：如果你愿意，你可以在命令行命名几个表。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk *.MYI</span><br><span class="line">shell&gt; isamchk *.ISM</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在新建数据快照或者开启复制进程之前，需要定位主服务器二进制日志的坐标</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; FLUSH TABLES WITH READ LOCK;    --对于InnoDB表，该操作还会锁定commit操作</span><br><span class="line">mysql&gt; SHOW MASTER STATUS;    --记录file和position的值。这条命令最好新建一个会话再执行。</span><br></pre></td></tr></table></figure>
 
-<p>◆ 如果你不在数据库目录下，你可指定目录的路径：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk options /path/to/database_dir/*.MYI</span><br><span class="line">shell&gt; isamchk options /path/to/database_dir/*.ISM</span><br></pre></td></tr></table></figure>
+<ul>
+<li>若你的主数据库已经存有数据，并且你希望从服务器同步这些数据。那么你需要新建一个数据快照。一般新建数据快照的方式有两种：MySQLdump；直接拷贝数据文件。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysqldump --all-databases --master-data &gt; dbdump.db --该事例表示将所有数据库导出到一个名为dbdump.db的文件中，附加的 --master-data命令，官方文档解释了一大堆，看着似懂非懂，反正都加上吧-。- 如果你的数据库比较大，那么将原始数据文件直接复制到从服务器比使用mysqldump要效率很多。</span><br></pre></td></tr></table></figure>
 
-<p>◆ 你甚至可以通过为MySQL数据目录的路径指定一个通配符来作用于所有的数据库中的所有表：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk options /path/to/datadir/*/*.MYI</span><br><span class="line">shell&gt; isamchk options /path/to/database_dir/*/*.ISM</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解锁主数据库</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; UNLOCK TABLES;</span><br></pre></td></tr></table></figure>
 
-<p>这个方法无法在windows平台下使用。注意，不论是myisamchk还是isamchk都不对表所在的位置做任何判断，因此，应该或者在包含表文件的目录运行程序，或者指定表的路径名。这允许你将表文件拷贝到另一个目录中并用该拷贝进行操作。</p>
-<p><strong>检查数据库表</strong></p>
-<p>myisamchk和isamchk提供了表的检查方法，这些方法在彻底检查表的程度方面有差异。</p>
-<p><strong>标准的方法检查表</strong></p>
-<p>通常用标准的方法就足够了。对表使用标准的方法进行检查，不使用任何选项直接调用即可，或用-s或–silent选项的任何一个：</p>
-<p>myisamchk tbl_name isamchk tbl_name</p>
-<p>这能找出所有错误的99.99%。它不能找出的是仅仅涉及数据文件的损坏(这很不常见)。</p>
-<p><strong>完全彻底的数据检查</strong></p>
-<p>为了执行扩充检查，使用–extend-check或-e选项，这个选项检查数据：&amp;nbsp;</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myisamchk -e tbl_name</span><br><span class="line">isamchk -e tbl_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将主数据库的dump出的文件导入到从服务器</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysql &lt; dbdump.db</span><br></pre></td></tr></table></figure>
 
-<p>它做一个完全彻底的数据检查(-e意思是&amp;ldquo;扩展检查&amp;rdquo;)。它对每一行做每个键的读检查以证实他们确实指向正确的行。这在一个有很多键的大表上可能花很长时间。myisamchk通常将在它发现第一个错误以后停止。如果你想要获得更多的信息，你能增加–verbose(-v)选项。这使得myisamchk或isamchk继续一直到最多20个错误。在一般使用中，一个简单的标准检查(没有除表名以外的参数)就足够了。</p>
-<p>&amp;nbsp;</p>
-<p><strong>中等程度的检查</strong></p>
-<p>指定选项–medium-check或-m</p>
-<p>myisamchk -m tbl_name</p>
-<p>中等程度的检查不如扩展检查彻底，但速度快一些。其意义不大，较少使用。</p>
-<p>如果对于–extend-check检查不报告错误，则可以肯定表是完好的。如果你仍然感觉表有问题，那原因肯定在其它地方。应重新检查人和好像有问题的查询以验证查询是正确书写的。如果你认为问题可能是MySQL服务器的原因，应该考虑整理一份故障报告或者升级到新的版本上。</p>
-<p><strong>可能有用的检查选项：</strong></p>
-<p>1.-i或&amp;mdash;information 打印统计信息,例如：</p>
-<p>myisamchk -e -i tbl_name</p>
-<p>象前面的命令一样，但是-i选项告诉myisamchk还打印出一些统计信息。</p>
-<p>2.-C, –check-only-changed</p>
-<p>只检查上一次检查后被修改的表</p>
-<p>&amp;nbsp;</p>
-<p>原文链接：<a href="http://linux.cn/article-138-1-rel.html">http://linux.cn/article-138-1-rel.html</a></p>
-]]></content>
+<ul>
+<li>在从服务器开启复制进程</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE;  <span class="comment">--一般情况下是启动不了的，必须先change master to </span></span><br><span class="line">mysql<span class="operator">&gt;</span> CHANGE MASTER <span class="keyword">TO</span></span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_HOST<span class="operator">=</span><span class="string">&#x27;master_host_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_USER<span class="operator">=</span><span class="string">&#x27;replication_user_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;replication_password&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_FILE<span class="operator">=</span><span class="string">&#x27;recorded_log_file_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_POS<span class="operator">=</span>recorded_log_position;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE; </span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> slave status \G <span class="comment">--检查Slave_IO_Running以及Slave_SQL_Running，如果都为yes则主从复制配置成功。若不成功，该命令可以看到相关报错。</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>技术宅</category>
       </categories>
       <tags>
         <tag>MySQL</tag>
-        <tag>转载学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1193,21 +1193,6 @@
       </categories>
       <tags>
         <tag>PHP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python脚本内自定义域名解析的IP</title>
-    <url>/2016/03/09/python-custom-ip-resolve.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
-<p>由于服务器走公网解析我们域名的话，同样只有一台服务器完成功能。所以我想着是不是在不修改本机hosts的情况下，在Python脚本内实现对域名的解析。带着这个想法，终于在<a href="http://stackoverflow.com/questions/2236498/tell-urllib2-to-use-custom-dns">stackoverflow</a>上找到了可行的答案。</p>
-<p>大致思路是，首先定义一个函数，记录你需要自定义IP的域名，并建立一个httplib.HTTPConnection的子类，在参数传递给socket.create_connection前修改self.host以封装connection方法。然后继承HTTPHandler这个类，用上面的HTTPConnection替换httplib内自带的HTTPConnection，并重写http_open方法；最后把HTTPHandler放到自定义的opener。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> httplib</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">req_host</span>(<span class="params">host</span>):</span><br><span class="line">        <span class="keyword">if</span> host == <span class="string">&#x27;www.***.cn&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&#x27;8.8.8.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPConnection</span>(httplib.HTTPConnection):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">connect</span>(<span class="params">self</span>):</span><br><span class="line">                self.sock = socket.create_connection((req_host(self.host),self.port),self.timeout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPHandler</span>(urllib2.HTTPHandler):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">http_open</span>(<span class="params">self,req</span>):</span><br><span class="line">                <span class="keyword">return</span> self.do_open(MyHTTPConnection,req)</span><br><span class="line"></span><br><span class="line">opener = urllib2.build_opener(MyHTTPHandler)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://&#x27;</span></span><br><span class="line">f = urllib2.urlopen(url)</span><br><span class="line">req = f.read()</span><br><span class="line"><span class="built_in">print</span> req</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1382,18 +1367,19 @@
       </tags>
   </entry>
   <entry>
-    <title>被折腾了一把按键精灵</title>
-    <url>/2016/09/22/reboot-app-with-anjianjingling.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>线上有台Windows服务器，上面跑了一个第三方C&#x2F;S架构的程序。因为这个程序比较矫情，经常与这第三方的通信中断，然后就得手动重启。而重启之后报错几率很大，反复登录得消耗很长时间。所以别人提到是不是可以用按键精灵自动完成输密码登录的操作。当时觉得还是有点为难的，因为输密码那个地方，屏蔽了很多自动输入的方式，不过好在最后找到了解决办法，算是弄出来了。</p>
-<span id="more"></span>
-
-<p>不过现在这代码断开远程桌面之后就执行不了了，算是一个弊端，而且刚接触手写按键精灵的代码，基本上写的很面向过程，哈哈。想起来高中那几年，要是当初能把按键精灵研究好，当时玩天龙八部也不至于那么乏味枯燥吧。下面直接上码。</p>
-<h2 id="Show-the-Code"><a href="#Show-the-Code" class="headerlink" title="Show the Code"></a>Show the Code</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始化屏幕分辨率</span></span><br><span class="line">sx = Plugin.Sys.GetScRX()</span><br><span class="line">sy = Plugin.Sys.GetScRY()</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置定时器</span></span><br><span class="line">Rem Loop1</span><br><span class="line">Do</span><br><span class="line">NowTime = Time</span><br><span class="line"><span class="comment">//TracePrint NowTime</span></span><br><span class="line">SWTime = <span class="string">&quot;02:30&quot;</span> <span class="comment">//这里是定时时间</span></span><br><span class="line">If Hour(SWTime) = Hour(NowTime) and Minute(SWTime) = Minute(NowTime) Then </span><br><span class="line">Exit Do</span><br><span class="line">End If</span><br><span class="line">Loop</span><br><span class="line"></span><br><span class="line">LogStart <span class="string">&quot;C:\reboot_v3.log&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;程序开始&quot;</span></span><br><span class="line">Call Login()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N  <span class="comment">//检查是否登录成功</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">While int4M &lt; <span class="number">0</span> and int4N &lt; <span class="number">0</span></span><br><span class="line">TracePrint <span class="string">&quot;看来得重新登陆一遍&quot;</span></span><br><span class="line">Call Lib.系统.结束进程(<span class="string">&quot;进程名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">Delay <span class="number">5000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">TracePrint <span class="string">&quot;继续检查是否登录成功&quot;</span></span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Wend</span><br><span class="line">TracePrint <span class="string">&quot;登陆成功，执行完毕&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;等待下一次执行&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">Goto Loop1</span><br><span class="line"></span><br><span class="line">Sub Login()</span><br><span class="line">Call 子程序<span class="number">1</span>()</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//启动应用程序</span></span><br><span class="line">Sub 子程序<span class="number">1</span>()</span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\1.bmp&quot;</span>, <span class="number">0.9</span>, intX, intY</span><br><span class="line">If intX &lt; <span class="number">0</span> And intY &lt; <span class="number">0</span> Then</span><br><span class="line">TracePrint <span class="string">&quot;远程桌面似乎已关闭，终止运行&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">EndScript</span><br><span class="line">End If</span><br><span class="line">Hwnd = Plugin.Window.Find(<span class="number">0</span>, <span class="string">&quot;应用窗口名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Plugin.Window.Close(Hwnd)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;开始子程序1，应用程序已启动&quot;</span></span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//点击调出登陆按钮</span></span><br><span class="line">Sub 子程序<span class="number">2</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序2，调出登陆框&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这段代码不重要，不提了</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Delay <span class="number">400</span></span><br><span class="line">End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//输入密码并回车</span></span><br><span class="line">Sub 子程序<span class="number">3</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序3，输入密码并登陆&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\4.bmp&quot;</span>, <span class="number">0.9</span>, int3X, int3Y</span><br><span class="line">TracePrint <span class="string">&quot;输入框X轴坐标&quot;</span> &amp; int3X</span><br><span class="line">TracePrint <span class="string">&quot;输入框Y轴坐标&quot;</span> &amp; int3Y</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">If int3X &gt; <span class="number">0</span> And int3Y &gt; <span class="number">0</span> Then</span><br><span class="line">MoveTo int3X+<span class="number">110</span>, int3Y+<span class="number">8</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">LeftClick <span class="number">1</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是账号&quot;</span>,<span class="number">0</span>,<span class="number">20</span>)</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是密码&quot;</span>,<span class="number">0</span>,<span class="number">30</span>)</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">KeyPress <span class="string">&quot;Enter&quot;</span>, <span class="number">1</span></span><br><span class="line">TracePrint <span class="string">&quot;登陆等待&quot;</span></span><br><span class="line">TracePrint Time</span><br><span class="line">Delay <span class="number">400000</span> <span class="comment">//程序登录缓慢，设置一个延时时间等待响应</span></span><br><span class="line">TracePrint Time</span><br><span class="line">End If</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
-
+    <title>Python脚本内自定义域名解析的IP</title>
+    <url>/2016/03/09/python-custom-ip-resolve.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
+<p>由于服务器走公网解析我们域名的话，同样只有一台服务器完成功能。所以我想着是不是在不修改本机hosts的情况下，在Python脚本内实现对域名的解析。带着这个想法，终于在<a href="http://stackoverflow.com/questions/2236498/tell-urllib2-to-use-custom-dns">stackoverflow</a>上找到了可行的答案。</p>
+<p>大致思路是，首先定义一个函数，记录你需要自定义IP的域名，并建立一个httplib.HTTPConnection的子类，在参数传递给socket.create_connection前修改self.host以封装connection方法。然后继承HTTPHandler这个类，用上面的HTTPConnection替换httplib内自带的HTTPConnection，并重写http_open方法；最后把HTTPHandler放到自定义的opener。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> httplib</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">req_host</span>(<span class="params">host</span>):</span><br><span class="line">        <span class="keyword">if</span> host == <span class="string">&#x27;www.***.cn&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&#x27;8.8.8.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPConnection</span>(httplib.HTTPConnection):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">connect</span>(<span class="params">self</span>):</span><br><span class="line">                self.sock = socket.create_connection((req_host(self.host),self.port),self.timeout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPHandler</span>(urllib2.HTTPHandler):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">http_open</span>(<span class="params">self,req</span>):</span><br><span class="line">                <span class="keyword">return</span> self.do_open(MyHTTPConnection,req)</span><br><span class="line"></span><br><span class="line">opener = urllib2.build_opener(MyHTTPHandler)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://&#x27;</span></span><br><span class="line">f = urllib2.urlopen(url)</span><br><span class="line">req = f.read()</span><br><span class="line"><span class="built_in">print</span> req</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>技术宅</category>
       </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title>Redis安装和基本配置</title>
@@ -1453,6 +1439,20 @@
       </tags>
   </entry>
   <entry>
+    <title>被折腾了一把按键精灵</title>
+    <url>/2016/09/22/reboot-app-with-anjianjingling.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>线上有台Windows服务器，上面跑了一个第三方C&#x2F;S架构的程序。因为这个程序比较矫情，经常与这第三方的通信中断，然后就得手动重启。而重启之后报错几率很大，反复登录得消耗很长时间。所以别人提到是不是可以用按键精灵自动完成输密码登录的操作。当时觉得还是有点为难的，因为输密码那个地方，屏蔽了很多自动输入的方式，不过好在最后找到了解决办法，算是弄出来了。</p>
+<span id="more"></span>
+
+<p>不过现在这代码断开远程桌面之后就执行不了了，算是一个弊端，而且刚接触手写按键精灵的代码，基本上写的很面向过程，哈哈。想起来高中那几年，要是当初能把按键精灵研究好，当时玩天龙八部也不至于那么乏味枯燥吧。下面直接上码。</p>
+<h2 id="Show-the-Code"><a href="#Show-the-Code" class="headerlink" title="Show the Code"></a>Show the Code</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始化屏幕分辨率</span></span><br><span class="line">sx = Plugin.Sys.GetScRX()</span><br><span class="line">sy = Plugin.Sys.GetScRY()</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置定时器</span></span><br><span class="line">Rem Loop1</span><br><span class="line">Do</span><br><span class="line">NowTime = Time</span><br><span class="line"><span class="comment">//TracePrint NowTime</span></span><br><span class="line">SWTime = <span class="string">&quot;02:30&quot;</span> <span class="comment">//这里是定时时间</span></span><br><span class="line">If Hour(SWTime) = Hour(NowTime) and Minute(SWTime) = Minute(NowTime) Then </span><br><span class="line">Exit Do</span><br><span class="line">End If</span><br><span class="line">Loop</span><br><span class="line"></span><br><span class="line">LogStart <span class="string">&quot;C:\reboot_v3.log&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;程序开始&quot;</span></span><br><span class="line">Call Login()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N  <span class="comment">//检查是否登录成功</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">While int4M &lt; <span class="number">0</span> and int4N &lt; <span class="number">0</span></span><br><span class="line">TracePrint <span class="string">&quot;看来得重新登陆一遍&quot;</span></span><br><span class="line">Call Lib.系统.结束进程(<span class="string">&quot;进程名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">Delay <span class="number">5000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">TracePrint <span class="string">&quot;继续检查是否登录成功&quot;</span></span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Wend</span><br><span class="line">TracePrint <span class="string">&quot;登陆成功，执行完毕&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;等待下一次执行&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">Goto Loop1</span><br><span class="line"></span><br><span class="line">Sub Login()</span><br><span class="line">Call 子程序<span class="number">1</span>()</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//启动应用程序</span></span><br><span class="line">Sub 子程序<span class="number">1</span>()</span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\1.bmp&quot;</span>, <span class="number">0.9</span>, intX, intY</span><br><span class="line">If intX &lt; <span class="number">0</span> And intY &lt; <span class="number">0</span> Then</span><br><span class="line">TracePrint <span class="string">&quot;远程桌面似乎已关闭，终止运行&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">EndScript</span><br><span class="line">End If</span><br><span class="line">Hwnd = Plugin.Window.Find(<span class="number">0</span>, <span class="string">&quot;应用窗口名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Plugin.Window.Close(Hwnd)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;开始子程序1，应用程序已启动&quot;</span></span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//点击调出登陆按钮</span></span><br><span class="line">Sub 子程序<span class="number">2</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序2，调出登陆框&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这段代码不重要，不提了</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Delay <span class="number">400</span></span><br><span class="line">End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//输入密码并回车</span></span><br><span class="line">Sub 子程序<span class="number">3</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序3，输入密码并登陆&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\4.bmp&quot;</span>, <span class="number">0.9</span>, int3X, int3Y</span><br><span class="line">TracePrint <span class="string">&quot;输入框X轴坐标&quot;</span> &amp; int3X</span><br><span class="line">TracePrint <span class="string">&quot;输入框Y轴坐标&quot;</span> &amp; int3Y</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">If int3X &gt; <span class="number">0</span> And int3Y &gt; <span class="number">0</span> Then</span><br><span class="line">MoveTo int3X+<span class="number">110</span>, int3Y+<span class="number">8</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">LeftClick <span class="number">1</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是账号&quot;</span>,<span class="number">0</span>,<span class="number">20</span>)</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是密码&quot;</span>,<span class="number">0</span>,<span class="number">30</span>)</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">KeyPress <span class="string">&quot;Enter&quot;</span>, <span class="number">1</span></span><br><span class="line">TracePrint <span class="string">&quot;登陆等待&quot;</span></span><br><span class="line">TracePrint Time</span><br><span class="line">Delay <span class="number">400000</span> <span class="comment">//程序登录缓慢，设置一个延时时间等待响应</span></span><br><span class="line">TracePrint Time</span><br><span class="line">End If</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Rewrite</title>
     <url>/2015/02/01/rewrite.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>nginx for wordpress</p>
@@ -1483,6 +1483,36 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#定义变量</span></span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 0;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$request_uri</span> ~* /metals/nickel\?mid ) &#123;</span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定不同的fastcgi</span></span><br><span class="line">    location ~ .*\.php &#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$nickelprice</span> = 1 ) &#123;</span><br><span class="line">    fastcgi_pass   172.16.xx.xx:9000;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>服务器端全部启用之后，终于主站不再受这波请求的影响了。至于那台被牺牲的服务器，就随它去吧～～</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哎呀，网站又被黑了</title>
+    <url>/2016/04/12/site-be-hacked-again.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
+<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
+<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
+<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
+<blockquote>
+<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
+</blockquote>
+<p>既然知道了原理，那么就好排查问题了。</p>
+<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
+<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
+<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
+<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
+<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
+<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>技术宅</category>
@@ -1552,36 +1582,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哎呀，网站又被黑了</title>
-    <url>/2016/04/12/site-be-hacked-again.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
-<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
-<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
-<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
-<blockquote>
-<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
-</blockquote>
-<p>既然知道了原理，那么就好排查问题了。</p>
-<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
-<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
-<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
-<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
-<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
-<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -1665,6 +1665,25 @@
       </tags>
   </entry>
   <entry>
+    <title>The Fault</title>
+    <url>/2015/08/19/the-fault.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/the-fault-1.jpg"></p>
+<p>灯光暗灭，前奏响起。那场执念多年的演唱会终于拉开了帷幕。</p>
+<p>如我在开场时发的微博，那天虽然忙碌，可是安心坐下来的时候仍然怀疑他在合肥的演唱会真的能开始了吗，这场景本应存在于梦里才对。</p>
+<p>演唱会当天仍然不可避免的忙碌。虽淡出许久，可是对于安徽的活动总是有些牵挂。而至于这份牵挂的由来，可能要追溯回2010年跟小伙伴们相识的年份吧。那一年的一场商演，我误打误撞的认识了那样的一群人。那时候的安徽分会，也在那群人秉承着的某种意志下建立起来了。</p>
+<p>虽然那一年的商演最后由他的一句“不见不散”，变成了“因病缺席”。可是这一群人却变成了我年少时期几乎所有幸福的源头。于是他们所坚守的“安徽”也渐渐成为了我的执念。</p>
+<p>故事的开头总是美好的，故事的结局也总是被想象的很美好。原本大家约定安排妥当后借着一场活动完美告别。可是因为一些不解与愤慨，最后这场告别以一群人的裸退收场。而当我面对这样一个大家曾经那么用心经营的地方时，心里却满满的惋惜。想着让它茁壮成长下去才对得起他们那么多年那么多的用心吧。虽然刚开始的那半年忍受过多不解，可是最后也算坚持下来了。而且经过这场演唱会的验收，的确现在那些年轻的孩子们已经做的很棒很让人欣慰了。</p>
+<p>记得在这场演唱会只是公布行程的时候，就期待着能在奥体举办。因为他对这座场馆说过太多次的“不见不散”，但最终又因为各种说辞未能如约。甚至这场演唱会在开始前的一个月，都因为主办与经济公司之间的沟通不悦差点夭折，所以格外珍惜着最终的时线。更何况我曾听过从这座场馆里拨出的那么暖心连线的五月天，亲眼见过满场粉海的周杰伦，所以对于能在这里看到紫海便更加执念。</p>
+<p>所谓圆梦与遗憾，大体是人生里面最磨人的小妖精了吧。这场看似圆梦的演唱会，也因为一些遗憾，让我更深刻的纪念着。</p>
+<p><img data-src="https://statics.yvanz.com/the-fault-2.jpg"></p>
+<p>嗯，也谢谢今天所有的生日快乐。Love U U.</p>
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850682&amp;auto=1&amp;height=66" width="330"></iframe>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+  </entry>
+  <entry>
     <title>微博春晚背后的技术故事</title>
     <url>/2015/04/01/technical-story-behind-the-spring-festival-weibo.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
@@ -1738,48 +1757,6 @@
       </tags>
   </entry>
   <entry>
-    <title>The Fault</title>
-    <url>/2015/08/19/the-fault.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/the-fault-1.jpg"></p>
-<p>灯光暗灭，前奏响起。那场执念多年的演唱会终于拉开了帷幕。</p>
-<p>如我在开场时发的微博，那天虽然忙碌，可是安心坐下来的时候仍然怀疑他在合肥的演唱会真的能开始了吗，这场景本应存在于梦里才对。</p>
-<p>演唱会当天仍然不可避免的忙碌。虽淡出许久，可是对于安徽的活动总是有些牵挂。而至于这份牵挂的由来，可能要追溯回2010年跟小伙伴们相识的年份吧。那一年的一场商演，我误打误撞的认识了那样的一群人。那时候的安徽分会，也在那群人秉承着的某种意志下建立起来了。</p>
-<p>虽然那一年的商演最后由他的一句“不见不散”，变成了“因病缺席”。可是这一群人却变成了我年少时期几乎所有幸福的源头。于是他们所坚守的“安徽”也渐渐成为了我的执念。</p>
-<p>故事的开头总是美好的，故事的结局也总是被想象的很美好。原本大家约定安排妥当后借着一场活动完美告别。可是因为一些不解与愤慨，最后这场告别以一群人的裸退收场。而当我面对这样一个大家曾经那么用心经营的地方时，心里却满满的惋惜。想着让它茁壮成长下去才对得起他们那么多年那么多的用心吧。虽然刚开始的那半年忍受过多不解，可是最后也算坚持下来了。而且经过这场演唱会的验收，的确现在那些年轻的孩子们已经做的很棒很让人欣慰了。</p>
-<p>记得在这场演唱会只是公布行程的时候，就期待着能在奥体举办。因为他对这座场馆说过太多次的“不见不散”，但最终又因为各种说辞未能如约。甚至这场演唱会在开始前的一个月，都因为主办与经济公司之间的沟通不悦差点夭折，所以格外珍惜着最终的时线。更何况我曾听过从这座场馆里拨出的那么暖心连线的五月天，亲眼见过满场粉海的周杰伦，所以对于能在这里看到紫海便更加执念。</p>
-<p>所谓圆梦与遗憾，大体是人生里面最磨人的小妖精了吧。这场看似圆梦的演唱会，也因为一些遗憾，让我更深刻的纪念着。</p>
-<p><img data-src="https://statics.yvanz.com/the-fault-2.jpg"></p>
-<p>嗯，也谢谢今天所有的生日快乐。Love U U.</p>
-<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850682&amp;auto=1&amp;height=66" width="330"></iframe>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>浪漫血液</title>
-    <url>/2015/01/01/the-romantic.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
-<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
-</div>
-&nbsp;
-
-<p>又到了交待这一年的时候了。</p>
-<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
-<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
-<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
-<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
-<div style="text-align: right;">
-——2015，我们值得更幸福
-</div>]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The Old Classmate</title>
     <url>/2014/05/21/the-old-classmate.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
@@ -1829,6 +1806,52 @@ Posted at 2014.6.14
       </categories>
   </entry>
   <entry>
+    <title>致父亲</title>
+    <url>/2023/06/18/to-father.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>之前自己曾经在朋友圈转发过这样一条内容，现在这个时日重新再看的话，特别是自己配的那个表情，显得尤其的天真了。</p>
+<p><img data-src="https://statics.yvanz.com/2023/gene.jpeg"></p>
+<p>回想起来，当时看到这么犀利的观点，加上自己的一点小知识分子气焰作祟，便转发到了朋友圈，尤其是即将跨年的时刻。因为我知道总会没有父亲的，只是若干年后的现在，才着实体会到他所说的“接受这一点就更难了”。去年 10 月父亲的复查结果不理想时，我从未去想这件事，可是以后只能去想了。</p>
+<p>我的父亲其实是一位很典型的中国式父亲，还记得 2012 年春节前自己做了一个小手术，在医院里住了大概不到一个星期，期间我的父亲从未来过医院，虽然从小到大的生活习惯让我并没有觉得这种做法有什么问题。他也沉迷这个年纪的中年人普遍的爱好，热衷参与麻将以及各种酒桌，对此我也常常颇有微词。</p>
+<p>他也是一名很典型的中国式男性，出身清苦，却一直为小家努力打拼，早年对待工作也很积极和踏实。我们的家境也的确因为这种踏实，逐渐有点起色，虽不算富，却很知足。只是他并没有多少时光享受这种起色了。</p>
+<p>就是这样一位普通到不能再普通的父亲，在我有限的时光里只见他流过两次泪。一次是在我爷爷的葬礼上，而第二次，便是去年 12 月我去医院看他的时候。而哭的原因，不过是觉得往常我回家的时候，他都能备好我喜欢吃的，而现在只能躺在病床上，再也没有能力做这样的事情了。我的父亲就像一座山一样，平时尽力的保护和“纵容”着我。我自认在亲戚的酒桌上是一个“无礼”的人，父亲在的时候，我总能有各种托词和靠山。只是从今以后，这些世俗的事情我得自己去面对了。</p>
+<p>也是从那之后，每次回家发现他的身体都在肉眼可见的衰弱。12 月底我临走前一天晚上，他还能来我房间跟我闲聊几句。聊天结束时，我看到他已经佝偻的身体从凳子上缓缓站起来，然后两只手借助着转身的惯性，背在身后缓缓的离开了，尽力的保持着优雅。而春节之后，他只能坐在自己的床上跟我道别。直到 2 月份去世前的那周，我吃完午饭准备离开家的时候，他却因为身体的能量已经不能很好的支撑大脑保持清醒，在我告别时，他在那昏昏欲睡，显得有点恍惚。</p>
+<p>对于我而言，多多少少是有些遗憾的。遗憾因为一些限制，并没有让他多多体验我现在的生活，遗憾他治病的过程中，我是不是能陪的更多，贡献的更多。遗憾最后的时候，我没能回到身边，只是前一天晚上通过视频进行了简单的问候。反而好像是他尽力让我不要有太多遗憾，因为去年国庆假期之后，他不顾我们的反对，要来看看我刚换不久的房子，或许当时他就发觉自己的身体不对劲了吧。也的确谢谢他的坚持，否则按照我们想让他复查后再来看看的计划，或许真的就再也不能来了。而他回家时发的圈，也成了他留在朋友圈的最后一条内容。</p>
+<p><img data-src="https://statics.yvanz.com/2023/back-home.jpeg"></p>
+<p>我也不愿意悲伤，尤其是借着回忆写这样的一篇文章，过程本身就是痛苦的。因为行文过程中总是有这样那样的情绪和回忆打断自己的思路。我记得在殡仪馆的时候，其实心里并没有多少波澜。只是觉得躺在那里的那个人，曾经不是很伟岸吗，怎么现在看起来那么瘦小，而一个活生生的人变成一张照片，一块石碑，就是一种结束吗。</p>
+<p>只是不知为何，今早刚睁眼的时候，所有的情绪突然喷涌而出无法自已。哦，大概这就是所谓的“接受这一点就更难了”吧，而这种情绪，对生者是持久的，是绵绵不绝的。</p>
+<p>今年看《流浪地球2》的时候，因为经历过这一切，对数字生命的概念也向往了好久，或多或少的同情图恒宇的行为。可是理性又告诉我，这种看似真实的虚拟生命，或许的确没有意义，而生命的印记能以任意一种形式在数字世界永存，才是真正有意义的事情吧。从这种角度看，Apple 的 Vision Pro 发布的 3D 视频功能，可能最适合普通人的生活。只是，我也不能用这样的产品去记录我与我的父亲了。</p>
+<p>爱是记得，嗯，那就希望用这一篇文章在数字世界永远的做个标记。</p>
+<img style="margin: auto;" data-src="https://statics.yvanz.com/2023/nio-remember.gif">
+
+
+        <div id="aplayer-YovkjmDH" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-YovkjmDH"),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+              title: "谢幕",
+              author: "林俊杰",
+              url: "https://statics.yvanz.com/2023/jjlin-hero.m4a",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>牢骚</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一场值得纪念的战役</title>
     <url>/2016/07/19/this-is-miracle-truly.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="http://ww4.sinaimg.cn/large/6482d531gw1f5pwcysmz4j20hp0a642d.jpg"></p>
@@ -1851,49 +1874,26 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
-    <title>致父亲</title>
-    <url>/2023/06/18/to-father.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>之前自己曾经在朋友圈转发过这样一条内容，现在这个时日重新再看的话，特别是自己配的那个表情，显得尤其的天真了。</p>
-<p><img data-src="https://statics.yvanz.com/2023/gene.jpeg"></p>
-<p>回想起来，当时看到这么犀利的观点，加上自己的一点小知识分子气焰作祟，便转发到了朋友圈，尤其是即将跨年的时刻。因为我知道总会没有父亲的，只是若干年后的现在，才着实体会到他所说的“接受这一点就更难了”。去年 10 月父亲的复查结果不理想时，我从未去想这件事，可是以后只能去想了。</p>
-<p>我的父亲其实是一位很典型的中国式父亲，还记得 2012 年春节前自己做了一个小手术，在医院里住了大概不到一个星期，期间我的父亲从未来过医院，虽然从小到大的生活习惯让我并没有觉得这种做法有什么问题。他也沉迷这个年纪的中年人普遍的爱好，热衷参与麻将以及各种酒桌，对此我也常常颇有微词。</p>
-<p>他也是一名很典型的中国式男性，出身清苦，却一直为小家努力打拼，早年对待工作也很积极和踏实。我们的家境也的确因为这种踏实，逐渐有点起色，虽不算富，却很知足。只是他并没有多少时光享受这种起色了。</p>
-<p>就是这样一位普通到不能再普通的父亲，在我有限的时光里只见他流过两次泪。一次是在我爷爷的葬礼上，而第二次，便是去年 12 月我去医院看他的时候。而哭的原因，不过是觉得往常我回家的时候，他都能备好我喜欢吃的，而现在只能躺在病床上，再也没有能力做这样的事情了。我的父亲就像一座山一样，平时尽力的保护和“纵容”着我。我自认在亲戚的酒桌上是一个“无礼”的人，父亲在的时候，我总能有各种托词和靠山。只是从今以后，这些世俗的事情我得自己去面对了。</p>
-<p>也是从那之后，每次回家发现他的身体都在肉眼可见的衰弱。12 月底我临走前一天晚上，他还能来我房间跟我闲聊几句。聊天结束时，我看到他已经佝偻的身体从凳子上缓缓站起来，然后两只手借助着转身的惯性，背在身后缓缓的离开了，尽力的保持着优雅。而春节之后，他只能坐在自己的床上跟我道别。直到 2 月份去世前的那周，我吃完午饭准备离开家的时候，他却因为身体的能量已经不能很好的支撑大脑保持清醒，在我告别时，他在那昏昏欲睡，显得有点恍惚。</p>
-<p>对于我而言，多多少少是有些遗憾的。遗憾因为一些限制，并没有让他多多体验我现在的生活，遗憾他治病的过程中，我是不是能陪的更多，贡献的更多。遗憾最后的时候，我没能回到身边，只是前一天晚上通过视频进行了简单的问候。反而好像是他尽力让我不要有太多遗憾，因为去年国庆假期之后，他不顾我们的反对，要来看看我刚换不久的房子，或许当时他就发觉自己的身体不对劲了吧。也的确谢谢他的坚持，否则按照我们想让他复查后再来看看的计划，或许真的就再也不能来了。而他回家时发的圈，也成了他留在朋友圈的最后一条内容。</p>
-<p><img data-src="https://statics.yvanz.com/2023/back-home.jpeg"></p>
-<p>我也不愿意悲伤，尤其是借着回忆写这样的一篇文章，过程本身就是痛苦的。因为行文过程中总是有这样那样的情绪和回忆打断自己的思路。我记得在殡仪馆的时候，其实心里并没有多少波澜。只是觉得躺在那里的那个人，曾经不是很伟岸吗，怎么现在看起来那么瘦小，而一个活生生的人变成一张照片，一块石碑，就是一种结束吗。</p>
-<p>只是不知为何，今早刚睁眼的时候，所有的情绪突然喷涌而出无法自已。哦，大概这就是所谓的“接受这一点就更难了”吧，而这种情绪，对生者是持久的，是绵绵不绝的。</p>
-<p>今年看《流浪地球2》的时候，因为经历过这一切，对数字生命的概念也向往了好久，或多或少的同情图恒宇的行为。可是理性又告诉我，这种看似真实的虚拟生命，或许的确没有意义，而生命的印记能以任意一种形式在数字世界永存，才是真正有意义的事情吧。从这种角度看，Apple 的 Vision Pro 发布的 3D 视频功能，可能最适合普通人的生活。只是，我也不能用这样的产品去记录我与我的父亲了。</p>
-<p>爱是记得，嗯，那就希望用这一篇文章在数字世界永远的做个标记。</p>
-<img style="margin: auto;" data-src="https://statics.yvanz.com/2023/nio-remember.gif">
+    <title>浪漫血液</title>
+    <url>/2015/01/01/the-romantic.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
+</div>
+&nbsp;
 
-
-        <div id="aplayer-dXRvCQSf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-dXRvCQSf"),
-            narrow: false,
-            autoplay: true,
-            showlrc: false,
-            music: {
-              title: "谢幕",
-              author: "林俊杰",
-              url: "https://statics.yvanz.com/2023/jjlin-hero.m4a",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
+<p>又到了交待这一年的时候了。</p>
+<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
+<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
+<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
+<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
+<div style="text-align: right;">
+——2015，我们值得更幸福
+</div>]]></content>
       <categories>
         <category>文艺范</category>
       </categories>
       <tags>
-        <tag>牢骚</tag>
+        <tag>林俊杰</tag>
       </tags>
   </entry>
   <entry>
@@ -1954,6 +1954,83 @@ Posted at 2014.6.14
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信红包系统设计 &amp; 优化</title>
+    <url>/2015/04/01/weixin-red-envelope.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>编者按：经过2014年一年的酝酿，2015微信红包总量创下历史新高，峰值1400万次&#x2F;秒，8.1亿次每分钟，微信红包收发达10.1亿次，系统整体运行平稳, 在这里我分享下微信红包背后的技术。</p>
+<ul>
+<li>核心功能&amp;目标</li>
+</ul>
+<p>首先，了解下微信红包的4个逻辑：摇&#x2F;发&#x2F;抢&#x2F;拆。看似简单，实现可不简单再review下微信红包要实现目标：</p>
+<p>摇：摇的流畅</p>
+<p>快：抢的要快</p>
+<p>爽：拆的爽</p>
+<p>稳：能分享出去</p>
+<ul>
+<li>系统难点：</li>
+</ul>
+<p>1.中国运营商网络环境复杂，覆盖面广，春节期间网络吃紧，容易出现网络故障</p>
+<p>2.在尖峰摇时如何避免服务雪崩</p>
+<p>3.在服务资源有限时，如何提供柔性服务</p>
+<p>4.如何构造有损服务</p>
+<p>5.如何构造set模型</p>
+<p>6.如何解决并发抢</p>
+<p>7.如何实现实现数据一致性</p>
+<ul>
+<li>系统整体架构图</li>
+</ul>
+<p><img data-src="http://djt.qq.com/upload/public/common/2015/03/images/150327153526716.png?nothumb=false"></p>
+<ul>
+<li>跨区域网络解决方案</li>
+</ul>
+<p>微信客户端分布全球，接入点较多，用户资料靠近接入点，可以加速用户资料访问，但是红包的业务逻辑层并不全网分布，业务逻辑层访问数据层比较多，数据层有状态强一致性问题，只能同用一个数据副本，比如上海用户与深圳用户在同个群里，抢同一个红包，如果订单数据在上海与深圳都有，在抢的时候，无法保证数据同步，可用性低，所以，设计系统时，一定要梳理清楚系统间的调用关系，优化接入层的业务逻辑，把网络耗时降到最小，系统吞吐量才能提升。</p>
+<p>跨区域网络问题，在物理实施上，也需要有备份绕行的能力，这个可以在系统的底层框架中实现，当指定专线出现故障时，快速切换网络，恢复服务</p>
+<ul>
+<li>如何构建有损服务</li>
+</ul>
+<p>什么是有损服务？选择性牺牲一部分数据一致性和完整性从而保证核心功能绝大多数运行，经过一段时间窗口，数据一致性与完整性能得以恢复，这也是腾讯的一直运营策略，在有限资源前提下，量力而为，满足用户的核心需求</p>
+<p>比如，春晚摇一摇，我们的核心点是摇&#x2F;拆&#x2F;分享，那系统的资源优先需要保证这些服务的响应，任何关联系统出现异常的时候马上进行系统降级，防止引起系统雪崩。</p>
+<p>系统降级可以分为两个方面，一是把核心功能调用链路简化，减少依赖，通过辅助轻量化的服务实现，确保最短关键路径的可行，比方说在接入层置入摇红包逻辑，将每秒千万级请求转化为每秒万级的红包请求，再传到红包服务的后端逻辑，降低雪崩的可能性。</p>
+<ul>
+<li>柔性服务.打造好的产品体验</li>
+</ul>
+<p>柔性可用是在有损服务价值观支持下的方法，重点在于实际上会结合用户使用场景，根据资源消耗，调整产品策略，设计几个级别不同的用户体验场景，保证尽可能成功返回关键数据，并正常接受请求，绝不轻易倒下。</p>
+<p>比如，红包的核心功能拆，拆完需要记录用户头像昵称，转帐资金划转，同时输出同个订单下其它拆记录，拆过程这些操作都可能失败，但是核心操作获取红包是成功的，此时，我们至少可以告诉用户抢到金额，不至于让用户焦急等待，不断重试，未完成的操作(头像补全与资金转帐)，可以通异步补尝方式重试。这样解决了用户的问题，也缓解了系统压力。</p>
+<ul>
+<li>如何构造set模型</li>
+</ul>
+<p>Set模块就像一个集装箱，把各模块标准化，模块化，规模化，它为海量服务运营，特别是设备管理、网络架构，提供了宏观运营支撑框架，从而极大提高了海量服务运营效率。</p>
+<p>微信红包的set模块，以拆服务为例，从接入层开始，数据开始sticky，按订单号路由，即按单号分set，同一个set尽可能在一个IDC 里，减少模块间调用的耗时，在同一个set内，逻辑层任何一台机器，调用方可实时摘除，如果是数据层发生故障，先在接入层，把新产生的红包订单号屏蔽有故障对应的set编号，比如，set1 数据库出现故障，为了避免在故障的set1 上继续产生新的支付请求，在订单生成器直接跳过set1的单号规则，把新请求导致其它set, 只有未抢完的部分红包，会提示故障，稍后恢复，阻止了故障引发的进一步恶化，在故障db上的数据，通过备机与业务逻辑层的数据核对，完成数据一致性的修复。</p>
+<ul>
+<li>如何解决并发抢</li>
+</ul>
+<p>群里红包的规则是金额随机抢，在一个大群发一个红包出去，抢并发请求量高，在同一个资源上操作，需要增加锁操作，避免一个抢总数超过发送红包总数，众所周所，mysql的加锁操作，很多抢在一个锁上等，性能损耗大，吞吐量下降，对于海量服务的操作，是不能满足要求。</p>
+<p>在set模块的基础上，我们把发&#x2F;抢的资源请求都会落到同一个资源set，在最外层，cache红包的状态，如果红包已经被抢完了，即刻返回，如果红包未接完，对于一个红包进去抢环节还有限流，这是第一级保护，通过一致性hash算法，一一个单到dao层都会路由到同一个机器的同一个进程，dao到mysql在现一个连接上完成抢操作，把并发抢修改成串行化，mysql可以无锁等待，性能明显提升。</p>
+<ul>
+<li>如何实现数据一致性</li>
+</ul>
+<p>谈到分布式系统，先回顾CAP理论</p>
+<p>C：Consistency数据一致更新，所有变动都是同步的</p>
+<p>A：高可用，好的响应性能</p>
+<p>P: 分区容忍，可靠性</p>
+<p>在我们的系统设计中，同样碰到这个问题，无法同时满足三个因子，移动互联网系统，高可用性是必要要求，数据分区也是分布式系统的条件，所以，我们设计系统时，只能尽量保证数据一致性，只要一定时间窗口内，完成数据一致，让用户满意。</p>
+<p>微信红包的数据有几份，订单数据，用户数据，还有对应的cache数据，</p>
+<p>N：数据副本份数红包有三份</p>
+<p>R: 一次需读取的副本红包一次从一个副本可以全部读取需要数据</p>
+<p>W: 一次写入数据2份实时写，一分异步化</p>
+<p>R(1) + W(2) &lt;&#x3D;N从公式算出，我们的数据模型也是弱一致性</p>
+<p>用户数据是异步更新，更新失败，通过消息中心，异步重试，根据DB资源负载设置调用方的调用阀值，除了实时重试，我们还有准实时数据核对，保证数据最终一致性。</p>
+<p>&amp;nbsp;</p>
+<p>原文链接：<a href="http://djt.qq.com/article/view/1349">http://djt.qq.com/article/view/1349</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>转载学习</tag>
+        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -2086,83 +2163,6 @@ Posted at 2014.6.14
       </categories>
       <tags>
         <tag>装逼遭雷劈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信红包系统设计 &amp; 优化</title>
-    <url>/2015/04/01/weixin-red-envelope.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>编者按：经过2014年一年的酝酿，2015微信红包总量创下历史新高，峰值1400万次&#x2F;秒，8.1亿次每分钟，微信红包收发达10.1亿次，系统整体运行平稳, 在这里我分享下微信红包背后的技术。</p>
-<ul>
-<li>核心功能&amp;目标</li>
-</ul>
-<p>首先，了解下微信红包的4个逻辑：摇&#x2F;发&#x2F;抢&#x2F;拆。看似简单，实现可不简单再review下微信红包要实现目标：</p>
-<p>摇：摇的流畅</p>
-<p>快：抢的要快</p>
-<p>爽：拆的爽</p>
-<p>稳：能分享出去</p>
-<ul>
-<li>系统难点：</li>
-</ul>
-<p>1.中国运营商网络环境复杂，覆盖面广，春节期间网络吃紧，容易出现网络故障</p>
-<p>2.在尖峰摇时如何避免服务雪崩</p>
-<p>3.在服务资源有限时，如何提供柔性服务</p>
-<p>4.如何构造有损服务</p>
-<p>5.如何构造set模型</p>
-<p>6.如何解决并发抢</p>
-<p>7.如何实现实现数据一致性</p>
-<ul>
-<li>系统整体架构图</li>
-</ul>
-<p><img data-src="http://djt.qq.com/upload/public/common/2015/03/images/150327153526716.png?nothumb=false"></p>
-<ul>
-<li>跨区域网络解决方案</li>
-</ul>
-<p>微信客户端分布全球，接入点较多，用户资料靠近接入点，可以加速用户资料访问，但是红包的业务逻辑层并不全网分布，业务逻辑层访问数据层比较多，数据层有状态强一致性问题，只能同用一个数据副本，比如上海用户与深圳用户在同个群里，抢同一个红包，如果订单数据在上海与深圳都有，在抢的时候，无法保证数据同步，可用性低，所以，设计系统时，一定要梳理清楚系统间的调用关系，优化接入层的业务逻辑，把网络耗时降到最小，系统吞吐量才能提升。</p>
-<p>跨区域网络问题，在物理实施上，也需要有备份绕行的能力，这个可以在系统的底层框架中实现，当指定专线出现故障时，快速切换网络，恢复服务</p>
-<ul>
-<li>如何构建有损服务</li>
-</ul>
-<p>什么是有损服务？选择性牺牲一部分数据一致性和完整性从而保证核心功能绝大多数运行，经过一段时间窗口，数据一致性与完整性能得以恢复，这也是腾讯的一直运营策略，在有限资源前提下，量力而为，满足用户的核心需求</p>
-<p>比如，春晚摇一摇，我们的核心点是摇&#x2F;拆&#x2F;分享，那系统的资源优先需要保证这些服务的响应，任何关联系统出现异常的时候马上进行系统降级，防止引起系统雪崩。</p>
-<p>系统降级可以分为两个方面，一是把核心功能调用链路简化，减少依赖，通过辅助轻量化的服务实现，确保最短关键路径的可行，比方说在接入层置入摇红包逻辑，将每秒千万级请求转化为每秒万级的红包请求，再传到红包服务的后端逻辑，降低雪崩的可能性。</p>
-<ul>
-<li>柔性服务.打造好的产品体验</li>
-</ul>
-<p>柔性可用是在有损服务价值观支持下的方法，重点在于实际上会结合用户使用场景，根据资源消耗，调整产品策略，设计几个级别不同的用户体验场景，保证尽可能成功返回关键数据，并正常接受请求，绝不轻易倒下。</p>
-<p>比如，红包的核心功能拆，拆完需要记录用户头像昵称，转帐资金划转，同时输出同个订单下其它拆记录，拆过程这些操作都可能失败，但是核心操作获取红包是成功的，此时，我们至少可以告诉用户抢到金额，不至于让用户焦急等待，不断重试，未完成的操作(头像补全与资金转帐)，可以通异步补尝方式重试。这样解决了用户的问题，也缓解了系统压力。</p>
-<ul>
-<li>如何构造set模型</li>
-</ul>
-<p>Set模块就像一个集装箱，把各模块标准化，模块化，规模化，它为海量服务运营，特别是设备管理、网络架构，提供了宏观运营支撑框架，从而极大提高了海量服务运营效率。</p>
-<p>微信红包的set模块，以拆服务为例，从接入层开始，数据开始sticky，按订单号路由，即按单号分set，同一个set尽可能在一个IDC 里，减少模块间调用的耗时，在同一个set内，逻辑层任何一台机器，调用方可实时摘除，如果是数据层发生故障，先在接入层，把新产生的红包订单号屏蔽有故障对应的set编号，比如，set1 数据库出现故障，为了避免在故障的set1 上继续产生新的支付请求，在订单生成器直接跳过set1的单号规则，把新请求导致其它set, 只有未抢完的部分红包，会提示故障，稍后恢复，阻止了故障引发的进一步恶化，在故障db上的数据，通过备机与业务逻辑层的数据核对，完成数据一致性的修复。</p>
-<ul>
-<li>如何解决并发抢</li>
-</ul>
-<p>群里红包的规则是金额随机抢，在一个大群发一个红包出去，抢并发请求量高，在同一个资源上操作，需要增加锁操作，避免一个抢总数超过发送红包总数，众所周所，mysql的加锁操作，很多抢在一个锁上等，性能损耗大，吞吐量下降，对于海量服务的操作，是不能满足要求。</p>
-<p>在set模块的基础上，我们把发&#x2F;抢的资源请求都会落到同一个资源set，在最外层，cache红包的状态，如果红包已经被抢完了，即刻返回，如果红包未接完，对于一个红包进去抢环节还有限流，这是第一级保护，通过一致性hash算法，一一个单到dao层都会路由到同一个机器的同一个进程，dao到mysql在现一个连接上完成抢操作，把并发抢修改成串行化，mysql可以无锁等待，性能明显提升。</p>
-<ul>
-<li>如何实现数据一致性</li>
-</ul>
-<p>谈到分布式系统，先回顾CAP理论</p>
-<p>C：Consistency数据一致更新，所有变动都是同步的</p>
-<p>A：高可用，好的响应性能</p>
-<p>P: 分区容忍，可靠性</p>
-<p>在我们的系统设计中，同样碰到这个问题，无法同时满足三个因子，移动互联网系统，高可用性是必要要求，数据分区也是分布式系统的条件，所以，我们设计系统时，只能尽量保证数据一致性，只要一定时间窗口内，完成数据一致，让用户满意。</p>
-<p>微信红包的数据有几份，订单数据，用户数据，还有对应的cache数据，</p>
-<p>N：数据副本份数红包有三份</p>
-<p>R: 一次需读取的副本红包一次从一个副本可以全部读取需要数据</p>
-<p>W: 一次写入数据2份实时写，一分异步化</p>
-<p>R(1) + W(2) &lt;&#x3D;N从公式算出，我们的数据模型也是弱一致性</p>
-<p>用户数据是异步更新，更新失败，通过消息中心，异步重试，根据DB资源负载设置调用方的调用阀值，除了实时重试，我们还有准实时数据核对，保证数据最终一致性。</p>
-<p>&amp;nbsp;</p>
-<p>原文链接：<a href="http://djt.qq.com/article/view/1349">http://djt.qq.com/article/view/1349</a></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>转载学习</tag>
-        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
