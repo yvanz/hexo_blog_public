@@ -4,6 +4,8 @@
     <title>我的13，等着你的14</title>
     <url>/2013/12/31/1314.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>约定好会聊聊自己的故事，想一想，先交待这样的一个故事吧。</p>
+<span id="more"></span>
+
 <p>去年刚到上海那会儿，经常在住的地方听到楼上一位女生电话里头跟她男朋友的争吵。只是从这争吵的声音里面，我多听到了一点撕心裂肺。那似乎是一种控诉与虽然不服气但还是抵挡不了既定事实的绝望情绪。控诉着对方为什么变成这个样子；绝望着把两个人的感情经营到如此不堪却毫无回天之力。</p>
 <p>我当初就在幻想，这对情侣一定有过你浓我浓的阶段。那又是什么，让一对情侣之间变得只剩争吵了呢。曾经跟某个人聊到这样的情况，她给我的解答是触碰到原则和底线了吧。</p>
 <p>关于底线，之前找过一句话来安慰自己：“生命里的VIP，总是让你甘愿把自己的原则一再打折”。所以，因为不是什么VIP，才有那些不愉快吧。</p>
@@ -112,59 +114,12 @@
       </tags>
   </entry>
   <entry>
-    <title>vsftp安装配置小记</title>
-    <url>/2016/01/04/a-note-with-vsftp.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>每次安装ftp服务的时候，我都得折腾很长时间，可是需求本身很简单，配置文件的修改项也很少。所以还是记录一下安装配置流程，假如以后还需要再装呢。</p>
-<p>首先说明一下需求：为服务器安装一个ftp服务，让开发可以看指定目录的日志，禁止从该目录跳转至其他文件夹</p>
-<p>安装ftp</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install vsftpd -y</span><br></pre></td></tr></table></figure>
-
-<p>编辑配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">anonymous_enable=YES   <span class="comment">#修改为NO，禁止匿名用户登陆</span></span><br><span class="line">write_enable=YES  <span class="comment">#修改为NO，禁止上传</span></span><br><span class="line">local_root=/   <span class="comment">#使用该设置项可以修改用户默认登陆路径，这里我将值设置为日志路径</span></span><br><span class="line"><span class="comment">#chroot_local_user=YES   #取消该设置项的注释，可以禁止ftp登陆用户访问local_root以外的文件夹</span></span><br></pre></td></tr></table></figure>
-
-<p>重启vsftp使修改生效</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">service vsftpd restart</span><br></pre></td></tr></table></figure>
-
-<p>若使用系统自带的ftp用户登陆，则不需要修改selinux。若新建了一个带家目录的nologin用户，则需要修改selinux设置，否则登陆时会报500错误</p>
-<p>500 OOPS: cannot change directory:XXXXX</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改selinux限制</span></span><br><span class="line">service vsftpd stop</span><br><span class="line">setsebool ftp_home_dir on</span><br><span class="line">service vsftpd start</span><br><span class="line"><span class="comment">#或者直接关闭selinux</span></span><br><span class="line">setenforce 0</span><br></pre></td></tr></table></figure>
-
-<p>另外需要注意的是，nologin的用户需要有家目录，否则即使设置好了selinux，同样会报500错误，因为当家目录不存在时，它不知道从哪里可以跳至local_root</p>
-<p>更多内容可参考：<a href="http://www.hi-linux.com/2016/07/25/VSftpd%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEFTP%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7%E5%AE%9E%E8%B7%B5/">VSftpd安装和配置FTP虚拟用户实践</a></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新地球</title>
-    <url>/2014/12/01/brave-new-world.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
-<p><embed src="http://www.tudou.com/v/ijKdeiuKNI8/&bid=05&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></p>
-<p>完整歌词</p>
-<blockquote>
-<p>是一种蓝色的哀愁<br>我醒在荒凉的地球<br>纽约在海底的角落<br>阳光把大地变沙漠</p>
-<p><em>Rap：变了味道 人们才开始哀悼 讽刺的是空气很好 烟囱在水里无声飘摇 没了情调 人们为三餐奔跑</em><br><em>一切的爱恨都在自寻烦恼</em></p>
-<p>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
-<p>灰色的土地很枯燥<br>人们的娱乐好无聊<br>转圈圈不停转圈圈 然后摔倒<br>地平线眺望地平线 默默祈祷<br>没有飓风就好</p>
-<p>新地球他们跑不了 像是个圈套 只能庸庸碌碌到老<br>新地球 他们的监牢 只是眼神 悲伤难以去掉<br>新地球 从头来一遭 过去的错误不能一起重弹老调<br>新地球 我只想回到<br>那一年 那年 被遗忘的小岛<br>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>时间轴归档制作</title>
     <url>/2014/06/06/css-timeline.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>当初在筹划建站的时候，无意间发现有人用时间轴的样式做了一个文章归档的页面，顿时觉得十分高大上。于是联系到那位亲几封邮件下来终于也把时间轴归档弄到我的博客来了。</p>
 <p>Anyway，先来看看代码吧（以下代码是针对我所使用的Clearision主题修改而来的）</p>
+<span id="more"></span>
+
 <ul>
 <li>footer.php添加引入jquery语句（要在script.js引入前引入）</li>
 </ul>
@@ -198,36 +153,22 @@
       </categories>
   </entry>
   <entry>
-    <title>Messy</title>
-    <url>/2016/07/02/everything-seems-in-a-mess.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>似乎人人都会敏感本命年，可是我前一个本命年却过的不可思议的顺利。然而过完年回来上班却发现，等待着我的只是一副烂摊子。</p>
-<span id="more"></span>
-
-<p>原本在过年前，我还自信满满的规划着今年要做些什么，看起来前景好像很是广阔。只是年后这“改朝换代”的现实，把我打击的似乎一蹶不振。三月底经历着公司内部的人员清洗。当时还在天真的觉得，我如果拥有足够的实力，陪他们一起离职让公司额外产生一些实际的损失，也算是为兄弟们出口气了。可是后来明白，没有什么地方是在缺了一个人之后就转不起来的。我们能做的，大致只有提升自己的能力，在面临山雨欲来风满楼的时候，可以稳妥的找到另一个栖身的地方吧。然而我需要多久才能达到这样的级别呢。</p>
-<p>今天结束，第一个五年计划里第四个年头也随之结束了。回望一番，头一次觉得中间的任性真的耽误了不少时间呢。这剩下的最后一年，如果要实现当初定的目标，应该任务繁重吧。可是现在终日赋闲的状态，连干活都成了看心情的事，想必更是形势严峻吧。有时候会好奇，那些顺利进入一线大公司，与我同行业的人到底技术层面比我成熟多少呢。那些招聘jd里要求的三年经验的高级职位最后都会招到什么样的人呢。Messy,work seems in a mess.</p>
-<p>今年上半年，家里刚好也有一些乱七八糟的事情。前段时间那样的撕破脸，想想一些人的言语。还真的蛮难让我尊敬起来的。又想到父母被别人用孙子吃定得死死的，突然觉得自己也挺不孝顺的吧。Messy,life seems in a  mess.</p>
-<p>有些牢骚。不过五年计划的时间真的不多了。虽然有时候会幻想，如果有妳陪，即使再不顺，也应该能量满满吧，毕竟觉得自己还是一个挺依赖情绪做事情的人。然而只是个幻想。</p>
-<p>总之，希望自己能早点从一团糟的状态爬出来吧。希望。</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
     <title>浅析电子邮件的发送</title>
     <url>/2014/05/14/email-post.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
+<span id="more"></span>
+
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/1.jpg" alt="1"></p>
 <p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
 <p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
 <p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
-<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#115;&#101;&#x72;&#x76;&#105;&#x63;&#x65;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;">&#115;&#101;&#x72;&#x76;&#105;&#x63;&#x65;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
+<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#115;&#101;&#x72;&#x76;&#x69;&#99;&#101;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#x2e;&#99;&#111;&#x6d;">&#115;&#101;&#x72;&#x76;&#x69;&#99;&#101;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#x2e;&#99;&#111;&#x6d;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
 <p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
 <p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
 <p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
 <p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
-<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#115;&#101;&#x72;&#x76;&#x69;&#x63;&#101;&#x40;&#106;&#x6a;&#108;&#105;&#x6e;&#46;&#x63;&#111;&#109;">&#115;&#101;&#x72;&#x76;&#x69;&#x63;&#101;&#x40;&#106;&#x6a;&#108;&#105;&#x6e;&#46;&#x63;&#111;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
+<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#115;&#101;&#114;&#118;&#105;&#x63;&#x65;&#64;&#x6a;&#106;&#x6c;&#x69;&#110;&#x2e;&#99;&#111;&#109;">&#115;&#101;&#114;&#118;&#105;&#x63;&#x65;&#64;&#x6a;&#106;&#x6c;&#x69;&#110;&#x2e;&#99;&#111;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
 <p>尾巴：</p>
 <p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
 <p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
@@ -242,6 +183,75 @@
       <tags>
         <tag>装逼遭雷劈</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>新地球</title>
+    <url>/2014/12/01/brave-new-world.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
+<span id="more"></span>
+
+<p><embed src="http://www.tudou.com/v/ijKdeiuKNI8/&bid=05&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></p>
+<p>完整歌词</p>
+<blockquote>
+<p>是一种蓝色的哀愁<br>我醒在荒凉的地球<br>纽约在海底的角落<br>阳光把大地变沙漠</p>
+<p><em>Rap：变了味道 人们才开始哀悼 讽刺的是空气很好 烟囱在水里无声飘摇 没了情调 人们为三餐奔跑</em><br><em>一切的爱恨都在自寻烦恼</em></p>
+<p>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
+<p>灰色的土地很枯燥<br>人们的娱乐好无聊<br>转圈圈不停转圈圈 然后摔倒<br>地平线眺望地平线 默默祈祷<br>没有飓风就好</p>
+<p>新地球他们跑不了 像是个圈套 只能庸庸碌碌到老<br>新地球 他们的监牢 只是眼神 悲伤难以去掉<br>新地球 从头来一遭 过去的错误不能一起重弹老调<br>新地球 我只想回到<br>那一年 那年 被遗忘的小岛<br>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vsftp安装配置小记</title>
+    <url>/2016/01/04/a-note-with-vsftp.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>每次安装ftp服务的时候，我都得折腾很长时间，可是需求本身很简单，配置文件的修改项也很少。所以还是记录一下安装配置流程，假如以后还需要再装呢。</p>
+<span id="more"></span>
+
+<p>首先说明一下需求：为服务器安装一个ftp服务，让开发可以看指定目录的日志，禁止从该目录跳转至其他文件夹</p>
+<p>安装ftp</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install vsftpd -y</span><br></pre></td></tr></table></figure>
+
+<p>编辑配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">anonymous_enable=YES   <span class="comment">#修改为NO，禁止匿名用户登陆</span></span><br><span class="line">write_enable=YES  <span class="comment">#修改为NO，禁止上传</span></span><br><span class="line">local_root=/   <span class="comment">#使用该设置项可以修改用户默认登陆路径，这里我将值设置为日志路径</span></span><br><span class="line"><span class="comment">#chroot_local_user=YES   #取消该设置项的注释，可以禁止ftp登陆用户访问local_root以外的文件夹</span></span><br></pre></td></tr></table></figure>
+
+<p>重启vsftp使修改生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">service vsftpd restart</span><br></pre></td></tr></table></figure>
+
+<p>若使用系统自带的ftp用户登陆，则不需要修改selinux。若新建了一个带家目录的nologin用户，则需要修改selinux设置，否则登陆时会报500错误</p>
+<p>500 OOPS: cannot change directory:XXXXX</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改selinux限制</span></span><br><span class="line">service vsftpd stop</span><br><span class="line">setsebool ftp_home_dir on</span><br><span class="line">service vsftpd start</span><br><span class="line"><span class="comment">#或者直接关闭selinux</span></span><br><span class="line">setenforce 0</span><br></pre></td></tr></table></figure>
+
+<p>另外需要注意的是，nologin的用户需要有家目录，否则即使设置好了selinux，同样会报500错误，因为当家目录不存在时，它不知道从哪里可以跳至local_root</p>
+<p>更多内容可参考：<a href="http://www.hi-linux.com/2016/07/25/VSftpd%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEFTP%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7%E5%AE%9E%E8%B7%B5/">VSftpd安装和配置FTP虚拟用户实践</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Messy</title>
+    <url>/2016/07/02/everything-seems-in-a-mess.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>似乎人人都会敏感本命年，可是我前一个本命年却过的不可思议的顺利。然而过完年回来上班却发现，等待着我的只是一副烂摊子。</p>
+<span id="more"></span>
+
+<p>原本在过年前，我还自信满满的规划着今年要做些什么，看起来前景好像很是广阔。只是年后这“改朝换代”的现实，把我打击的似乎一蹶不振。三月底经历着公司内部的人员清洗。当时还在天真的觉得，我如果拥有足够的实力，陪他们一起离职让公司额外产生一些实际的损失，也算是为兄弟们出口气了。可是后来明白，没有什么地方是在缺了一个人之后就转不起来的。我们能做的，大致只有提升自己的能力，在面临山雨欲来风满楼的时候，可以稳妥的找到另一个栖身的地方吧。然而我需要多久才能达到这样的级别呢。</p>
+<p>今天结束，第一个五年计划里第四个年头也随之结束了。回望一番，头一次觉得中间的任性真的耽误了不少时间呢。这剩下的最后一年，如果要实现当初定的目标，应该任务繁重吧。可是现在终日赋闲的状态，连干活都成了看心情的事，想必更是形势严峻吧。有时候会好奇，那些顺利进入一线大公司，与我同行业的人到底技术层面比我成熟多少呢。那些招聘jd里要求的三年经验的高级职位最后都会招到什么样的人呢。Messy,work seems in a mess.</p>
+<p>今年上半年，家里刚好也有一些乱七八糟的事情。前段时间那样的撕破脸，想想一些人的言语。还真的蛮难让我尊敬起来的。又想到父母被别人用孙子吃定得死死的，突然觉得自己也挺不孝顺的吧。Messy,life seems in a  mess.</p>
+<p>有些牢骚。不过五年计划的时间真的不多了。虽然有时候会幻想，如果有妳陪，即使再不顺，也应该能量满满吧，毕竟觉得自己还是一个挺依赖情绪做事情的人。然而只是个幻想。</p>
+<p>总之，希望自己能早点从一团糟的状态爬出来吧。希望。</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
   </entry>
   <entry>
     <title>伟大的渺小 —— Ever Cry, Never Life</title>
@@ -260,9 +270,91 @@
       </tags>
   </entry>
   <entry>
+    <title>你给我听好</title>
+    <url>/2014/06/07/gaokao2014.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
+
+<p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
+<p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
+<span id="more"></span>
+
+<p>嗯？为什么今天家里没人？为什么我看的电视里放着一部电影？我就算看电视也应该在看喜羊羊的啊。不过我没有追究完这么多为什么，因为我似乎被电影的剧情吸引了。说起来也奇怪，这其实是一部在我觉得很老套的文艺片，里面女主对男主爱的死去活来，只不过男主感受不到。这样的情节不应该引起我的注意才对。</p>
+<p>而冗杂的电影里面，我现在只记得女主最后实在忍受不了跟男主争吵的桥段，大意不过是在控诉为何自己付出那么多却得不到自己想要的关心和爱护。</p>
+<p>或许是在看别人故事的缘故吧，我好像大致能懂这对纠结情侣之间的问题：其实看得出男主对女主是有感情的，相处的时候男主做的很多细节也体现了对女主的关心。可是男主比较委婉，不曾将这些细节和盘托出，所以女主也就没有切身的体会到被爱。而女主则比较简单直接，没有那么多委婉。她觉得什么方式是好的，就在用什么方式对待男主，时刻希望男主能感觉到她就在身边。可是这种自以为的方式，不过是她自己最能接受的方式罢了。换句话说就是，当别人用她的这种方式来关心她时，她才能感觉的到自己是有人爱护的。</p>
+<p>所以其实两个人都没有错的吧，不过是频段不一样，加上两个人在沟通之前都想表达自己其实更在乎对方，可没想到的是，这些话到了嘴边却变成了谁更伤害对方的现实。</p>
+<p>而这一切的美中不足，大概就是还没等我看到结局，就被开门声吵醒了。原来那部电影是个梦，我在看喜羊羊的时候睡着了……更悲催的是趁家里没人偷看电视这一行径被抓个现行又挨批了。只不过这时候我似乎想通了之前的问题：其实长辈们没错，他们教育我的时候有自己的既定立场，因为他们已经替我们经历过了未来我们可能经历过的事，所以有那些教育我的角度。理虽明白，可是我亦只有一个一生，我虽然希望能顺着长辈们的好意，按着他们的期望走下去，但其实我更想把我的一生定义成我想要的样子。也许未来的某个桥段我会出现差错，可是这出戏演起来，经历的更多我才能收获的更多吧。当然我也相信，等到我年纪老迈之时，可能对晚辈也会“指指点点”，因为我们总是用自以为最好的方式要求着别人。无他，这是表达爱意的一种方式。</p>
+<hr>
+<p>此段文与作文主体无关：</p>
+<p>写这作文不过是突发奇想，希望把我理解的安徽高考今年的作文题跟大家交流一下。而关于作文本身，希望轻吐槽，毕竟从09年到现在，时代也有点久远了，而且虽然努力回忆我高考时的心态来写这作文，可是好像引那样的故事也不太合适，哈哈。</p>
+<p>其实我还是很怀念那段高考时光的。因为好像全世界对我们都很关心，很宽容。印象最深的是有一次在后期冲刺阶段，我买了一本书之后打车回学校，司机看我拿着复习材料便问：“快高考了吧”。我简单的回了一句“是的”，笑一笑，便没了下文。没想到的是这位司机蜀黍在送我到学校之后很关心的叫我好好加油，别太累。还有一次便是考英语那天下午，我从家准备打车去考场，在招出租的时候有点争抢的意味，结果司机阿姨说带我吧，先把我送到考场要紧。</p>
+<p>当然最怀念的还是那段时间朋友们的鼓励和陪伴，也因为舍不得，所以甚至把当年六月份的短信都保留了下来发到了空间的日志上面。链接应该在<a href="http://user.qzone.qq.com/494732898/blog/1246375900">这里</a></p>
+<p>而远离高考这么多年，对我改变最大的应该是喜欢上了用笔在纸上写字的感觉。虽然当年作为母语是汉语的我，整个高中的语文考试几乎没及格过，唯一记得及格的就是高考的语文考试，但这不妨碍我现在喜欢那种笔尖在纸上婆娑的样子。唯一的缺点就是字略丑影响美感，哈哈。有图有真相~</p>
+<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019-759x1024.jpg" alt="IMG_20140607_205019"></a></p>
+<p>Peace.</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【草稿】GoAccess安装与使用</title>
+    <url>/2014/07/23/goaccess.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
+<p>首先在goaccess官方网站<a href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
+<p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
+<p>现在对下载的源码进行解压并编译</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --enable-geoip --enable-utf8 --没有安装geoip的话可以不选enable-geoip</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">安装完毕可以直接使用goaccess命令查看Apache日志，一般配合如下参数</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">goaccess -a -f &lt;日志文件路径&gt;</span><br></pre></td></tr></table></figure>
+
+<p>更多参数可以参见man goaccess或者<a href="http://goaccess.io/man">http://goaccess.io/man</a></p>
+<p>当然goaccess最吸引我的是可以生成html、csv、jscon之类的文件。直接在读取数据的时候导出成html等格式便可，如</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">goaccess -a -f &amp;lt;日志文件路径&amp;gt; &amp;gt; test.html</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的前提是必须设置好goaccess日志格式，配置文件默认路径为&#x2F;usr&#x2F;local&#x2F;etc&#x2F;goaccess.conf。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#date-format %d/%b/%Y</span></span><br><span class="line"><span class="comment">#log-format %h %^[%d:%^] &quot;%r&quot; %s %b</span></span><br><span class="line"><span class="comment">##删除上述两行前面#并保存即可</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>GoAccess</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无冕歌王——林俊杰</title>
+    <url>/2014/06/29/golden-melody-jjlin.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>#无冕歌王林俊杰#第18届、第21届、第22届、第25届，四次冲击金曲奖。第18届的时候或许太年轻。而这些年，我们见证过21届堪称完美的表演却失之交臂，我们体会过22届颁奖时那段被拉长的J音把心吊到嗓子眼的感觉。终于在第25届，我们如愿了。你因我们而在，and we are yours。JJ x JM。你好，歌王@林俊杰</p>
+</blockquote>
+<span id="more"></span>
+
+<p>这条微博在今天空闲的时候就酝酿着，大概是颁奖前半小时梳理好的。我抱着最美好的期待写着这条微博，因为熬过这么多年金曲奖，之前每一次的等待之后都告诉自己，不需要这个奖做证明，在我们心里你已经是歌王了。可是好像骗不了自己，每一年的金曲奖我们还是会期待，而且看得到你也在期待，否则你不会在致辞时说到前四年时，略带哽咽的声音。</p>
+<p>还记得第一次守金曲奖，是第21届的时候，我特意跑到网吧通宵，在看完他那段表演之后觉得，这金曲歌王非你莫属了吧，可是没想到那一年，得奖的是陶喆。之后的第22届，当陶喆在念名单时，那吊胃口的J….ay Chou，让我们看到了他眼神中的那一瞥喜出望外，可是最终却是失望的神情。大概也是那次之后他意识到必须让自己的内心更加强大，不那么轻易的将心里的想法表现出来吧。我们总是得不断经历各种各样的事情，逼着自己快点长大的。</p>
+<p>好在他一直有这样一个目标作为他做音乐的动力之一，虽然波折这么多，可是今天的结果证明了，有梦想谁都了不起~</p>
+<p>“远远超出45秒，但是我不管”，一句很纯粹很直白的话，看得出你心里是有多开心，就像听到自己得奖时笑起来的表情一样。这么多年这么多颁奖礼，我还是第一次看到你得奖时笑起来这么像个孩子。</p>
+<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/QQimage201406290025491.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/QQimage201406290025491-1024x544.jpg" alt="QQimage201406290025491"></a></p>
+<p>而我又想了想，大概父母长辈们，在看到我们获得学业或者事业上的成功时，那种激动安慰的心情与我们此时此刻的心情大致相同吧。毕竟只有最亲近我们的人，才看得到我们为既定目标做了多少努力，才懂我们对既定目标有多大的期望。</p>
+<p>扯偏了，最后补一下金曲奖评审团对林俊杰的评价吧，我骄傲。</p>
+<blockquote>
+<p>林俊杰，兼具明星特质和演唱实力。诠释的细腻度和音乐掌控功力精湛，在音色展现上无可挑剔，唱功不容置疑。</p>
+</blockquote>
+<p>而这段获奖视频，应该值得永久收藏。</p>
+<p><embed allowfullscreen="true" allowscriptaccess="always" height="400" src="http://www.tudou.com/v/jSbf51_PVfk/&amp;bid=05&amp;rpid=19505363&amp;resourceId=19505363_05_05_99/v.swf" type="application/x-shockwave-flash" width="480" wmode="opaque"></embed></p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+        <tag>金曲奖</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Facebook如何实现PB级别数据库自动化备份</title>
     <url>/2015/03/11/facebook-mysql-backup.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Facebook的MySQL数据库，是世界上最庞大的MySQL数据库之一，在不同地区有数千个数据库服务器。因此，备份对他们来说是个巨大的挑战。为了解决这个问题，他们构建了一个高度自动化、非常有效的备份系统，每周移动多个PB的数据。Facebook数据团队的Eric Barrett通过一篇文章分享了他们的做法。</p>
+<span id="more"></span>
+
 <p>他们没有采用大量前载（front-loaded）测试，而是强调快速检测失败，并且进行快速、自动化纠正。部署几百个数据库服务器，只需很少人力干预。使用下面的三个措施，他们做到了有节奏的增长，同时具备支持上十亿用户的灵活性。</p>
 <p>措施1：二进制日志和mysqldump</p>
 <p>第一道防线称为&amp;ldquo;措施1&amp;rdquo;，或&amp;ldquo;机架&amp;rdquo;备份（rack backup），简称RBU。在每个数据库机架上，不论其类型为何，都有两个RBU存储服务器。以RBU作为数据库服务器放在同一个机架中，这可以保证最大的带宽和最小的延迟，它们同时可以作为缓存，在备份的下个措施使用。</p>
@@ -313,6 +405,8 @@
     <title>手游服务器开发技术详解</title>
     <url>/2016/03/09/gameserver-development.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>从事游戏服务器开发差不多两年时间，两年间参与了不少项目，学到了很多游戏服务器开发技术，参与过几个不同架构的服务器开发，就随便聊聊游戏服务器开发需要的技术。（以下所指游戏服务器更偏向于手游，因为我对端游和页游开发接触并不多）</p>
+<span id="more"></span>
+
 <p><strong>一.聊聊服务器开发有哪些东西要考虑。</strong></p>
 <p><strong>1.开发语言的选择：</strong></p>
 <p>工欲善其事,必先利其器，选择一门适合的开发语法对后期开发有着事半功倍的作用。</p>
@@ -370,82 +464,6 @@
       </tags>
   </entry>
   <entry>
-    <title>你给我听好</title>
-    <url>/2014/06/07/gaokao2014.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
-
-<p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
-<p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
-<p>嗯？为什么今天家里没人？为什么我看的电视里放着一部电影？我就算看电视也应该在看喜羊羊的啊。不过我没有追究完这么多为什么，因为我似乎被电影的剧情吸引了。说起来也奇怪，这其实是一部在我觉得很老套的文艺片，里面女主对男主爱的死去活来，只不过男主感受不到。这样的情节不应该引起我的注意才对。</p>
-<p>而冗杂的电影里面，我现在只记得女主最后实在忍受不了跟男主争吵的桥段，大意不过是在控诉为何自己付出那么多却得不到自己想要的关心和爱护。</p>
-<p>或许是在看别人故事的缘故吧，我好像大致能懂这对纠结情侣之间的问题：其实看得出男主对女主是有感情的，相处的时候男主做的很多细节也体现了对女主的关心。可是男主比较委婉，不曾将这些细节和盘托出，所以女主也就没有切身的体会到被爱。而女主则比较简单直接，没有那么多委婉。她觉得什么方式是好的，就在用什么方式对待男主，时刻希望男主能感觉到她就在身边。可是这种自以为的方式，不过是她自己最能接受的方式罢了。换句话说就是，当别人用她的这种方式来关心她时，她才能感觉的到自己是有人爱护的。</p>
-<p>所以其实两个人都没有错的吧，不过是频段不一样，加上两个人在沟通之前都想表达自己其实更在乎对方，可没想到的是，这些话到了嘴边却变成了谁更伤害对方的现实。</p>
-<p>而这一切的美中不足，大概就是还没等我看到结局，就被开门声吵醒了。原来那部电影是个梦，我在看喜羊羊的时候睡着了……更悲催的是趁家里没人偷看电视这一行径被抓个现行又挨批了。只不过这时候我似乎想通了之前的问题：其实长辈们没错，他们教育我的时候有自己的既定立场，因为他们已经替我们经历过了未来我们可能经历过的事，所以有那些教育我的角度。理虽明白，可是我亦只有一个一生，我虽然希望能顺着长辈们的好意，按着他们的期望走下去，但其实我更想把我的一生定义成我想要的样子。也许未来的某个桥段我会出现差错，可是这出戏演起来，经历的更多我才能收获的更多吧。当然我也相信，等到我年纪老迈之时，可能对晚辈也会“指指点点”，因为我们总是用自以为最好的方式要求着别人。无他，这是表达爱意的一种方式。</p>
-<hr>
-<p>此段文与作文主体无关：</p>
-<p>写这作文不过是突发奇想，希望把我理解的安徽高考今年的作文题跟大家交流一下。而关于作文本身，希望轻吐槽，毕竟从09年到现在，时代也有点久远了，而且虽然努力回忆我高考时的心态来写这作文，可是好像引那样的故事也不太合适，哈哈。</p>
-<p>其实我还是很怀念那段高考时光的。因为好像全世界对我们都很关心，很宽容。印象最深的是有一次在后期冲刺阶段，我买了一本书之后打车回学校，司机看我拿着复习材料便问：“快高考了吧”。我简单的回了一句“是的”，笑一笑，便没了下文。没想到的是这位司机蜀黍在送我到学校之后很关心的叫我好好加油，别太累。还有一次便是考英语那天下午，我从家准备打车去考场，在招出租的时候有点争抢的意味，结果司机阿姨说带我吧，先把我送到考场要紧。</p>
-<p>当然最怀念的还是那段时间朋友们的鼓励和陪伴，也因为舍不得，所以甚至把当年六月份的短信都保留了下来发到了空间的日志上面。链接应该在<a href="http://user.qzone.qq.com/494732898/blog/1246375900">这里</a></p>
-<p>而远离高考这么多年，对我改变最大的应该是喜欢上了用笔在纸上写字的感觉。虽然当年作为母语是汉语的我，整个高中的语文考试几乎没及格过，唯一记得及格的就是高考的语文考试，但这不妨碍我现在喜欢那种笔尖在纸上婆娑的样子。唯一的缺点就是字略丑影响美感，哈哈。有图有真相~</p>
-<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019-759x1024.jpg" alt="IMG_20140607_205019"></a></p>
-<p>Peace.</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>【草稿】GoAccess安装与使用</title>
-    <url>/2014/07/23/goaccess.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
-<p>首先在goaccess官方网站<a href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
-<p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
-<p>现在对下载的源码进行解压并编译</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --enable-geoip --enable-utf8 --没有安装geoip的话可以不选enable-geoip</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">安装完毕可以直接使用goaccess命令查看Apache日志，一般配合如下参数</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">goaccess -a -f &lt;日志文件路径&gt;</span><br></pre></td></tr></table></figure>
-
-<p>更多参数可以参见man goaccess或者<a href="http://goaccess.io/man">http://goaccess.io/man</a></p>
-<p>当然goaccess最吸引我的是可以生成html、csv、jscon之类的文件。直接在读取数据的时候导出成html等格式便可，如</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">goaccess -a -f &amp;lt;日志文件路径&amp;gt; &amp;gt; test.html</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的前提是必须设置好goaccess日志格式，配置文件默认路径为&#x2F;usr&#x2F;local&#x2F;etc&#x2F;goaccess.conf。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#date-format %d/%b/%Y</span></span><br><span class="line"><span class="comment">#log-format %h %^[%d:%^] &quot;%r&quot; %s %b</span></span><br><span class="line"><span class="comment">##删除上述两行前面#并保存即可</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>GoAccess</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>无冕歌王——林俊杰</title>
-    <url>/2014/06/29/golden-melody-jjlin.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>#无冕歌王林俊杰#第18届、第21届、第22届、第25届，四次冲击金曲奖。第18届的时候或许太年轻。而这些年，我们见证过21届堪称完美的表演却失之交臂，我们体会过22届颁奖时那段被拉长的J音把心吊到嗓子眼的感觉。终于在第25届，我们如愿了。你因我们而在，and we are yours。JJ x JM。你好，歌王@林俊杰</p>
-</blockquote>
-<p>这条微博在今天空闲的时候就酝酿着，大概是颁奖前半小时梳理好的。我抱着最美好的期待写着这条微博，因为熬过这么多年金曲奖，之前每一次的等待之后都告诉自己，不需要这个奖做证明，在我们心里你已经是歌王了。可是好像骗不了自己，每一年的金曲奖我们还是会期待，而且看得到你也在期待，否则你不会在致辞时说到前四年时，略带哽咽的声音。</p>
-<p>还记得第一次守金曲奖，是第21届的时候，我特意跑到网吧通宵，在看完他那段表演之后觉得，这金曲歌王非你莫属了吧，可是没想到那一年，得奖的是陶喆。之后的第22届，当陶喆在念名单时，那吊胃口的J….ay Chou，让我们看到了他眼神中的那一瞥喜出望外，可是最终却是失望的神情。大概也是那次之后他意识到必须让自己的内心更加强大，不那么轻易的将心里的想法表现出来吧。我们总是得不断经历各种各样的事情，逼着自己快点长大的。</p>
-<p>好在他一直有这样一个目标作为他做音乐的动力之一，虽然波折这么多，可是今天的结果证明了，有梦想谁都了不起~</p>
-<p>“远远超出45秒，但是我不管”，一句很纯粹很直白的话，看得出你心里是有多开心，就像听到自己得奖时笑起来的表情一样。这么多年这么多颁奖礼，我还是第一次看到你得奖时笑起来这么像个孩子。</p>
-<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/QQimage201406290025491.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/QQimage201406290025491-1024x544.jpg" alt="QQimage201406290025491"></a></p>
-<p>而我又想了想，大概父母长辈们，在看到我们获得学业或者事业上的成功时，那种激动安慰的心情与我们此时此刻的心情大致相同吧。毕竟只有最亲近我们的人，才看得到我们为既定目标做了多少努力，才懂我们对既定目标有多大的期望。</p>
-<p>扯偏了，最后补一下金曲奖评审团对林俊杰的评价吧，我骄傲。</p>
-<blockquote>
-<p>林俊杰，兼具明星特质和演唱实力。诠释的细腻度和音乐掌控功力精湛，在音色展现上无可挑剔，唱功不容置疑。</p>
-</blockquote>
-<p>而这段获奖视频，应该值得永久收藏。</p>
-<p><embed allowfullscreen="true" allowscriptaccess="always" height="400" src="http://www.tudou.com/v/jSbf51_PVfk/&amp;bid=05&amp;rpid=19505363&amp;resourceId=19505363_05_05_99/v.swf" type="application/x-shockwave-flash" width="480" wmode="opaque"></embed></p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-        <tag>金曲奖</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>半年记</title>
     <url>/2015/08/01/half-year-note.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=27560017&amp;auto=1&amp;height=66" width="330"></iframe>
@@ -460,6 +478,17 @@
 ]]></content>
       <categories>
         <category>文艺范</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>世界，你好！</title>
+    <url>/2012/11/11/hello-world-1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Hello world.</p>
+<p>这是使用基于Wordpress搭建的博客发布的第一篇文章。</p>
+<p>——Yvan</p>
+]]></content>
+      <categories>
+        <category>一开始</category>
       </categories>
   </entry>
   <entry>
@@ -478,51 +507,11 @@
       </tags>
   </entry>
   <entry>
-    <title>世界，你好！</title>
-    <url>/2012/11/11/hello-world-1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Hello world.</p>
-<p>这是使用基于Wordpress搭建的博客发布的第一篇文章。</p>
-<p>——Yvan</p>
-]]></content>
-      <categories>
-        <category>一开始</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>带着hexo来问好</title>
-    <url>/2016/05/15/hello-world-with-hexo.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早就想从wordpress换成hexo，因为想好好体验一下markdown编辑博客，而且直接用html语法直接实现文章样式的修改。只是一直没有契机。<br>最近因为想给自己的站加上https，所以在阿里云上买了个云主机，顺势把博客也搬到了阿里云。既然有了云主机，索性搭了个hexo环境，尝试把wordpress的文章导入hexo里。不过这两天折腾下来，发现自己原先有一些误区，用牢骚的方式记录一下。</p>
-<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><blockquote>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-</blockquote>
-<p>原先看着这段简介以及网上的文章，只了解到hexo使用markdown语法写作，并且最终的文章是以静态页的方式呈现出来。同时支持将静态页部署到github pages上。那么倘若我部署在服务器上，应该用法和wordpress一样的吧。可是事实证明，我似乎太天真。</p>
-<p>实际上，hexo正确的打开方式是，写好md文章用hexo generate生成好静态页，倘若使用github pages，则再用<code>hexo deploy</code>命令部署到github上；若自有服务器，则把静态页丢到服务器上的web目录让用户访问就可以了。hexo的<code>hexo server</code>只推荐用来本地调试。</p>
-<p>然而既然我已经买了云主机，似乎只丢静态文件到服务器上，有点太浪费资源了。所以还是在服务器端装好hexo，一条路走到了黑。</p>
-<h2 id="Hexo部署"><a href="#Hexo部署" class="headerlink" title="Hexo部署"></a>Hexo部署</h2><p>hexo的部署很简单，他们的<a href="https://hexo.io/zh-cn/docs/index.html">官方文档</a>写的很详细了。对照着安装然后生成站点文件夹即可。</p>
-<h2 id="Hexo文章导入"><a href="#Hexo文章导入" class="headerlink" title="Hexo文章导入"></a>Hexo文章导入</h2><p>从wordpress导出我所有的文章和网页，用hexo支持的方式导入这些文章。我在导入结束后发现转换后的文章，markdown解析起来全乱掉了。没办法只能这两天熬夜把所有的文章重新用markdown支持的语法改了一遍。庆幸自己不是话痨，写的文章还不算多。</p>
-<h2 id="启动博客"><a href="#启动博客" class="headerlink" title="启动博客"></a>启动博客</h2><p>修改好站点配置文件以及主题配置文件，用<code>hexo generate</code>命令生成静态文件，在nginx配置文件里将网站根目录指向public文件夹即可实现访问。</p>
-<h2 id="文章更新"><a href="#文章更新" class="headerlink" title="文章更新"></a>文章更新</h2><p>因为hexo是静态站点，不像wordpress自带后台可以直接发布文章。为了方便更新，以及实时备份的目的，我还是借助了git的力量。不过鉴于国内访问github速度感人，我选了国内的产品</p>
-<h3 id="程序文件纳入git"><a href="#程序文件纳入git" class="headerlink" title="程序文件纳入git"></a>程序文件纳入git</h3><p>在hexo程序目录里，使用<code>git init</code>将目录git化，然后提交目录里的文件至git仓库。具体操作如下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;hello hexo&#x27;</span></span><br><span class="line">git remote add origin <span class="string">&#x27;你的git仓库地址&#x27;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用webhooks实现自动更新"><a href="#使用webhooks实现自动更新" class="headerlink" title="使用webhooks实现自动更新"></a>使用webhooks实现自动更新</h3><p>基本上这些类github产品，都有webhooks。有了webhooks，就可以实现在远端库更新之后，POST一段json数据到服务器，让服务器执行一系列更新文章的命令。这里我在网上找到有现成的代码接收POST数据，<a href="http://my.oschina.net/ism/blog/647303">作者传送门</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding:UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> BaseHTTPServer <span class="keyword">import</span> HTTPServer,BaseHTTPRequestHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RequestHandler</span>(<span class="title class_ inherited__">BaseHTTPRequestHandler</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_writeheaders</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span> self.path</span><br><span class="line">        <span class="built_in">print</span> self.headers</span><br><span class="line">        self.send_response(<span class="number">200</span>);</span><br><span class="line">        self.send_header(<span class="string">&#x27;Content-type&#x27;</span>,<span class="string">&#x27;text/html&#x27;</span>);</span><br><span class="line">        self.end_headers()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_Head</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_GET</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">        self.wfile.write(<span class="string">&quot;&quot;&quot;&quot;&quot;&quot;</span> <span class="built_in">str</span>(self.headers))</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_POST</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">        length = self.headers.getheader(<span class="string">&#x27;content-length&#x27;</span>);</span><br><span class="line">        nbytes = <span class="built_in">int</span>(length)</span><br><span class="line">        data = self.rfile.read(nbytes)</span><br><span class="line">        self.wfile.write(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line">        <span class="comment"># print data</span></span><br><span class="line">        data = urllib.unquote(data)</span><br><span class="line">        data = data[<span class="number">5</span>:]</span><br><span class="line">        <span class="comment"># print data</span></span><br><span class="line">        json_obj = json.loads(data)</span><br><span class="line">        commits_cnt = <span class="built_in">len</span>(json_obj[<span class="string">&#x27;push_data&#x27;</span>][<span class="string">&#x27;commits&#x27;</span>])</span><br><span class="line">        <span class="built_in">print</span> commits_cnt</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(commits_cnt):</span><br><span class="line">            <span class="comment"># print i</span></span><br><span class="line">            <span class="built_in">print</span> json_obj[<span class="string">&#x27;push_data&#x27;</span>][<span class="string">&#x27;commits&#x27;</span>][i][<span class="string">&#x27;message&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    addr = (<span class="string">&#x27;&#x27;</span>,<span class="number">8765</span>)</span><br><span class="line">    server = HTTPServer(addr,RequestHandler)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure>
-
-<p>秉着拿来主义，在上述代码中自己添加了当message字段值为特定值时，去更新静态文件的功能。自动更新效果演示如下图</p>
-<p><img data-src="https://statics.yvanz.com/webhooks.jpg"></p>
-<p>这篇文章是用git提交并自动在服务器上生成的第一篇文章。Nice~</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>后篇，服务器负载过高</title>
     <url>/2016/04/22/high-load-be-solved.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。</p>
+<span id="more"></span>
+
 <p>首先用CPU火焰图绘出CPU的具体调用</p>
 <p> <img data-src="https://statics.yvanz.com/php-fpm_flame.png"><br>这里就看的很明显了，php-fpm栈里面有一个getdents64尤其的亮眼。那么这个getdents64又是何物呢？这里祭出<a href="http://linux.die.net/man/2/getdents64">Linux man page</a>的解释</p>
 <blockquote>
@@ -565,9 +554,82 @@
       </tags>
   </entry>
   <entry>
+    <title>可惜，没如果</title>
+    <url>/2014/12/15/if-only.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29814898&amp;auto=1&amp;height=66" width="330"></iframe>
+
+<p>在那个全碟试听的视频中听到那句“全都怪我 不该沉默时沉默 该勇敢时软弱 如果不是我”时，我就感觉得到，这首歌应该能让我回忆起非常多的画面。嗯，全都怪我，不该沉默时沉默……</p>
+<span id="more"></span>
+
+<blockquote>
+<p>假如把犯得起的错<br>能错的都错过<br>应该还来得及去悔过<br>假如没把一切说破<br>那一场小风波 将一笑带过<br>在感情面前 讲什么自我<br>要得过且过 再好过</p>
+</blockquote>
+<p>当还在一起的时候我就在想，以后还有那么漫长的日子需要陪伴，那么就让前期的磨合更彻底一些吧。在最开始的时候试探着对方的忍耐底线，应该能有悔过认错的机会。可是我不知道这之后我将为我的天真付出代价。<br>那天你终于爆发你所有的忍耐，也只在那时候才知道原来你一直压抑了这么久。而冲动如我，自以为完全在理，只想着自己希望得到什么的关心为何不能如期而至。只是最后才明白，在感情里面讲什么自我，原来知道什么是得过且过才能好好的过活。</p>
+<blockquote>
+<p>全都怪我 不该沉默时沉默 该勇敢时软弱<br>如果不是我 不会自己洒脱 让我们难过<br>可当初的你 和现在的我 假如从来过<br>倘若那天<br>把该说的话好好说 该体谅的不执着<br>如果那天我<br>不受情绪挑拨 你会怎么做<br>那么多如果 可能如果我 可惜没如果<br>只剩下结果</p>
+</blockquote>
+<p>我想是我不够称职，每当在面对问题需要沟通时总不自觉的沉默，甚至在需要承担的时候不会勇敢面对。如果不是我一直患得患失，我想我们之间不会有那么多的不开心。如果当初的你和现在明白这些的我能重新来过，又会有什么样的故事发生呢？倘若那时候我能言善答，可以说出心里的忐忑，你是否会理解我的词不达意呢？如果那时候我能多一些坚持和体谅，不像当时那样执着着不明所以的东西，会不会是另一种不一样的结局呢？</p>
+<p>&amp;nbsp;</p>
+<blockquote>
+<p>如果早点了解 那率性的你<br>或者晚一点 遇上成熟的我<br>不过 。。。</p>
+</blockquote>
+<p>如果能早点了解你的率性，或者我们再晚一些岁月遇见，遇见正好成熟的我。不过……我一直明白，缘分是一种很奇妙的东西，有时候把两个人放在一起，就是为了让他们错过彼此吧。</p>
+<blockquote>
+<p>全都怪我 不该沉默时沉默 该勇敢时软弱<br>如果不是我 不会自己洒脱 让我们难过<br>当初的你 和现在的我 假如从来过<br>倘若那天<br>把该说的话好好说 该体谅的不执着<br>如果那天我<br>不受情绪挑拨 你会怎么做<br>那么多如果 可能如果我&amp;nbsp;可惜没如果<br>没有你和我</p>
+</blockquote>
+<p>如果那天我没有受情绪波动说着一些违心的话，更没有做任何连自己现在想起来都觉得匪夷所思的事情，那么那天之后，你又会用什么样的态度对待我呢？你又会有什么样的决定呢？还是像现在这样不再有你和我同时出现的故事吗？</p>
+<blockquote>
+<p>都怪我 不该沉默时沉默 该勇敢时软弱<br>如果不是我&amp;nbsp;不会自己洒脱 让我们难过&amp;nbsp;<br>可当初的你 和现在的我&amp;nbsp;假如从来过&amp;nbsp;<br>倘若那天<br>把该说的话好好说&amp;nbsp;该体谅的不执着&amp;nbsp;<br>如果那天我<br>不受情绪挑拨&amp;nbsp;你会怎么做&amp;nbsp;那么多如果<br>可能如果我 可惜没如果&amp;nbsp;只剩下结果&amp;nbsp;<br>可惜没如果</p>
+</blockquote>
+<p>说了这么多的如果，是因为我知道现在剩下的只是结果.</p>
+<p>可惜，没如果</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>带着hexo来问好</title>
+    <url>/2016/05/15/hello-world-with-hexo.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早就想从wordpress换成hexo，因为想好好体验一下markdown编辑博客，而且直接用html语法直接实现文章样式的修改。只是一直没有契机。<br>最近因为想给自己的站加上https，所以在阿里云上买了个云主机，顺势把博客也搬到了阿里云。既然有了云主机，索性搭了个hexo环境，尝试把wordpress的文章导入hexo里。不过这两天折腾下来，发现自己原先有一些误区，用牢骚的方式记录一下。</p>
+<span id="more"></span>
+
+<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<p>原先看着这段简介以及网上的文章，只了解到hexo使用markdown语法写作，并且最终的文章是以静态页的方式呈现出来。同时支持将静态页部署到github pages上。那么倘若我部署在服务器上，应该用法和wordpress一样的吧。可是事实证明，我似乎太天真。</p>
+<p>实际上，hexo正确的打开方式是，写好md文章用hexo generate生成好静态页，倘若使用github pages，则再用<code>hexo deploy</code>命令部署到github上；若自有服务器，则把静态页丢到服务器上的web目录让用户访问就可以了。hexo的<code>hexo server</code>只推荐用来本地调试。</p>
+<p>然而既然我已经买了云主机，似乎只丢静态文件到服务器上，有点太浪费资源了。所以还是在服务器端装好hexo，一条路走到了黑。</p>
+<h2 id="Hexo部署"><a href="#Hexo部署" class="headerlink" title="Hexo部署"></a>Hexo部署</h2><p>hexo的部署很简单，他们的<a href="https://hexo.io/zh-cn/docs/index.html">官方文档</a>写的很详细了。对照着安装然后生成站点文件夹即可。</p>
+<h2 id="Hexo文章导入"><a href="#Hexo文章导入" class="headerlink" title="Hexo文章导入"></a>Hexo文章导入</h2><p>从wordpress导出我所有的文章和网页，用hexo支持的方式导入这些文章。我在导入结束后发现转换后的文章，markdown解析起来全乱掉了。没办法只能这两天熬夜把所有的文章重新用markdown支持的语法改了一遍。庆幸自己不是话痨，写的文章还不算多。</p>
+<h2 id="启动博客"><a href="#启动博客" class="headerlink" title="启动博客"></a>启动博客</h2><p>修改好站点配置文件以及主题配置文件，用<code>hexo generate</code>命令生成静态文件，在nginx配置文件里将网站根目录指向public文件夹即可实现访问。</p>
+<h2 id="文章更新"><a href="#文章更新" class="headerlink" title="文章更新"></a>文章更新</h2><p>因为hexo是静态站点，不像wordpress自带后台可以直接发布文章。为了方便更新，以及实时备份的目的，我还是借助了git的力量。不过鉴于国内访问github速度感人，我选了国内的产品</p>
+<h3 id="程序文件纳入git"><a href="#程序文件纳入git" class="headerlink" title="程序文件纳入git"></a>程序文件纳入git</h3><p>在hexo程序目录里，使用<code>git init</code>将目录git化，然后提交目录里的文件至git仓库。具体操作如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;hello hexo&#x27;</span></span><br><span class="line">git remote add origin <span class="string">&#x27;你的git仓库地址&#x27;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用webhooks实现自动更新"><a href="#使用webhooks实现自动更新" class="headerlink" title="使用webhooks实现自动更新"></a>使用webhooks实现自动更新</h3><p>基本上这些类github产品，都有webhooks。有了webhooks，就可以实现在远端库更新之后，POST一段json数据到服务器，让服务器执行一系列更新文章的命令。这里我在网上找到有现成的代码接收POST数据，<a href="http://my.oschina.net/ism/blog/647303">作者传送门</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding:UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> BaseHTTPServer <span class="keyword">import</span> HTTPServer,BaseHTTPRequestHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RequestHandler</span>(<span class="title class_ inherited__">BaseHTTPRequestHandler</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_writeheaders</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span> self.path</span><br><span class="line">        <span class="built_in">print</span> self.headers</span><br><span class="line">        self.send_response(<span class="number">200</span>);</span><br><span class="line">        self.send_header(<span class="string">&#x27;Content-type&#x27;</span>,<span class="string">&#x27;text/html&#x27;</span>);</span><br><span class="line">        self.end_headers()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_Head</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_GET</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">        self.wfile.write(<span class="string">&quot;&quot;&quot;&quot;&quot;&quot;</span> <span class="built_in">str</span>(self.headers))</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_POST</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">        length = self.headers.getheader(<span class="string">&#x27;content-length&#x27;</span>);</span><br><span class="line">        nbytes = <span class="built_in">int</span>(length)</span><br><span class="line">        data = self.rfile.read(nbytes)</span><br><span class="line">        self.wfile.write(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line">        <span class="comment"># print data</span></span><br><span class="line">        data = urllib.unquote(data)</span><br><span class="line">        data = data[<span class="number">5</span>:]</span><br><span class="line">        <span class="comment"># print data</span></span><br><span class="line">        json_obj = json.loads(data)</span><br><span class="line">        commits_cnt = <span class="built_in">len</span>(json_obj[<span class="string">&#x27;push_data&#x27;</span>][<span class="string">&#x27;commits&#x27;</span>])</span><br><span class="line">        <span class="built_in">print</span> commits_cnt</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(commits_cnt):</span><br><span class="line">            <span class="comment"># print i</span></span><br><span class="line">            <span class="built_in">print</span> json_obj[<span class="string">&#x27;push_data&#x27;</span>][<span class="string">&#x27;commits&#x27;</span>][i][<span class="string">&#x27;message&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    addr = (<span class="string">&#x27;&#x27;</span>,<span class="number">8765</span>)</span><br><span class="line">    server = HTTPServer(addr,RequestHandler)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure>
+
+<p>秉着拿来主义，在上述代码中自己添加了当message字段值为特定值时，去更新静态文件的功能。自动更新效果演示如下图</p>
+<p><img data-src="https://statics.yvanz.com/webhooks.jpg"></p>
+<p>这篇文章是用git提交并自动在服务器上生成的第一篇文章。Nice~</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开启HTTPS加密连接</title>
     <url>/2014/09/26/https-connect.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为在弄心脏滴血的漏洞修复，于是兴起试了试网站的https连接，麻溜把步骤记下来。</p>
+<span id="more"></span>
+
 <p>首先准备https连接必须要的组件openssl。因为修复漏洞，我直接在<a href="http://www.openssl.org/">官网</a>下载最新版然后源码安装，源码安装三大金刚命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/config --prefix=/usr/local/openssl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 
@@ -592,46 +654,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>Apache</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>可惜，没如果</title>
-    <url>/2014/12/15/if-only.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29814898&amp;auto=1&amp;height=66" width="330"></iframe>
-
-<p>在那个全碟试听的视频中听到那句“全都怪我 不该沉默时沉默 该勇敢时软弱 如果不是我”时，我就感觉得到，这首歌应该能让我回忆起非常多的画面。嗯，全都怪我，不该沉默时沉默……</p>
-<p>&amp;nbsp;</p>
-<blockquote>
-<p>假如把犯得起的错<br>能错的都错过<br>应该还来得及去悔过<br>假如没把一切说破<br>那一场小风波 将一笑带过<br>在感情面前 讲什么自我<br>要得过且过 再好过</p>
-</blockquote>
-<p>当还在一起的时候我就在想，以后还有那么漫长的日子需要陪伴，那么就让前期的磨合更彻底一些吧。在最开始的时候试探着对方的忍耐底线，应该能有悔过认错的机会。可是我不知道这之后我将为我的天真付出代价。<br>那天你终于爆发你所有的忍耐，也只在那时候才知道原来你一直压抑了这么久。而冲动如我，自以为完全在理，只想着自己希望得到什么的关心为何不能如期而至。只是最后才明白，在感情里面讲什么自我，原来知道什么是得过且过才能好好的过活。</p>
-<p>&amp;nbsp;</p>
-<blockquote>
-<p>全都怪我 不该沉默时沉默 该勇敢时软弱<br>如果不是我 不会自己洒脱 让我们难过<br>可当初的你 和现在的我 假如从来过<br>倘若那天<br>把该说的话好好说 该体谅的不执着<br>如果那天我<br>不受情绪挑拨 你会怎么做<br>那么多如果 可能如果我 可惜没如果<br>只剩下结果</p>
-</blockquote>
-<p>我想是我不够称职，每当在面对问题需要沟通时总不自觉的沉默，甚至在需要承担的时候不会勇敢面对。如果不是我一直患得患失，我想我们之间不会有那么多的不开心。如果当初的你和现在明白这些的我能重新来过，又会有什么样的故事发生呢？倘若那时候我能言善答，可以说出心里的忐忑，你是否会理解我的词不达意呢？如果那时候我能多一些坚持和体谅，不像当时那样执着着不明所以的东西，会不会是另一种不一样的结局呢？</p>
-<p>&amp;nbsp;</p>
-<blockquote>
-<p>如果早点了解 那率性的你<br>或者晚一点 遇上成熟的我<br>不过 。。。</p>
-</blockquote>
-<p>如果能早点了解你的率性，或者我们再晚一些岁月遇见，遇见正好成熟的我。不过……我一直明白，缘分是一种很奇妙的东西，有时候把两个人放在一起，就是为了让他们错过彼此吧。</p>
-<p>&amp;nbsp;</p>
-<blockquote>
-<p>全都怪我 不该沉默时沉默 该勇敢时软弱<br>如果不是我 不会自己洒脱 让我们难过<br>当初的你 和现在的我 假如从来过<br>倘若那天<br>把该说的话好好说 该体谅的不执着<br>如果那天我<br>不受情绪挑拨 你会怎么做<br>那么多如果 可能如果我&amp;nbsp;可惜没如果<br>没有你和我</p>
-</blockquote>
-<p>如果那天我没有受情绪波动说着一些违心的话，更没有做任何连自己现在想起来都觉得匪夷所思的事情，那么那天之后，你又会用什么样的态度对待我呢？你又会有什么样的决定呢？还是像现在这样不再有你和我同时出现的故事吗？</p>
-<p>&amp;nbsp;</p>
-<blockquote>
-<p>都怪我 不该沉默时沉默 该勇敢时软弱<br>如果不是我&amp;nbsp;不会自己洒脱 让我们难过&amp;nbsp;<br>可当初的你 和现在的我&amp;nbsp;假如从来过&amp;nbsp;<br>倘若那天<br>把该说的话好好说&amp;nbsp;该体谅的不执着&amp;nbsp;<br>如果那天我<br>不受情绪挑拨&amp;nbsp;你会怎么做&amp;nbsp;那么多如果<br>可能如果我 可惜没如果&amp;nbsp;只剩下结果&amp;nbsp;<br>可惜没如果</p>
-</blockquote>
-<p>说了这么多的如果，是因为我知道现在剩下的只是结果.</p>
-<p>可惜，没如果</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
       </tags>
   </entry>
   <entry>
@@ -682,7 +704,7 @@
   <entry>
     <title>林俊杰的歌，是自己的年少时光</title>
     <url>/2015/01/31/jj-memory.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/jj-memory.jpg"><br>&amp;nbsp;</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/jj-memory.jpg"></p>
 <blockquote>
 <p>从第一张专辑开始，11分钟听完十一年的24首经典歌曲。一路走来，他都是安静地唱着歌，如今回头看去才恍然发现，原来我的青春里一直都有林俊杰。谢谢你的歌，点缀着我的年少时光</span></p>
 </blockquote>
@@ -699,46 +721,11 @@
       </tags>
   </entry>
   <entry>
-    <title>好书推荐——《高性能Linux服务器构建实战：系统安全、故障排查、自动化运维与集群架构》</title>
-    <url>/2014/12/08/linux-server-structure.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天逛多看的时候发现了这样一本书，感觉挺屌的。内容实用充实，实验性丰富。以下是全书基本结构：</p>
-<p><span style="color:#0000FF;"><span style="font-size:14px;">&amp;nbsp; &amp;nbsp; </span></span><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">安全运维篇（第1章至第3章）</span></span></p>
-<p><span style="line-height: 20.7999992370605px;"></span>安全运维篇介绍了系统运维中安全应用的三个方面：服务器安全运维、网络安全运维和数据安全运维。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第1章讲述了Linux服务器安全运维，主要从系统角度介绍了账号安全、远程访问安全、文件系统安全、系统软件安全等的应用与防范，同时介绍了两款系统安全检测软件，最后通过一个实际案例详细介绍了服务器遭受攻击后的处理过程。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第2章讲述了Linux下网络安全运维，主要介绍了iftop、ntop、iperf、nmap等几款常用的网络安全运维工具，通过对这些网络安全工具的介绍，可使读者迅速定位网络故障与防范网络攻击。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第3章介绍了运维过程中的数据安全策略，主要介绍了数据镜像工具DRBD和数据恢复工具extundelete。DRBD可以通过网络对数据进行实时备份，保证数据安全，而extundelete可以在误删除数据的时候进行数据恢复。</p>
-<p><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">运维故障排查篇（第4章和第5章）</span></span></p>
-<p><span style="line-height: 20.7999992370605px;"></span>运维故障排查篇介绍了运维工作中可能遇到的一些常见问题以及相应的解决思路和方法。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第4章讲述了Linux服务器经常出现的问题及解决思路，这是Linux运维的基础。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第5章讲述了Linux运维中常见的一些软件级应用故障，以及故障出现的原因和最终的解决方法。该章内容完全是生产环境下的实际案例，通过对每个案例的介绍，更多传递的是一种解决问题的思路，相信掌握了思路，一切问题都会迎刃而解。</p>
-<p><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">自动化运维篇（第6章至第9章）</span></span></p>
-<p><span style="line-height: 20.7999992370605px;"></span>自动化运维篇是本书的一个重点，主要讲述了海量主机的自动化部署、分布式监控等内容。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第6章讲述了几个轻量级自动化部署工具，分别是pssh、pdsh和mussh，这三个小工具基本可以应对在上千台主机中批量安装和部署软件。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第7章讲述了分布式监控系统Ganglia的使用方法和应用实例，通过Ganglia可以监控千台以上Linux主机，并且性能稳定。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第8章讲述了如何通过nagios构建一个基于Web的分布式监控报警平台，其实就是将nagios监控、报警配置Web化的过程，而分布式Web监控平台是通过一款开源软件Centreon实现的，并可实现声音、邮件、短信等多种形式的报警。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第9章讲述了如何构建一个智能化的监控报警平台，主要讲述如何将Ganglia和Centreon实现整合。在这个整合过程中，Ganglia是一个数据收集平台，而Centreon是一个数据展示平台，通过一个数据提取程序实现了Ganglia和Centreon的无缝整合。</p>
-<p><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">集群架构篇（第10章至第14章）</span></span></p>
-<p><span style="line-height: 20.7999992370605px;"></span>集群架构应用篇也是本书的重点，主要介绍了基于Web和数据库的高可用集群、负载均衡集群的应用案例，每个案例都是生产环境下的真实应用。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第10章讲述了Nginx作为Web服务器的应用，主要介绍了Nginx的反向代理功能和URL重写功能，并列举了很多实例，最后深入讲述了Nginx作为Web缓存服务器、Nginx作为负载均衡服务器的应用案例。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第11章讲述了高性能集群软件Keepalived的实战应用，首先介绍了Keepalived的实现原理，接着详细介绍了Keepalived的配置过程，最后通过一个应用案例演示了Keepalived在生产环境下的使用方法和使用技巧。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第12章讲述了千万级高并发负载均衡软件HAProxy的应用技巧，首先介绍了HAProxy常见的应用实例和配置技巧，然后通过生产环境下HAProxy的配置实例详细介绍了基于虚拟主机的负载均衡的实现过程。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第13章讲述了如何构建高性能的MySQL集群系统，主要介绍了常见的高可用MySQL解决方案，深入讲述了通过Keepalived实现MySQL双主高可用、MMM构建MySQL高可用、MySQL读写分离等各种MySQL生产环境高性能解决方案。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>第14章讲述了如何构建高可用的HAProxy负载均衡集群系统，通过单机HAProxy的缺点，引出构建高可用HAProxy的必要性，详细介绍了通过Keepalived实现HAProxy高可用的解决方案。</p>
-<p><span style="line-height: 20.7999992370605px;"></span>多看链接：<a href="http://www.duokan.com/book/63647">http://www.duokan.com/book/63647</a></p>
-<p><span style="line-height: 20.7999992370605px;"></span>作者博客：<a href="http://ixdba.blog.51cto.com/2895551/1547509">http://ixdba.blog.51cto.com</a></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本地YUM源</title>
     <url>/2015/07/16/local-yumrepo.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>建立本地YUM源的初衷是按照自己的需求打包rpm包并在内网装机时直接部署。所以先来介绍一下RPM包的打包工具，我选择的是FPM来打包。</p>
+<span id="more"></span>
+
 <p>FPM on&amp;nbsp;github：<a href="https://github.com/jordansissel/fpm">https://github.com/jordansissel/fpm</a></p>
 <p>FPM安装</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#FPM基于ruby开发，所以先yum安装ruby以及rubygems</span></span><br><span class="line">yum install ruby rubygems ruby-devel ruby-rdoc rpm-build gcc -y</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除默认RubyGems源并添加使用淘宝的RubyGems源</span></span><br><span class="line">gem sources --remove http://rubygems.org/</span><br><span class="line">gem sources -a https://ruby.taobao.org/</span><br><span class="line">gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://ruby.taobao.org</span><br><span class="line"><span class="comment"># 请确保只有 ruby.taobao.org</span></span><br><span class="line"></span><br><span class="line">gem install fpm  <span class="comment">#使用gem安装fpm</span></span><br></pre></td></tr></table></figure>
@@ -857,12 +844,51 @@
       </tags>
   </entry>
   <entry>
+    <title>好书推荐——《高性能Linux服务器构建实战：系统安全、故障排查、自动化运维与集群架构》</title>
+    <url>/2014/12/08/linux-server-structure.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天逛多看的时候发现了这样一本书，感觉挺屌的。内容实用充实，实验性丰富。以下是全书基本结构：</p>
+<span id="more"></span>
+
+<p><span style="color:#0000FF;"><span style="font-size:14px;">&amp;nbsp; &amp;nbsp; </span></span><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">安全运维篇（第1章至第3章）</span></span></p>
+<p><span style="line-height: 20.7999992370605px;"></span>安全运维篇介绍了系统运维中安全应用的三个方面：服务器安全运维、网络安全运维和数据安全运维。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第1章讲述了Linux服务器安全运维，主要从系统角度介绍了账号安全、远程访问安全、文件系统安全、系统软件安全等的应用与防范，同时介绍了两款系统安全检测软件，最后通过一个实际案例详细介绍了服务器遭受攻击后的处理过程。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第2章讲述了Linux下网络安全运维，主要介绍了iftop、ntop、iperf、nmap等几款常用的网络安全运维工具，通过对这些网络安全工具的介绍，可使读者迅速定位网络故障与防范网络攻击。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第3章介绍了运维过程中的数据安全策略，主要介绍了数据镜像工具DRBD和数据恢复工具extundelete。DRBD可以通过网络对数据进行实时备份，保证数据安全，而extundelete可以在误删除数据的时候进行数据恢复。</p>
+<p><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">运维故障排查篇（第4章和第5章）</span></span></p>
+<p><span style="line-height: 20.7999992370605px;"></span>运维故障排查篇介绍了运维工作中可能遇到的一些常见问题以及相应的解决思路和方法。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第4章讲述了Linux服务器经常出现的问题及解决思路，这是Linux运维的基础。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第5章讲述了Linux运维中常见的一些软件级应用故障，以及故障出现的原因和最终的解决方法。该章内容完全是生产环境下的实际案例，通过对每个案例的介绍，更多传递的是一种解决问题的思路，相信掌握了思路，一切问题都会迎刃而解。</p>
+<p><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">自动化运维篇（第6章至第9章）</span></span></p>
+<p><span style="line-height: 20.7999992370605px;"></span>自动化运维篇是本书的一个重点，主要讲述了海量主机的自动化部署、分布式监控等内容。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第6章讲述了几个轻量级自动化部署工具，分别是pssh、pdsh和mussh，这三个小工具基本可以应对在上千台主机中批量安装和部署软件。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第7章讲述了分布式监控系统Ganglia的使用方法和应用实例，通过Ganglia可以监控千台以上Linux主机，并且性能稳定。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第8章讲述了如何通过nagios构建一个基于Web的分布式监控报警平台，其实就是将nagios监控、报警配置Web化的过程，而分布式Web监控平台是通过一款开源软件Centreon实现的，并可实现声音、邮件、短信等多种形式的报警。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第9章讲述了如何构建一个智能化的监控报警平台，主要讲述如何将Ganglia和Centreon实现整合。在这个整合过程中，Ganglia是一个数据收集平台，而Centreon是一个数据展示平台，通过一个数据提取程序实现了Ganglia和Centreon的无缝整合。</p>
+<p><span style="line-height: 20.7999992370605px;"></span><span style="color:#0000FF;"><span style="font-size:14px;">集群架构篇（第10章至第14章）</span></span></p>
+<p><span style="line-height: 20.7999992370605px;"></span>集群架构应用篇也是本书的重点，主要介绍了基于Web和数据库的高可用集群、负载均衡集群的应用案例，每个案例都是生产环境下的真实应用。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第10章讲述了Nginx作为Web服务器的应用，主要介绍了Nginx的反向代理功能和URL重写功能，并列举了很多实例，最后深入讲述了Nginx作为Web缓存服务器、Nginx作为负载均衡服务器的应用案例。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第11章讲述了高性能集群软件Keepalived的实战应用，首先介绍了Keepalived的实现原理，接着详细介绍了Keepalived的配置过程，最后通过一个应用案例演示了Keepalived在生产环境下的使用方法和使用技巧。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第12章讲述了千万级高并发负载均衡软件HAProxy的应用技巧，首先介绍了HAProxy常见的应用实例和配置技巧，然后通过生产环境下HAProxy的配置实例详细介绍了基于虚拟主机的负载均衡的实现过程。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第13章讲述了如何构建高性能的MySQL集群系统，主要介绍了常见的高可用MySQL解决方案，深入讲述了通过Keepalived实现MySQL双主高可用、MMM构建MySQL高可用、MySQL读写分离等各种MySQL生产环境高性能解决方案。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>第14章讲述了如何构建高可用的HAProxy负载均衡集群系统，通过单机HAProxy的缺点，引出构建高可用HAProxy的必要性，详细介绍了通过Keepalived实现HAProxy高可用的解决方案。</p>
+<p><span style="line-height: 20.7999992370605px;"></span>多看链接：<a href="http://www.duokan.com/book/63647">http://www.duokan.com/book/63647</a></p>
+<p><span style="line-height: 20.7999992370605px;"></span>作者博客：<a href="http://ixdba.blog.51cto.com/2895551/1547509">http://ixdba.blog.51cto.com</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL二进制日志安全删除</title>
     <url>/2014/05/30/mysql-bin-log.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一、Reset master</p>
 <p>这个语句可以验证首次配置主机备机是否成功、步骤如下：</p>
-<p>1.&amp;nbsp;启动master和 slave，开启replication (即&amp;nbsp;复制)</p>
-<p>注：replication&amp;nbsp;(复制)&amp;nbsp;也是mysql一个重要的技术</p>
+<p>1.启动master和 slave，开启replication (即复制)</p>
+<p>注：replication(复制)也是mysql一个重要的技术</p>
 <p>2.运行一些测试的语句看数据是否能够复制到 slave上面</p>
 <p>3.当复制运行正常的话，就 stop slace 然后在slave上面执行 reset slave,去掉不需要的数据</p>
 <p>4.在master上面执行reset master 去掉2中产生的数据。</p>
@@ -886,8 +912,8 @@
 <p>2.使用SHOW MASTER LOGS获得master上的一系列日志。</p>
 <p>3.在所有的slave中判定最早的日志。这个是目标日志。如果所有的slave是更新的，这是清单上的最后一个日志。</p>
 <p>4.将所有要删除日志的备份</p>
-<p>三.&amp;nbsp;指定自动清理日志的参数</p>
-<p>my.cnf 配置文件中的参数&amp;nbsp; expire_logs_days &amp;nbsp;默认值为0,表示&amp;ldquo;不要自动删除&amp;rdquo;</p>
+<p>三.指定自动清理日志的参数</p>
+<p>my.cnf 配置文件中的参数 expire_logs_days &amp;nbsp;默认值为0,表示&amp;ldquo;不要自动删除&amp;rdquo;</p>
 <p>启动时和二进制日志循环时可能删除</p>
 <p>语法：mysql -u&amp;nbsp;-p进去之后&amp;nbsp;执行：</p>
 <p>set GLOBAL expire_logs_days&#x3D;5;</p>
@@ -920,7 +946,7 @@
 <p>◆ 如果你在Unix平台上对表进行维护时，应该首先注册到专用的帐户 mysql，以避免对表读写访问产生所有权的问题，以及破坏数据库目录的所有权限。</p>
 <p><strong>数据库表的维护工具</strong></p>
 <p>MySQL的myisanchk和isamchk实用程序很类似，基本上它们具有同样的使用方法。它们之间的主要区别时所使用的表的类型。为了检查&#x2F;修复MyISAM表(.MYI和.MYD)，你应该使用myisamchk实用程序。为了检查&#x2F;修复ISAM表(.ISM和.ISD)，你应该使用isamchk实用程序。</p>
-<p>&amp;nbsp;◆ 为了使用任一个使用程序，应指明你要检查或修复的表，myisamchk和isamchk的使用方法为：&amp;nbsp;</p>
+<p>◆ 为了使用任一个使用程序，应指明你要检查或修复的表，myisamchk和isamchk的使用方法为：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; myisamchk options tbl_name </span><br><span class="line">shell&gt; isamchk options tbl_name</span><br></pre></td></tr></table></figure>
 
 <p> ◆ 你也能指定一个名字作为一个索引文件(用&amp;ldquo; .MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;后缀)，它允许你通过使用模式&amp;ldquo;*.MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;指定在一个目录所有的表。例如，如果你在一个数据库目录，你可以这样在目录下检查所有的表：如果你愿意，你可以在命令行命名几个表。</p>
@@ -940,11 +966,10 @@
 <p>myisamchk tbl_name isamchk tbl_name</p>
 <p>这能找出所有错误的99.99%。它不能找出的是仅仅涉及数据文件的损坏(这很不常见)。</p>
 <p><strong>完全彻底的数据检查</strong></p>
-<p>为了执行扩充检查，使用–extend-check或-e选项，这个选项检查数据：&amp;nbsp;</p>
+<p>为了执行扩充检查，使用–extend-check或-e选项，这个选项检查数据：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myisamchk -e tbl_name</span><br><span class="line">isamchk -e tbl_name</span><br></pre></td></tr></table></figure>
 
 <p>它做一个完全彻底的数据检查(-e意思是&amp;ldquo;扩展检查&amp;rdquo;)。它对每一行做每个键的读检查以证实他们确实指向正确的行。这在一个有很多键的大表上可能花很长时间。myisamchk通常将在它发现第一个错误以后停止。如果你想要获得更多的信息，你能增加–verbose(-v)选项。这使得myisamchk或isamchk继续一直到最多20个错误。在一般使用中，一个简单的标准检查(没有除表名以外的参数)就足够了。</p>
-<p>&amp;nbsp;</p>
 <p><strong>中等程度的检查</strong></p>
 <p>指定选项–medium-check或-m</p>
 <p>myisamchk -m tbl_name</p>
@@ -956,7 +981,6 @@
 <p>象前面的命令一样，但是-i选项告诉myisamchk还打印出一些统计信息。</p>
 <p>2.-C, –check-only-changed</p>
 <p>只检查上一次检查后被修改的表</p>
-<p>&amp;nbsp;</p>
 <p>原文链接：<a href="http://linux.cn/article-138-1-rel.html">http://linux.cn/article-138-1-rel.html</a></p>
 ]]></content>
       <categories>
@@ -971,7 +995,6 @@
     <title>Linux TCP队列相关参数的总结</title>
     <url>/2015/04/07/linux-tcp-summary.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>锋寒 技术保障 基础平台 技术专家</p>
-<p>&amp;nbsp;</p>
 <p>在Linux上做网络应用的性能优化时，一般都会对TCP相关的内核参数进行调节，特别是和缓冲、队列有关的参数。网上搜到的文章会告诉你需要修改哪些参数，但我们经常是知其然而不知其所以然，每次照抄过来后，可能很快就忘记或混淆了它们的含义。本文尝试总结TCP队列缓冲相关的内核参数，从协议栈的角度梳理它们，希望可以更容易的理解和记忆。注意，本文内容均来源于参考文档，没有去读相关的内核源码做验证，不能保证内容严谨正确。作为Java程序员没读过内核源码是硬伤。</p>
 <p>下面我以server端为视角，从&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">连接建立</span>、&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">数据包接收</span>&amp;nbsp;<wbr />和&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">数据包发送</span>&amp;nbsp;<wbr />这3条路径对参数进行归类梳理。</p>
 <p>一、连接建立</p>
@@ -1098,9 +1121,85 @@
       </tags>
   </entry>
   <entry>
+    <title>PHP连接sql server</title>
+    <url>/2014/06/25/php-sql-server.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
+<p>化繁为简，先说说Linux平台的php怎么连接：</p>
+<span id="more"></span>
+
+<p>首先下载freeTDS，解压安装。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/freetds --with-tdsver=8.0 --enable-msdblib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>配置freeTDS</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /usr/local/freetds/etc/freetds.conf</span><br></pre></td></tr></table></figure>
+
+<p>在A typical Microsoft server下配置自己的sql server数据库连接，如：</p>
+<blockquote>
+<p>[192.168.0.254]<br>host&#x3D;192.168.0.254<br>port&#x3D;1433<br>tds version&#x3D;8.0</p>
+</blockquote>
+<p>配置完成，使用tsql测试连接是否成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/local/freetds/bin/tsql -S 192.168.0.254 -U sa</span><br></pre></td></tr></table></figure>
+
+<p>之后输入密码，若显示以下信息则配置成功。</p>
+<blockquote>
+<p>locale is “zh_CN.UTF-8”<br>locale charset is “UTF-8”<br>using default charset “UTF-8”<br>1&gt;</p>
+</blockquote>
+<p>其次设置PHP，这里需要先安装mssql extension，可以在php源码的ext&#x2F;mssql下找到。</p>
+<p>进行编译</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">phpize</span><br><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config --with-mssql=/usr/local/freetds/</span><br></pre></td></tr></table></figure>
+
+<p>将安装好的插件加入php.ini的extension部分，如</p>
+<blockquote>
+<p>extension_dir &#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;lib&#x2F;php&#x2F;extensions&#x2F;no-debug-zts-20121212<br>extension&#x3D;mssql.so</p>
+</blockquote>
+<p>重启Apache或者nginx重新应用php使用最新配置即可。</p>
+<p>接下来可以新建一个db.php测试php是否正常连接sql server</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$mssql</span>=<span class="title function_ invoke__">mssql_connect</span>(<span class="string">&quot;DBhost&quot;</span>,<span class="string">&quot;DBuser&quot;</span>,<span class="string">&quot;DBpasswd&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (<span class="variable">$mssql</span>) &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>连接成功后，若要对数据库进行操作，可使用如下函数：</p>
+<p><a href="http://blog.sina.com.cn/s/blog_5c7a517801012etb.html">http://blog.sina.com.cn/s/blog_5c7a517801012etb.html</a></p>
+<p>接着再来看看windows平台，我使用的方法是通过OBDC连接sql server。</p>
+<p>一、编辑php.ini，将;extension&#x3D;php_pdo_odbc.dll前的;去掉，重启Apache或者Nginx，让php启用pdo_odbc。</p>
+<p>二、新建db.php</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$dbhost</span> = <span class="string">&#x27;DBhost&#x27;</span>; </span><br><span class="line"><span class="variable">$dbuser</span> = <span class="string">&#x27;DBuser&#x27;</span>; <span class="comment">//你的mssql用户名 </span></span><br><span class="line"><span class="variable">$dbpass</span> = <span class="string">&#x27;DBpasswd&#x27;</span>; <span class="comment">//你的mssql密码 </span></span><br><span class="line"><span class="variable">$dbname</span> = <span class="string">&#x27;DB&#x27;</span>; <span class="comment">//你的mssql库名 </span></span><br><span class="line"><span class="variable">$connect</span>=@<span class="title function_ invoke__">odbc_connect</span>(<span class="string">&quot;Driver=&#123;SQL Server&#125;;Server=<span class="subst">$dbhost</span>;Database=<span class="subst">$dbname</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbuser</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbpass</span>&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$connect</span>)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>连接成功之后，若要使用数据库，可参加以下函数</p>
+<p><a href="http://blog.csdn.net/shaobingj126/article/details/5678009">http://blog.csdn.net/shaobingj126/article/details/5678009</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>系统端口也是稀缺资源呐</title>
+    <url>/2016/11/16/port-is-also-a-kind-of-resourse.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="直面问题"><a href="#直面问题" class="headerlink" title="直面问题"></a>直面问题</h2><p>上午的时候，公司的一个网站因为激发流量，服务有些不稳定。通过一个监控页面显示memcached已经无法连接，但是memcached进程明明是存活的。于是好奇的<code>telnet</code>了一下，果然有些问题，给我反馈了一个<code>Cannot assign requested address</code>。然而当时也没有多想，单纯的以为端口不通了，索性就重启了memcached，可是发现并没有解决问题。而且看到端口也是在监听状态，并且用本机IP的连接11211端口是可以连通的。</p>
+<span id="more"></span>
+
+<p>在思考了一会儿之后，看了一下memcached的tcp状态，发现已经积攒了数万的<code>TIME_WAIT</code>。这下子就能对的上先前的“无法分配响应地址”的错误提示了。结合这个网站的实际环境，因为程序本身强依赖memcached，而且该服务器的session也存放在本地的memcached。所以可能由于访问量突然的激增，导致memcached并发了太多的短连接，并且这些结束的连接需要2MSL（Max Segment Lifetime）才会变成<code>CLOSED</code>状态。如此反复就超过Linux本身的限制了。</p>
+<p>既然发现了问题，那就先临时处理掉这些<code>TIME_WAIT</code>的连接吧。先后往内核里塞了<code>net.ipv4.tcp_tw_reuse = 1</code>和<code>net.ipv4.tcp_tw_recycle = 1</code>，并且在端口都回收之后，禁用了<code>net.ipv4.tcp_tw_recycle</code>。不过要是想有效的解决这个问题，最好还是程序端连接memcached的时候，改成长连接。然而已经没人维护的项目，也就想想而已啦。</p>
+<p>虽然之前看文章，也看到过说排障的时候注意<code>TIME_WAIT</code>，然而在实际场景的时候仍然没有相关的意识。然后又想起之前的几次线上应急处理，如果查看了系统TCP连接状态的话，可能会有更多的发现，但是因为没有意识，也许就错过了。看样子，得考虑在zabbix里面添加相关程序的tcp状态收集了。</p>
+<p>今天就先草草记录一下吧，多敲打敲打自己。</p>
+<h2 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h2><p><a href="http://www.jianshu.com/p/313798ae863d">TCP长连接和短连接</a></p>
+<p><a href="http://www.cnxct.com/coping-with-the-tcp-time_wait-state-on-busy-linux-servers-in-chinese-and-dont-enable-tcp_tw_recycle/">不要在linux上启用net.ipv4.tcp_tw_recycle参数</a></p>
+<p><a href="http://www.cnxct.com/default-configuration-and-performance-of-nginx-phpfpm-and-tcp-socket-or-unix-domain-socket/">nginx、php-fpm默认配置与性能–TCP socket还是unix domain socket</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL主从复制</title>
     <url>/2014/05/30/mysql-master-slave.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
+<span id="more"></span>
+
 <ul>
 <li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
 <p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
@@ -1142,78 +1241,6 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PHP连接sql server</title>
-    <url>/2014/06/25/php-sql-server.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
-<p>化繁为简，先说说Linux平台的php怎么连接：</p>
-<p>首先下载freeTDS，解压安装。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/freetds --with-tdsver=8.0 --enable-msdblib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>配置freeTDS</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /usr/local/freetds/etc/freetds.conf</span><br></pre></td></tr></table></figure>
-
-<p>在A typical Microsoft server下配置自己的sql server数据库连接，如：</p>
-<blockquote>
-<p>[192.168.0.254]<br>&amp;nbsp;&amp;nbsp;host&#x3D;192.168.0.254<br>&amp;nbsp;&amp;nbsp;port&#x3D;1433<br>&amp;nbsp;&amp;nbsp;tds version&#x3D;8.0</p>
-</blockquote>
-<p>配置完成，使用tsql测试连接是否成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/local/freetds/bin/tsql -S 192.168.0.254 -U sa</span><br></pre></td></tr></table></figure>
-
-<p>之后输入密码，若显示以下信息则配置成功。</p>
-<blockquote>
-<p>locale is “zh_CN.UTF-8”<br>locale charset is “UTF-8”<br>using default charset “UTF-8”<br>1&gt;</p>
-</blockquote>
-<p>&amp;nbsp;<br>其次设置PHP，这里需要先安装mssql extension，可以在php源码的ext&#x2F;mssql下找到。</p>
-<p>进行编译</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">phpize</span><br><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config --with-mssql=/usr/local/freetds/</span><br></pre></td></tr></table></figure>
-
-<p>将安装好的插件加入php.ini的extension部分，如</p>
-<blockquote>
-<p>extension_dir &#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;lib&#x2F;php&#x2F;extensions&#x2F;no-debug-zts-20121212<br>extension&#x3D;mssql.so</p>
-</blockquote>
-<p>重启Apache或者nginx重新应用php使用最新配置即可。</p>
-<p>接下来可以新建一个db.php测试php是否正常连接sql server</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$mssql</span>=<span class="title function_ invoke__">mssql_connect</span>(<span class="string">&quot;DBhost&quot;</span>,<span class="string">&quot;DBuser&quot;</span>,<span class="string">&quot;DBpasswd&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (<span class="variable">$mssql</span>) &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>连接成功后，若要对数据库进行操作，可使用如下函数：</p>
-<p><a href="http://blog.sina.com.cn/s/blog_5c7a517801012etb.html">http://blog.sina.com.cn/s/blog_5c7a517801012etb.html</a></p>
-<p>&amp;nbsp;<br>接着再来看看windows平台，我使用的方法是通过OBDC连接sql server。</p>
-<p>一、编辑php.ini，将;extension&#x3D;php_pdo_odbc.dll前的;去掉，重启Apache或者Nginx，让php启用pdo_odbc。</p>
-<p>二、新建db.php</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$dbhost</span> = <span class="string">&#x27;DBhost&#x27;</span>; </span><br><span class="line"><span class="variable">$dbuser</span> = <span class="string">&#x27;DBuser&#x27;</span>; <span class="comment">//你的mssql用户名 </span></span><br><span class="line"><span class="variable">$dbpass</span> = <span class="string">&#x27;DBpasswd&#x27;</span>; <span class="comment">//你的mssql密码 </span></span><br><span class="line"><span class="variable">$dbname</span> = <span class="string">&#x27;DB&#x27;</span>; <span class="comment">//你的mssql库名 </span></span><br><span class="line"><span class="variable">$connect</span>=@<span class="title function_ invoke__">odbc_connect</span>(<span class="string">&quot;Driver=&#123;SQL Server&#125;;Server=<span class="subst">$dbhost</span>;Database=<span class="subst">$dbname</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbuser</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbpass</span>&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$connect</span>)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>连接成功之后，若要使用数据库，可参加以下函数</p>
-<p><a href="http://blog.csdn.net/shaobingj126/article/details/5678009">http://blog.csdn.net/shaobingj126/article/details/5678009</a></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>PHP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>系统端口也是稀缺资源呐</title>
-    <url>/2016/11/16/port-is-also-a-kind-of-resourse.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="直面问题"><a href="#直面问题" class="headerlink" title="直面问题"></a>直面问题</h2><p>上午的时候，公司的一个网站因为激发流量，服务有些不稳定。通过一个监控页面显示memcached已经无法连接，但是memcached进程明明是存活的。于是好奇的<code>telnet</code>了一下，果然有些问题，给我反馈了一个<code>Cannot assign requested address</code>。然而当时也没有多想，单纯的以为端口不通了，索性就重启了memcached，可是发现并没有解决问题。而且看到端口也是在监听状态，并且用本机IP的连接11211端口是可以连通的。</p>
-<span id="more"></span>
-
-<p>在思考了一会儿之后，看了一下memcached的tcp状态，发现已经积攒了数万的<code>TIME_WAIT</code>。这下子就能对的上先前的“无法分配响应地址”的错误提示了。结合这个网站的实际环境，因为程序本身强依赖memcached，而且该服务器的session也存放在本地的memcached。所以可能由于访问量突然的激增，导致memcached并发了太多的短连接，并且这些结束的连接需要2MSL（Max Segment Lifetime）才会变成<code>CLOSED</code>状态。如此反复就超过Linux本身的限制了。</p>
-<p>既然发现了问题，那就先临时处理掉这些<code>TIME_WAIT</code>的连接吧。先后往内核里塞了<code>net.ipv4.tcp_tw_reuse = 1</code>和<code>net.ipv4.tcp_tw_recycle = 1</code>，并且在端口都回收之后，禁用了<code>net.ipv4.tcp_tw_recycle</code>。不过要是想有效的解决这个问题，最好还是程序端连接memcached的时候，改成长连接。然而已经没人维护的项目，也就想想而已啦。</p>
-<p>虽然之前看文章，也看到过说排障的时候注意<code>TIME_WAIT</code>，然而在实际场景的时候仍然没有相关的意识。然后又想起之前的几次线上应急处理，如果查看了系统TCP连接状态的话，可能会有更多的发现，但是因为没有意识，也许就错过了。看样子，得考虑在zabbix里面添加相关程序的tcp状态收集了。</p>
-<p>今天就先草草记录一下吧，多敲打敲打自己。</p>
-<h2 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a>延伸阅读</h2><p><a href="http://www.jianshu.com/p/313798ae863d">TCP长连接和短连接</a></p>
-<p><a href="http://www.cnxct.com/coping-with-the-tcp-time_wait-state-on-busy-linux-servers-in-chinese-and-dont-enable-tcp_tw_recycle/">不要在linux上启用net.ipv4.tcp_tw_recycle参数</a></p>
-<p><a href="http://www.cnxct.com/default-configuration-and-performance-of-nginx-phpfpm-and-tcp-socket-or-unix-domain-socket/">nginx、php-fpm默认配置与性能–TCP socket还是unix domain socket</a></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1367,9 +1394,25 @@
       </tags>
   </entry>
   <entry>
+    <title>被折腾了一把按键精灵</title>
+    <url>/2016/09/22/reboot-app-with-anjianjingling.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>线上有台Windows服务器，上面跑了一个第三方C&#x2F;S架构的程序。因为这个程序比较矫情，经常与这第三方的通信中断，然后就得手动重启。而重启之后报错几率很大，反复登录得消耗很长时间。所以别人提到是不是可以用按键精灵自动完成输密码登录的操作。当时觉得还是有点为难的，因为输密码那个地方，屏蔽了很多自动输入的方式，不过好在最后找到了解决办法，算是弄出来了。</p>
+<span id="more"></span>
+
+<p>不过现在这代码断开远程桌面之后就执行不了了，算是一个弊端，而且刚接触手写按键精灵的代码，基本上写的很面向过程，哈哈。想起来高中那几年，要是当初能把按键精灵研究好，当时玩天龙八部也不至于那么乏味枯燥吧。下面直接上码。</p>
+<h2 id="Show-the-Code"><a href="#Show-the-Code" class="headerlink" title="Show the Code"></a>Show the Code</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始化屏幕分辨率</span></span><br><span class="line">sx = Plugin.Sys.GetScRX()</span><br><span class="line">sy = Plugin.Sys.GetScRY()</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置定时器</span></span><br><span class="line">Rem Loop1</span><br><span class="line">Do</span><br><span class="line">NowTime = Time</span><br><span class="line"><span class="comment">//TracePrint NowTime</span></span><br><span class="line">SWTime = <span class="string">&quot;02:30&quot;</span> <span class="comment">//这里是定时时间</span></span><br><span class="line">If Hour(SWTime) = Hour(NowTime) and Minute(SWTime) = Minute(NowTime) Then </span><br><span class="line">Exit Do</span><br><span class="line">End If</span><br><span class="line">Loop</span><br><span class="line"></span><br><span class="line">LogStart <span class="string">&quot;C:\reboot_v3.log&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;程序开始&quot;</span></span><br><span class="line">Call Login()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N  <span class="comment">//检查是否登录成功</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">While int4M &lt; <span class="number">0</span> and int4N &lt; <span class="number">0</span></span><br><span class="line">TracePrint <span class="string">&quot;看来得重新登陆一遍&quot;</span></span><br><span class="line">Call Lib.系统.结束进程(<span class="string">&quot;进程名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">Delay <span class="number">5000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">TracePrint <span class="string">&quot;继续检查是否登录成功&quot;</span></span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Wend</span><br><span class="line">TracePrint <span class="string">&quot;登陆成功，执行完毕&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;等待下一次执行&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">Goto Loop1</span><br><span class="line"></span><br><span class="line">Sub Login()</span><br><span class="line">Call 子程序<span class="number">1</span>()</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//启动应用程序</span></span><br><span class="line">Sub 子程序<span class="number">1</span>()</span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\1.bmp&quot;</span>, <span class="number">0.9</span>, intX, intY</span><br><span class="line">If intX &lt; <span class="number">0</span> And intY &lt; <span class="number">0</span> Then</span><br><span class="line">TracePrint <span class="string">&quot;远程桌面似乎已关闭，终止运行&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">EndScript</span><br><span class="line">End If</span><br><span class="line">Hwnd = Plugin.Window.Find(<span class="number">0</span>, <span class="string">&quot;应用窗口名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Plugin.Window.Close(Hwnd)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;开始子程序1，应用程序已启动&quot;</span></span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//点击调出登陆按钮</span></span><br><span class="line">Sub 子程序<span class="number">2</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序2，调出登陆框&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这段代码不重要，不提了</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Delay <span class="number">400</span></span><br><span class="line">End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//输入密码并回车</span></span><br><span class="line">Sub 子程序<span class="number">3</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序3，输入密码并登陆&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\4.bmp&quot;</span>, <span class="number">0.9</span>, int3X, int3Y</span><br><span class="line">TracePrint <span class="string">&quot;输入框X轴坐标&quot;</span> &amp; int3X</span><br><span class="line">TracePrint <span class="string">&quot;输入框Y轴坐标&quot;</span> &amp; int3Y</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">If int3X &gt; <span class="number">0</span> And int3Y &gt; <span class="number">0</span> Then</span><br><span class="line">MoveTo int3X+<span class="number">110</span>, int3Y+<span class="number">8</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">LeftClick <span class="number">1</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是账号&quot;</span>,<span class="number">0</span>,<span class="number">20</span>)</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是密码&quot;</span>,<span class="number">0</span>,<span class="number">30</span>)</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">KeyPress <span class="string">&quot;Enter&quot;</span>, <span class="number">1</span></span><br><span class="line">TracePrint <span class="string">&quot;登陆等待&quot;</span></span><br><span class="line">TracePrint Time</span><br><span class="line">Delay <span class="number">400000</span> <span class="comment">//程序登录缓慢，设置一个延时时间等待响应</span></span><br><span class="line">TracePrint Time</span><br><span class="line">End If</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Python脚本内自定义域名解析的IP</title>
     <url>/2016/03/09/python-custom-ip-resolve.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
+<span id="more"></span>
+
 <p>由于服务器走公网解析我们域名的话，同样只有一台服务器完成功能。所以我想着是不是在不修改本机hosts的情况下，在Python脚本内实现对域名的解析。带着这个想法，终于在<a href="http://stackoverflow.com/questions/2236498/tell-urllib2-to-use-custom-dns">stackoverflow</a>上找到了可行的答案。</p>
 <p>大致思路是，首先定义一个函数，记录你需要自定义IP的域名，并建立一个httplib.HTTPConnection的子类，在参数传递给socket.create_connection前修改self.host以封装connection方法。然后继承HTTPHandler这个类，用上面的HTTPConnection替换httplib内自带的HTTPConnection，并重写http_open方法；最后把HTTPHandler放到自定义的opener。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> httplib</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">req_host</span>(<span class="params">host</span>):</span><br><span class="line">        <span class="keyword">if</span> host == <span class="string">&#x27;www.***.cn&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&#x27;8.8.8.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPConnection</span>(httplib.HTTPConnection):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">connect</span>(<span class="params">self</span>):</span><br><span class="line">                self.sock = socket.create_connection((req_host(self.host),self.port),self.timeout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPHandler</span>(urllib2.HTTPHandler):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">http_open</span>(<span class="params">self,req</span>):</span><br><span class="line">                <span class="keyword">return</span> self.do_open(MyHTTPConnection,req)</span><br><span class="line"></span><br><span class="line">opener = urllib2.build_opener(MyHTTPHandler)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://&#x27;</span></span><br><span class="line">f = urllib2.urlopen(url)</span><br><span class="line">req = f.read()</span><br><span class="line"><span class="built_in">print</span> req</span><br></pre></td></tr></table></figure>
@@ -1379,6 +1422,48 @@
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rewrite</title>
+    <url>/2015/02/01/rewrite.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>nginx for wordpress</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    root   /data/Yvanz;</span><br><span class="line">    index  index.html index.htm index.php;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php?q=<span class="variable">$uri</span>&amp;amp;<span class="variable">$args</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>nginx for thinkphp</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">index index.php;</span><br><span class="line"><span class="keyword">if</span> (!-e <span class="variable">$request_filename</span>) &#123;</span><br><span class="line">rewrite ^(.*)$ /index.php?s=<span class="variable">$1</span> last;</span><br><span class="line"><span class="built_in">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>警告，服务器负载过高</title>
+    <url>/2016/04/21/server-with-high-load-average.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这周二开始十一点半，突然zabbix上看到网站集群上每台机器有好几千的并发请求，然后就是噼里啪啦的cpu过载报警。因为我们服务器高峰时的请求不会过一千，所以看到这个报警第一反应就是是不是又被恶意刷了（呃，为什么要说又）。</p>
+<span id="more"></span>
+
+<p>首先筛了一遍日志，定位几个访问频率比较高的IP，详细看了他们的访问记录，似乎并没有恶意请求的样子，只不过日志里面有一种请求非常之多。服务器的流量也没有过高的起伏，后端数据库的压力也不大。再看一下php-fpm的status，所有进程都被叫起来干活了。</p>
+<p>仔细用top看看服务器负载，发现load average非常高，但是usr态和sys态只是维持在25%左右，内存占用不高，swap也没用多少，IO也没有异常。懵逼三秒钟，再用vmstat看看先</p>
+<p><img data-src="https://statics.yvanz.com/vmstat_info.png"></p>
+<p>system的interrupts和context switch都比较高，看起来cpu不仅在不停处理请求，内核还在不停切换进程。联想起超多的nginx连接数，以及那条频率很高的URL。应该是客户端发起了太多的请求，让服务器端开启了所有php-fpm的进程应付，但是处理不过来这么多请求，大量未处理的请求积压。所以决定先去网站上看看这个请求为何会如此之多。</p>
+<p>chrome打开开发者工具，看到那条请求是网页上一个价格实时更新的模块，频率为每5秒钟请求一次。</p>
+<p><img data-src="https://statics.yvanz.com/nickel_request_info.png"></p>
+<p>既然找到了消耗资源的地方，那就想想办法解决这个问题吧。</p>
+<p>一时半会儿，似乎找不到资源可以扩充，从服务器优化的角度也没有思路去优化，让PHP执行的更快。于是想了想，是不是可以把这样的请求让一台资源利用率低的服务器去执行。之后同事说要不对这样的请求做一个反向代理吧。听起来合乎逻辑，那么赶紧干起来。</p>
+<p>既然做反向代理，我第一时间想起来的是nginx自带的proxy_pass或者upstream。可是对比实际的请求，似乎upstream不适合这种场景，那么就用一下fastcgi_pass吧。照着这个思路，试试用location匹配那个URI，再丢给别的机器执行看看。可是并不顺利，写的location规则一直匹配不上，于是用if来匹配request_uri。但是这里并不能放fastcgi_pass。折腾了一番之后，想起来可以用set赋值变量。然后根据这个变量，在处理php脚步的location里面指定不同的fastcgi server。配置完毕nginx -t，终于看到久违的successful。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#定义变量</span></span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 0;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$request_uri</span> ~* /metals/nickel\?mid ) &#123;</span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定不同的fastcgi</span></span><br><span class="line">    location ~ .*\.php &#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$nickelprice</span> = 1 ) &#123;</span><br><span class="line">    fastcgi_pass   172.16.xx.xx:9000;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>服务器端全部启用之后，终于主站不再受这波请求的影响了。至于那台被牺牲的服务器，就随它去吧～～</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -1439,98 +1524,17 @@
       </tags>
   </entry>
   <entry>
-    <title>被折腾了一把按键精灵</title>
-    <url>/2016/09/22/reboot-app-with-anjianjingling.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>线上有台Windows服务器，上面跑了一个第三方C&#x2F;S架构的程序。因为这个程序比较矫情，经常与这第三方的通信中断，然后就得手动重启。而重启之后报错几率很大，反复登录得消耗很长时间。所以别人提到是不是可以用按键精灵自动完成输密码登录的操作。当时觉得还是有点为难的，因为输密码那个地方，屏蔽了很多自动输入的方式，不过好在最后找到了解决办法，算是弄出来了。</p>
-<span id="more"></span>
-
-<p>不过现在这代码断开远程桌面之后就执行不了了，算是一个弊端，而且刚接触手写按键精灵的代码，基本上写的很面向过程，哈哈。想起来高中那几年，要是当初能把按键精灵研究好，当时玩天龙八部也不至于那么乏味枯燥吧。下面直接上码。</p>
-<h2 id="Show-the-Code"><a href="#Show-the-Code" class="headerlink" title="Show the Code"></a>Show the Code</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始化屏幕分辨率</span></span><br><span class="line">sx = Plugin.Sys.GetScRX()</span><br><span class="line">sy = Plugin.Sys.GetScRY()</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置定时器</span></span><br><span class="line">Rem Loop1</span><br><span class="line">Do</span><br><span class="line">NowTime = Time</span><br><span class="line"><span class="comment">//TracePrint NowTime</span></span><br><span class="line">SWTime = <span class="string">&quot;02:30&quot;</span> <span class="comment">//这里是定时时间</span></span><br><span class="line">If Hour(SWTime) = Hour(NowTime) and Minute(SWTime) = Minute(NowTime) Then </span><br><span class="line">Exit Do</span><br><span class="line">End If</span><br><span class="line">Loop</span><br><span class="line"></span><br><span class="line">LogStart <span class="string">&quot;C:\reboot_v3.log&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;程序开始&quot;</span></span><br><span class="line">Call Login()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N  <span class="comment">//检查是否登录成功</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">While int4M &lt; <span class="number">0</span> and int4N &lt; <span class="number">0</span></span><br><span class="line">TracePrint <span class="string">&quot;看来得重新登陆一遍&quot;</span></span><br><span class="line">Call Lib.系统.结束进程(<span class="string">&quot;进程名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">Delay <span class="number">5000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">FindPic sx / <span class="number">2</span>, sy / <span class="number">2</span>, sx, sy, <span class="string">&quot;Attachment:\2.bmp&quot;</span>, <span class="number">0.8</span>, int4M, int4N</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">TracePrint <span class="string">&quot;继续检查是否登录成功&quot;</span></span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 X轴坐标&quot;</span> &amp; int4M</span><br><span class="line">TracePrint <span class="string">&quot;任务栏登陆成功图片 Y轴坐标&quot;</span> &amp; int4N</span><br><span class="line">Wend</span><br><span class="line">TracePrint <span class="string">&quot;登陆成功，执行完毕&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;等待下一次执行&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;-------&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">Goto Loop1</span><br><span class="line"></span><br><span class="line">Sub Login()</span><br><span class="line">Call 子程序<span class="number">1</span>()</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">Call 子程序<span class="number">2</span>()</span><br><span class="line">Delay <span class="number">600</span></span><br><span class="line">Call 子程序<span class="number">3</span>()</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//启动应用程序</span></span><br><span class="line">Sub 子程序<span class="number">1</span>()</span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\1.bmp&quot;</span>, <span class="number">0.9</span>, intX, intY</span><br><span class="line">If intX &lt; <span class="number">0</span> And intY &lt; <span class="number">0</span> Then</span><br><span class="line">TracePrint <span class="string">&quot;远程桌面似乎已关闭，终止运行&quot;</span></span><br><span class="line">LogStop</span><br><span class="line">EndScript</span><br><span class="line">End If</span><br><span class="line">Hwnd = Plugin.Window.Find(<span class="number">0</span>, <span class="string">&quot;应用窗口名&quot;</span>)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Plugin.Window.Close(Hwnd)</span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">RunApp <span class="string">&quot;应用程序完整路径&quot;</span></span><br><span class="line">TracePrint <span class="string">&quot;开始子程序1，应用程序已启动&quot;</span></span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//点击调出登陆按钮</span></span><br><span class="line">Sub 子程序<span class="number">2</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序2，调出登陆框&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这段代码不重要，不提了</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Delay <span class="number">400</span></span><br><span class="line">End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line"><span class="comment">//输入密码并回车</span></span><br><span class="line">Sub 子程序<span class="number">3</span>()</span><br><span class="line">TracePrint <span class="string">&quot;开始子程序3，输入密码并登陆&quot;</span></span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">FindPic <span class="number">0</span>, <span class="number">0</span>, sx, sy, <span class="string">&quot;Attachment:\4.bmp&quot;</span>, <span class="number">0.9</span>, int3X, int3Y</span><br><span class="line">TracePrint <span class="string">&quot;输入框X轴坐标&quot;</span> &amp; int3X</span><br><span class="line">TracePrint <span class="string">&quot;输入框Y轴坐标&quot;</span> &amp; int3Y</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">If int3X &gt; <span class="number">0</span> And int3Y &gt; <span class="number">0</span> Then</span><br><span class="line">MoveTo int3X+<span class="number">110</span>, int3Y+<span class="number">8</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">LeftClick <span class="number">1</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是账号&quot;</span>,<span class="number">0</span>,<span class="number">20</span>)</span><br><span class="line">Delay <span class="number">100</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">Call Lib.键盘.KeyList(<span class="string">&quot;我是密码&quot;</span>,<span class="number">0</span>,<span class="number">30</span>)</span><br><span class="line">Delay <span class="number">1000</span></span><br><span class="line">KeyPress <span class="string">&quot;Tab&quot;</span>,<span class="number">1</span></span><br><span class="line">Delay <span class="number">2000</span></span><br><span class="line">KeyPress <span class="string">&quot;Enter&quot;</span>, <span class="number">1</span></span><br><span class="line">TracePrint <span class="string">&quot;登陆等待&quot;</span></span><br><span class="line">TracePrint Time</span><br><span class="line">Delay <span class="number">400000</span> <span class="comment">//程序登录缓慢，设置一个延时时间等待响应</span></span><br><span class="line">TracePrint Time</span><br><span class="line">End If</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Rewrite</title>
-    <url>/2015/02/01/rewrite.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>nginx for wordpress</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    root   /data/Yvanz;</span><br><span class="line">    index  index.html index.htm index.php;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php?q=<span class="variable">$uri</span>&amp;amp;<span class="variable">$args</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>nginx for thinkphp</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">index index.php;</span><br><span class="line"><span class="keyword">if</span> (!-e <span class="variable">$request_filename</span>) &#123;</span><br><span class="line">rewrite ^(.*)$ /index.php?s=<span class="variable">$1</span> last;</span><br><span class="line"><span class="built_in">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>警告，服务器负载过高</title>
-    <url>/2016/04/21/server-with-high-load-average.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这周二开始十一点半，突然zabbix上看到网站集群上每台机器有好几千的并发请求，然后就是噼里啪啦的cpu过载报警。因为我们服务器高峰时的请求不会过一千，所以看到这个报警第一反应就是是不是又被恶意刷了（呃，为什么要说又）。</p>
-<p>首先筛了一遍日志，定位几个访问频率比较高的IP，详细看了他们的访问记录，似乎并没有恶意请求的样子，只不过日志里面有一种请求非常之多。服务器的流量也没有过高的起伏，后端数据库的压力也不大。再看一下php-fpm的status，所有进程都被叫起来干活了。</p>
-<p>仔细用top看看服务器负载，发现load average非常高，但是usr态和sys态只是维持在25%左右，内存占用不高，swap也没用多少，IO也没有异常。懵逼三秒钟，再用vmstat看看先</p>
-<p><img data-src="https://statics.yvanz.com/vmstat_info.png"></p>
-<p>system的interrupts和context switch都比较高，看起来cpu不仅在不停处理请求，内核还在不停切换进程。联想起超多的nginx连接数，以及那条频率很高的URL。应该是客户端发起了太多的请求，让服务器端开启了所有php-fpm的进程应付，但是处理不过来这么多请求，大量未处理的请求积压。所以决定先去网站上看看这个请求为何会如此之多。</p>
-<p>chrome打开开发者工具，看到那条请求是网页上一个价格实时更新的模块，频率为每5秒钟请求一次。</p>
-<p><img data-src="https://statics.yvanz.com/nickel_request_info.png"></p>
-<p>既然找到了消耗资源的地方，那就想想办法解决这个问题吧。</p>
-<p>一时半会儿，似乎找不到资源可以扩充，从服务器优化的角度也没有思路去优化，让PHP执行的更快。于是想了想，是不是可以把这样的请求让一台资源利用率低的服务器去执行。之后同事说要不对这样的请求做一个反向代理吧。听起来合乎逻辑，那么赶紧干起来。</p>
-<p>既然做反向代理，我第一时间想起来的是nginx自带的proxy_pass或者upstream。可是对比实际的请求，似乎upstream不适合这种场景，那么就用一下fastcgi_pass吧。照着这个思路，试试用location匹配那个URI，再丢给别的机器执行看看。可是并不顺利，写的location规则一直匹配不上，于是用if来匹配request_uri。但是这里并不能放fastcgi_pass。折腾了一番之后，想起来可以用set赋值变量。然后根据这个变量，在处理php脚步的location里面指定不同的fastcgi server。配置完毕nginx -t，终于看到久违的successful。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#定义变量</span></span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 0;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$request_uri</span> ~* /metals/nickel\?mid ) &#123;</span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定不同的fastcgi</span></span><br><span class="line">    location ~ .*\.php &#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$nickelprice</span> = 1 ) &#123;</span><br><span class="line">    fastcgi_pass   172.16.xx.xx:9000;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>服务器端全部启用之后，终于主站不再受这波请求的影响了。至于那台被牺牲的服务器，就随它去吧～～</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哎呀，网站又被黑了</title>
-    <url>/2016/04/12/site-be-hacked-again.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
-<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
-<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
-<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
-<blockquote>
-<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
-</blockquote>
-<p>既然知道了原理，那么就好排查问题了。</p>
-<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
-<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
-<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
-<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
-<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
-<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为Linux开启两步验证</title>
     <url>/2015/03/03/ssh-google-authentication.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天又想折腾了，于是着手试了一遍为服务器开启两步验证增强安全性。话不多说，实战开始。</p>
+<span id="more"></span>
+
 <ul>
 <li>安装依赖包</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install pam-devel gcc-c++ make -y</span><br></pre></td></tr></table></figure>
-<p>&amp;nbsp;</p>
+
+
 <ul>
 <li>下载Google-authentication源码，并安装</li>
 </ul>
@@ -1582,6 +1586,111 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微博春晚背后的技术故事</title>
+    <url>/2015/04/01/technical-story-behind-the-spring-festival-weibo.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
+<li>前言</li>
+</ul>
+<p>一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。</p>
+<p>谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。</p>
+<p>马年春晚又格外引人注目，不仅仅是因为冯小刚亲自坐镇，担当总导演，更值得一提的是本届春晚首次将社交平台作为其与观众互动的主要途径，而新浪微博更是成为官方二维码独家合作方。在节目播出时，用户通用手机客户端，扫描屏幕右下角的官方二维码，即可参与春晚的话题讨论。不仅如此，参与讨论的观众，还可以免费获得微博红包，抽大奖的机会。如此一来，大大的提升了微博的活跃度瞬间提升，同时在线人数翻了几倍，给微博系统带来前所未有的访问压力。</p>
+<p>根据以往统计的数据，春晚期间微博的访问量将激增到日常水平的数倍之多，而瞬时发表量更是飙升数十倍，如此场景丝毫不亚于淘宝双11和12306抢票时的“盛况”。</p>
+<p>而最后的统计数据结果表明，马年春晚直播期间，微博的访问量和发表量都再创新高，而我们系统也自始至终平稳运行，经受住了此次高峰的考验。这成功的背后，是我们的工程师将近一个月的努力。其间面临了哪些问题，又是如何解决的呢？下面，我们一一为大家揭秘。</p>
+<ul>
+<li>挑战1：如何应对数倍于日常访问量的压力？</li>
+</ul>
+<p>每年春运抢票时，12306都会崩溃；淘宝双11时，也会有短暂的购买失败的情况。究其原因还是，有限的服务器资源难以承受上千万人同时在线访问。同样，春晚的时候，微博的访问量也会激增，同时在线人数到达日常的数倍之多。面对突然增长的访问压力，大部分互联网公司都会临时扩容来加以应对，同样我们也需要进行扩容。那么如何进行扩容？哪些部分需要扩容？具体扩容多少？这都是厄需解决的问题。</p>
+<p>需要提到一点的是，微博目前线上部署了几千台服务器，来保障日常的正常访问。假如面对原来数倍的访问压力时，如果简单粗暴通过线性扩容来应对的话，需要部署原来数倍的服务器，也就是需要上万台服务器。无论从硬件成本还是从管理成本上，这都是不可接受的。那么，又该如何做呢？</p>
+<p>在线压测，找极限，最小化扩容前端机</p>
+<p>众所周知，为了尽可能的保障线上运行的服务器的稳定，资源都是有一定冗余度的，一般安全值在30%以上。在面临5倍的访问量时，出于成本的考虑，单纯的扩容难以令人接受。这个时候，就要充分利用每台服务器，在不影响业务性能的前提下，使每台服务器的利用率发挥到极限，可以极大的降低资源扩容的数量。如何评估服务器的承受极限是其中的关键，为此我们在业务低峰时期，对线上的服务器进行了实际的压测。具体方法如下：</p>
+<p>假如线上一个服务池里有300台 tomcat服务器在提供API服务，正常情况下，每台服务器的负载都小于1（为了简化模型，我们这里只提到了系统load这个指标，实际情况要比这个复杂的多，还要考虑CPU 利用率、带宽、io延迟等）。通过运维系统，我们以10%、20%、30%、40%、50%等比例逐步将该服务池里的300台 tomcat 机器503，通过观察一台 tomcat 服务器的负载以及 API 服务的接口性能，当服务器的负载达到极限或者 API 服务的接口性能达到阈值时，假设此时服务池里正常状态的 tomcat 服务器的数量是100台，那么我们就可以推断出该服务池，极限情况下可以承受3倍与日常的访问压力。同理，为了承担5倍的访问量，只需再扩容一倍机器即可。</p>
+<ul>
+<li>挑战2：如何应对瞬时可达几万&#x2F;s 的发表量？</li>
+</ul>
+<p>互联网应用有个显著特点，就是读多写少。针对读多有很多成熟的解决方案，比如可以通过cache 来缓存热数据来降低数据库的压力等方式来解决。而对于写多的情况，由于数据库本身写入性能瓶颈，相对较难解决。</p>
+<p>微博系统在处理发表微博时，采用了异步消息队列。具体来讲，就是用户发表微博时，不是直接去更新数据库和缓存，而是先写入到 mcq消息队列中。再通过队列机处理程序读取消息队列中的消息，再写入到数据库和缓存中。那么，如何保证消息队列的读写性能，以及如何保证队列机处理程序的性能，是系统的关键所在。</p>
+<p>按消息大小设置双重队列，保证写入速度。</p>
+<p>众所知之，微博最大长度不超过140个字，而大部分用户实际发表的微博长度都比较小。为了提高写入消息队列的速度，我们针对不同长度的微博消息，写入不同大小的消息队列。比如以512字节为分界线，大于512字节的写入长队列，小于512字节的写入短队列，其中短队列的单机写入性能要远远高于长队列。实际在线结果表明，短队列的QPS 在万&#x2F;s 级别，长队列的QPS 在千&#x2F;s 级别，而99%的微博消息长度均小于512字节。这种优化，大大提高了微博消息的写入和读取性能。</p>
+<p>堵塞队列，压队列机极限处理能力。</p>
+<p>为了验证队列机处理程序的极限处理能力，我们在业务低峰时期，对线上队列机进行了实际的压测，具体方法如下：</p>
+<p>通过开关控制，使队列机处理程序停止读取消息，从而堵塞消息队列，使堆积的消息分别达到10万，20万，30万，60万，100万，然后再打开开关，使队列机重新开始处理消息，整个过程类似于大坝蓄水，然后开闸泄洪，可想而知，瞬间涌来的消息对队列机将产生极大的压力。通过分析日志，来查找队列机处理程序最慢的地方，也就是瓶颈所在。</p>
+<p>通过两次实际的压测模拟，出乎意料的是，我们发现系统在极限压力下，首先达到瓶颈的并非是数据库写入，而是缓存更新。因此，为了提高极限压力下，队列机处理程序的吞吐量，我们对一部分缓存更新进行了优化。</p>
+<ul>
+<li>挑战3：如何保证系统的可靠性？</li>
+</ul>
+<p>无论是发微博，还是刷 feed，在微博系统内的处理过程都十分复杂，依赖着各种内部资源和外部服务，保证系统的可靠性显得尤为困难。</p>
+<p>为此，我们内部开发了代号为试金石&amp;mdash;&amp;mdash;TouchStone的压测系统，对系统的可靠性进行全面检测。</p>
+<p>首先，我们对微博的各个接口进行了服务依赖和资源依赖的梳理，并针对每个服务和资源定义了相应的 SLA 和降级开关。然后，模拟资源或者服务出现异常，再来查看其对接口性能的影响。以 redis资源为例， 假设系统定义了redis的 SLA是300ms，相应的端口是6379，通过 TouchStone，使该端口不可用，从而模拟 redis 资源出现异常，然后验证依赖该资源的接口的性能，确保 SLA 。同时，通过降级开关，对该资源进行降级，验证降级开关的有效。</p>
+<p>基于以上方法，对系统进行了全面的检测，并对各个服务和资源的 SLA 和降级开关进行梳理，总结成业务降级手册，保证在出现问题时，运维人员无需开发的介入，也能第一时间根据降级手册进行降级，确保问题能够尽快解决。</p>
+<ul>
+<li>挑战4：如何保证核心系统的稳定性？</li>
+</ul>
+<p>任何一个系统，都包含核心系统和非核心系统。在出现异常的情况下，弃车保帅，只保障核心系统的稳定性也是可以接受的。</p>
+<p>为此，我们降核心接口和非核心接口拆分，部分部署到不同的应用池子当中，确保非核心业务不会影响核心业务。比如发微博和刷 feed 属于核心业务，而评论，赞属于非核心业务，所以两者应当部署到不同的应用池中。在评论或者赞出现异常时，发微博和刷 feed 就不会受到影响，从而保障系统核心业务的稳定性。</p>
+<p>同样，对于一个业务，也要区分核心逻辑和非核心逻辑。以发微博为例，更新缓存和写数据库属于核心逻辑，而给其它业务部门推送数据则属于非核心逻辑。因此，可以将推送数据进行异步化处理，交给单独的线程池处理，在出现异常时，不会对更新缓存和写数据库造成影响。</p>
+<ul>
+<li>挑战5：如何做到异地容灾？</li>
+</ul>
+<p>近些年来，异地容灾成为全球性互联网企业面临的难题之一。无论是在国内，以微信为例，还是在国外，以 twitter 为例，都曾经出现过全球性宕机的事故。由此可见，异地容灾仍旧是一个挑战。</p>
+<p>微博早在2010年就开始了多机房的部署，如今已经具备三大机房（分别针对联通、电信和海外用户）。</p>
+<p>由于人为或者天气等不可抗拒因素，网络故障近年来时有发生。微博的三个机房，各自独立承担了一部分用户的访问。在一个机房出现故障或者压力过大的时候，通过DNS切换等手段，将流量迁移到另外两个机房，从而确保该访问该机房的用户不受影响。一个现实的情况例子，在马年春晚直播期间，由于观看人群的地域分布的特点，出现了联通机房的访问量突增，同时在线人数的增长超过了电信机房和广州机房，我们通过切换一部分联通机房的流量到电信机房，使得联通机房的负载降到了安全值的范围。</p>
+<ul>
+<li>挑战6：如何实时监控系统状态？</li>
+</ul>
+<p>我们都知道，地震的发生都是有前兆的，比如一些动物的异常反应。同样，系统中的任何问题出现之前，也是有线索可寻的。这就需要对系统的关键指标做实时的监控，当指标出现异常时，能够第一时间发出报警信息。</p>
+<p>为此，我们基于实时流处理系统 Storm 开发了一套监控系统——dashboard。有别于以往的监控系统，它能实时处理系统产生的海量日志，绘制出更加直观的曲线，方便运维进行管理。通过 dashborad，我们能够了解系统的实时状态，主要包括feed的访问量、微博的发表量、队列机的处理性能，消息队列的堆积量等指标。当某个监控指标出现异常时，能够第一时间在 dashboard 中反映出来，从而第一时间采取措施，解决问题，避免问题扩大化。</p>
+<ul>
+<li>后记</li>
+</ul>
+<p>春晚已经过去一个月了，渐渐成为回忆。但春晚背后，我们的工程师所付出的巨大的努力所产生的价值，却是一笔宝贵的财富，希望这篇文章能给大家带来启发甚至帮助，也在此向为微博春晚默默贡献的工程师们致敬！</p>
+<ul>
+<li>关于作者</li>
+</ul>
+<p>胡忠想（微博昵称：@古月中心相心），目前任职于新浪微博的平台研发部门，主要负责微博 Feed 服务相关工作，曾先后参与微博 Feed 存储、微博计数器、微博阅读数等重大业务产品的开发。2012年3月份毕业于北京航空航天大学计算系，同年4月份，加入新浪微博并工作至今。业余爱好户 外，曾徒步过贡嘎、雨崩，攀登过四姑娘三峰。</p>
+<p>感谢张凯峰对本文的审校。</p>
+<p>原文链接：<a href="http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo">http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>转载学习</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哎呀，网站又被黑了</title>
+    <url>/2016/04/12/site-be-hacked-again.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
+<span id="more"></span>
+
+<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
+<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
+<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
+<blockquote>
+<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
+</blockquote>
+<p>既然知道了原理，那么就好排查问题了。</p>
+<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
+<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
+<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
+<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
+<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
+<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -1684,84 +1793,13 @@
       </categories>
   </entry>
   <entry>
-    <title>微博春晚背后的技术故事</title>
-    <url>/2015/04/01/technical-story-behind-the-spring-festival-weibo.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
-<li>前言</li>
-</ul>
-<p>一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。</p>
-<p>谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。</p>
-<p>马年春晚又格外引人注目，不仅仅是因为冯小刚亲自坐镇，担当总导演，更值得一提的是本届春晚首次将社交平台作为其与观众互动的主要途径，而新浪微博更是成为官方二维码独家合作方。在节目播出时，用户通用手机客户端，扫描屏幕右下角的官方二维码，即可参与春晚的话题讨论。不仅如此，参与讨论的观众，还可以免费获得微博红包，抽大奖的机会。如此一来，大大的提升了微博的活跃度瞬间提升，同时在线人数翻了几倍，给微博系统带来前所未有的访问压力。</p>
-<p>根据以往统计的数据，春晚期间微博的访问量将激增到日常水平的数倍之多，而瞬时发表量更是飙升数十倍，如此场景丝毫不亚于淘宝双11和12306抢票时的“盛况”。</p>
-<p>而最后的统计数据结果表明，马年春晚直播期间，微博的访问量和发表量都再创新高，而我们系统也自始至终平稳运行，经受住了此次高峰的考验。这成功的背后，是我们的工程师将近一个月的努力。其间面临了哪些问题，又是如何解决的呢？下面，我们一一为大家揭秘。</p>
-<ul>
-<li>挑战1：如何应对数倍于日常访问量的压力？</li>
-</ul>
-<p>每年春运抢票时，12306都会崩溃；淘宝双11时，也会有短暂的购买失败的情况。究其原因还是，有限的服务器资源难以承受上千万人同时在线访问。同样，春晚的时候，微博的访问量也会激增，同时在线人数到达日常的数倍之多。面对突然增长的访问压力，大部分互联网公司都会临时扩容来加以应对，同样我们也需要进行扩容。那么如何进行扩容？哪些部分需要扩容？具体扩容多少？这都是厄需解决的问题。</p>
-<p>需要提到一点的是，微博目前线上部署了几千台服务器，来保障日常的正常访问。假如面对原来数倍的访问压力时，如果简单粗暴通过线性扩容来应对的话，需要部署原来数倍的服务器，也就是需要上万台服务器。无论从硬件成本还是从管理成本上，这都是不可接受的。那么，又该如何做呢？</p>
-<p>在线压测，找极限，最小化扩容前端机</p>
-<p>众所周知，为了尽可能的保障线上运行的服务器的稳定，资源都是有一定冗余度的，一般安全值在30%以上。在面临5倍的访问量时，出于成本的考虑，单纯的扩容难以令人接受。这个时候，就要充分利用每台服务器，在不影响业务性能的前提下，使每台服务器的利用率发挥到极限，可以极大的降低资源扩容的数量。如何评估服务器的承受极限是其中的关键，为此我们在业务低峰时期，对线上的服务器进行了实际的压测。具体方法如下：</p>
-<p>假如线上一个服务池里有300台 tomcat服务器在提供API服务，正常情况下，每台服务器的负载都小于1（为了简化模型，我们这里只提到了系统load这个指标，实际情况要比这个复杂的多，还要考虑CPU 利用率、带宽、io延迟等）。通过运维系统，我们以10%、20%、30%、40%、50%等比例逐步将该服务池里的300台 tomcat 机器503，通过观察一台 tomcat 服务器的负载以及 API 服务的接口性能，当服务器的负载达到极限或者 API 服务的接口性能达到阈值时，假设此时服务池里正常状态的 tomcat 服务器的数量是100台，那么我们就可以推断出该服务池，极限情况下可以承受3倍与日常的访问压力。同理，为了承担5倍的访问量，只需再扩容一倍机器即可。</p>
-<ul>
-<li>挑战2：如何应对瞬时可达几万&#x2F;s 的发表量？</li>
-</ul>
-<p>互联网应用有个显著特点，就是读多写少。针对读多有很多成熟的解决方案，比如可以通过cache 来缓存热数据来降低数据库的压力等方式来解决。而对于写多的情况，由于数据库本身写入性能瓶颈，相对较难解决。</p>
-<p>微博系统在处理发表微博时，采用了异步消息队列。具体来讲，就是用户发表微博时，不是直接去更新数据库和缓存，而是先写入到 mcq消息队列中。再通过队列机处理程序读取消息队列中的消息，再写入到数据库和缓存中。那么，如何保证消息队列的读写性能，以及如何保证队列机处理程序的性能，是系统的关键所在。</p>
-<p>按消息大小设置双重队列，保证写入速度。</p>
-<p>众所知之，微博最大长度不超过140个字，而大部分用户实际发表的微博长度都比较小。为了提高写入消息队列的速度，我们针对不同长度的微博消息，写入不同大小的消息队列。比如以512字节为分界线，大于512字节的写入长队列，小于512字节的写入短队列，其中短队列的单机写入性能要远远高于长队列。实际在线结果表明，短队列的QPS 在万&#x2F;s 级别，长队列的QPS 在千&#x2F;s 级别，而99%的微博消息长度均小于512字节。这种优化，大大提高了微博消息的写入和读取性能。</p>
-<p>堵塞队列，压队列机极限处理能力。</p>
-<p>为了验证队列机处理程序的极限处理能力，我们在业务低峰时期，对线上队列机进行了实际的压测，具体方法如下：</p>
-<p>通过开关控制，使队列机处理程序停止读取消息，从而堵塞消息队列，使堆积的消息分别达到10万，20万，30万，60万，100万，然后再打开开关，使队列机重新开始处理消息，整个过程类似于大坝蓄水，然后开闸泄洪，可想而知，瞬间涌来的消息对队列机将产生极大的压力。通过分析日志，来查找队列机处理程序最慢的地方，也就是瓶颈所在。</p>
-<p>通过两次实际的压测模拟，出乎意料的是，我们发现系统在极限压力下，首先达到瓶颈的并非是数据库写入，而是缓存更新。因此，为了提高极限压力下，队列机处理程序的吞吐量，我们对一部分缓存更新进行了优化。</p>
-<ul>
-<li>挑战3：如何保证系统的可靠性？</li>
-</ul>
-<p>无论是发微博，还是刷 feed，在微博系统内的处理过程都十分复杂，依赖着各种内部资源和外部服务，保证系统的可靠性显得尤为困难。</p>
-<p>为此，我们内部开发了代号为试金石&amp;mdash;&amp;mdash;TouchStone的压测系统，对系统的可靠性进行全面检测。</p>
-<p>首先，我们对微博的各个接口进行了服务依赖和资源依赖的梳理，并针对每个服务和资源定义了相应的 SLA 和降级开关。然后，模拟资源或者服务出现异常，再来查看其对接口性能的影响。以 redis资源为例， 假设系统定义了redis的 SLA是300ms，相应的端口是6379，通过 TouchStone，使该端口不可用，从而模拟 redis 资源出现异常，然后验证依赖该资源的接口的性能，确保 SLA 。同时，通过降级开关，对该资源进行降级，验证降级开关的有效。</p>
-<p>基于以上方法，对系统进行了全面的检测，并对各个服务和资源的 SLA 和降级开关进行梳理，总结成业务降级手册，保证在出现问题时，运维人员无需开发的介入，也能第一时间根据降级手册进行降级，确保问题能够尽快解决。</p>
-<ul>
-<li>挑战4：如何保证核心系统的稳定性？</li>
-</ul>
-<p>任何一个系统，都包含核心系统和非核心系统。在出现异常的情况下，弃车保帅，只保障核心系统的稳定性也是可以接受的。</p>
-<p>为此，我们降核心接口和非核心接口拆分，部分部署到不同的应用池子当中，确保非核心业务不会影响核心业务。比如发微博和刷 feed 属于核心业务，而评论，赞属于非核心业务，所以两者应当部署到不同的应用池中。在评论或者赞出现异常时，发微博和刷 feed 就不会受到影响，从而保障系统核心业务的稳定性。</p>
-<p>同样，对于一个业务，也要区分核心逻辑和非核心逻辑。以发微博为例，更新缓存和写数据库属于核心逻辑，而给其它业务部门推送数据则属于非核心逻辑。因此，可以将推送数据进行异步化处理，交给单独的线程池处理，在出现异常时，不会对更新缓存和写数据库造成影响。</p>
-<ul>
-<li>挑战5：如何做到异地容灾？</li>
-</ul>
-<p>近些年来，异地容灾成为全球性互联网企业面临的难题之一。无论是在国内，以微信为例，还是在国外，以 twitter 为例，都曾经出现过全球性宕机的事故。由此可见，异地容灾仍旧是一个挑战。</p>
-<p>微博早在2010年就开始了多机房的部署，如今已经具备三大机房（分别针对联通、电信和海外用户）。</p>
-<p>由于人为或者天气等不可抗拒因素，网络故障近年来时有发生。微博的三个机房，各自独立承担了一部分用户的访问。在一个机房出现故障或者压力过大的时候，通过DNS切换等手段，将流量迁移到另外两个机房，从而确保该访问该机房的用户不受影响。一个现实的情况例子，在马年春晚直播期间，由于观看人群的地域分布的特点，出现了联通机房的访问量突增，同时在线人数的增长超过了电信机房和广州机房，我们通过切换一部分联通机房的流量到电信机房，使得联通机房的负载降到了安全值的范围。</p>
-<ul>
-<li>挑战6：如何实时监控系统状态？</li>
-</ul>
-<p>我们都知道，地震的发生都是有前兆的，比如一些动物的异常反应。同样，系统中的任何问题出现之前，也是有线索可寻的。这就需要对系统的关键指标做实时的监控，当指标出现异常时，能够第一时间发出报警信息。</p>
-<p>为此，我们基于实时流处理系统 Storm 开发了一套监控系统——dashboard。有别于以往的监控系统，它能实时处理系统产生的海量日志，绘制出更加直观的曲线，方便运维进行管理。通过 dashborad，我们能够了解系统的实时状态，主要包括feed的访问量、微博的发表量、队列机的处理性能，消息队列的堆积量等指标。当某个监控指标出现异常时，能够第一时间在 dashboard 中反映出来，从而第一时间采取措施，解决问题，避免问题扩大化。</p>
-<ul>
-<li>后记</li>
-</ul>
-<p>春晚已经过去一个月了，渐渐成为回忆。但春晚背后，我们的工程师所付出的巨大的努力所产生的价值，却是一笔宝贵的财富，希望这篇文章能给大家带来启发甚至帮助，也在此向为微博春晚默默贡献的工程师们致敬！</p>
-<ul>
-<li>关于作者</li>
-</ul>
-<p>胡忠想（微博昵称：@古月中心相心），目前任职于新浪微博的平台研发部门，主要负责微博 Feed 服务相关工作，曾先后参与微博 Feed 存储、微博计数器、微博阅读数等重大业务产品的开发。2012年3月份毕业于北京航空航天大学计算系，同年4月份，加入新浪微博并工作至今。业余爱好户 外，曾徒步过贡嘎、雨崩，攀登过四姑娘三峰。</p>
-<p>感谢张凯峰对本文的审校。</p>
-<p>原文链接：<a href="http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo">http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo</a></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>转载学习</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The Old Classmate</title>
     <url>/2014/05/21/the-old-classmate.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
 这大概是一篇观后感吧，记在看了《同桌的你》之后
 </div>
+
+<span id="more"></span>
 
 <ul>
 <li>做我女朋友吧</li>
@@ -1824,12 +1862,12 @@ Posted at 2014.6.14
 <img style="margin: auto;" data-src="https://statics.yvanz.com/2023/nio-remember.gif">
 
 
-        <div id="aplayer-YovkjmDH" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+        <div id="aplayer-djBPuoJD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-YovkjmDH"),
+            element: document.getElementById("aplayer-djBPuoJD"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -1852,54 +1890,11 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
-    <title>一场值得纪念的战役</title>
-    <url>/2016/07/19/this-is-miracle-truly.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="http://ww4.sinaimg.cn/large/6482d531gw1f5pwcysmz4j20hp0a642d.jpg"></p>
-<p>也许这是林俊杰家第一次与各领域明星粉丝在一场投票争夺战中“厮杀”。起初在看到这场活动的时候，我们内心其实对于能占领几个站点并没有底。因为从历次投票活动中，我们已经见识到韩星粉丝和鲜肉粉丝们的战斗力，只不过以前借由港台这个地区划分，免于正面对决。</p>
-<span id="more"></span>
-
-<p>在活动开始前，歌友会内部讨论关于首战目标时，便要求北上广的分会领导根据自己对于所在城市的地铁流量了解，分别上报一个主攻站点和一个备选站点。我印象比较深的是上海最初即选定主攻虹口站，备选了宜山路站。之后经过几番推演与讨论，鉴于林俊杰个人首场巡演的起点以及虹口站本身地铁人流和商业广场人流，决定将虹口站定为我们此次征途的起点。</p>
-<p>当然，不出所料的，在我们公布虹口站的时候，JM群体里也出现了质疑和异议的声音。或许这是很多歌迷对于歌友会情不自禁的不信任案，好在正式投票的时候，我们看到林俊杰的头像很快就被送上了虹口站的第一位，并保持了些许优势。</p>
-<p>正当我们有些欢喜的时候，突然第二名的位置出现了一个来势汹汹的名字。在那个晚上，我们亲眼看着票数逐渐被追上，进而被反超。那种无力的感觉现在回忆起来仍然心生波澜呢。面临着首战失利，为了不浪费大家手里的投票，我们有些“慌张”的开始讨论转移战场的候选目标。首先我们选定了上海的几个候选站点，让网宣数据组对这几个站点进行投票监控。经过数据比对，才有了进攻徐泾东站的决定。为了在对外公布目标前不引起别家的注意，同时让全面投票时有些底子，网宣各群的同学在公布之前便打响了进攻徐泾东的第一枪，慢慢的终于掌握了自己的节奏。</p>
-<p><img data-src="https://statics.yvanz.com/votes_count.png"></p>
-<p>同时如上图所示，我们每隔一个小时从音悦台那边取了1至150名明星总票数的排行数据。因为时间和精力有限，我只对音悦台的数据做了简单的提取整理，记录在文本上，供数据组的同学下载和分析。所有这些数据对于我们之后的进攻起到了很大的指导作用。当然离不开数据组的同学对这些数据的记录和汇总分析。更离不开生产这些数据的众歌迷。</p>
-<p>此时，艰难的投票战早已经结束。再过几天我们就可以在地铁站看到我们亲手打下的江山了。而我们也深知歌友会包括网宣在很多方面仍然有改进和进步的地方。但是经过此役我们发现了众JM身上强大的战斗力。有了这股战斗力支撑，未来会有更辉煌的战绩在等待我们。</p>
-<p>最后，感谢所有在此次战役中，互有攻守的各家粉丝。我们因对手而变得更加强大，而你们都是很好的对手。</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浪漫血液</title>
-    <url>/2015/01/01/the-romantic.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
-<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
-</div>
-&nbsp;
-
-<p>又到了交待这一年的时候了。</p>
-<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
-<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
-<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
-<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
-<div style="text-align: right;">
-——2015，我们值得更幸福
-</div>]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>tomcat应用占用CPU过高</title>
     <url>/2016/03/18/tomcat-app-with-high-cpu-utilization.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近新上了个java应用，部署到服务器上之后发现运行一段时间之后服务器cpu的占用率会很高。排查了一遍之后，发现网上这篇文章的思路可以解决我遇到的问题，遂转载过来留存。</p>
+<span id="more"></span>
+
 <p>【转载】</p>
 <p>一个应用占用CPU很高，除了确实是计算密集型应用之外，通常原因都是出现了死循环。</p>
 <p>以我们最近出现的一个实际故障为例，介绍怎么定位和解决这类问题。</p>
@@ -1935,6 +1930,53 @@ Posted at 2014.6.14
       </categories>
       <tags>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浪漫血液</title>
+    <url>/2015/01/01/the-romantic.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
+</div>
+&nbsp;
+
+<p>又到了交待这一年的时候了。</p>
+<span id="more"></span>
+
+<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
+<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
+<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
+<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
+<div style="text-align: right;">
+——2015，我们值得更幸福
+</div>]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一场值得纪念的战役</title>
+    <url>/2016/07/19/this-is-miracle-truly.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="http://ww4.sinaimg.cn/large/6482d531gw1f5pwcysmz4j20hp0a642d.jpg"></p>
+<p>也许这是林俊杰家第一次与各领域明星粉丝在一场投票争夺战中“厮杀”。起初在看到这场活动的时候，我们内心其实对于能占领几个站点并没有底。因为从历次投票活动中，我们已经见识到韩星粉丝和鲜肉粉丝们的战斗力，只不过以前借由港台这个地区划分，免于正面对决。</p>
+<span id="more"></span>
+
+<p>在活动开始前，歌友会内部讨论关于首战目标时，便要求北上广的分会领导根据自己对于所在城市的地铁流量了解，分别上报一个主攻站点和一个备选站点。我印象比较深的是上海最初即选定主攻虹口站，备选了宜山路站。之后经过几番推演与讨论，鉴于林俊杰个人首场巡演的起点以及虹口站本身地铁人流和商业广场人流，决定将虹口站定为我们此次征途的起点。</p>
+<p>当然，不出所料的，在我们公布虹口站的时候，JM群体里也出现了质疑和异议的声音。或许这是很多歌迷对于歌友会情不自禁的不信任案，好在正式投票的时候，我们看到林俊杰的头像很快就被送上了虹口站的第一位，并保持了些许优势。</p>
+<p>正当我们有些欢喜的时候，突然第二名的位置出现了一个来势汹汹的名字。在那个晚上，我们亲眼看着票数逐渐被追上，进而被反超。那种无力的感觉现在回忆起来仍然心生波澜呢。面临着首战失利，为了不浪费大家手里的投票，我们有些“慌张”的开始讨论转移战场的候选目标。首先我们选定了上海的几个候选站点，让网宣数据组对这几个站点进行投票监控。经过数据比对，才有了进攻徐泾东站的决定。为了在对外公布目标前不引起别家的注意，同时让全面投票时有些底子，网宣各群的同学在公布之前便打响了进攻徐泾东的第一枪，慢慢的终于掌握了自己的节奏。</p>
+<p><img data-src="https://statics.yvanz.com/votes_count.png"></p>
+<p>同时如上图所示，我们每隔一个小时从音悦台那边取了1至150名明星总票数的排行数据。因为时间和精力有限，我只对音悦台的数据做了简单的提取整理，记录在文本上，供数据组的同学下载和分析。所有这些数据对于我们之后的进攻起到了很大的指导作用。当然离不开数据组的同学对这些数据的记录和汇总分析。更离不开生产这些数据的众歌迷。</p>
+<p>此时，艰难的投票战早已经结束。再过几天我们就可以在地铁站看到我们亲手打下的江山了。而我们也深知歌友会包括网宣在很多方面仍然有改进和进步的地方。但是经过此役我们发现了众JM身上强大的战斗力。有了这股战斗力支撑，未来会有更辉煌的战绩在等待我们。</p>
+<p>最后，感谢所有在此次战役中，互有攻守的各家粉丝。我们因对手而变得更加强大，而你们都是很好的对手。</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
       </tags>
   </entry>
   <entry>
@@ -2031,138 +2073,6 @@ Posted at 2014.6.14
       <tags>
         <tag>转载学习</tag>
         <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>10张图带你深入理解Docker容器和镜像</title>
-    <url>/2016/08/19/visualizing-docker-containers-and-images.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>**转载地址：<a href="http://dockone.io/article/783">http://dockone.io/article/783</a> **</p>
-<p>【编者的话】本文用图文并茂的方式介绍了容器、镜像的区别和Docker每个命令后面的技术细节，能够很好的帮助读者深入理解Docker。</p>
-<span id="more"></span>
-
-<p>这篇文章希望能够帮助读者深入理解Docker的命令，还有容器（container）和镜像（image）之间的区别，并深入探讨容器和运行中的容器之间的区别。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-1.png" alt="1.png"></p>
-<p>当我对Docker技术还是一知半解的时候，我发现理解Docker的命令非常困难。于是，我花了几周的时间来学习Docker的工作原理，更确切地说，是关于Docker统一文件系统（the union file system）的知识，然后回过头来再看Docker的命令，一切变得顺理成章，简单极了。</p>
-<p><strong>题外话：</strong><br>就我个人而言，掌握一门技术并合理使用它的最好办法就是深入理解这项技术背后的工作原理。通常情况下，一项新技术的诞生常常会伴随着媒体的大肆宣传和炒作，这使得用户很难看清技术的本质。更确切地说，新技术总是会发明一些新的术语或者隐喻词来帮助宣传，这在初期是非常有帮助的，但是这给技术的原理蒙上了一层砂纸，不利于用户在后期掌握技术的真谛。</p>
-<p>Git就是一个很好的例子。我之前不能够很好的使用Git，于是我花了一段时间去学习Git的原理，直到这时，我才真正明白了Git的用法。我坚信只有真正理解Git内部原理的人才能够掌握这个工具。<br>Image Definition镜像（Image）就是一堆只读层（read-only layer）的统一视角，也许这个定义有些难以理解，下面的这张图能够帮助读者理解镜像的定义。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-2.png" alt="2.png"></p>
-<p>从左边我们看到了多个只读层，它们重叠在一起。除了最下面一层，其它层都会有一个指针指向下一层。这些层是Docker内部的实现细节，并且能够在主机（译者注：运行Docker的机器）的文件系统上访问到。统一文件系统（union file system）技术能够将不同的层整合成一个文件系统，为这些层提供了一个统一的视角，这样就隐藏了多层的存在，在用户的角度看来，只存在一个文件系统。我们可以在图片的右边看到这个视角的形式。</p>
-<p>你可以在你的主机文件系统上找到有关这些层的文件。需要注意的是，在一个运行中的容器内部，这些层是不可见的。在我的主机上，我发现它们存在于<code>/var/lib/docker/aufs</code>目录下。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo tree -L 1 /var/lib/docker//var/lib/docker/</span><br><span class="line">├── aufs</span><br><span class="line">├── containers</span><br><span class="line">├── graph</span><br><span class="line">├── init</span><br><span class="line">├── linkgraph.db</span><br><span class="line">├── repositories-aufs</span><br><span class="line">├── tmp</span><br><span class="line">├── trust</span><br><span class="line">└── volumes</span><br><span class="line">7 directories, 2 files</span><br></pre></td></tr></table></figure>
-
-<p>Container Definition容器（container）的定义和镜像（image）几乎一模一样，也是一堆层的统一视角，唯一区别在于容器的最上面那一层是可读可写的。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-3.png" alt="3.png"></p>
-<p>细心的读者可能会发现，容器的定义并没有提及容器是否在运行，没错，这是故意的。正是这个发现帮助我理解了很多困惑。</p>
-<p>要点：容器 &#x3D; 镜像 + 读写层。并且容器的定义并没有提及是否要运行容器。</p>
-<p>接下来，我们将会讨论运行态容器。<br>Running Container Definition一个运行态容器（running container）被定义为一个可读写的统一文件系统加上隔离的进程空间和包含其中的进程。下面这张图片展示了一个运行中的容器。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-4.png" alt="4.png"></p>
-<p>正是文件系统隔离技术使得Docker成为了一个前途无量的技术。一个容器中的进程可能会对文件进行修改、删除、创建，这些改变都将作用于可读写层（read-write layer）。下面这张图展示了这个行为。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-5.png" alt="5.png"></p>
-<p>我们可以通过运行以下命令来验证我们上面所说的：<br><code>docker run ubuntu touch happiness.txt</code><br>即便是这个ubuntu容器不再运行，我们依旧能够在主机的文件系统上找到这个新文件。<br><code>find / -name happiness.txt/var/lib/docker/aufs/diff/860a7b...889/happiness.txt</code><br>Image Layer Definition为了将零星的数据整合起来，我们提出了镜像层（image layer）这个概念。下面的这张图描述了一个镜像层，通过图片我们能够发现一个层并不仅仅包含文件系统的改变，它还能包含了其他重要信息。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-6.png" alt="6.png"></p>
-<p>元数据（metadata）就是关于这个层的额外信息，它不仅能够让Docker获取运行和构建时的信息，还包括父层的层次信息。需要注意，只读层和读写层都包含元数据。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-7.png" alt="7.png"></p>
-<p>除此之外，每一层都包括了一个指向父层的指针。如果一个层没有这个指针，说明它处于最底层。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-8.png" alt="8.png"></p>
-<p><strong>Metadata Location:</strong></p>
-<p><code>/var/lib/docker/graph/e809f156dc985.../json</code><br>e809f156dc985…就是这层的id</p>
-<p>一个容器的元数据好像是被分成了很多文件，但或多或少能够在&#x2F;var&#x2F;lib&#x2F;docker&#x2F;containers&#x2F;&lt;id&gt;目录下找到，&lt;id&gt;就是一个可读层的id。这个目录下的文件大多是运行时的数据，比如说网络，日志等等。<br>全局理解（Tying It All Together）现在，让我们结合上面提到的实现细节来理解Docker的命令。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-9.jpg" alt="9.png"></p>
-<p>docker create 命令为指定的镜像（image）添加了一个可读写层，构成了一个新的容器。注意，这个容器并没有运行。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-10.png" alt="10.png"></p>
-<p><code>docker start &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-11.jpg" alt="11.png"></p>
-<p>Docker start命令为容器文件系统创建了一个进程隔离空间。注意，每一个容器只能够有一个进程隔离空间。</p>
-<p><code>docker run &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-12.jpg" alt="12.png"></p>
-<p>看到这个命令，读者通常会有一个疑问：<code>docker start</code>和 <code>docker run</code>命令有什么区别。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-13.png" alt="13.png"></p>
-<p>从图片可以看出，<code>docker run</code>命令先是利用镜像创建了一个容器，然后运行这个容器。这个命令非常的方便，并且隐藏了两个命令的细节，但从另一方面来看，这容易让用户产生误解。</p>
-<p>题外话：继续我们之前有关于Git的话题，我认为<code>docker run</code>命令类似于<code>git pull</code>命令。<code>git pull</code>命令就是<code>git fetch</code> 和 <code>git merge</code>两个命令的组合，同样的，<code>docker run</code>就是<code>docker create</code>和<code>docker start</code>两个命令的组合。</p>
-<p><code>docker ps</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-14.jpg" alt="14.png"></p>
-<p><code>docker ps</code> 命令会列出所有运行中的容器。这隐藏了非运行态容器的存在，如果想要找出这些容器，我们需要使用下面这个命令。</p>
-<p><code>docker ps –a</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-15.jpg" alt="15.png"></p>
-<p><code>docker ps –a</code>命令会列出所有的容器，不管是运行的，还是停止的。</p>
-<p><code>docker images</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-16.jpg" alt="16.png"></p>
-<p><code>docker images</code>命令会列出了所有顶层（top-level）镜像。实际上，在这里我们没有办法区分一个镜像和一个只读层，所以我们提出了top-level镜像。只有创建容器时使用的镜像或者是直接pull下来的镜像能被称为顶层（top-level）镜像，并且每一个顶层镜像下面都隐藏了多个镜像层。</p>
-<p><code>docker images –a</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-17.jpg" alt="17.png"></p>
-<p><code>docker images –a</code>命令列出了所有的镜像，也可以说是列出了所有的可读层。如果你想要查看某一个image-id下的所有层，可以使用<code>docker history</code>来查看。</p>
-<p><code>docker stop &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-18.jpg" alt="18.png"></p>
-<p><code>docker stop</code>命令会向运行中的容器发送一个SIGTERM的信号，然后停止所有的进程。</p>
-<p><code>docker kill &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-19.jpg" alt="19.png"></p>
-<p><code>docker kill</code>命令向所有运行在容器中的进程发送了一个不友好的SIGKILL信号。</p>
-<p><code>docker pause &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-20.jpg" alt="20.png"></p>
-<p><code>docker stop</code>和<code>docker kill</code>命令会发送UNIX的信号给运行中的进程，<code>docker pause</code>命令则不一样，它利用了cgroups的特性将运行中的进程空间暂停。具体的内部原理你可以在这里找到：<a href="https://www.kernel.org/doc/Documentation/cgroups/freezer-subsystem.txt">https://www.kernel.org/doc/Doc ... m.txt</a>，但是这种方式的不足之处在于发送一个SIGTSTP信号对于进程来说不够简单易懂，以至于不能够让所有进程暂停。</p>
-<p><code>docker rm &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-21.jpg" alt="21.png"></p>
-<p><code>docker rm</code>命令会移除构成容器的可读写层。注意，这个命令只能对非运行态容器执行。</p>
-<p><code>docker rmi &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-22.jpg" alt="22.png"></p>
-<p><code>docker rmi</code>命令会移除构成镜像的一个只读层。你只能够使用<code>docker rmi</code>来移除最顶层（top level layer）（也可以说是镜像），你也可以使用-f参数来强制删除中间的只读层。 </p>
-<p><code>docker commit &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-23.jpg" alt="23.png"></p>
-<p><code>docker commit</code>命令将容器的可读写层转换为一个只读层，这样就把一个容器转换成了不可变的镜像。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-24.png" alt="24.png"></p>
-<p><code>docker build</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-25.jpg" alt="25.png"></p>
-<p><code>docker build</code>命令非常有趣，它会反复的执行多个命令。</p>
-<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-26.png" alt="26.png"></p>
-<p>我们从上图可以看到，build命令根据Dockerfile文件中的FROM指令获取到镜像，然后重复地1）run（create和start）、2）修改、3）commit。在循环中的每一步都会生成一个新的层，因此许多新的层会被创建。</p>
-<p><code>docker exec &lt;running-container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-27.jpg" alt="27.png"></p>
-<p><code>docker exec</code>命令会在运行中的容器执行一个新进程。</p>
-<p><code>docker inspect &lt;container-id&gt; or &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-28.jpg" alt="28.png"></p>
-<p><code>docker inspect</code>命令会提取出容器或者镜像最顶层的元数据。</p>
-<p><code>docker save &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-29.jpg" alt="29.png"></p>
-<p><code>docker save</code>命令会创建一个镜像的压缩文件，这个文件能够在另外一个主机的Docker上使用。和export命令不同，这个命令为每一个层都保存了它们的元数据。这个命令只能对镜像生效。</p>
-<p><code>docker export &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-30.jpg" alt="30.png"></p>
-<p><code>docker export</code>命令创建一个tar文件，并且移除了元数据和不必要的层，将多个层整合成了一个层，只保存了当前统一视角看到的内容（译者注：expoxt后的容器再import到Docker中，通过docker images –tree命令只能看到一个镜像；而save后的镜像则不同，它能够看到这个镜像的历史镜像）。</p>
-<p><code>docker history &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-31.jpg" alt="31.png"></p>
-<p><code>docker history</code>命令递归地输出指定镜像的历史镜像。</p>
-<p>结论我希望你们能喜欢这篇文章。还有其他许多的命令（pull，search，restart，attach等）我没有提及，但是我相信通过阅读这篇文章，大部分的Docker命令都能够被很好理解。我仅仅学习了Docker两个星期，因此，如果我有什么地方说的不好，欢迎大家指出。</p>
-<p><strong>原文链接：<a href="http://merrigrove.blogspot.sg/2015/10/visualizing-docker-containers-and-images.html">Visualizing Docker Containers and Images</a>（翻译：杨润青）</strong></p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>You are hacked</title>
-    <url>/2014/08/08/you-are-hacked.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>大家好我又来科（zhuang）普（bility）了。偶然林俊杰官网的密码泄露风波四起，想想有必要聊聊这方面的问题。</p>
-<p>首先我们生活在一个怎样的网络世界呢？来看个链接吧。</p>
-<p><a href="http://www.wooyun.org/bugs/">http://www.wooyun.org/bugs/</a></p>
-<p>wooyuu所为何物？他们官方的介绍是这样的</p>
-<blockquote>
-<p>WooYun是一个位于厂商和安全研究者之间的安全问题反馈平台，在对安全问题进行反馈处理跟进的同时，为互联网安全研究者提供一个公益、学习、交流和研究的平台。其名字来源于目前互联网上的“云”，在这个不做“云”不好意思和人家打招呼的时代，网络安全相关的，无论是技术还是思路都会有点黑色的感觉，所以自然出现了乌云。</p>
-<p>你可以叫他乌云，或者巫云，或者我晕，但是我们坚信它是汇聚互联网安全研究者力量的，将带来暴风雨清洗一切的乌云。</p>
-</blockquote>
-<p>如果你点进链接大致浏览一遍，你就会发现几乎所有常用的互联网应用，都多多少少被爆过漏洞。这里不是想说网站存在漏洞是理所当然，而是想解释网站存在漏洞这个可能性在所难免，攻与防往往是相对发展的。加上互联网发达的今天，所谓的黑客技术门槛已然有所降低，有些零基础的有心之人拿着下载到的工具在线搜寻漏洞，然后根据漏洞再进行入侵已经变得不像想象中的那么困难。</p>
-<p>在这里我应该可以拿图举证：</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked1.jpg" alt="hacked1"></p>
-<p>这是我某一天例行检查服务器日志的时候看到的记录，这里有位仁兄在凌晨12点半的时候花了一个多小时的时间通过各种方式想找到我们服务器的漏洞（这大半夜的不睡觉想必也是蛮拼的），虽然无功而返，可是能发现漏洞信息交换的便捷，当某一个系统组件被爆出漏洞时，这些人就会根据自己掌握的这些信息在互联网上广撒网，如果网站的运维人员不及时跟进相关的漏洞信息，就容易让有心之人得逞。所以这需要网站背后的公司或个人进行持续的资金与人力投入，成本可谓大大的。</p>
-<p>接下来进入正题。</p>
-<p>虽然我不知道黑林俊杰官网的人是出于什么目的，但是大致有以下几个方面：</p>
-<ol>
-<li><p>对于自己所掌握的技术的自豪感，驱使有些人想通过拿下别人的网站获得自我认同。</p>
-</li>
-<li><p>增加自己手中用户数据库的内容</p>
-</li>
-<li><p>帮助网站寻找漏洞并提供解决方案，升级网站安全性</p>
-</li>
-</ol>
-<p>这里就主要说说第二点吧。不出意外的情况下，国内各种黑客的手中都有一些记录了别人账号和密码等敏感信息的数据库，他们拿着这些隐私数据能做很多事情，比如进你的网银花你的钱，用你的微信勾搭你的妹子（以上场景纯属虚构，如有雷同我不负责&#x3D;。&#x3D;）。如果顺利拿到林俊杰官网的用户数据，可以增加自己的数据库内容，因为很多用户的习惯是所有网站都使用相同的用户名和密码，如果顺利，黑客们就能用拿到的林俊杰官网的数据去撞库，测试他们想要的网站的信息。所以一再强调，我们要养成密码分级以及勤改密码的好习惯。</p>
-<p>比如你会遇到这样的场景：我一个很久很久没用的QQ号，为什么今天登陆上去被提示密码错误？没错啦，大致就是你的一些信息在别的地方被别人窃取，然后试出了你QQ的密码然后被修改了。</p>
-<p>更多密码泄露的原因可以点这里了解：<a href="http://blog.unnoo.com/?p=2181">http://blog.unnoo.com/?p=2181</a></p>
-<p>最后，据说林俊杰官网泄露的数据是去年关站维护之前被拿到的数据，里面只包括用户名和密码。理论上不必有太大的恐慌。不过因为关站维护之后更新官网网站程序，用的数据库包含了旧官网的数据，所以维护好之后的新官网我们可以用之前注册的账号密码进行登陆。具体猜测可见我去年的一条微博，链接为<a href="http://weibo.com/1686295857/Al296qPTI" title="http://weibo.com/1686295857/Al296qPTI">http://weibo.com/1686295857/Al296qPTI</a></p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked3.jpg" alt="hacked3"></p>
-<p>大概也是因为知道旧官网有被拖库吧，所以新官网开放之后，在我们登陆网站进入会员中心，时常提示修改密码，不知道各位还有没有印象。<br>&amp;nbsp;</p>
-<p>题外话：</p>
-<p>国内的环境是当有网站被爆出漏洞，一般容易开启某些不相关人员的嘲讽模式，可是嘲讽从来都不能解决问题，因为某一天你所依附的网络也有可能被入侵，被拖库，毕竟一般人用的网站程序，都是别人写好公布在网上的。</p>
-<p>如果你不作为，那么在那些有所作为的黑客面前，你将一无所有。这里的“你”包括所有互联网用户以及网站维护人员，peace~</p>
-<p>（本文如有技术逻辑错误，欢迎拍砖）</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>装逼遭雷劈</tag>
       </tags>
   </entry>
   <entry>
@@ -2264,11 +2174,144 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
+    <title>You are hacked</title>
+    <url>/2014/08/08/you-are-hacked.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>大家好我又来科（zhuang）普（bility）了。偶然林俊杰官网的密码泄露风波四起，想想有必要聊聊这方面的问题。</p>
+<p>首先我们生活在一个怎样的网络世界呢？来看个链接吧。</p>
+<p><a href="http://www.wooyun.org/bugs/">http://www.wooyun.org/bugs/</a></p>
+<p>wooyuu所为何物？他们官方的介绍是这样的</p>
+<blockquote>
+<p>WooYun是一个位于厂商和安全研究者之间的安全问题反馈平台，在对安全问题进行反馈处理跟进的同时，为互联网安全研究者提供一个公益、学习、交流和研究的平台。其名字来源于目前互联网上的“云”，在这个不做“云”不好意思和人家打招呼的时代，网络安全相关的，无论是技术还是思路都会有点黑色的感觉，所以自然出现了乌云。</p>
+<p>你可以叫他乌云，或者巫云，或者我晕，但是我们坚信它是汇聚互联网安全研究者力量的，将带来暴风雨清洗一切的乌云。</p>
+</blockquote>
+<p>如果你点进链接大致浏览一遍，你就会发现几乎所有常用的互联网应用，都多多少少被爆过漏洞。这里不是想说网站存在漏洞是理所当然，而是想解释网站存在漏洞这个可能性在所难免，攻与防往往是相对发展的。加上互联网发达的今天，所谓的黑客技术门槛已然有所降低，有些零基础的有心之人拿着下载到的工具在线搜寻漏洞，然后根据漏洞再进行入侵已经变得不像想象中的那么困难。</p>
+<p>在这里我应该可以拿图举证：</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked1.jpg" alt="hacked1"></p>
+<p>这是我某一天例行检查服务器日志的时候看到的记录，这里有位仁兄在凌晨12点半的时候花了一个多小时的时间通过各种方式想找到我们服务器的漏洞（这大半夜的不睡觉想必也是蛮拼的），虽然无功而返，可是能发现漏洞信息交换的便捷，当某一个系统组件被爆出漏洞时，这些人就会根据自己掌握的这些信息在互联网上广撒网，如果网站的运维人员不及时跟进相关的漏洞信息，就容易让有心之人得逞。所以这需要网站背后的公司或个人进行持续的资金与人力投入，成本可谓大大的。</p>
+<p>接下来进入正题。</p>
+<p>虽然我不知道黑林俊杰官网的人是出于什么目的，但是大致有以下几个方面：</p>
+<ol>
+<li><p>对于自己所掌握的技术的自豪感，驱使有些人想通过拿下别人的网站获得自我认同。</p>
+</li>
+<li><p>增加自己手中用户数据库的内容</p>
+</li>
+<li><p>帮助网站寻找漏洞并提供解决方案，升级网站安全性</p>
+</li>
+</ol>
+<p>这里就主要说说第二点吧。不出意外的情况下，国内各种黑客的手中都有一些记录了别人账号和密码等敏感信息的数据库，他们拿着这些隐私数据能做很多事情，比如进你的网银花你的钱，用你的微信勾搭你的妹子（以上场景纯属虚构，如有雷同我不负责&#x3D;。&#x3D;）。如果顺利拿到林俊杰官网的用户数据，可以增加自己的数据库内容，因为很多用户的习惯是所有网站都使用相同的用户名和密码，如果顺利，黑客们就能用拿到的林俊杰官网的数据去撞库，测试他们想要的网站的信息。所以一再强调，我们要养成密码分级以及勤改密码的好习惯。</p>
+<p>比如你会遇到这样的场景：我一个很久很久没用的QQ号，为什么今天登陆上去被提示密码错误？没错啦，大致就是你的一些信息在别的地方被别人窃取，然后试出了你QQ的密码然后被修改了。</p>
+<p>更多密码泄露的原因可以点这里了解：<a href="http://blog.unnoo.com/?p=2181">http://blog.unnoo.com/?p=2181</a></p>
+<p>最后，据说林俊杰官网泄露的数据是去年关站维护之前被拿到的数据，里面只包括用户名和密码。理论上不必有太大的恐慌。不过因为关站维护之后更新官网网站程序，用的数据库包含了旧官网的数据，所以维护好之后的新官网我们可以用之前注册的账号密码进行登陆。具体猜测可见我去年的一条微博，链接为<a href="http://weibo.com/1686295857/Al296qPTI" title="http://weibo.com/1686295857/Al296qPTI">http://weibo.com/1686295857/Al296qPTI</a></p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked3.jpg" alt="hacked3"></p>
+<p>大概也是因为知道旧官网有被拖库吧，所以新官网开放之后，在我们登陆网站进入会员中心，时常提示修改密码，不知道各位还有没有印象。<br>&amp;nbsp;</p>
+<p>题外话：</p>
+<p>国内的环境是当有网站被爆出漏洞，一般容易开启某些不相关人员的嘲讽模式，可是嘲讽从来都不能解决问题，因为某一天你所依附的网络也有可能被入侵，被拖库，毕竟一般人用的网站程序，都是别人写好公布在网上的。</p>
+<p>如果你不作为，那么在那些有所作为的黑客面前，你将一无所有。这里的“你”包括所有互联网用户以及网站维护人员，peace~</p>
+<p>（本文如有技术逻辑错误，欢迎拍砖）</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>装逼遭雷劈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>10张图带你深入理解Docker容器和镜像</title>
+    <url>/2016/08/19/visualizing-docker-containers-and-images.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>**转载地址：<a href="http://dockone.io/article/783">http://dockone.io/article/783</a> **</p>
+<p>【编者的话】本文用图文并茂的方式介绍了容器、镜像的区别和Docker每个命令后面的技术细节，能够很好的帮助读者深入理解Docker。</p>
+<span id="more"></span>
+
+<p>这篇文章希望能够帮助读者深入理解Docker的命令，还有容器（container）和镜像（image）之间的区别，并深入探讨容器和运行中的容器之间的区别。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-1.png" alt="1.png"></p>
+<p>当我对Docker技术还是一知半解的时候，我发现理解Docker的命令非常困难。于是，我花了几周的时间来学习Docker的工作原理，更确切地说，是关于Docker统一文件系统（the union file system）的知识，然后回过头来再看Docker的命令，一切变得顺理成章，简单极了。</p>
+<p><strong>题外话：</strong><br>就我个人而言，掌握一门技术并合理使用它的最好办法就是深入理解这项技术背后的工作原理。通常情况下，一项新技术的诞生常常会伴随着媒体的大肆宣传和炒作，这使得用户很难看清技术的本质。更确切地说，新技术总是会发明一些新的术语或者隐喻词来帮助宣传，这在初期是非常有帮助的，但是这给技术的原理蒙上了一层砂纸，不利于用户在后期掌握技术的真谛。</p>
+<p>Git就是一个很好的例子。我之前不能够很好的使用Git，于是我花了一段时间去学习Git的原理，直到这时，我才真正明白了Git的用法。我坚信只有真正理解Git内部原理的人才能够掌握这个工具。<br>Image Definition镜像（Image）就是一堆只读层（read-only layer）的统一视角，也许这个定义有些难以理解，下面的这张图能够帮助读者理解镜像的定义。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-2.png" alt="2.png"></p>
+<p>从左边我们看到了多个只读层，它们重叠在一起。除了最下面一层，其它层都会有一个指针指向下一层。这些层是Docker内部的实现细节，并且能够在主机（译者注：运行Docker的机器）的文件系统上访问到。统一文件系统（union file system）技术能够将不同的层整合成一个文件系统，为这些层提供了一个统一的视角，这样就隐藏了多层的存在，在用户的角度看来，只存在一个文件系统。我们可以在图片的右边看到这个视角的形式。</p>
+<p>你可以在你的主机文件系统上找到有关这些层的文件。需要注意的是，在一个运行中的容器内部，这些层是不可见的。在我的主机上，我发现它们存在于<code>/var/lib/docker/aufs</code>目录下。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo tree -L 1 /var/lib/docker//var/lib/docker/</span><br><span class="line">├── aufs</span><br><span class="line">├── containers</span><br><span class="line">├── graph</span><br><span class="line">├── init</span><br><span class="line">├── linkgraph.db</span><br><span class="line">├── repositories-aufs</span><br><span class="line">├── tmp</span><br><span class="line">├── trust</span><br><span class="line">└── volumes</span><br><span class="line">7 directories, 2 files</span><br></pre></td></tr></table></figure>
+
+<p>Container Definition容器（container）的定义和镜像（image）几乎一模一样，也是一堆层的统一视角，唯一区别在于容器的最上面那一层是可读可写的。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-3.png" alt="3.png"></p>
+<p>细心的读者可能会发现，容器的定义并没有提及容器是否在运行，没错，这是故意的。正是这个发现帮助我理解了很多困惑。</p>
+<p>要点：容器 &#x3D; 镜像 + 读写层。并且容器的定义并没有提及是否要运行容器。</p>
+<p>接下来，我们将会讨论运行态容器。<br>Running Container Definition一个运行态容器（running container）被定义为一个可读写的统一文件系统加上隔离的进程空间和包含其中的进程。下面这张图片展示了一个运行中的容器。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-4.png" alt="4.png"></p>
+<p>正是文件系统隔离技术使得Docker成为了一个前途无量的技术。一个容器中的进程可能会对文件进行修改、删除、创建，这些改变都将作用于可读写层（read-write layer）。下面这张图展示了这个行为。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-5.png" alt="5.png"></p>
+<p>我们可以通过运行以下命令来验证我们上面所说的：<br><code>docker run ubuntu touch happiness.txt</code><br>即便是这个ubuntu容器不再运行，我们依旧能够在主机的文件系统上找到这个新文件。<br><code>find / -name happiness.txt/var/lib/docker/aufs/diff/860a7b...889/happiness.txt</code><br>Image Layer Definition为了将零星的数据整合起来，我们提出了镜像层（image layer）这个概念。下面的这张图描述了一个镜像层，通过图片我们能够发现一个层并不仅仅包含文件系统的改变，它还能包含了其他重要信息。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-6.png" alt="6.png"></p>
+<p>元数据（metadata）就是关于这个层的额外信息，它不仅能够让Docker获取运行和构建时的信息，还包括父层的层次信息。需要注意，只读层和读写层都包含元数据。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-7.png" alt="7.png"></p>
+<p>除此之外，每一层都包括了一个指向父层的指针。如果一个层没有这个指针，说明它处于最底层。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-8.png" alt="8.png"></p>
+<p><strong>Metadata Location:</strong></p>
+<p><code>/var/lib/docker/graph/e809f156dc985.../json</code><br>e809f156dc985…就是这层的id</p>
+<p>一个容器的元数据好像是被分成了很多文件，但或多或少能够在&#x2F;var&#x2F;lib&#x2F;docker&#x2F;containers&#x2F;&lt;id&gt;目录下找到，&lt;id&gt;就是一个可读层的id。这个目录下的文件大多是运行时的数据，比如说网络，日志等等。<br>全局理解（Tying It All Together）现在，让我们结合上面提到的实现细节来理解Docker的命令。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-9.jpg" alt="9.png"></p>
+<p>docker create 命令为指定的镜像（image）添加了一个可读写层，构成了一个新的容器。注意，这个容器并没有运行。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-10.png" alt="10.png"></p>
+<p><code>docker start &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-11.jpg" alt="11.png"></p>
+<p>Docker start命令为容器文件系统创建了一个进程隔离空间。注意，每一个容器只能够有一个进程隔离空间。</p>
+<p><code>docker run &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-12.jpg" alt="12.png"></p>
+<p>看到这个命令，读者通常会有一个疑问：<code>docker start</code>和 <code>docker run</code>命令有什么区别。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-13.png" alt="13.png"></p>
+<p>从图片可以看出，<code>docker run</code>命令先是利用镜像创建了一个容器，然后运行这个容器。这个命令非常的方便，并且隐藏了两个命令的细节，但从另一方面来看，这容易让用户产生误解。</p>
+<p>题外话：继续我们之前有关于Git的话题，我认为<code>docker run</code>命令类似于<code>git pull</code>命令。<code>git pull</code>命令就是<code>git fetch</code> 和 <code>git merge</code>两个命令的组合，同样的，<code>docker run</code>就是<code>docker create</code>和<code>docker start</code>两个命令的组合。</p>
+<p><code>docker ps</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-14.jpg" alt="14.png"></p>
+<p><code>docker ps</code> 命令会列出所有运行中的容器。这隐藏了非运行态容器的存在，如果想要找出这些容器，我们需要使用下面这个命令。</p>
+<p><code>docker ps –a</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-15.jpg" alt="15.png"></p>
+<p><code>docker ps –a</code>命令会列出所有的容器，不管是运行的，还是停止的。</p>
+<p><code>docker images</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-16.jpg" alt="16.png"></p>
+<p><code>docker images</code>命令会列出了所有顶层（top-level）镜像。实际上，在这里我们没有办法区分一个镜像和一个只读层，所以我们提出了top-level镜像。只有创建容器时使用的镜像或者是直接pull下来的镜像能被称为顶层（top-level）镜像，并且每一个顶层镜像下面都隐藏了多个镜像层。</p>
+<p><code>docker images –a</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-17.jpg" alt="17.png"></p>
+<p><code>docker images –a</code>命令列出了所有的镜像，也可以说是列出了所有的可读层。如果你想要查看某一个image-id下的所有层，可以使用<code>docker history</code>来查看。</p>
+<p><code>docker stop &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-18.jpg" alt="18.png"></p>
+<p><code>docker stop</code>命令会向运行中的容器发送一个SIGTERM的信号，然后停止所有的进程。</p>
+<p><code>docker kill &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-19.jpg" alt="19.png"></p>
+<p><code>docker kill</code>命令向所有运行在容器中的进程发送了一个不友好的SIGKILL信号。</p>
+<p><code>docker pause &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-20.jpg" alt="20.png"></p>
+<p><code>docker stop</code>和<code>docker kill</code>命令会发送UNIX的信号给运行中的进程，<code>docker pause</code>命令则不一样，它利用了cgroups的特性将运行中的进程空间暂停。具体的内部原理你可以在这里找到：<a href="https://www.kernel.org/doc/Documentation/cgroups/freezer-subsystem.txt">https://www.kernel.org/doc/Doc ... m.txt</a>，但是这种方式的不足之处在于发送一个SIGTSTP信号对于进程来说不够简单易懂，以至于不能够让所有进程暂停。</p>
+<p><code>docker rm &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-21.jpg" alt="21.png"></p>
+<p><code>docker rm</code>命令会移除构成容器的可读写层。注意，这个命令只能对非运行态容器执行。</p>
+<p><code>docker rmi &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-22.jpg" alt="22.png"></p>
+<p><code>docker rmi</code>命令会移除构成镜像的一个只读层。你只能够使用<code>docker rmi</code>来移除最顶层（top level layer）（也可以说是镜像），你也可以使用-f参数来强制删除中间的只读层。 </p>
+<p><code>docker commit &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-23.jpg" alt="23.png"></p>
+<p><code>docker commit</code>命令将容器的可读写层转换为一个只读层，这样就把一个容器转换成了不可变的镜像。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-24.png" alt="24.png"></p>
+<p><code>docker build</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-25.jpg" alt="25.png"></p>
+<p><code>docker build</code>命令非常有趣，它会反复的执行多个命令。</p>
+<p><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-26.png" alt="26.png"></p>
+<p>我们从上图可以看到，build命令根据Dockerfile文件中的FROM指令获取到镜像，然后重复地1）run（create和start）、2）修改、3）commit。在循环中的每一步都会生成一个新的层，因此许多新的层会被创建。</p>
+<p><code>docker exec &lt;running-container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-27.jpg" alt="27.png"></p>
+<p><code>docker exec</code>命令会在运行中的容器执行一个新进程。</p>
+<p><code>docker inspect &lt;container-id&gt; or &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-28.jpg" alt="28.png"></p>
+<p><code>docker inspect</code>命令会提取出容器或者镜像最顶层的元数据。</p>
+<p><code>docker save &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-29.jpg" alt="29.png"></p>
+<p><code>docker save</code>命令会创建一个镜像的压缩文件，这个文件能够在另外一个主机的Docker上使用。和export命令不同，这个命令为每一个层都保存了它们的元数据。这个命令只能对镜像生效。</p>
+<p><code>docker export &lt;container-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-30.jpg" alt="30.png"></p>
+<p><code>docker export</code>命令创建一个tar文件，并且移除了元数据和不必要的层，将多个层整合成了一个层，只保存了当前统一视角看到的内容（译者注：expoxt后的容器再import到Docker中，通过docker images –tree命令只能看到一个镜像；而save后的镜像则不同，它能够看到这个镜像的历史镜像）。</p>
+<p><code>docker history &lt;image-id&gt;</code><br><img data-src="https://statics.yvanz.com/visualizing-docker-containers-and-images-31.jpg" alt="31.png"></p>
+<p><code>docker history</code>命令递归地输出指定镜像的历史镜像。</p>
+<p>结论我希望你们能喜欢这篇文章。还有其他许多的命令（pull，search，restart，attach等）我没有提及，但是我相信通过阅读这篇文章，大部分的Docker命令都能够被很好理解。我仅仅学习了Docker两个星期，因此，如果我有什么地方说的不好，欢迎大家指出。</p>
+<p><strong>原文链接：<a href="http://merrigrove.blogspot.sg/2015/10/visualizing-docker-containers-and-images.html">Visualizing Docker Containers and Images</a>（翻译：杨润青）</strong></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>zabbix新建监控项item</title>
     <url>/2014/11/27/zabbix-create-item.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先我们了解一下什么是zabbix的item（监控项）</p>
 <p>所谓监控项是zabbix收集数据的基础。没有监控项就没有数据，因为一个监控项定义了一组特殊数据，或者说定义了什么样的数据从监控主机发往监控服务端。例如我需要监控一台主机的cpu情况，则监控项就是收集cpu状态并发往服务端的。</p>
-<p>&amp;nbsp;</p>
+<span id="more"></span>
+
 <p><strong>新建一个监控项</strong></p>
 <p>所有的监控项都是围绕主机的，所以新建监控项时，我们需要进入主机列表，再点击Items</p>
 <p><img data-src="https://statics.yvanz.com/zabbix-item1.png"></p>
@@ -2640,7 +2683,6 @@ Posted at 2014.6.14
 </table>
 
 <p>当然，你也可以Clone现有的监控项并重命名保存成新监控项。</p>
-<p>&amp;nbsp;</p>
 <p>这篇文章翻译的着实不满意，蹩脚翻译看着难受的话，可以查看源文档：<a href="https://www.zabbix.com/documentation/2.4/manual/config/items/item">https://www.zabbix.com/documentation/2.4/manual/config/items/item</a></p>
 <p>当然，这篇文章也花了很多时间编辑，目测还有两篇文章需要用到蹩脚的翻译——《zabbix的item type解析》、《zabbix的item key解析》，心累-。-</p>
 ]]></content>
@@ -2757,9 +2799,88 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
+    <title>zabbix邮件告警设置</title>
+    <url>/2015/05/09/zabbix-post-a-mail.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>好久没更关于zabbix的东西了，今天完善了一下内网zabbix监控的邮件告警功能。</p>
+<span id="more"></span>
+
+<p>这里就不赘述使用服务器自带邮件发信了，直接介绍使用maix联合自有常用邮箱实现发送邮件的功能。</p>
+<ul>
+<li>配置发信功能</li>
+</ul>
+<p>首先使用which mailx检查服务器是否安装mailx，若没有安装直接yum安装。</p>
+<p>然后编辑其配置文件，在末尾加上发信邮箱等信息</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/mail.rc</span><br><span class="line"><span class="comment">#For zabbix media</span></span><br><span class="line"><span class="built_in">set</span> from=你的邮箱 smtp=你的邮箱smtp服务器</span><br><span class="line"><span class="built_in">set</span> smtp-auth-user=你的邮箱 smtp-auth-password=邮箱密码</span><br><span class="line"><span class="built_in">set</span> smtp-auth=login</span><br></pre></td></tr></table></figure>
+
+<p>测试新加的配置信息是否正常</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zabbix test mail&quot;</span> |mail -s <span class="string">&quot;zabbix&quot;</span> yyy@qq.com</span><br></pre></td></tr></table></figure>
+
+<p>若QQ邮箱成功收信，则配置成功</p>
+<ul>
+<li>配置zabbix</li>
+</ul>
+<p>1.新建媒介</p>
+<p>点击Administration→Media types→Create media type</p>
+<p><img data-src="https://statics.yvanz.com/zabbix-mail1.jpg"></p>
+<p>Type选择Script，根据自己习惯，自定义Name字段以及Script name字段。其中Script name字段为待会新建的发信脚本名称。</p>
+<p>2.设置报警邮箱</p>
+<p>点击Administration→Users，选择Members列的用户，为其配置Media</p>
+<p><img data-src="https://statics.yvanz.com/zabbix-mail3.jpg"></p>
+<p><img data-src="https://statics.yvanz.com/zabbix-mail2.jpg"></p>
+<p>3.设置报警触发行为</p>
+<p>点击Configuration→Actions，我们可以直接修改现有的Report problems to Zabbix administrators。选择Opreations页，Edit现有的触发行为，注意修改如下几项并最后update</p>
+<p><img data-src="https://statics.yvanz.com/zabbix-mail4.jpg"></p>
+<p>4.编辑发信脚本</p>
+<p>zabbix默认脚本目录位于zabbix安装目录下的share&#x2F;zabbix&#x2F;alertscripts。我们在这里新建一个前面命名的mail.sh文件，内容如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$3</span>&quot;</span> | mail -s <span class="string">&quot;<span class="variable">$2</span>&quot;</span> <span class="variable">$1</span></span><br></pre></td></tr></table></figure>
+
+<p>若该脚本发信时，邮箱收到的中文显示乱码，且正文为空，同时显示收到一个命名规则为tcmime.***.***.***.bin的附件，可yum安装dos2unix</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">export</span> LANG=zh_CN.UTF-8</span><br><span class="line">FILE=/tmp/mailinfo.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$3</span>&quot;</span> &gt;<span class="variable">$FILE</span></span><br><span class="line">dos2unix -k <span class="variable">$FILE</span></span><br><span class="line">mail -s <span class="string">&quot;<span class="variable">$2</span>&quot;</span> <span class="variable">$1</span> &lt; <span class="variable">$FILE</span></span><br></pre></td></tr></table></figure>
+
+<p>保存并修改脚本所属用户以及赋予执行权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chown</span> zabbix zabbix mail.sh</span><br><span class="line"><span class="built_in">chmod</span> +x mail.sh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>测试报警</li>
+</ul>
+<p>关闭监控服务器上的zabbix_agentd，等待若干分钟会收到错误报警的邮件。开启zabbix_agentd，等待若干分钟会收到服务恢复的邮件。</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>zabbix</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zabbix批量添加web监控</title>
+    <url>/2016/12/12/zabbix-web-monitor-in-batches.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近有那么一批的域名希望添加到zabbix的Web scenarios。想着每个域名还得添加告警触发器，这样工作重复性就大了。所以利用zabbix的API，写了一个批量添加的脚本。</p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="keyword">from</span> pyzabbix <span class="keyword">import</span> ZabbixAPI</span><br><span class="line"></span><br><span class="line">server_name_in_zabbix = <span class="string">&#x27;my server&#x27;</span></span><br><span class="line">hostid =   <span class="comment"># This is what host you want to add the scenarios</span></span><br><span class="line">applicationid =    <span class="comment"># This is what application you want to add</span></span><br><span class="line">retries = <span class="number">1</span></span><br><span class="line">delay = <span class="number">10</span></span><br><span class="line">status = <span class="number">200</span></span><br><span class="line">the_string_required = <span class="string">&#x27;Copyright&#x27;</span></span><br><span class="line">agent = <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.8 (KHTML, like Gecko) Chrome/17.0.940.0 Safari/535.8&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auth</span>():</span><br><span class="line">    zapi = ZabbixAPI(<span class="string">&quot;http://zabbix url&quot;</span>)</span><br><span class="line">    zapi.login(<span class="string">&quot;my username&quot;</span>, <span class="string">&quot;my secret&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> zapi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_host_name</span>(<span class="params">login_zabbix</span>):</span><br><span class="line">    host_dict = login_zabbix.host.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>: server_name_in_zabbix&#125;)[<span class="number">0</span>]</span><br><span class="line">    host_name = host_dict.get(<span class="string">&#x27;host&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> host_name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_host_id</span>(<span class="params">login_zabbix</span>):</span><br><span class="line">    host_dict = login_zabbix.host.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>:server_name_in_zabbix&#125;)[<span class="number">0</span>]</span><br><span class="line">    hostid = host_dict.get(<span class="string">&quot;hostid&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> hostid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_url</span>(<span class="params">login_zabbix, host_name</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;your file&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> url <span class="keyword">in</span> f:</span><br><span class="line">            monitor_url = url</span><br><span class="line">            name = monitor_url.split(<span class="string">&#x27;//&#x27;</span>)[-<span class="number">1</span>].split(<span class="string">&#x27;\n&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            create_web_scenarios(login_zabbix, host_name, monitor_url=monitor_url, name=name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_web_scenarios</span>(<span class="params">login_zabbix, host_name, monitor_url, name</span>):</span><br><span class="line">    request = login_zabbix.httptest.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>: name&#125;)</span><br><span class="line">    <span class="keyword">if</span> request:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;&quot;&#123;&#125;&quot; is exist&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">        create_trigger(login_zabbix, host_name, name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        login_zabbix.httptest.create(&#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: name,</span><br><span class="line">            <span class="string">&quot;agent&quot;</span>: agent,</span><br><span class="line">            <span class="string">&quot;hostid&quot;</span>: hostid,</span><br><span class="line">            <span class="string">&quot;applicationid&quot;</span>: applicationid,</span><br><span class="line">            <span class="string">&quot;delay&quot;</span>: delay,</span><br><span class="line">            <span class="string">&quot;retries&quot;</span>: retries,</span><br><span class="line">            <span class="string">&quot;steps&quot;</span>: [&#123;</span><br><span class="line">                <span class="string">&#x27;name&#x27;</span>: name+<span class="string">&#x27; index&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;url&#x27;</span>: monitor_url,</span><br><span class="line">                <span class="string">&#x27;required&#x27;</span>: the_string_required,</span><br><span class="line">                <span class="string">&#x27;status_codes&#x27;</span>: status,</span><br><span class="line">                <span class="string">&#x27;no&#x27;</span>: <span class="string">&#x27;1&#x27;</span>&#125;]</span><br><span class="line">        &#125;)</span><br><span class="line">        create_trigger(login_zabbix, host_name, name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_trigger</span>(<span class="params">login_zabbix, host_name, name</span>):</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; http code got an exception&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.rspcode[%s,%s index].last()&#125;&gt;400&quot;</span> % (host_name, name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; response slow now&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.time[%s,%s index,resp].count(2m,10,&quot;</span>gt<span class="string">&quot;)&#125;&gt;5&quot;</span> % (host_name, name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; seems error&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.error[%s].str(required pattern,3)&#125;=1&quot;</span> % (host_name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    login_zabbix = auth()</span><br><span class="line">    host_name = get_host_name(login_zabbix)</span><br><span class="line">    <span class="comment"># host_id = get_host_id(login_zabbix)</span></span><br><span class="line">    get_url(login_zabbix, host_name)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Everything is done,please check on your zabbix server&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p>具体这段代码的使用，首先需要准备一个逐行记录待添加域名的文件，然后将文件路径替换代码里的<code>your file</code>，这里没有写成参数的形式，偷懒了一把，哈哈。</p>
+<p>其次将代码里<code>server_name_in_zabbix</code>的值替换成需要添加主机的Visible name。这里我只用到利用Visible name提取host_name。所以代码里备注了，自己将hostid和applicationid填写进去。我用的hostid和applicationid，是用API的方式找到然后填写进去的。虽然host_id的提取写好了，但是没有用上。</p>
+<p>最后在<code>auth</code>函数里，把自己环境的<code>zabbix url</code>以及用户名和密码填写好，并用<code>pip install pyzabbix</code>安装好模块，就可以使用了。使用完成，会生成三个触发器：状态码异常报警，响应时间慢报警以及访问页面没有匹配我定义的Copyright字符报警。</p>
+<p>目前我的这段代码完成度不是很高，不过在GitHub上看到这么一个脚本，<a href="https://github.com/renanvicente/zabbix-web-scenario/blob/master/zabbix_web_scenario.py">地址戳这里</a>。他的完成度感觉还是不错的。不过他利用的zabbix api是2.2的版本，如果你的zabbix版本在2.4及以上，需要将脚本里<code>webcheck</code>替换成<code>httptest</code>。</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>zabbix</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用zabbix监控磁盘IO</title>
     <url>/2014/11/27/zabbix-io-monitor.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>zabbix默认的磁盘监控中没有磁盘IO方面的监控，于是我在网上找到这样一个模版，可以实现对磁盘IO的监控。</p>
+<span id="more"></span>
+
 <p>首先编辑zabbix安装目录下etc&#x2F;zabbix_agentd.conf，添加如下内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">##IO monitor</span></span><br><span class="line">UserParameter=custom.vfs.dev.read.ops[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$4&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.read.ms[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$7&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.write.ops[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$8&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.write.ms[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$11&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.io.active[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$12&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.io.ms[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$13&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.read.sectors[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$6&#125;&#x27;</span></span><br><span class="line">UserParameter=custom.vfs.dev.write.sectors[*],<span class="built_in">cat</span> /proc/diskstats | grep <span class="variable">$1</span> | <span class="built_in">head</span> -1 | awk <span class="string">&#x27;&#123;print $$10&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 
@@ -2788,7 +2909,8 @@ Posted at 2014.6.14
     <url>/2014/11/25/zabbix-nhost.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="font-size:12px;"><strong>全文翻译自zabbix官方文档</strong></span><a href="https://www.zabbix.com/documentation/2.4/manual/quickstart/host">https://www.zabbix.com/documentation/2.4/manual/quickstart/host</a></p>
 <p><span style="font-size:12px;"><strong>并有删改编辑</strong></span></p>
-<p>&amp;nbsp;</p>
+<span id="more"></span>
+
 <p>在本文中，我们将了解如何新建一台主机。</p>
 <p>在zabbix中，主机是一台你希望监测的（物理或者虚拟）网络对象，主机的定义十分灵活，它可以是一台物理服务器，一台网络交换机，一台虚拟机或者其他的应用。</p>
 <p>设置主机的条目在zabbix的Configuration→Hosts中。点击即可看到系统已经预设的一台主机——zabbix server。但是日常工作要求我们仍然需要学着如何新建另外一台主机。</p>
@@ -2980,7 +3102,8 @@ Posted at 2014.6.14
 </code></pre>
 </table>
 
-<p>&amp;nbsp;</p>
+
+
 <p>新建Host所需参数编辑完毕后，切换到Templates标签页选择现有的模版，链接至新主机。</p>
 <p><img data-src="https://statics.yvanz.com/zabbix-nhost2.png"></p>
 <p>我们可以输入关键字或者点击Select，在弹出的对话框从现有模版中选择合适的监控模版，比如我需要监控的是Linux服务器，则勾选Template OS Linux并点击select确认选择，最后点击Add&amp;rarr;Update，使设置生效。</p>
@@ -2995,81 +3118,6 @@ Posted at 2014.6.14
       <tags>
         <tag>Linux</tag>
         <tag>zabbix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zabbix邮件告警设置</title>
-    <url>/2015/05/09/zabbix-post-a-mail.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>好久没更关于zabbix的东西了，今天完善了一下内网zabbix监控的邮件告警功能。</p>
-<p>这里就不赘述使用服务器自带邮件发信了，直接介绍使用maix联合自有常用邮箱实现发送邮件的功能。</p>
-<ul>
-<li>配置发信功能</li>
-</ul>
-<p>首先使用which mailx检查服务器是否安装mailx，若没有安装直接yum安装。</p>
-<p>然后编辑其配置文件，在末尾加上发信邮箱等信息</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/mail.rc</span><br><span class="line"><span class="comment">#For zabbix media</span></span><br><span class="line"><span class="built_in">set</span> from=你的邮箱 smtp=你的邮箱smtp服务器</span><br><span class="line"><span class="built_in">set</span> smtp-auth-user=你的邮箱 smtp-auth-password=邮箱密码</span><br><span class="line"><span class="built_in">set</span> smtp-auth=login</span><br></pre></td></tr></table></figure>
-
-<p>测试新加的配置信息是否正常</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;zabbix test mail&quot;</span> |mail -s <span class="string">&quot;zabbix&quot;</span> yyy@qq.com</span><br></pre></td></tr></table></figure>
-
-<p>若QQ邮箱成功收信，则配置成功</p>
-<ul>
-<li>配置zabbix</li>
-</ul>
-<p>1.新建媒介</p>
-<p>点击Administration→Media types→Create media type</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-mail1.jpg"></p>
-<p>Type选择Script，根据自己习惯，自定义Name字段以及Script name字段。其中Script name字段为待会新建的发信脚本名称。</p>
-<p>2.设置报警邮箱</p>
-<p>点击Administration→Users，选择Members列的用户，为其配置Media</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-mail3.jpg"></p>
-<p><img data-src="https://statics.yvanz.com/zabbix-mail2.jpg"></p>
-<p>3.设置报警触发行为</p>
-<p>点击Configuration→Actions，我们可以直接修改现有的Report problems to Zabbix administrators。选择Opreations页，Edit现有的触发行为，注意修改如下几项并最后update</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-mail4.jpg"></p>
-<p>4.编辑发信脚本</p>
-<p>zabbix默认脚本目录位于zabbix安装目录下的share&#x2F;zabbix&#x2F;alertscripts。我们在这里新建一个前面命名的mail.sh文件，内容如下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$3</span>&quot;</span> | mail -s <span class="string">&quot;<span class="variable">$2</span>&quot;</span> <span class="variable">$1</span></span><br></pre></td></tr></table></figure>
-
-<p>若该脚本发信时，邮箱收到的中文显示乱码，且正文为空，同时显示收到一个命名规则为tcmime.***.***.***.bin的附件，可yum安装dos2unix</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">export</span> LANG=zh_CN.UTF-8</span><br><span class="line">FILE=/tmp/mailinfo.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$3</span>&quot;</span> &gt;<span class="variable">$FILE</span></span><br><span class="line">dos2unix -k <span class="variable">$FILE</span></span><br><span class="line">mail -s <span class="string">&quot;<span class="variable">$2</span>&quot;</span> <span class="variable">$1</span> &lt; <span class="variable">$FILE</span></span><br></pre></td></tr></table></figure>
-
-<p>保存并修改脚本所属用户以及赋予执行权限</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chown</span> zabbix zabbix mail.sh</span><br><span class="line"><span class="built_in">chmod</span> +x mail.sh</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>测试报警</li>
-</ul>
-<p>关闭监控服务器上的zabbix_agentd，等待若干分钟会收到错误报警的邮件。开启zabbix_agentd，等待若干分钟会收到服务恢复的邮件。</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>zabbix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zabbix批量添加web监控</title>
-    <url>/2016/12/12/zabbix-web-monitor-in-batches.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近有那么一批的域名希望添加到zabbix的Web scenarios。想着每个域名还得添加告警触发器，这样工作重复性就大了。所以利用zabbix的API，写了一个批量添加的脚本。</p>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="keyword">from</span> pyzabbix <span class="keyword">import</span> ZabbixAPI</span><br><span class="line"></span><br><span class="line">server_name_in_zabbix = <span class="string">&#x27;my server&#x27;</span></span><br><span class="line">hostid =   <span class="comment"># This is what host you want to add the scenarios</span></span><br><span class="line">applicationid =    <span class="comment"># This is what application you want to add</span></span><br><span class="line">retries = <span class="number">1</span></span><br><span class="line">delay = <span class="number">10</span></span><br><span class="line">status = <span class="number">200</span></span><br><span class="line">the_string_required = <span class="string">&#x27;Copyright&#x27;</span></span><br><span class="line">agent = <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.8 (KHTML, like Gecko) Chrome/17.0.940.0 Safari/535.8&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auth</span>():</span><br><span class="line">    zapi = ZabbixAPI(<span class="string">&quot;http://zabbix url&quot;</span>)</span><br><span class="line">    zapi.login(<span class="string">&quot;my username&quot;</span>, <span class="string">&quot;my secret&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> zapi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_host_name</span>(<span class="params">login_zabbix</span>):</span><br><span class="line">    host_dict = login_zabbix.host.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>: server_name_in_zabbix&#125;)[<span class="number">0</span>]</span><br><span class="line">    host_name = host_dict.get(<span class="string">&#x27;host&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> host_name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_host_id</span>(<span class="params">login_zabbix</span>):</span><br><span class="line">    host_dict = login_zabbix.host.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>:server_name_in_zabbix&#125;)[<span class="number">0</span>]</span><br><span class="line">    hostid = host_dict.get(<span class="string">&quot;hostid&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> hostid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_url</span>(<span class="params">login_zabbix, host_name</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;your file&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> url <span class="keyword">in</span> f:</span><br><span class="line">            monitor_url = url</span><br><span class="line">            name = monitor_url.split(<span class="string">&#x27;//&#x27;</span>)[-<span class="number">1</span>].split(<span class="string">&#x27;\n&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            create_web_scenarios(login_zabbix, host_name, monitor_url=monitor_url, name=name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_web_scenarios</span>(<span class="params">login_zabbix, host_name, monitor_url, name</span>):</span><br><span class="line">    request = login_zabbix.httptest.get(<span class="built_in">filter</span>=&#123;<span class="string">&quot;name&quot;</span>: name&#125;)</span><br><span class="line">    <span class="keyword">if</span> request:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;&quot;&#123;&#125;&quot; is exist&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">        create_trigger(login_zabbix, host_name, name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        login_zabbix.httptest.create(&#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: name,</span><br><span class="line">            <span class="string">&quot;agent&quot;</span>: agent,</span><br><span class="line">            <span class="string">&quot;hostid&quot;</span>: hostid,</span><br><span class="line">            <span class="string">&quot;applicationid&quot;</span>: applicationid,</span><br><span class="line">            <span class="string">&quot;delay&quot;</span>: delay,</span><br><span class="line">            <span class="string">&quot;retries&quot;</span>: retries,</span><br><span class="line">            <span class="string">&quot;steps&quot;</span>: [&#123;</span><br><span class="line">                <span class="string">&#x27;name&#x27;</span>: name+<span class="string">&#x27; index&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;url&#x27;</span>: monitor_url,</span><br><span class="line">                <span class="string">&#x27;required&#x27;</span>: the_string_required,</span><br><span class="line">                <span class="string">&#x27;status_codes&#x27;</span>: status,</span><br><span class="line">                <span class="string">&#x27;no&#x27;</span>: <span class="string">&#x27;1&#x27;</span>&#125;]</span><br><span class="line">        &#125;)</span><br><span class="line">        create_trigger(login_zabbix, host_name, name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_trigger</span>(<span class="params">login_zabbix, host_name, name</span>):</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; http code got an exception&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.rspcode[%s,%s index].last()&#125;&gt;400&quot;</span> % (host_name, name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; response slow now&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.time[%s,%s index,resp].count(2m,10,&quot;</span>gt<span class="string">&quot;)&#125;&gt;5&quot;</span> % (host_name, name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line">    login_zabbix.trigger.create(&#123;</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&#123;&#125; seems error&quot;</span>.<span class="built_in">format</span>(name),</span><br><span class="line">        <span class="string">&quot;expression&quot;</span>: <span class="string">&quot;&#123;%s:web.test.error[%s].str(required pattern,3)&#125;=1&quot;</span> % (host_name, name),</span><br><span class="line">        <span class="string">&quot;priority&quot;</span>: <span class="string">&quot;2&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    login_zabbix = auth()</span><br><span class="line">    host_name = get_host_name(login_zabbix)</span><br><span class="line">    <span class="comment"># host_id = get_host_id(login_zabbix)</span></span><br><span class="line">    get_url(login_zabbix, host_name)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Everything is done,please check on your zabbix server&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<p>具体这段代码的使用，首先需要准备一个逐行记录待添加域名的文件，然后将文件路径替换代码里的<code>your file</code>，这里没有写成参数的形式，偷懒了一把，哈哈。</p>
-<p>其次将代码里<code>server_name_in_zabbix</code>的值替换成需要添加主机的Visible name。这里我只用到利用Visible name提取host_name。所以代码里备注了，自己将hostid和applicationid填写进去。我用的hostid和applicationid，是用API的方式找到然后填写进去的。虽然host_id的提取写好了，但是没有用上。</p>
-<p>最后在<code>auth</code>函数里，把自己环境的<code>zabbix url</code>以及用户名和密码填写好，并用<code>pip install pyzabbix</code>安装好模块，就可以使用了。使用完成，会生成三个触发器：状态码异常报警，响应时间慢报警以及访问页面没有匹配我定义的Copyright字符报警。</p>
-<p>目前我的这段代码完成度不是很高，不过在GitHub上看到这么一个脚本，<a href="https://github.com/renanvicente/zabbix-web-scenario/blob/master/zabbix_web_scenario.py">地址戳这里</a>。他的完成度感觉还是不错的。不过他利用的zabbix api是2.2的版本，如果你的zabbix版本在2.4及以上，需要将脚本里<code>webcheck</code>替换成<code>httptest</code>。</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>zabbix</tag>
-        <tag>python</tag>
       </tags>
   </entry>
 </search>

@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yvanz.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"style":null,"show_result":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。 化繁为简，先说说Linux平台的php怎么连接： 首先下载freeTDS，解压安装。 12.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;freetds --with-tdsver&#x3D;8.0 --enable-msdblibmak">
+    <meta name="description" content="这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。 化繁为简，先说说Linux平台的php怎么连接：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP连接sql server">
 <meta property="og:url" content="https://www.yvanz.com/2014/06/25/php-sql-server.html">
 <meta property="og:site_name" content="Yvanの平行时空">
-<meta property="og:description" content="这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。 化繁为简，先说说Linux平台的php怎么连接： 首先下载freeTDS，解压安装。 12.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;freetds --with-tdsver&#x3D;8.0 --enable-msdblibmak">
+<meta property="og:description" content="这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。 化繁为简，先说说Linux平台的php怎么连接：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2014-06-25T09:02:06.000Z">
-<meta property="article:modified_time" content="2023-06-16T05:43:56.726Z">
+<meta property="article:modified_time" content="2023-06-19T02:08:54.174Z">
 <meta property="article:author" content="Yvan">
 <meta property="article:tag" content="PHP">
 <meta name="twitter:card" content="summary">
@@ -282,6 +282,8 @@
     
     <div class="post-body" itemprop="articleBody"><p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
 <p>化繁为简，先说说Linux平台的php怎么连接：</p>
+<span id="more"></span>
+
 <p>首先下载freeTDS，解压安装。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/freetds --with-tdsver=8.0 --enable-msdblib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 
@@ -290,7 +292,7 @@
 
 <p>在A typical Microsoft server下配置自己的sql server数据库连接，如：</p>
 <blockquote>
-<p>[192.168.0.254]<br>&amp;nbsp;&amp;nbsp;host&#x3D;192.168.0.254<br>&amp;nbsp;&amp;nbsp;port&#x3D;1433<br>&amp;nbsp;&amp;nbsp;tds version&#x3D;8.0</p>
+<p>[192.168.0.254]<br>host&#x3D;192.168.0.254<br>port&#x3D;1433<br>tds version&#x3D;8.0</p>
 </blockquote>
 <p>配置完成，使用tsql测试连接是否成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/freetds/bin/tsql -S 192.168.0.254 -U sa</span><br></pre></td></tr></table></figure>
@@ -299,7 +301,7 @@
 <blockquote>
 <p>locale is “zh_CN.UTF-8”<br>locale charset is “UTF-8”<br>using default charset “UTF-8”<br>1&gt;</p>
 </blockquote>
-<p>&amp;nbsp;<br>其次设置PHP，这里需要先安装mssql extension，可以在php源码的ext&#x2F;mssql下找到。</p>
+<p>其次设置PHP，这里需要先安装mssql extension，可以在php源码的ext&#x2F;mssql下找到。</p>
 <p>进行编译</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">phpize</span><br><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config --with-mssql=/usr/local/freetds/</span><br></pre></td></tr></table></figure>
 
@@ -313,7 +315,7 @@
 
 <p>连接成功后，若要对数据库进行操作，可使用如下函数：</p>
 <p><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_5c7a517801012etb.html">http://blog.sina.com.cn/s/blog_5c7a517801012etb.html</a></p>
-<p>&amp;nbsp;<br>接着再来看看windows平台，我使用的方法是通过OBDC连接sql server。</p>
+<p>接着再来看看windows平台，我使用的方法是通过OBDC连接sql server。</p>
 <p>一、编辑php.ini，将;extension&#x3D;php_pdo_odbc.dll前的;去掉，重启Apache或者Nginx，让php启用pdo_odbc。</p>
 <p>二、新建db.php</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$dbhost</span> = <span class="string">&#x27;DBhost&#x27;</span>; </span><br><span class="line"><span class="variable">$dbuser</span> = <span class="string">&#x27;DBuser&#x27;</span>; <span class="comment">//你的mssql用户名 </span></span><br><span class="line"><span class="variable">$dbpass</span> = <span class="string">&#x27;DBpasswd&#x27;</span>; <span class="comment">//你的mssql密码 </span></span><br><span class="line"><span class="variable">$dbname</span> = <span class="string">&#x27;DB&#x27;</span>; <span class="comment">//你的mssql库名 </span></span><br><span class="line"><span class="variable">$connect</span>=@<span class="title function_ invoke__">odbc_connect</span>(<span class="string">&quot;Driver=&#123;SQL Server&#125;;Server=<span class="subst">$dbhost</span>;Database=<span class="subst">$dbname</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbuser</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbpass</span>&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$connect</span>)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>

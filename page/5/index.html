@@ -279,382 +279,14 @@
     <div class="post-body" itemprop="articleBody">
           <p>首先我们了解一下什么是zabbix的item（监控项）</p>
 <p>所谓监控项是zabbix收集数据的基础。没有监控项就没有数据，因为一个监控项定义了一组特殊数据，或者说定义了什么样的数据从监控主机发往监控服务端。例如我需要监控一台主机的cpu情况，则监控项就是收集cpu状态并发往服务端的。</p>
-<p>&amp;nbsp;</p>
-<p><strong>新建一个监控项</strong></p>
-<p>所有的监控项都是围绕主机的，所以新建监控项时，我们需要进入主机列表，再点击Items</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-item1.png"></p>
-<p>在跳转后的网页我们可以看到目前hfshangyou主机中已经存在的49个监控项。此时我们可以点击右上角的Create item进入我们的新建页面</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-item2.png"></p>
-<p>为了新建一个测试监控项，我们只需要输入以下信息：</p>
-<p>Name</p>
-<p>&amp;nbsp;&amp;nbsp;输入cpu，这个名字将会在监控项列表中显示</p>
-<p>Key</p>
-<p>&amp;nbsp;&amp;nbsp;我们可以从select中选择，这里选system.cpu.load[<cpu>,<mode>]并删除可选项[<cpu>,<mode>]</p>
-<p>Type of information</p>
-<p>&amp;nbsp;&amp;nbsp;这里选Numeric(float)，该属性定义的是监控数据的格式</p>
-<p>其他的选项就先使用初始数值吧，选择点Add完成新建。点击之后可以看到新的监控项已经存放在监控列表中，并且显示Enable状态时说明新建的监控项是可用的。</p>
-<p><strong>查看数据</strong></p>
-<p>当新的监控项设置好后，你一定很好奇它是否在收集数据。于是我们进入Monitoring→Latest data，设置好过滤条件找出新建了监控项的主机，</p>
-<p>点击在-other-前的+，展开即可看到刚刚新建的监控项，并且可以看到监控数据的变化。并且一段时间之后，我们可以点击Graph查看可视化的数据。</p>
-<p>&amp;nbsp;</p>
-<p>上面使用一个简单的例子让我们更深刻的了解zabbix的监控项，那么接下来开始全面的了解一下新建监控项时所见到的参数及其含义吧，所提及的参数都在上面那张图上。</p>
-<table border="1" cellpadding="0" cellspacing="0">
-    <tbody>
-        <tr>
-            <td>
-
-<pre><code>                参数
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                描述
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Name
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                监控项的名字。可以使用以下的宏命令：$1,$2...$9 - 这九个参数对应item key的位置。例如：Free disk space on $1。如果item key为&quot;vfs.fs.size[/,free]&quot;，则可以自动转换成Free disk space on /
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Type
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                Item类型，详见《zabbix的item type解析》
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Key
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                Item key，所支持的item key可以在不同的Type中找到，详见《zabbix的item key解析》。一台主机添加的key必须是唯一的。如果key的所属类型是&#39;Zabbix agent&#39;, &#39;Zabbix agent (active)&#39;, &#39;Simple check&#39; or &#39;Zabbix aggregate&#39;，那么key的值必须被客户端或者服务端所支持
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Host interface
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                选择一个主机接口，这一栏是在为一台主机新建监控项所编辑的
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Type of information
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                数据进行转换后存放在数据库中的类型，如
-
-                Numeric (unsigned) - 64位无符号整数
-
-                Numeric (float) - 浮点数，包括负数，允许MySQL的range:-999999999999.9999 to 999999999999.9999 (double(16,4))
-
-                Character - 小于255字节的字符串
-
-                Log - 日志文件，必须设置成关键字日志
-
-                Text - 无限制文本
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Data type
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                指定所有监控项的预期数据类型：
-
-                Boolean - 布尔值，0表示False，1表示True。不区分大小写。如下为True or False的具体含义：
-
-                TRUE - true, t, yes, y, on, up, running, enabled, available
-
-                FALSE - false, f, no, n, off, down, unused, disabled, unavailable
-
-                另外，任何非零数被认为是True，零被认为是False。
-
-                Octal - 八进制
-
-                Decimal - 十进制
-
-                Hexadecimal - 十六进制，zabbix会自动将其转换成数字
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Units
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                如果设置了单位符号，zabbix会将收到的数值按设置的单位转换并输出。
-
-                默认情况下，如果原始数值超过1000，会先除以1000再显示出来。例如设置的单位为bps并且收到的数值为881764，zabbix会显示成881.764Kbps。如果单位设置成**B** (byte), **Bps** (bytes per second)，则会除以1024。
-
-                如果使用如下的时间单位，则如此转换：
-
-                **Unixtime - **转为&quot;yyyy.mm.dd hh:mm:ss&quot;，必须使用正数
-
-                **Uptime - **转为&quot;hh:mm:ss&quot; 或者&quot;N days, hh:mm:ss&quot;。例如收到的数值为881764秒，则会显示成&quot;10 days, 04:56:04&quot;
-
-                **S** - 转为&quot;yyy mmm ddd hhh mmm sss ms&quot;，参数为秒。例如收到数值为881764，会转换成&quot;10d 4h 56m&quot;。只有三个较高的单位会显示出来，例如&quot;1m 15d 5h&quot; 或者 &quot;2h 4m 46s&quot;，如果没有单位【日】，那么只会显示两个单位时间 - &quot;1m 5h&quot;（不会显示分钟、秒和毫秒），如果返回值小于0.001，则只会显示&quot;&amp;lt; 1ms&quot;。
-
-                禁用单位：ms、RPM、rpm、%
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Use custom multiplier
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                如果勾选该选项，所有接收到的值将乘以该文本框中设置的整数或者浮点数
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Update interval (in sec)
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                数据更新时间（秒）。
-
-                注：如果设置为0，监控数据将永不更新。然而如果Flexible intervals也存在一个非零值，那么该监控项的数据将在灵活更新时间中更新
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Flexible intervals
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                创建额外的更新周期。例如：
-
-                Interval: **10**, Period: **1-5,09:00-18:00** - 在工作日的朝九晚六期间每十秒检查一次监控项
-
-                Interval: **0**, Period: **1-7,00:00-7:00 - **在每天凌晨到早七点禁止检查
-
-                最多设置7个更新周期，如果设置的周期有冲突，则只使用最小区间。在更新周期以外的时间，使用默认的update interval。如果更新周期被设置为0，则监控项的数据不会更新。
-
-                注：该设置对主动客户端无效
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                History storage period
-
-                (in days)
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                在数据库中保存详细历史数据的具体天数，旧数据将被housekeeper删除。
-
-                从zabbix2.2开始，该值可以被Administration →
-
-                General → Housekeeper所覆盖。如果全局设置已存在，则这里会显示告警信息：
-
-                ![](https://statics.yvanz.com/zabbix-item3.png)
-
-                推荐按需设置一个最小值从而减少历史数据在数据库中的开销。若想保留更多的历史记录，可以增大下面的trend值。
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Trend storage period
-
-                (in days)
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                在数据库中聚合（以小时为单位的min，max，avg，count）N天的详细历史数据。旧数据将被housekeeper删除。从zabbix2.2开始，该值可以被覆盖，参考上文。
-
-                注：趋势数据的保存功能无法在非数字类型数据 - character, log and text中使用。
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Store value
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                **As is** - 不做任何处理
-
-                **Delta (speed per second)** - 计算公式为(**value-prev_value**)/(**time-prev_time**)，注释：
-
-                Value - 当前值
-
-                Prev_value - 上次收到的值
-
-                Time - 当前时间戳
-
-                Prev-time - 上次收到的时间戳
-
-                该设置对计算不断增长的数据，其增长速度非常有用。
-
-                注：如果当前值小于上次收到的值，zabbix会忽略更改（即不存储任何值）并等待新的数据。
-
-                **Delta (simple change) **- 计算公式为（**value-pre_value**）**:**
-
-                Value - 当前值
-
-                Pre_value - 上次收到的值
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Show value
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                值映射，映射的值不改变收到的值，只作数据显示用。查看已有的映射表，可以点击show value mappings
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Log time format
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                Type of information选择Log时显示。支持的占位符有：
-
-                *** y**：年（0001-9999）
-
-                *** M**：月（01-12）
-
-                *** d**：日（01-31）
-
-                *** h**：时（00-23）
-
-                *** m**：分（00-59）
-
-                *** s**：秒（00-59）
-
-                若留空则时间戳不被解析
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                New application
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                为新应用取一个名字
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Applications
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                将一个监控项链接到一个或多个现存的应用
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Populates host inventory field
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                数据自动填充到inventory资产清单的相应属性，前提是你的inventory对该主机处于自动模式
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Description
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                对该监控项的描述
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Enabled
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                勾选表启用
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
-</code></pre>
-</table>
-
-<p>当然，你也可以Clone现有的监控项并重命名保存成新监控项。</p>
-<p>&amp;nbsp;</p>
-<p>这篇文章翻译的着实不满意，蹩脚翻译看着难受的话，可以查看源文档：<a target="_blank" rel="noopener" href="https://www.zabbix.com/documentation/2.4/manual/config/items/item">https://www.zabbix.com/documentation/2.4/manual/config/items/item</a></p>
-<p>当然，这篇文章也花了很多时间编辑，目测还有两篇文章需要用到蹩脚的翻译——《zabbix的item type解析》、《zabbix的item key解析》，心累-。-</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/11/27/zabbix-create-item.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -747,207 +379,14 @@
     <div class="post-body" itemprop="articleBody">
           <p><span style="font-size:12px;"><strong>全文翻译自zabbix官方文档</strong></span><a target="_blank" rel="noopener" href="https://www.zabbix.com/documentation/2.4/manual/quickstart/host">https://www.zabbix.com/documentation/2.4/manual/quickstart/host</a></p>
 <p><span style="font-size:12px;"><strong>并有删改编辑</strong></span></p>
-<p>&amp;nbsp;</p>
-<p>在本文中，我们将了解如何新建一台主机。</p>
-<p>在zabbix中，主机是一台你希望监测的（物理或者虚拟）网络对象，主机的定义十分灵活，它可以是一台物理服务器，一台网络交换机，一台虚拟机或者其他的应用。</p>
-<p>设置主机的条目在zabbix的Configuration→Hosts中。点击即可看到系统已经预设的一台主机——zabbix server。但是日常工作要求我们仍然需要学着如何新建另外一台主机。</p>
-<p>首先点击Create host，在新页面按照要求填入如下新主机的信息</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-nhost1.png"></p>
-<p>最小化的输入内容包括：</p>
-<p>Host name</p>
-<p>&amp;nbsp;&amp;nbsp;输入一个主机名，只允许字母数字，空格，句号（E）以及下划线</p>
-<p>Groups</p>
-<p>&amp;nbsp;&amp;nbsp;从右边的已有项中选择一个或多个组并点击&amp;laquo;将选中组移动至in groups。</p>
-<p>IP address</p>
-<p>&amp;nbsp;&amp;nbsp;输入主机的IP地址。需要注意的是，如果该IP是zabbix server的IP地址，则需要在zabbix客户端的配置文件zabbix_agentd.conf中修改Server项的IP地址。</p>
-<blockquote>
-<p>各参数详解</p>
-</blockquote>
-<table border="1" cellpadding="0" cellspacing="0">
-    <tbody>
-        <tr>
-            <td>
-
-<pre><code>                参数
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                描述
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Host name
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                输入一个唯一的主机名，只允许数字，空格，句号（E），下划线。zabbix客户端配置文件zabbix_agentd.conf中的hostname参数一定要与这个名字一致。
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Visible name
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                显示名称，可选项。主机名的别名。支持UTF-8
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Groups
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                主机要加入的组，一个主机至少要加入一个组。
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                New host group 
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                添加一个新组并将主机添加至该组。如果该项为空则忽略
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Interfaces
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                主机接口，支持Agent, SNMP, JMX and IPMI。添加一个新接口，则点击Add并输入IP/DNS，连接方式以及端口等信息。
-
-                注：所有使用中的接口不能被删除
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                IP address
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                主机IP地址（可选）
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                DNS name
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                主机DNS地址（可选）
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Connect to
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                点击相应的按钮，选择相应的方式定义zabbix server如何从客户端获取数据，推荐使用IP
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Port
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                TCP端口号，zabbix客户端默认10050
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Default
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                使用单选按钮设置默认的接口
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Description
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                输入主机的描述信息
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Monitored by proxy
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                主机可以使用被zabbix server或者zabbix proxy监控。默认no proxy，由zabbix server直接监控。如果选择了&#39;proxy name&#39;（你的代理名称），那么客户机由代理代为收集数据
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Enabled
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                勾选使主机设置成活动，并准备被监控。如果未勾选，则主机为非活动状态，不会被监控
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
-</code></pre>
-</table>
-
-<p>&amp;nbsp;</p>
-<p>新建Host所需参数编辑完毕后，切换到Templates标签页选择现有的模版，链接至新主机。</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-nhost2.png"></p>
-<p>我们可以输入关键字或者点击Select，在弹出的对话框从现有模版中选择合适的监控模版，比如我需要监控的是Linux服务器，则勾选Template OS Linux并点击select确认选择，最后点击Add&amp;rarr;Update，使设置生效。</p>
-<p>若要取消对某个模版的链接，有两种方式</p>
-<p>&amp;nbsp;&amp;nbsp;Unlink：取消模版，但保留它的项目、触发器和图表</p>
-<p>&amp;nbsp;&amp;nbsp;Unlink and clear：取消模版并删除它的项目、触发器和图表</p>
-<p>新建主机后，客户端的配置，请见<a href="http://www.yvanz.com/2014/11/24/zabbix-ins.html">http://www.yvanz.com/2014/11/24/zabbix-ins.html</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/11/25/zabbix-nhost.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1399,24 +838,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>今天因为在弄心脏滴血的漏洞修复，于是兴起试了试网站的https连接，麻溜把步骤记下来。</p>
-<p>首先准备https连接必须要的组件openssl。因为修复漏洞，我直接在<a target="_blank" rel="noopener" href="http://www.openssl.org/">官网</a>下载最新版然后源码安装，源码安装三大金刚命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/config --prefix=/usr/local/openssl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>安装完毕配置成本机命令：重命名已有的openssl命令，并在profile文件夹中添加&#x2F;usr&#x2F;local&#x2F;openssl，同时创建软连到&#x2F;usr&#x2F;bin&#x2F;openssl</p>
-<p>其次修改Apache配置文件：</p>
-<p>启用组件mod_ssl.so和mod_socache_shmcb.so</p>
-<p>启用配置文件conf&#x2F;extra&#x2F;httpd-ssl.conf</p>
-<p>生成ssl证书</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成私钥key文件</span></span><br><span class="line">openssl genrsa -des3 -out server.key 1024</span><br><span class="line"><span class="comment">#生成证书签名请求csr文件，并按要求填写相关信息</span></span><br><span class="line">openssl req -new -key server.key -out server.csr</span><br><span class="line"><span class="comment">#自签证。或者省略这一步，将csr文件和key文件提交给权威证书颁发机构</span></span><br><span class="line">openssl x509 -req -days 700 -<span class="keyword">in</span> server.csr -signkey server.key -out server.crt</span><br></pre></td></tr></table></figure>
-
-<p>将生成好的server.crt以及server.key复制到httpd-ssl.conf配置文件中记录的位置。因为我除了servername之外没修改httpd-ssl.conf中其他的设置项，所以复制到了它默认的conf文件夹下。</p>
-<p>准备工作就绪之后重启Apache使上面的配置生效，如此在不出意外的情况下，就能使用HTTPS协议访问网页了。当然，因为我们的网站证书没有注册，所以打开网页的时候IE浏览器会提示网站安全证书存在问题。</p>
-<p>Nginx配置</p>
-<p>将以下放入server段</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line"><span class="comment">#定义证书crt文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate</span> /root/server.crt;</span><br><span class="line"><span class="comment">#定义私钥key文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate_key</span> /root/server.key;</span><br></pre></td></tr></table></figure>
-
-<p><strong>附：<a target="_blank" rel="noopener" href="http://netkiller.github.io/cryptography/openssl/format.html">常见SSL证书格式转换</a></strong></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/09/26/https-connect.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1630,11 +1059,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28815250&amp;auto=1&amp;height=32" width="298"></iframe>
-
-<p>那么多的喜欢，还没来得及表达就被丢弃；那么多的道理，回到生活里很快就被忘记。 一部看似叙事性不佳的片子，里面却包含了那么多的故事。一段路一个人，每次还没来得及说再见，就再也不见了。所谓后会无期，或许还可以称之为&amp;mdash;&amp;mdash;转身一世。这部电影让我依稀的想起高二那年写的一个音乐剧。我挑了几个片段穿插在剧本里面，初心是想着把班级生活里面遇到的感动通过那出戏讲出来，另外憧憬一下即将来临的高三，我们会用一种什么样的方式面对。可惜舞台时限，我在剧本里面掐掉了很多细节。而最后，在评委老师的认真关切下，还是因为他们觉得故事性不强被毙，哈哈哈~</p>
-<p>【就走吧，无论去哪，就算你被夺走什么。】</p>
-
+          <p> </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/07/27/hanhan.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1824,19 +1257,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
-<p>首先在goaccess官方网站<a target="_blank" rel="noopener" href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
-<p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
-<p>现在对下载的源码进行解压并编译</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-geoip --enable-utf8 --没有安装geoip的话可以不选enable-geoip</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">安装完毕可以直接使用goaccess命令查看Apache日志，一般配合如下参数</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">goaccess -a -f &lt;日志文件路径&gt;</span><br></pre></td></tr></table></figure>
-
-<p>更多参数可以参见man goaccess或者<a target="_blank" rel="noopener" href="http://goaccess.io/man">http://goaccess.io/man</a></p>
-<p>当然goaccess最吸引我的是可以生成html、csv、jscon之类的文件。直接在读取数据的时候导出成html等格式便可，如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">goaccess -a -f &amp;lt;日志文件路径&amp;gt; &amp;gt; test.html</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的前提是必须设置好goaccess日志格式，配置文件默认路径为&#x2F;usr&#x2F;local&#x2F;etc&#x2F;goaccess.conf。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#date-format %d/%b/%Y</span></span><br><span class="line"><span class="comment">#log-format %h %^[%d:%^] &quot;%r&quot; %s %b</span></span><br><span class="line"><span class="comment">##删除上述两行前面#并保存即可</span></span><br></pre></td></tr></table></figure>
-
+          <p> </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/07/23/goaccess.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1930,19 +1359,14 @@
           <blockquote>
 <p>#无冕歌王林俊杰#第18届、第21届、第22届、第25届，四次冲击金曲奖。第18届的时候或许太年轻。而这些年，我们见证过21届堪称完美的表演却失之交臂，我们体会过22届颁奖时那段被拉长的J音把心吊到嗓子眼的感觉。终于在第25届，我们如愿了。你因我们而在，and we are yours。JJ x JM。你好，歌王@林俊杰</p>
 </blockquote>
-<p>这条微博在今天空闲的时候就酝酿着，大概是颁奖前半小时梳理好的。我抱着最美好的期待写着这条微博，因为熬过这么多年金曲奖，之前每一次的等待之后都告诉自己，不需要这个奖做证明，在我们心里你已经是歌王了。可是好像骗不了自己，每一年的金曲奖我们还是会期待，而且看得到你也在期待，否则你不会在致辞时说到前四年时，略带哽咽的声音。</p>
-<p>还记得第一次守金曲奖，是第21届的时候，我特意跑到网吧通宵，在看完他那段表演之后觉得，这金曲歌王非你莫属了吧，可是没想到那一年，得奖的是陶喆。之后的第22届，当陶喆在念名单时，那吊胃口的J….ay Chou，让我们看到了他眼神中的那一瞥喜出望外，可是最终却是失望的神情。大概也是那次之后他意识到必须让自己的内心更加强大，不那么轻易的将心里的想法表现出来吧。我们总是得不断经历各种各样的事情，逼着自己快点长大的。</p>
-<p>好在他一直有这样一个目标作为他做音乐的动力之一，虽然波折这么多，可是今天的结果证明了，有梦想谁都了不起~</p>
-<p>“远远超出45秒，但是我不管”，一句很纯粹很直白的话，看得出你心里是有多开心，就像听到自己得奖时笑起来的表情一样。这么多年这么多颁奖礼，我还是第一次看到你得奖时笑起来这么像个孩子。</p>
-<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/QQimage201406290025491.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/QQimage201406290025491-1024x544.jpg" alt="QQimage201406290025491"></a></p>
-<p>而我又想了想，大概父母长辈们，在看到我们获得学业或者事业上的成功时，那种激动安慰的心情与我们此时此刻的心情大致相同吧。毕竟只有最亲近我们的人，才看得到我们为既定目标做了多少努力，才懂我们对既定目标有多大的期望。</p>
-<p>扯偏了，最后补一下金曲奖评审团对林俊杰的评价吧，我骄傲。</p>
-<blockquote>
-<p>林俊杰，兼具明星特质和演唱实力。诠释的细腻度和音乐掌控功力精湛，在音色展现上无可挑剔，唱功不容置疑。</p>
-</blockquote>
-<p>而这段获奖视频，应该值得永久收藏。</p>
-<p><embed allowfullscreen="true" allowscriptaccess="always" height="400" src="http://www.tudou.com/v/jSbf51_PVfk/&amp;bid=05&amp;rpid=19505363&amp;resourceId=19505363_05_05_99/v.swf" type="application/x-shockwave-flash" width="480" wmode="opaque"></embed></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/06/29/golden-melody-jjlin.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

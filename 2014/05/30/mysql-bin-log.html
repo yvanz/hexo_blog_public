@@ -21,15 +21,13 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yvanz.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"style":null,"show_result":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="一、Reset master 这个语句可以验证首次配置主机备机是否成功、步骤如下： 1.&amp;nbsp;启动master和 slave，开启replication (即&amp;nbsp;复制) 注：replication&amp;nbsp;(复制)&amp;nbsp;也是mysql一个重要的技术 2.运行一些测试的语句看数据是否能够复制到 slave上面 3.当复制运行正常的话，就 stop">
-<meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL二进制日志安全删除">
 <meta property="og:url" content="https://www.yvanz.com/2014/05/30/mysql-bin-log.html">
 <meta property="og:site_name" content="Yvanの平行时空">
-<meta property="og:description" content="一、Reset master 这个语句可以验证首次配置主机备机是否成功、步骤如下： 1.&amp;nbsp;启动master和 slave，开启replication (即&amp;nbsp;复制) 注：replication&amp;nbsp;(复制)&amp;nbsp;也是mysql一个重要的技术 2.运行一些测试的语句看数据是否能够复制到 slave上面 3.当复制运行正常的话，就 stop">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2014-05-30T06:16:19.000Z">
-<meta property="article:modified_time" content="2023-06-16T05:43:56.726Z">
+<meta property="article:modified_time" content="2023-06-19T02:12:02.705Z">
 <meta property="article:author" content="Yvan">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
@@ -230,7 +228,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="MySQL二进制日志安全删除 | Yvanの平行时空">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content=" ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -274,6 +272,7 @@
   
 </div>
 
+            <div class="post-description"> </div>
         </div>
       </header>
 
@@ -282,8 +281,8 @@
     
     <div class="post-body" itemprop="articleBody"><p>一、Reset master</p>
 <p>这个语句可以验证首次配置主机备机是否成功、步骤如下：</p>
-<p>1.&amp;nbsp;启动master和 slave，开启replication (即&amp;nbsp;复制)</p>
-<p>注：replication&amp;nbsp;(复制)&amp;nbsp;也是mysql一个重要的技术</p>
+<p>1.启动master和 slave，开启replication (即复制)</p>
+<p>注：replication(复制)也是mysql一个重要的技术</p>
 <p>2.运行一些测试的语句看数据是否能够复制到 slave上面</p>
 <p>3.当复制运行正常的话，就 stop slace 然后在slave上面执行 reset slave,去掉不需要的数据</p>
 <p>4.在master上面执行reset master 去掉2中产生的数据。</p>
@@ -307,8 +306,8 @@
 <p>2.使用SHOW MASTER LOGS获得master上的一系列日志。</p>
 <p>3.在所有的slave中判定最早的日志。这个是目标日志。如果所有的slave是更新的，这是清单上的最后一个日志。</p>
 <p>4.将所有要删除日志的备份</p>
-<p>三.&amp;nbsp;指定自动清理日志的参数</p>
-<p>my.cnf 配置文件中的参数&amp;nbsp; expire_logs_days &amp;nbsp;默认值为0,表示&amp;ldquo;不要自动删除&amp;rdquo;</p>
+<p>三.指定自动清理日志的参数</p>
+<p>my.cnf 配置文件中的参数 expire_logs_days &amp;nbsp;默认值为0,表示&amp;ldquo;不要自动删除&amp;rdquo;</p>
 <p>启动时和二进制日志循环时可能删除</p>
 <p>语法：mysql -u&amp;nbsp;-p进去之后&amp;nbsp;执行：</p>
 <p>set GLOBAL expire_logs_days&#x3D;5;</p>

@@ -21,16 +21,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yvanz.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"style":null,"show_result":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="早上莫名收到运营的一封邮件，反映网站又被黑了。 唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。 从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http">
+    <meta name="description" content="早上莫名收到运营的一封邮件，反映网站又被黑了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="哎呀，网站又被黑了">
 <meta property="og:url" content="https://www.yvanz.com/2016/04/12/site-be-hacked-again.html">
 <meta property="og:site_name" content="Yvanの平行时空">
-<meta property="og:description" content="早上莫名收到运营的一封邮件，反映网站又被黑了。 唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。 从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http">
+<meta property="og:description" content="早上莫名收到运营的一封邮件，反映网站又被黑了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://statics.yvanz.com/be-hacked-webshell.jpg">
 <meta property="article:published_time" content="2016-04-12T13:09:41.000Z">
-<meta property="article:modified_time" content="2023-06-16T05:43:56.728Z">
+<meta property="article:modified_time" content="2023-06-19T01:51:12.121Z">
 <meta property="article:author" content="Yvan">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="运维">
@@ -284,6 +284,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
+<span id="more"></span>
+
 <p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
 <p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
 <p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>

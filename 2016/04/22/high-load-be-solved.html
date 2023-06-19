@@ -21,16 +21,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yvanz.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"style":null,"show_result":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。 首先用CPU火焰图绘出CPU的具体调用  这里就看的很明显了，php-fpm栈里面有一个getdents64尤其的亮眼。那么这个getdents64又是何物呢？这里祭出Linux man page的解释">
+    <meta name="description" content="虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="后篇，服务器负载过高">
 <meta property="og:url" content="https://www.yvanz.com/2016/04/22/high-load-be-solved.html">
 <meta property="og:site_name" content="Yvanの平行时空">
-<meta property="og:description" content="虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。 首先用CPU火焰图绘出CPU的具体调用  这里就看的很明显了，php-fpm栈里面有一个getdents64尤其的亮眼。那么这个getdents64又是何物呢？这里祭出Linux man page的解释">
+<meta property="og:description" content="虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://statics.yvanz.com/php-fpm_flame.png">
 <meta property="article:published_time" content="2016-04-22T10:14:50.000Z">
-<meta property="article:modified_time" content="2023-06-16T05:43:56.723Z">
+<meta property="article:modified_time" content="2023-06-19T01:50:27.391Z">
 <meta property="article:author" content="Yvan">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="运维">
@@ -284,6 +284,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。</p>
+<span id="more"></span>
+
 <p>首先用CPU火焰图绘出CPU的具体调用</p>
 <p> <img data-src="https://statics.yvanz.com/php-fpm_flame.png"><br>这里就看的很明显了，php-fpm栈里面有一个getdents64尤其的亮眼。那么这个getdents64又是何物呢？这里祭出<a target="_blank" rel="noopener" href="http://linux.die.net/man/2/getdents64">Linux man page</a>的解释</p>
 <blockquote>

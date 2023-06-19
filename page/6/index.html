@@ -279,45 +279,14 @@
     <div class="post-body" itemprop="articleBody">
           <p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
 <p>化繁为简，先说说Linux平台的php怎么连接：</p>
-<p>首先下载freeTDS，解压安装。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/freetds --with-tdsver=8.0 --enable-msdblib</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>配置freeTDS</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/freetds/etc/freetds.conf</span><br></pre></td></tr></table></figure>
-
-<p>在A typical Microsoft server下配置自己的sql server数据库连接，如：</p>
-<blockquote>
-<p>[192.168.0.254]<br>&amp;nbsp;&amp;nbsp;host&#x3D;192.168.0.254<br>&amp;nbsp;&amp;nbsp;port&#x3D;1433<br>&amp;nbsp;&amp;nbsp;tds version&#x3D;8.0</p>
-</blockquote>
-<p>配置完成，使用tsql测试连接是否成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/freetds/bin/tsql -S 192.168.0.254 -U sa</span><br></pre></td></tr></table></figure>
-
-<p>之后输入密码，若显示以下信息则配置成功。</p>
-<blockquote>
-<p>locale is “zh_CN.UTF-8”<br>locale charset is “UTF-8”<br>using default charset “UTF-8”<br>1&gt;</p>
-</blockquote>
-<p>&amp;nbsp;<br>其次设置PHP，这里需要先安装mssql extension，可以在php源码的ext&#x2F;mssql下找到。</p>
-<p>进行编译</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">phpize</span><br><span class="line">./configure --with-php-config=/usr/local/php/bin/php-config --with-mssql=/usr/local/freetds/</span><br></pre></td></tr></table></figure>
-
-<p>将安装好的插件加入php.ini的extension部分，如</p>
-<blockquote>
-<p>extension_dir &#x3D;&#x2F;usr&#x2F;local&#x2F;php&#x2F;lib&#x2F;php&#x2F;extensions&#x2F;no-debug-zts-20121212<br>extension&#x3D;mssql.so</p>
-</blockquote>
-<p>重启Apache或者nginx重新应用php使用最新配置即可。</p>
-<p>接下来可以新建一个db.php测试php是否正常连接sql server</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$mssql</span>=<span class="title function_ invoke__">mssql_connect</span>(<span class="string">&quot;DBhost&quot;</span>,<span class="string">&quot;DBuser&quot;</span>,<span class="string">&quot;DBpasswd&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (<span class="variable">$mssql</span>) &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>连接成功后，若要对数据库进行操作，可使用如下函数：</p>
-<p><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_5c7a517801012etb.html">http://blog.sina.com.cn/s/blog_5c7a517801012etb.html</a></p>
-<p>&amp;nbsp;<br>接着再来看看windows平台，我使用的方法是通过OBDC连接sql server。</p>
-<p>一、编辑php.ini，将;extension&#x3D;php_pdo_odbc.dll前的;去掉，重启Apache或者Nginx，让php启用pdo_odbc。</p>
-<p>二、新建db.php</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$dbhost</span> = <span class="string">&#x27;DBhost&#x27;</span>; </span><br><span class="line"><span class="variable">$dbuser</span> = <span class="string">&#x27;DBuser&#x27;</span>; <span class="comment">//你的mssql用户名 </span></span><br><span class="line"><span class="variable">$dbpass</span> = <span class="string">&#x27;DBpasswd&#x27;</span>; <span class="comment">//你的mssql密码 </span></span><br><span class="line"><span class="variable">$dbname</span> = <span class="string">&#x27;DB&#x27;</span>; <span class="comment">//你的mssql库名 </span></span><br><span class="line"><span class="variable">$connect</span>=@<span class="title function_ invoke__">odbc_connect</span>(<span class="string">&quot;Driver=&#123;SQL Server&#125;;Server=<span class="subst">$dbhost</span>;Database=<span class="subst">$dbname</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbuser</span>&quot;</span>,<span class="string">&quot;<span class="subst">$dbpass</span>&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="variable">$connect</span>)&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;Connent Mssql Succeed&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&quot;connent Mssql Error!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>连接成功之后，若要使用数据库，可参加以下函数</p>
-<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/shaobingj126/article/details/5678009">http://blog.csdn.net/shaobingj126/article/details/5678009</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/06/25/php-sql-server.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -412,20 +381,14 @@
 
 <p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
 <p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
-<p>嗯？为什么今天家里没人？为什么我看的电视里放着一部电影？我就算看电视也应该在看喜羊羊的啊。不过我没有追究完这么多为什么，因为我似乎被电影的剧情吸引了。说起来也奇怪，这其实是一部在我觉得很老套的文艺片，里面女主对男主爱的死去活来，只不过男主感受不到。这样的情节不应该引起我的注意才对。</p>
-<p>而冗杂的电影里面，我现在只记得女主最后实在忍受不了跟男主争吵的桥段，大意不过是在控诉为何自己付出那么多却得不到自己想要的关心和爱护。</p>
-<p>或许是在看别人故事的缘故吧，我好像大致能懂这对纠结情侣之间的问题：其实看得出男主对女主是有感情的，相处的时候男主做的很多细节也体现了对女主的关心。可是男主比较委婉，不曾将这些细节和盘托出，所以女主也就没有切身的体会到被爱。而女主则比较简单直接，没有那么多委婉。她觉得什么方式是好的，就在用什么方式对待男主，时刻希望男主能感觉到她就在身边。可是这种自以为的方式，不过是她自己最能接受的方式罢了。换句话说就是，当别人用她的这种方式来关心她时，她才能感觉的到自己是有人爱护的。</p>
-<p>所以其实两个人都没有错的吧，不过是频段不一样，加上两个人在沟通之前都想表达自己其实更在乎对方，可没想到的是，这些话到了嘴边却变成了谁更伤害对方的现实。</p>
-<p>而这一切的美中不足，大概就是还没等我看到结局，就被开门声吵醒了。原来那部电影是个梦，我在看喜羊羊的时候睡着了……更悲催的是趁家里没人偷看电视这一行径被抓个现行又挨批了。只不过这时候我似乎想通了之前的问题：其实长辈们没错，他们教育我的时候有自己的既定立场，因为他们已经替我们经历过了未来我们可能经历过的事，所以有那些教育我的角度。理虽明白，可是我亦只有一个一生，我虽然希望能顺着长辈们的好意，按着他们的期望走下去，但其实我更想把我的一生定义成我想要的样子。也许未来的某个桥段我会出现差错，可是这出戏演起来，经历的更多我才能收获的更多吧。当然我也相信，等到我年纪老迈之时，可能对晚辈也会“指指点点”，因为我们总是用自以为最好的方式要求着别人。无他，这是表达爱意的一种方式。</p>
-<hr>
-<p>此段文与作文主体无关：</p>
-<p>写这作文不过是突发奇想，希望把我理解的安徽高考今年的作文题跟大家交流一下。而关于作文本身，希望轻吐槽，毕竟从09年到现在，时代也有点久远了，而且虽然努力回忆我高考时的心态来写这作文，可是好像引那样的故事也不太合适，哈哈。</p>
-<p>其实我还是很怀念那段高考时光的。因为好像全世界对我们都很关心，很宽容。印象最深的是有一次在后期冲刺阶段，我买了一本书之后打车回学校，司机看我拿着复习材料便问：“快高考了吧”。我简单的回了一句“是的”，笑一笑，便没了下文。没想到的是这位司机蜀黍在送我到学校之后很关心的叫我好好加油，别太累。还有一次便是考英语那天下午，我从家准备打车去考场，在招出租的时候有点争抢的意味，结果司机阿姨说带我吧，先把我送到考场要紧。</p>
-<p>当然最怀念的还是那段时间朋友们的鼓励和陪伴，也因为舍不得，所以甚至把当年六月份的短信都保留了下来发到了空间的日志上面。链接应该在<a target="_blank" rel="noopener" href="http://user.qzone.qq.com/494732898/blog/1246375900">这里</a></p>
-<p>而远离高考这么多年，对我改变最大的应该是喜欢上了用笔在纸上写字的感觉。虽然当年作为母语是汉语的我，整个高中的语文考试几乎没及格过，唯一记得及格的就是高考的语文考试，但这不妨碍我现在喜欢那种笔尖在纸上婆娑的样子。唯一的缺点就是字略丑影响美感，哈哈。有图有真相~</p>
-<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019-759x1024.jpg" alt="IMG_20140607_205019"></a></p>
-<p>Peace.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/06/07/gaokao2014.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -518,34 +481,14 @@
     <div class="post-body" itemprop="articleBody">
           <p>当初在筹划建站的时候，无意间发现有人用时间轴的样式做了一个文章归档的页面，顿时觉得十分高大上。于是联系到那位亲几封邮件下来终于也把时间轴归档弄到我的博客来了。</p>
 <p>Anyway，先来看看代码吧（以下代码是针对我所使用的Clearision主题修改而来的）</p>
-<ul>
-<li>footer.php添加引入jquery语句（要在script.js引入前引入）</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改js\script.js 添加</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.archives ul.archives-monthlisting&#x27;</span>).<span class="title function_">hide</span>();</span><br><span class="line">$(<span class="string">&#x27;.archives ul.archives-monthlisting:first&#x27;</span>).<span class="title function_">show</span>();</span><br><span class="line">$(<span class="string">&#x27;.archives .m-title&#x27;</span>).<span class="title function_">click</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    $(<span class="variable language_">this</span>).<span class="title function_">next</span>().<span class="title function_">slideToggle</span>(<span class="string">&#x27;fast&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在clearision下参考留言板模版page-comments.php创建page-archives.php</li>
-</ul>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="comment">/* Template Name: 文章归档 */</span></span><br><span class="line"><span class="title function_ invoke__">get_header</span>(); <span class="meta">?&gt;</span></span><br><span class="line">&lt;div id=<span class="string">&quot;ctn&quot;</span>&gt;</span><br><span class="line">&lt;div id=<span class="string">&quot;content&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">while</span> ( <span class="title function_ invoke__">have_posts</span>() ) : <span class="title function_ invoke__">the_post</span>(); <span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span>=&quot;<span class="title">post_ctn</span>&quot;&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">	&lt;<span class="title">div</span> <span class="title">class</span>=&quot;<span class="title">archives</span>&quot;&gt;</span></span><br><span class="line"><span class="class">		&lt;?<span class="title">php</span></span></span><br><span class="line"><span class="class">		$<span class="title">previous_year</span> = $<span class="title">year</span> = 0;</span></span><br><span class="line"><span class="class">		$<span class="title">previous_month</span> = $<span class="title">month</span> = 0;</span></span><br><span class="line"><span class="class">		$<span class="title">ul_open</span> = <span class="title">false</span>;</span></span><br><span class="line"><span class="class">		$<span class="title">myposts</span> = <span class="title">get_posts</span>(&#x27;<span class="title">numberposts</span>=-1&amp;<span class="title">orderby</span>=<span class="title">post_date</span>&amp;<span class="title">order</span>=<span class="title">DESC</span>&#x27;);</span></span><br><span class="line"><span class="class">		<span class="title">foreach</span>($<span class="title">myposts</span> <span class="title">as</span> $<span class="title">post</span>) :</span></span><br><span class="line"><span class="class">		<span class="title">setup_postdata</span>($<span class="title">post</span>);</span></span><br><span class="line"><span class="class">		$<span class="title">year</span> = <span class="title">mysql2date</span>(&#x27;<span class="title">Y</span>&#x27;, $<span class="title">post</span>-&gt;<span class="title">post_date</span>);</span></span><br><span class="line"><span class="class">		$<span class="title">month</span> = <span class="title">mysql2date</span>(&#x27;<span class="title">n</span>&#x27;, $<span class="title">post</span>-&gt;<span class="title">post_date</span>);</span></span><br><span class="line"><span class="class">		$<span class="title">day</span> = <span class="title">mysql2date</span>(&#x27;<span class="title">j</span>&#x27;, $<span class="title">post</span>-&gt;<span class="title">post_date</span>);</span></span><br><span class="line"><span class="class">		<span class="title">if</span>($<span class="title">year</span> != $<span class="title">previous_year</span> || $<span class="title">month</span> != $<span class="title">previous_month</span>) :</span></span><br><span class="line"><span class="class">		<span class="title">if</span>($<span class="title">ul_open</span> == <span class="title">true</span>) :</span></span><br><span class="line"><span class="class">			<span class="title">echo</span> &#x27;&lt;/<span class="title">ul</span>&gt;&#x27;;</span></span><br><span class="line"><span class="class">		<span class="title">endif</span>;</span></span><br><span class="line"><span class="class">		<span class="title">echo</span> &#x27;&lt;<span class="title">h3</span> <span class="title">class</span>=&quot;<span class="title">m</span>-<span class="title">title</span>&quot;&gt;&#x27;; <span class="title">echo</span> <span class="title">the_time</span>(&#x27;<span class="title">Y</span>-<span class="title">m</span>&#x27;); <span class="title">echo</span> &#x27;&lt;/<span class="title">h3</span>&gt;&#x27;;</span></span><br><span class="line"><span class="class">		<span class="title">echo</span> &#x27;&lt;<span class="title">ul</span> <span class="title">class</span>=&quot;<span class="title">archives</span>-<span class="title">monthlisting</span>&quot;&gt;&#x27;;</span></span><br><span class="line"><span class="class">		$<span class="title">ul_open</span> = <span class="title">true</span>;</span></span><br><span class="line"><span class="class">		<span class="title">endif</span>;</span></span><br><span class="line"><span class="class">		$<span class="title">previous_year</span> = $<span class="title">year</span>; $<span class="title">previous_month</span> = $<span class="title">month</span>;</span></span><br><span class="line"><span class="class">		?&gt;</span></span><br><span class="line"><span class="class">		&lt;<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="class">		&lt;<span class="title">a</span> <span class="title">href</span>=&quot;&lt;?<span class="title">php</span> <span class="title">the_permalink</span>(); ?&gt;&quot;&gt;&lt;<span class="title">span</span>&gt;&lt;?<span class="title">php</span> <span class="title">the_time</span>(&#x27;<span class="title">Y</span>-<span class="title">m</span>-<span class="title">j</span>&#x27;); ?&gt;&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="class">		&lt;<span class="title">div</span> <span class="title">class</span>=&quot;<span class="title">atitle</span>&quot;&gt;&lt;?<span class="title">php</span> <span class="title">the_title</span>(); ?&gt;&lt;/<span class="title">div</span>&gt;&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="class">		&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="class">		&lt;?<span class="title">php</span> <span class="title">endforeach</span>; ?&gt;</span></span><br><span class="line"><span class="class">		&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="class">	&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">	&lt;<span class="title">div</span> <span class="title">class</span>=&quot;<span class="title">post_t</span>&quot;&gt;</span></span><br><span class="line"><span class="class">	&lt;!--&lt;?<span class="title">php</span> <span class="title">the_content</span>(); ?&gt;--&gt;</span></span><br><span class="line"><span class="class">	&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">	&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">	&lt;?<span class="title">php</span> <span class="title">endwhile</span>; ?&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">	&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class">	&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">	&lt;?<span class="title">php</span> <span class="title">get_sidebar</span>(); ?&gt;</span></span><br><span class="line"><span class="class">	&lt;?<span class="title">php</span> <span class="title">get_footer</span>(); ?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改style.css添加相关效果</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*归档时间轴*/</span>  </span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">ul</span>&#123;<span class="attribute">overflow</span>:hidden;<span class="attribute">padding-left</span>:<span class="number">0px</span>&#125;</span><br><span class="line"><span class="selector-class">.archive-title</span>&#123;<span class="attribute">border-bottom</span>:<span class="number">1px</span> <span class="number">#eee</span> solid;<span class="attribute">position</span>:relative;<span class="attribute">padding-bottom</span>:<span class="number">4px</span>;<span class="attribute">margin-bottom</span>:<span class="number">10px</span>&#125;</span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;<span class="attribute">padding</span>:<span class="number">8px</span> <span class="number">0</span>;<span class="attribute">display</span>:block;<span class="attribute">border-bottom</span>:<span class="number">0</span>;&#125;</span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.atitle</span><span class="selector-pseudo">:after</span>&#123;<span class="attribute">background</span>:<span class="number">#FF6600</span>&#125;</span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> <span class="selector-tag">span</span>&#123;<span class="attribute">display</span>:inline-block;<span class="attribute">width</span>:<span class="number">100px</span>;<span class="attribute">font-size</span>:<span class="number">12px</span>;<span class="attribute">text-indent</span>:<span class="number">20px</span>&#125;</span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> <span class="selector-class">.atitle</span>&#123;<span class="attribute">display</span>:inline-block;<span class="attribute">padding</span>:<span class="number">0</span> <span class="number">15px</span>;<span class="attribute">position</span>:relative;<span class="attribute">white-space</span>:nowrap;<span class="attribute">width</span>:<span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">180px</span>)&#125;</span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> <span class="selector-class">.atitle</span><span class="selector-pseudo">:after</span>&#123;<span class="attribute">position</span>:absolute;<span class="attribute">left</span>:-<span class="number">6px</span>;<span class="attribute">background</span>:<span class="number">#ccc</span>;<span class="attribute">height</span>:<span class="number">8px</span>;<span class="attribute">width</span>:<span class="number">8px</span>;<span class="attribute">border-radius</span>:<span class="number">6px</span>;<span class="attribute">top</span>:<span class="number">8px</span>;<span class="attribute">content</span>:<span class="string">&quot;&quot;</span>&#125;</span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> <span class="selector-class">.atitle</span><span class="selector-pseudo">:before</span>&#123;<span class="attribute">position</span>:absolute;<span class="attribute">left</span>:-<span class="number">8px</span>;<span class="attribute">background</span>:<span class="number">#fff</span>;<span class="attribute">height</span>:<span class="number">12px</span>;<span class="attribute">width</span>:<span class="number">12px</span>;<span class="attribute">border-radius</span>:<span class="number">6px</span>;<span class="attribute">top</span>:<span class="number">6px</span>;<span class="attribute">content</span>:<span class="string">&quot;&quot;</span>&#125;</span><br><span class="line"><span class="selector-class">.archives</span>&#123;<span class="attribute">position</span>:relative;<span class="attribute">padding</span>:<span class="number">10px</span> <span class="number">0</span>&#125;</span><br><span class="line"><span class="selector-class">.archives</span><span class="selector-pseudo">:before</span>&#123;<span class="attribute">width</span>:<span class="number">4px</span>;<span class="attribute">background</span>:<span class="number">#eee</span>;<span class="attribute">position</span>:absolute;<span class="attribute">left</span>:<span class="number">100px</span>;<span class="attribute">content</span>:<span class="string">&quot;&quot;</span>;<span class="attribute">top</span>:<span class="number">0</span>&#125;</span><br><span class="line"><span class="selector-class">.m-title</span>&#123;<span class="attribute">position</span>:relative;<span class="attribute">margin</span>:<span class="number">10px</span> <span class="number">0</span>;<span class="attribute">cursor</span>:pointer&#125;</span><br><span class="line"><span class="selector-class">.m-title</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">:after</span>&#123;<span class="attribute">background</span>:<span class="number">#FF0000</span>&#125;</span><br><span class="line"><span class="selector-class">.m-title</span><span class="selector-pseudo">:before</span>&#123;<span class="attribute">position</span>:absolute;<span class="attribute">left</span>:<span class="number">93px</span>;<span class="attribute">background</span>:<span class="number">#fff</span>;<span class="attribute">height</span>:<span class="number">18px</span>;<span class="attribute">width</span>:<span class="number">18px</span>;<span class="attribute">border-radius</span>:<span class="number">6px</span>;<span class="attribute">top</span>:<span class="number">3px</span>;<span class="attribute">content</span>:<span class="string">&quot;&quot;</span>&#125;</span><br><span class="line"><span class="selector-class">.m-title</span><span class="selector-pseudo">:after</span>&#123;<span class="attribute">position</span>:absolute;<span class="attribute">left</span>:<span class="number">96px</span>;<span class="attribute">background</span>:<span class="number">#ccc</span>;<span class="attribute">height</span>:<span class="number">12px</span>;<span class="attribute">width</span>:<span class="number">12px</span>;<span class="attribute">border-radius</span>:<span class="number">6px</span>;<span class="attribute">top</span>:<span class="number">6px</span>;<span class="attribute">content</span>:<span class="string">&quot;&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建文章归档页面</li>
-</ul>
-<p>因为JS的问题，这样的时间轴样式只能在chrome&#x2F;Firefox内核的浏览器下有折叠的效果，如下图：</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/chrome.jpg" alt="chrome"></p>
-<p>而在IE9及以下的版本，是折叠不了的。</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IE9.jpg" alt="IE9"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/06/06/css-timeline.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -636,46 +579,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>一、Reset master</p>
-<p>这个语句可以验证首次配置主机备机是否成功、步骤如下：</p>
-<p>1.&amp;nbsp;启动master和 slave，开启replication (即&amp;nbsp;复制)</p>
-<p>注：replication&amp;nbsp;(复制)&amp;nbsp;也是mysql一个重要的技术</p>
-<p>2.运行一些测试的语句看数据是否能够复制到 slave上面</p>
-<p>3.当复制运行正常的话，就 stop slace 然后在slave上面执行 reset slave,去掉不需要的数据</p>
-<p>4.在master上面执行reset master 去掉2中产生的数据。</p>
-<p>可以删除列于索引文件中的所有二进制日志，把二进制日志索引文件重新设置为空，并创建一个新的二进制日志文件</p>
-<p>当有slave正在运行的时候请不要执行这个语句。</p>
-<p>和 PURGE MASTER LOGS 的区别有2点：</p>
-<p>1.当执行 RESET MASTER 的时候&amp;nbsp;所有二进制日志&amp;nbsp;都重新设置为空&amp;nbsp;以&amp;nbsp;.000001&amp;nbsp;编号结尾的文件都被清空</p>
-<p>而PURGE MASTER LOGS 却没有重置</p>
-<p>2.RESET MASTER 有备机正在运行的时候不能执行&amp;nbsp;而 PURGE MASTER LOGS &amp;nbsp;是可以执行的。</p>
-<p><strong>注意：RESET&amp;nbsp;这个命令要慎用&amp;nbsp;只是在初始化环境&amp;nbsp;删除垃圾数据的时候取使用&amp;nbsp;目前正在运行的库&amp;nbsp;最好是不要去执行！！！！</strong></p>
-<p>二.PURGE MASTER LOGS</p>
-<p>语法</p>
-<p>PURGE {MASTER&amp;nbsp;| BINARY} LOGS TO ‘log_name’&amp;nbsp;–用于删除指定日志之前的所有日志</p>
-<p>PURGE {MASTER&amp;nbsp;| BINARY} LOGS BEFORE ‘date’&amp;nbsp;&amp;nbsp;–用于删除日期之前的日志，BEFORE变量的date自变量可以为’YYYY-MM-DD hh:mm:ss’格式</p>
-<p>如：（MASTER 和BINARY&amp;nbsp;在这里都是等效的）</p>
-<p>PURGE MASTER LOGS TO ‘test-bin.000001’;</p>
-<p>PURGE MASTER LOGS BEFORE ‘2011-01-0100:00:00’;</p>
-<p>如果您有一个活性的slave，该slave当前正在读取您正在master试图删除的日志之一，则本语句不会起作用，而是会失败，并伴随一个错误；如果slave是停止的，同时碰巧要清理的日志是其想要读取的日志之一，则salve启动后不能复制这些日志；当slave正在复制时，本语句可以安全运行。您不需要停止它们。</p>
-<p>要清理日志，需按照以下步骤：</p>
-<p>1.在slave上，使用SHOW SLAVE STATUS来检查它正在读取哪个日志。</p>
-<p>2.使用SHOW MASTER LOGS获得master上的一系列日志。</p>
-<p>3.在所有的slave中判定最早的日志。这个是目标日志。如果所有的slave是更新的，这是清单上的最后一个日志。</p>
-<p>4.将所有要删除日志的备份</p>
-<p>三.&amp;nbsp;指定自动清理日志的参数</p>
-<p>my.cnf 配置文件中的参数&amp;nbsp; expire_logs_days &amp;nbsp;默认值为0,表示&amp;ldquo;不要自动删除&amp;rdquo;</p>
-<p>启动时和二进制日志循环时可能删除</p>
-<p>语法：mysql -u&amp;nbsp;-p进去之后&amp;nbsp;执行：</p>
-<p>set GLOBAL expire_logs_days&#x3D;5;</p>
-<p>但是设置了&amp;nbsp;不会马上生效</p>
-<p>需要执行：</p>
-<p>1.执行 flush logs;</p>
-<p>(关闭当前的二进制日志文件并创建一个新文件，新的二进制日志文件的名字在当前的二进制文件的编号上加1。)</p>
-<p>2.或者等待当前的日志文件写满设定的大小（重启服务器可选）</p>
-<p>expire_logs_days＝5 &amp;nbsp;&amp;nbsp;–表示自动删除5天以前的日志</p>
-<p>备注：当有备机的时候一定要注意master对slave的影响。</p>
-
+          <p> </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/05/30/mysql-bin-log.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -767,42 +679,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
-<ul>
-<li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
-<p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
-</li>
-<li><p>修改从数据库配置文件my.cnf（or my.ini）</p>
-<p>设置server_id&#x3D;2 重启从服务器MySQL服务</p>
-</li>
-<li><p>在主数据库新建一个用来复制的用户（下划线处可自定义）</p>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%（此处也可定义为自己的从服务器IP）&#x27;</span>IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;slavepass&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在新建数据快照或者开启复制进程之前，需要定位主服务器二进制日志的坐标</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; FLUSH TABLES WITH READ LOCK;    --对于InnoDB表，该操作还会锁定commit操作</span><br><span class="line">mysql&gt; SHOW MASTER STATUS;    --记录file和position的值。这条命令最好新建一个会话再执行。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>若你的主数据库已经存有数据，并且你希望从服务器同步这些数据。那么你需要新建一个数据快照。一般新建数据快照的方式有两种：MySQLdump；直接拷贝数据文件。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell&gt; mysqldump --all-databases --master-data &gt; dbdump.db --该事例表示将所有数据库导出到一个名为dbdump.db的文件中，附加的 --master-data命令，官方文档解释了一大堆，看着似懂非懂，反正都加上吧-。- 如果你的数据库比较大，那么将原始数据文件直接复制到从服务器比使用mysqldump要效率很多。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>解锁主数据库</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; UNLOCK TABLES;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>将主数据库的dump出的文件导入到从服务器</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell&gt; mysql &lt; dbdump.db</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在从服务器开启复制进程</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE;  <span class="comment">--一般情况下是启动不了的，必须先change master to </span></span><br><span class="line">mysql<span class="operator">&gt;</span> CHANGE MASTER <span class="keyword">TO</span></span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_HOST<span class="operator">=</span><span class="string">&#x27;master_host_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_USER<span class="operator">=</span><span class="string">&#x27;replication_user_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;replication_password&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_FILE<span class="operator">=</span><span class="string">&#x27;recorded_log_file_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_POS<span class="operator">=</span>recorded_log_position;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE; </span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> slave status \G <span class="comment">--检查Slave_IO_Running以及Slave_SQL_Running，如果都为yes则主从复制配置成功。若不成功，该命令可以看到相关报错。</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/05/30/mysql-master-slave.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -893,17 +777,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>此为转载文章，原链接：<a target="_blank" rel="noopener" href="http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html">http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html</a></p>
-<p>1.禁用 WordPress 文章修订历史功能</p>
-<p>打开 WordPress 根目录下的 wp-config.php 文件，添加下面的代码即可：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">define</span>(<span class="string">&quot;WP_POST_REVISIONS&quot;</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
-
-<p>2.删除 WordPress 已有的文章修订记录</p>
-<p>上面也说过，WordPress 文章的修订记录，都是被写入了数据库，所以我们需要删除MySQL数据库中有关的语句SQL 如下（直接删除即可）：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_postmeta <span class="keyword">WHERE</span> post_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type <span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_term_relationships <span class="keyword">WHERE</span> object_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>OK，搞定了，操作完上面的两部，以后在wordpress写文，将不会产生历史修订，所以数据库也不会变的庞大！</p>
-
+          <p> </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/05/22/hisedit.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -997,45 +879,14 @@
           <div style="text-align: right;">
 这大概是一篇观后感吧，记在看了《同桌的你》之后
 </div>
-
-<ul>
-<li>做我女朋友吧</li>
-</ul>
-<p>所有故事的开始，似乎总是喜欢用最直接最美好的方式拉开帷幕，吸引着别人的关注。</p>
-<p>学生时代，让我最憧憬的情感大概就是，一个人的一句话，就努力奋斗考到对方能上的学校。因为好像这样的努力看上去很简单，我们不需要考虑的太多，只要大考过了起码能在一起好几年的时间，而不出意外，还可以有更久的日子。最重要的是，那一句话可以让我有多大的动力让我急着往前走。嗯，其实没有推力，我一般不会调动自己所有的小宇宙，大概是这样吧。</p>
-<ul>
-<li>这是我们两个人的事 我一个人办不到</li>
-</ul>
-<p>婚礼前的酒宴，周小栀带着十杯酒，说着那些为了林一去了美国之后努力奔赴团聚时所做的努力。可是结果一次一次的打击着她，她不确定了。那时候她想着把林一叫回来的吧，可是想一想，林一在美国发展的应该会很好吧，自己不确定她还值得林一回来找她。</p>
-<p>“我已经不是当初那个林一了，你也不是当初那个周小栀”。是这样的，她没去美国，可是每一天都在地图上一遍又一遍的看着他可能走过的路；他在美国，虽然已经接到电话说她不会来美国了，可还是习惯着搬家的时候找一间带向南窗户的房子，甚至想象着院子里挂着她的裙子，该是多么的好看。他不是当初那个林一，不是那个为了周小栀不计后果的林一；她不是当初那个周小栀，不是那个为了林一不惧生死的周小栀。</p>
-<p>只不过人们总是在完成不了一个愿望的时候，将未完成的原因推给现实。可是我天真的以为现实只是人们掩盖自己任性的幌子。所谓现实，明明是人性的弱点催生出来的实际情况，可是最后被当作了责备对方的理由。恐怕不太合适吧。</p>
-<ul>
-<li>我想在教堂办一个独一无二的婚礼 跟谁的都不一样</li>
-</ul>
-<p>当婚礼开始的时候，因为看过了预告片，加上周小栀前面剧情里说的这句话，所以总是爱幻想的我天真的觉得，这之后的抢亲应该就是这部电影最后的结局了吧。结果虽然“差强人意”，不过当幻想出来的镜头切回现实的时候，影院里的一片哗然倒是让我有一丝安慰，因为让我觉得天真的人其实不止我一个。</p>
-<p>而那场由周小栀幻想出来的抢亲，那个在神父询问是否愿意时迟疑的眼神，想象着他能像自己彼时在非典时不顾生死将手伸向他那样，能在教堂握着她的手，不顾一切的往外面奔跑。甚至做好了所有的准备，连逃婚用的平底鞋都穿好了，只不过……正当时，林一心里想的应该是，周小栀终于安稳的嫁给别人了，毕竟自己一败如水，根本提不起勇气，甚至不敢想抢亲的念头。所谓人性，不仅有自私，还有怯懦。</p>
-<ul>
-<li>The End</li>
-</ul>
-<p>记忆总是喜欢添油加醋，好像曾经的某个瞬间自己做或者不做一些事，结果就会向最好的方向发展。好在实际发生的事情总喜欢是不是的给我们来一记响亮的巴掌，如嘲讽一般。</p>
-<p>Yep，所有的故事都有结局，而关乎青春的故事更喜欢以当下看起来很悲伤的结局收尾，犹如那些年，犹如终将逝去的青春。不管有多怀念，未来的某一天，总会有这样的问题被问出来：</p>
-<p><strong>Miss Zhou</strong>.Do you come freely and without reservations to give yourselves to each other in this marridge.</p>
-<p>而后还会伴着一个理所应当的答案：</p>
-<p>我愿意。</p>
-<p><img data-src="https://statics.yvanz.com/the-old-classmate.png" alt="the-old-classmate"></p>
-<ul>
-<li>The end of the End</li>
-</ul>
-<p>爱情总是在自己最需要最感动的时候来到自己身边才是最好的，因为这个恰当的时候拥有这样一份感情，才容易让故事足够久的走下去。这也正是我现在对爱情不抱美好希望的&amp;ldquo;原罪&amp;rdquo;：不是别人多么适合，只不过是那年时光恰好。类似于这篇&amp;ldquo;观后感&amp;rdquo;，本意是在看完电影后就写出来的，可是总想沉淀更多的东西，却慢慢的将当初看电影的情绪也近乎消磨殆尽，最后拖拉成这个样子，以至于到今天应付为之。</p>
-<p>我知道，所有的事情，必有来时路。</p>
-<div style="text-align: right;">
-Edited at 杭州一生一信
-Posted at 2014.6.14
-</div>
-
-
-<p>今天是个美好的日子，我依稀的记得彼时的这个时候，我熬过了最漫长的一个星期，然后……</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/05/21/the-old-classmate.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1127,25 +978,14 @@ Posted at 2014.6.14
     
     <div class="post-body" itemprop="articleBody">
           <p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/1.jpg" alt="1"></p>
-<p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
-<p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
-<p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
-<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#115;&#101;&#x72;&#x76;&#105;&#x63;&#x65;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;">&#115;&#101;&#x72;&#x76;&#105;&#x63;&#x65;&#x40;&#106;&#106;&#x6c;&#105;&#110;&#46;&#99;&#x6f;&#x6d;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
-<p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
-<p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
-<p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
-<p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
-<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#115;&#101;&#x72;&#x76;&#x69;&#x63;&#101;&#x40;&#106;&#x6a;&#108;&#105;&#x6e;&#46;&#x63;&#111;&#109;">&#115;&#101;&#x72;&#x76;&#x69;&#x63;&#101;&#x40;&#106;&#x6a;&#108;&#105;&#x6e;&#46;&#x63;&#111;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
-<p>尾巴：</p>
-<p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
-<p>而我这么做的目的只有一个，那就是尽量保证入会的歌迷，在基本的邮件操作上是没有问题的，否则之后因为邮件发送不到位导致无法正常参加活动，最后责怪我们暗箱操作或者其他阴谋论指责，我个人是受不了的。</p>
-<p>最后尤其想要吐槽的就是，当事人觉得只要有组织就一定会有猫腻，只要有组织就有贪污。而我所在的某分支组织，目前为止的几年中，其表现可能会颠覆您的这种世界观。</p>
-<p>没办法，谁叫my big is always so high。哦，翻译过来就是我的逼格总是如此の高</p>
-<p>Peace~</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/05/14/email-post.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1236,76 +1076,15 @@ Posted at 2014.6.14
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>安装之前先which svn，查找系统中是否有svn命令。若找不到该命令，则欢迎往下看。</p>
-<p>首先是最简单的svn安装方式，即yum安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install svn -y</span><br></pre></td></tr></table></figure>
-
-<p>但通过此方式安装，获得的版本比较低。</p>
-<p>其次便是通过编译源码完成安装</p>
-<p>1.下载最新的subversion源码（截止2014&#x2F;05&#x2F;19，最新版为1.8.9）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://mirrors.hust.edu.cn/apache/subversion/subversion-1.8.9.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>2.解压subversion</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xzf subversion-1.8.9.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>3.下载sqlite并解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://www.sqlite.org/sqlite-amalgamation-3071501.zip</span><br><span class="line">unzip sqlite-amalgamation-3071501.zip</span><br></pre></td></tr></table></figure>
-
-<p>4.将sqlite-amalgamation-3071501中的所有文件复制到subversion-1.8.9&#x2F;sqlite-amalgamation文件夹（sqlite-amalgamation为手动新建）</p>
-<p>5.下载scons并安装，然后通过scons安装serf以使svn支持http、https协议（Subversion no longer supports the neon http library with 1.8 and has moved exclusively to using the serf http library）</p>
-<p>scons官网：<a target="_blank" rel="noopener" href="http://www.scons.org/" title="http://www.scons.org/">http://www.scons.org/</a></p>
-<p>serf官网：<a target="_blank" rel="noopener" href="https://code.google.com/p/serf/" title="https://code.google.com/p/serf/">https://code.google.com/p/serf/</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh scons-2.3.1-1.noarch.rpm</span><br><span class="line">（注：若使用的是ubuntu系统，则在scons官网下载scons-local package的prior stable包，并直接使用文件路径安装）</span><br><span class="line"><span class="comment">#进入serf源码包目录</span></span><br><span class="line">scons PREFIX=/usr/local/serf APR=/usr/local/apr APU=/usr/local/apr-util</span><br><span class="line"><span class="comment">#/tmp/scons/scons.py PREFIX=/usr/local/serf APR=/usr/local/apr APU=/usr/local/apr-utile</span></span><br><span class="line">scons install</span><br></pre></td></tr></table></figure>
-
-<p>6.进入subversion源码包目录，编译、安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/webserver/subversion --with-apr=/usr/local/apr/bin/apr-1-config --with-apr-util=/usr/local/apr-util/bin/apu-1-config --with-zlib --with-apxs=/usr/local/webserver/apache2/bin/apxs --enable-maintainer-mode --enable-mod-activation --with-serf=/usr/local/serf</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>启动或安装时报错svn: error while loading shared libraries: libserf-1.so.1: cannot open shared object file: No such file or directory，则cp &#x2F;usr&#x2F;local&#x2F;serf&#x2F;lib&#x2F;libserf-1.so.1 &#x2F;usr&#x2F;local&#x2F;webserver&#x2F;subversion&#x2F;lib并重新安装</p>
-<p>安装完毕，查看httpd.conf中是否有dav_svn_module以及authz_svn_module拓展，并且可以使用命令svn –version查看svn版本信息。</p>
-<p>若使用svn –version提示无此命令，可以编辑profile文件添加变量环境</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>在文末添加svn安装位置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PATH=/usr/local/webserver/subversion/lib:/usr/local/webserver/subversion/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> PATH</span><br><span class="line"><span class="built_in">source</span> /etc/profile //使环境立即生效</span><br></pre></td></tr></table></figure>
-
-<p>此时使用svn –version应该能看到想过信息了，如下图（我当初安装的是1.8.8）：</p>
-<p><img data-src="http://pic.yupoo.com/yvanzhang_v/DLWrq44O/11QMf6.jpg"><br>&amp;nbsp;</p>
-<p><strong>补充：配置svn使用svn协议和HTTP协议访问（2014&#x2F;11&#x2F;10）</strong></p>
-<p>svn协议访问：</p>
-<p>新建一个文件夹存放项目库，比如mkdir -p &#x2F;data&#x2F;svndata</p>
-<p>使用命令创建新项目test：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svnadmin create /data/svndata/test</span><br></pre></td></tr></table></figure>
-
-<p>编辑test&#x2F;conf&#x2F;文件夹下svnserve.conf、passwd、authz文件</p>
-<p>清除svnserve.conf中anon-access &#x3D; read、auth-access &#x3D; write、password-db &#x3D; passwd、authz-db &#x3D; authz前面的#和空格符。尤其是空格符，因为svn不识别配置文件中的空格符。</p>
-<p>passwd文件中在文末添加svn用户，格式为用户&#x3D;密码</p>
-<p>authz文件中[groups]标签下可以自定义svn用户各属于哪些组，格式为“组名&#x3D;用户名,用户名,用户名…,用户名”。文末新增类似于这样的[&#x2F;]标签，并在该标签下设置各组的权限，格式为 @组名&#x3D;rw等，其中&#x2F;代表项目库的根目录。若某些文件夹只允许某个组读写，可新建标签，并编辑权限,如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[/foo]</span><br><span class="line">@程序=rw</span><br><span class="line">*=</span><br></pre></td></tr></table></figure>
-
-<p>其中*代表所有人，&#x3D;后不写rw代表没有读写权限</p>
-<p>三大金刚编辑完毕，便可以使用命令启动svn服务。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">svnserve -d -r /data/svndata</span><br></pre></td></tr></table></figure>
-
-<p>启动完毕可以在windows上使用TortoiseSVN的repo-browser检测连通性，连接地址为<u>svn:&#x2F;&#x2F;ipaddress&#x2F;test</u>。若防火墙运行中且没有对svn的端口放行，记得编辑防火墙文件。<br>&amp;nbsp;</p>
-<p>HTTP协议访问：</p>
-<p>添加svn验证文件svn-auth.conf，该文件可以指定至任何位置，如&#x2F;home&#x2F;svnprofile，该文件与上面的passwd类似，不过使用Apache组件htpasswd命令生成用户的加密密码，命令如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">../apache2/bin/htpasswd -cm /home/svnprofile/svn-auth.conf admin</span><br></pre></td></tr></table></figure>
-
-<p>根据提示便可以新建admin用户，若需要新增用户，则上面的命令中，需要去掉c选项，否则会覆盖原文件，如</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">../apache2/bin/htpasswd -m /home/svnprofile/svn-auth.conf test</span><br></pre></td></tr></table></figure>
-
-<p>新增一个test用户</p>
-<p>添加svn权限控制文件svn-access.conf，该文件同样可以指定任意位置。并且内容格式与上面的authz类似，主要包括如下内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">groups</span>]</span><br><span class="line">admin = admin</span><br><span class="line">[/]</span><br><span class="line">@admin=rw</span><br></pre></td></tr></table></figure>
-
-<p>编辑Apache配置文件httpd.conf，去掉LoadModule dav_module modules&#x2F;mod_dav.so前的#，启用该组件。并在文末添加如下内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;Location /svn&gt;</span><br><span class="line">DAV svn</span><br><span class="line">SVNParentPath /data/svndata</span><br><span class="line">AuthType Basic</span><br><span class="line">AuthName <span class="string">&quot;SVN server&quot;</span></span><br><span class="line">AuthUserFile /home/svnprofile/svn-auth.conf</span><br><span class="line">Require valid-user</span><br><span class="line">AuthzSVNAccessFile /home/svnprofile/svn-access.conf</span><br><span class="line">&lt;/Location&gt;</span><br><span class="line">CustomLog logs/svn_logfile <span class="string">&quot;%t %u %&#123;SVN-ACTION&#125;e&quot;</span> <span class="built_in">env</span>=SVN-ACTION      --该行主要是开启日志记录客户端做了哪些高级操作</span><br></pre></td></tr></table></figure>
-
-<p>CustomLog解释详见：</p>
-<p><a target="_blank" rel="noopener" href="http://www.subversion.org.cn/svnbook/1.4/svn.serverconfig.httpd.html#svn.serverconfig.httpd.authz">http://www.subversion.org.cn/svnbook/1.4/svn.serverconfig.httpd.html#svn.serverconfig.httpd.authz</a></p>
-<p>运行或重启Apache使更改的配置文件生效，并运行svnserve启动svn服务器。运行成功后可以在浏览器输入连接<u><a target="_blank" rel="noopener" href="http://ipaddress/svn/test">http://ipaddress/svn/test</a></u>测试是否可以访问。</p>
-<p>这里可以看出，使用HTTP协议和svn协议时，连接地址有些许区别，http连接中，需要在项目库前添加svn&#x2F;</p>
-
+          <p> </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/04/02/subversion.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1397,23 +1176,14 @@ Posted at 2014.6.14
     
     <div class="post-body" itemprop="articleBody">
           <p>约定好会聊聊自己的故事，想一想，先交待这样的一个故事吧。</p>
-<p>去年刚到上海那会儿，经常在住的地方听到楼上一位女生电话里头跟她男朋友的争吵。只是从这争吵的声音里面，我多听到了一点撕心裂肺。那似乎是一种控诉与虽然不服气但还是抵挡不了既定事实的绝望情绪。控诉着对方为什么变成这个样子；绝望着把两个人的感情经营到如此不堪却毫无回天之力。</p>
-<p>我当初就在幻想，这对情侣一定有过你浓我浓的阶段。那又是什么，让一对情侣之间变得只剩争吵了呢。曾经跟某个人聊到这样的情况，她给我的解答是触碰到原则和底线了吧。</p>
-<p>关于底线，之前找过一句话来安慰自己：“生命里的VIP，总是让你甘愿把自己的原则一再打折”。所以，因为不是什么VIP，才有那些不愉快吧。</p>
-<p>我是一个相信一切都会改变的人，而所谓的承诺与永恒，在许下的那个当下便是永远，因为觉得之后的时间线里，再没有一模一样的瞬间了。稍微一些时间和距离的沉淀，我就开始怀疑感情是否依旧存在。只是这种怀疑，往往伴随着事实来到自己面前，所以也挺相信自己的这种负面情绪。日子一天天的过着，好像每天发生的都一模一样，可是突然到了某一天，发现原本自己执着着的东西都变了。这样子想一想也挺难过的吧，呵呵。</p>
-<p>三月的时候看到对方的手机记录，觉得心里有些梗，虽然当时有沟通，可是说实话没有多大实际作用。因为在那种沟通氛围里面，觉得自己的错误更多，这种沟通的实际情况是由我多事引起的，反而要对方来安抚我，心里很愧疚。所以也在质问自己，两个人在一起我却让对方不开心，“说散，你想很久了吧”，嗯，是的，从那时候开始。只是还有不服气，还想抓住些什么。这就称之为矛盾吧。在后来的日子里，眼看着感情慢慢走向凋零，尤其觉得对方什么都不在做，很难过……</p>
-<p>伴随着这样的矛盾，以及在上海见到的一些事情，想法变得有些“阴暗”，比如觉得好像快离开我身边了，那么我得讨回点什么才对得起之前的用心。现在回想起当初我的状态，自己也会很排斥，可是我知道自己摆脱不了这样差劲的状态，因为我不是第一次见到自己那样子了。起初以为可以克制好，但实际情况证明了我战胜不了那样的自己。于是曾经才会发一条微博，说每个人都希望被照顾吧。这样我才不会有那样的状态了吧。</p>
-<p>至于所谓的被照顾，在感情里面的角色应该是接受对方的付出吧。而那个付出更多的人，或许是期待着付出这么多的时候，可以得到对方按照自己期望的样子来回应。毕竟我深信这样的一句话——“每个人做任何事，都只是为了自己，虽然有人会说，我希望能为哪个人做些什么，但事实上，也只不过是希望看到别人幸福时，自己也有份幸福感罢了”。其实有这样的想法很正常，但问题的症结大致在于，男生和女生的思维如此的不一样，所以往往责备对方没有达到自己内心期望的样子，那么自然而然的，争执便如期而至。</p>
-<p>回到我自己身上的话，因为我对自己要求很严格。举例说来就是好比之前请朋友一起去看电影，结果电影枯燥无味。但最开始我顾虑的是朋友的感受，观影中途几次看朋友的状态，当对方表现的对电影漠不关心甚至不想再看的时候，我会觉得内疚和“不安”。再比如单独跟朋友一起吃饭，当面对面却没有声音的时候，我会在想自己为什么这么不善于沟通，让对方无话可说。所以跟别人介绍我自己的时候，会主动说我聊天很不行。而这种负担，在喜欢的女生面前表现的程度更深。之前跟朋友聊到这样的情况，她的解释让我清醒了一下：因为我对自己要求很严格，所以在恋爱的时候对对方也自然的有很高的要求。后来仔细想一想，好像真的是这样。那么多的争执，我如果能安稳一点，便可以避免的吧。再后来回忆起那些争执的时候，想着，没什么比对方还愿意跟你在一起更好的了。所以，为了那些争执执着作甚呢。</p>
-<p>记得在打算写这篇日志的时候，准备了好多好多的“理论”和独白。可到了这样的时间，却“提笔忘字”起来。罢了，本来就是简单的陈述和记录而已嘛。能想到这么些，那么就写这么多吧。哦，刚好上面提到的那个在外人面前不太常见的我，可以放在这里，为了以后方便别人了解我吧。毕竟按照目前的趋势，即使我多么的抵触，好像也改变不了过年回家相亲的可能，哈哈。</p>
-<p>嗯，其实还得写下遇到的一个人。起先的印象不算好。可是相处过一段时间实实在在看到没见过的一面，知道真的是一个很好的女生。可是那段时间我真的比较焦躁，因为很多生活上的不安。而且知道彼此曾经的经历那么的不同，交际着那么多不一样的朋友，想必以后的生活少不了委屈与妥协。所以曾经幻想过，如果跟你拥有着相似的世界观和经历，无论如何我都不会选择那么坚定的走开吧。对那段时间是否怀念，用现在记录着如此清晰的文字就足以证明了吧。</p>
-<p>大致觉得，心里能腾出的空位只有那么些，所以好好珍惜可能的遇见，好好把握已经发生的相遇。2014的时候，我还在，我相信还会爱。Peace</p>
-<p>接下来，该交待交待这几年都在做些什么了好像。</p>
-<p>从02年之后就很少写日志了，记得那一年对自己比较重要的是准备专升本考试（当然事实证明自己太高估自己了）。考试失败之后的确迷茫过一阵子，因为还想在学校里待着，抗拒踏上社会的感觉。可事实是由不得自己的，在朋友的召唤下跑去了上海。而接下来的半年，日子过的还是很紧巴的。可是到了今年初，随着工作转正和工作内容的改变，算是给了我接下来的工作方向。再到离职的这十个月，在公司还算接触和学习了很多东西。现在找工作面试聊的时候，发现之前公司给的平台还是很广阔的。</p>
-<p>刚好说到前公司很广阔的平台和现在找工作的实际情况，那就交待一些前几个月突然离职的几个想法吧：本来在那个公司按着那样的路走下去似乎蛮不错的，可是觉得刚毕业一年，前面的道路就这么清晰，会不会太顺利了。刚好那段时间开始想着再体验一下刚到上海找工作的时候那种心情，好像那时候虽然生活难熬，但是有更多的生活感觉，因为好像身边的全世界都在帮着我。加上那段时间朋友的结婚，说实话让我突然想安稳起来。而选择来合肥的理由很简单，因为我爱这样的城市。虽然现在待业待的有点心慌，生活上也真的拮据，想一想今年回家过年的话，应该会很有心理负担。可是总有让自己不断努力的理由，这样就足够了吧。</p>
-<p>能说的故事大致就这么多了，虽然一直觉得新的日期只不过让我们有足够的借口说，嘿，从某年某月某日开始就是新的阶段，我要重新开始云云。可让人拥有一些希望未必是一件坏的事情。</p>
-<p>【小子们哪，我们相爱，不要只在言语和舌头上，总要在行为和诚实上。——约翰一书3:18】2014，大家一起“马上幸福”</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2013/12/31/1314.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

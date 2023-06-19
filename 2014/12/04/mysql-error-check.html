@@ -21,15 +21,13 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yvanz.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"style":null,"show_result":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="表的故障检测和修正的一般过程如下： ◆ 检查出错的表。如果该表检查通过，则完成任务，否则必须修复出错的数据库表。 ◆ 在开始修复之前对表文件进行拷贝，以保证数据的安全。 ◆ 开始修复数据库表。 ◆ 如果修复失败，从数据库的备份或更新日志中恢复数据。 在使用myisamchk或isamchk检查或修复表之前，应该首先注意： ◆ 建立数据库备份和使用更新日志，以防修复失败，丢失数据。 ◆ 仔细阅读本章">
-<meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="如何进行MySQL数据库表的故障检测">
 <meta property="og:url" content="https://www.yvanz.com/2014/12/04/mysql-error-check.html">
 <meta property="og:site_name" content="Yvanの平行时空">
-<meta property="og:description" content="表的故障检测和修正的一般过程如下： ◆ 检查出错的表。如果该表检查通过，则完成任务，否则必须修复出错的数据库表。 ◆ 在开始修复之前对表文件进行拷贝，以保证数据的安全。 ◆ 开始修复数据库表。 ◆ 如果修复失败，从数据库的备份或更新日志中恢复数据。 在使用myisamchk或isamchk检查或修复表之前，应该首先注意： ◆ 建立数据库备份和使用更新日志，以防修复失败，丢失数据。 ◆ 仔细阅读本章">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2014-12-04T07:32:13.000Z">
-<meta property="article:modified_time" content="2023-06-16T05:43:56.726Z">
+<meta property="article:modified_time" content="2023-06-19T02:01:28.303Z">
 <meta property="article:author" content="Yvan">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="转载学习">
@@ -231,7 +229,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="如何进行MySQL数据库表的故障检测 | Yvanの平行时空">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content=" ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -275,6 +273,7 @@
   
 </div>
 
+            <div class="post-description"> </div>
         </div>
       </header>
 
@@ -292,7 +291,7 @@
 <p>◆ 如果你在Unix平台上对表进行维护时，应该首先注册到专用的帐户 mysql，以避免对表读写访问产生所有权的问题，以及破坏数据库目录的所有权限。</p>
 <p><strong>数据库表的维护工具</strong></p>
 <p>MySQL的myisanchk和isamchk实用程序很类似，基本上它们具有同样的使用方法。它们之间的主要区别时所使用的表的类型。为了检查&#x2F;修复MyISAM表(.MYI和.MYD)，你应该使用myisamchk实用程序。为了检查&#x2F;修复ISAM表(.ISM和.ISD)，你应该使用isamchk实用程序。</p>
-<p>&amp;nbsp;◆ 为了使用任一个使用程序，应指明你要检查或修复的表，myisamchk和isamchk的使用方法为：&amp;nbsp;</p>
+<p>◆ 为了使用任一个使用程序，应指明你要检查或修复的表，myisamchk和isamchk的使用方法为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shell&gt; myisamchk options tbl_name </span><br><span class="line">shell&gt; isamchk options tbl_name</span><br></pre></td></tr></table></figure>
 
 <p> ◆ 你也能指定一个名字作为一个索引文件(用&amp;ldquo; .MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;后缀)，它允许你通过使用模式&amp;ldquo;*.MYI&amp;rdquo;或&amp;ldquo;.ISM&amp;rdquo;指定在一个目录所有的表。例如，如果你在一个数据库目录，你可以这样在目录下检查所有的表：如果你愿意，你可以在命令行命名几个表。</p>
@@ -312,11 +311,10 @@
 <p>myisamchk tbl_name isamchk tbl_name</p>
 <p>这能找出所有错误的99.99%。它不能找出的是仅仅涉及数据文件的损坏(这很不常见)。</p>
 <p><strong>完全彻底的数据检查</strong></p>
-<p>为了执行扩充检查，使用–extend-check或-e选项，这个选项检查数据：&amp;nbsp;</p>
+<p>为了执行扩充检查，使用–extend-check或-e选项，这个选项检查数据：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myisamchk -e tbl_name</span><br><span class="line">isamchk -e tbl_name</span><br></pre></td></tr></table></figure>
 
 <p>它做一个完全彻底的数据检查(-e意思是&amp;ldquo;扩展检查&amp;rdquo;)。它对每一行做每个键的读检查以证实他们确实指向正确的行。这在一个有很多键的大表上可能花很长时间。myisamchk通常将在它发现第一个错误以后停止。如果你想要获得更多的信息，你能增加–verbose(-v)选项。这使得myisamchk或isamchk继续一直到最多20个错误。在一般使用中，一个简单的标准检查(没有除表名以外的参数)就足够了。</p>
-<p>&amp;nbsp;</p>
 <p><strong>中等程度的检查</strong></p>
 <p>指定选项–medium-check或-m</p>
 <p>myisamchk -m tbl_name</p>
@@ -328,7 +326,6 @@
 <p>象前面的命令一样，但是-i选项告诉myisamchk还打印出一些统计信息。</p>
 <p>2.-C, –check-only-changed</p>
 <p>只检查上一次检查后被修改的表</p>
-<p>&amp;nbsp;</p>
 <p>原文链接：<a target="_blank" rel="noopener" href="http://linux.cn/article-138-1-rel.html">http://linux.cn/article-138-1-rel.html</a></p>
 
     </div>

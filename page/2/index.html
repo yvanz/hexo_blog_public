@@ -382,26 +382,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>早就想从wordpress换成hexo，因为想好好体验一下markdown编辑博客，而且直接用html语法直接实现文章样式的修改。只是一直没有契机。<br>最近因为想给自己的站加上https，所以在阿里云上买了个云主机，顺势把博客也搬到了阿里云。既然有了云主机，索性搭了个hexo环境，尝试把wordpress的文章导入hexo里。不过这两天折腾下来，发现自己原先有一些误区，用牢骚的方式记录一下。</p>
-<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><blockquote>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用<a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-</blockquote>
-<p>原先看着这段简介以及网上的文章，只了解到hexo使用markdown语法写作，并且最终的文章是以静态页的方式呈现出来。同时支持将静态页部署到github pages上。那么倘若我部署在服务器上，应该用法和wordpress一样的吧。可是事实证明，我似乎太天真。</p>
-<p>实际上，hexo正确的打开方式是，写好md文章用hexo generate生成好静态页，倘若使用github pages，则再用<code>hexo deploy</code>命令部署到github上；若自有服务器，则把静态页丢到服务器上的web目录让用户访问就可以了。hexo的<code>hexo server</code>只推荐用来本地调试。</p>
-<p>然而既然我已经买了云主机，似乎只丢静态文件到服务器上，有点太浪费资源了。所以还是在服务器端装好hexo，一条路走到了黑。</p>
-<h2 id="Hexo部署"><a href="#Hexo部署" class="headerlink" title="Hexo部署"></a>Hexo部署</h2><p>hexo的部署很简单，他们的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">官方文档</a>写的很详细了。对照着安装然后生成站点文件夹即可。</p>
-<h2 id="Hexo文章导入"><a href="#Hexo文章导入" class="headerlink" title="Hexo文章导入"></a>Hexo文章导入</h2><p>从wordpress导出我所有的文章和网页，用hexo支持的方式导入这些文章。我在导入结束后发现转换后的文章，markdown解析起来全乱掉了。没办法只能这两天熬夜把所有的文章重新用markdown支持的语法改了一遍。庆幸自己不是话痨，写的文章还不算多。</p>
-<h2 id="启动博客"><a href="#启动博客" class="headerlink" title="启动博客"></a>启动博客</h2><p>修改好站点配置文件以及主题配置文件，用<code>hexo generate</code>命令生成静态文件，在nginx配置文件里将网站根目录指向public文件夹即可实现访问。</p>
-<h2 id="文章更新"><a href="#文章更新" class="headerlink" title="文章更新"></a>文章更新</h2><p>因为hexo是静态站点，不像wordpress自带后台可以直接发布文章。为了方便更新，以及实时备份的目的，我还是借助了git的力量。不过鉴于国内访问github速度感人，我选了国内的产品</p>
-<h3 id="程序文件纳入git"><a href="#程序文件纳入git" class="headerlink" title="程序文件纳入git"></a>程序文件纳入git</h3><p>在hexo程序目录里，使用<code>git init</code>将目录git化，然后提交目录里的文件至git仓库。具体操作如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;hello hexo&#x27;</span></span><br><span class="line">git remote add origin <span class="string">&#x27;你的git仓库地址&#x27;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用webhooks实现自动更新"><a href="#使用webhooks实现自动更新" class="headerlink" title="使用webhooks实现自动更新"></a>使用webhooks实现自动更新</h3><p>基本上这些类github产品，都有webhooks。有了webhooks，就可以实现在远端库更新之后，POST一段json数据到服务器，让服务器执行一系列更新文章的命令。这里我在网上找到有现成的代码接收POST数据，<a target="_blank" rel="noopener" href="http://my.oschina.net/ism/blog/647303">作者传送门</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding:UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> BaseHTTPServer <span class="keyword">import</span> HTTPServer,BaseHTTPRequestHandler</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RequestHandler</span>(<span class="title class_ inherited__">BaseHTTPRequestHandler</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_writeheaders</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span> self.path</span><br><span class="line">        <span class="built_in">print</span> self.headers</span><br><span class="line">        self.send_response(<span class="number">200</span>);</span><br><span class="line">        self.send_header(<span class="string">&#x27;Content-type&#x27;</span>,<span class="string">&#x27;text/html&#x27;</span>);</span><br><span class="line">        self.end_headers()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_Head</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_GET</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">        self.wfile.write(<span class="string">&quot;&quot;&quot;&quot;&quot;&quot;</span> <span class="built_in">str</span>(self.headers))</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_POST</span>(<span class="params">self</span>):</span><br><span class="line">        self._writeheaders()</span><br><span class="line">        length = self.headers.getheader(<span class="string">&#x27;content-length&#x27;</span>);</span><br><span class="line">        nbytes = <span class="built_in">int</span>(length)</span><br><span class="line">        data = self.rfile.read(nbytes)</span><br><span class="line">        self.wfile.write(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line">        <span class="comment"># print data</span></span><br><span class="line">        data = urllib.unquote(data)</span><br><span class="line">        data = data[<span class="number">5</span>:]</span><br><span class="line">        <span class="comment"># print data</span></span><br><span class="line">        json_obj = json.loads(data)</span><br><span class="line">        commits_cnt = <span class="built_in">len</span>(json_obj[<span class="string">&#x27;push_data&#x27;</span>][<span class="string">&#x27;commits&#x27;</span>])</span><br><span class="line">        <span class="built_in">print</span> commits_cnt</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(commits_cnt):</span><br><span class="line">            <span class="comment"># print i</span></span><br><span class="line">            <span class="built_in">print</span> json_obj[<span class="string">&#x27;push_data&#x27;</span>][<span class="string">&#x27;commits&#x27;</span>][i][<span class="string">&#x27;message&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    addr = (<span class="string">&#x27;&#x27;</span>,<span class="number">8765</span>)</span><br><span class="line">    server = HTTPServer(addr,RequestHandler)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure>
-
-<p>秉着拿来主义，在上述代码中自己添加了当message字段值为特定值时，去更新静态文件的功能。自动更新效果演示如下图</p>
-<p><img data-src="https://statics.yvanz.com/webhooks.jpg"></p>
-<p>这篇文章是用git提交并自动在服务器上生成的第一篇文章。Nice~</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/05/15/hello-world-with-hexo.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -493,18 +481,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>虽然昨天通过引流的方式，将频繁的价格请求转发到了一台被集群踢掉的机器。可是眼看着那台机器负载一直保持在100+，还真担心那机器的CPU爆掉呢。于是今天继续对这个问题展开了研究，好在研究有了结果。</p>
-<p>首先用CPU火焰图绘出CPU的具体调用</p>
-<p> <img data-src="https://statics.yvanz.com/php-fpm_flame.png"><br>这里就看的很明显了，php-fpm栈里面有一个getdents64尤其的亮眼。那么这个getdents64又是何物呢？这里祭出<a target="_blank" rel="noopener" href="http://linux.die.net/man/2/getdents64">Linux man page</a>的解释</p>
-<blockquote>
-<p>The system call <strong>getdents</strong>() reads several <em>linux-dirent</em> structures from the directory referred to by the open file descriptor <em>fd</em> into the buffer pointed to by <em>dirp</em>. The argument <em>count</em> specifies the size of that buffer.</p>
-</blockquote>
-<p>可是PHP程序为何会有这么多的对文件的操作呢。现在服务器只处理这个价格的请求，而且运行的这么慢，php-fpm的slowlog里应该有些记录吧，去碰碰运气。</p>
-<blockquote>
-<p> script_filename &#x3D; xxx&#x2F;metals&#x2F;index.php<br> [0x0000000001f98088] read() xxx&#x2F;include&#x2F;cache.php:35<br> [0x0000000001f97b48] delete() xxx&#x2F;include&#x2F;cache.php:50<br> [0x0000000001f97280] check() xxx&#x2F;metals&#x2F;index.php:30</p>
-</blockquote>
-<p>果然slowlog没有让我失望，记录了大量如上的日志。赶紧去文件里所标示的那几行看看代码压压惊，发现这里一直要去缓存目录。于是去缓存目录一探究竟，发现<code>ll</code>执行一下都非常的慢，原来这个文件夹里已经有好几万的文件了，程序到这里来自然非常的慢，也就不难解释火焰图表现的情况了。</p>
-<p>想起来前几天程序里更新了缓存文件的生成机制，又不对老旧的缓存文件做删除，导致文件的累计。所以解决方法自然就是在系统的tmpfs分区新建缓存目录，修改程序配置文件应用新的缓存目录。此时负载立刻下降，但是新缓存目录里并没有生成文件。看样子更新价格的请求只是去缓存目录遍历文件，并不做写入，所以IO一直没有过高，跟我以前遇到的服务器过载的情况也就不一样了。最后设置crontab每天凌晨清空缓存目录，防止新缓存目录出现同样的问题。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/04/22/high-load-be-solved.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -596,19 +580,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>这周二开始十一点半，突然zabbix上看到网站集群上每台机器有好几千的并发请求，然后就是噼里啪啦的cpu过载报警。因为我们服务器高峰时的请求不会过一千，所以看到这个报警第一反应就是是不是又被恶意刷了（呃，为什么要说又）。</p>
-<p>首先筛了一遍日志，定位几个访问频率比较高的IP，详细看了他们的访问记录，似乎并没有恶意请求的样子，只不过日志里面有一种请求非常之多。服务器的流量也没有过高的起伏，后端数据库的压力也不大。再看一下php-fpm的status，所有进程都被叫起来干活了。</p>
-<p>仔细用top看看服务器负载，发现load average非常高，但是usr态和sys态只是维持在25%左右，内存占用不高，swap也没用多少，IO也没有异常。懵逼三秒钟，再用vmstat看看先</p>
-<p><img data-src="https://statics.yvanz.com/vmstat_info.png"></p>
-<p>system的interrupts和context switch都比较高，看起来cpu不仅在不停处理请求，内核还在不停切换进程。联想起超多的nginx连接数，以及那条频率很高的URL。应该是客户端发起了太多的请求，让服务器端开启了所有php-fpm的进程应付，但是处理不过来这么多请求，大量未处理的请求积压。所以决定先去网站上看看这个请求为何会如此之多。</p>
-<p>chrome打开开发者工具，看到那条请求是网页上一个价格实时更新的模块，频率为每5秒钟请求一次。</p>
-<p><img data-src="https://statics.yvanz.com/nickel_request_info.png"></p>
-<p>既然找到了消耗资源的地方，那就想想办法解决这个问题吧。</p>
-<p>一时半会儿，似乎找不到资源可以扩充，从服务器优化的角度也没有思路去优化，让PHP执行的更快。于是想了想，是不是可以把这样的请求让一台资源利用率低的服务器去执行。之后同事说要不对这样的请求做一个反向代理吧。听起来合乎逻辑，那么赶紧干起来。</p>
-<p>既然做反向代理，我第一时间想起来的是nginx自带的proxy_pass或者upstream。可是对比实际的请求，似乎upstream不适合这种场景，那么就用一下fastcgi_pass吧。照着这个思路，试试用location匹配那个URI，再丢给别的机器执行看看。可是并不顺利，写的location规则一直匹配不上，于是用if来匹配request_uri。但是这里并不能放fastcgi_pass。折腾了一番之后，想起来可以用set赋值变量。然后根据这个变量，在处理php脚步的location里面指定不同的fastcgi server。配置完毕nginx -t，终于看到久违的successful。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义变量</span></span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 0;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$request_uri</span> ~* /metals/nickel\?mid ) &#123;</span><br><span class="line">    <span class="built_in">set</span> <span class="variable">$nickelprice</span> 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定不同的fastcgi</span></span><br><span class="line">    location ~ .*\.php &#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="variable">$nickelprice</span> = 1 ) &#123;</span><br><span class="line">    fastcgi_pass   172.16.xx.xx:9000;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>服务器端全部启用之后，终于主站不再受这波请求的影响了。至于那台被牺牲的服务器，就随它去吧～～</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/04/21/server-with-high-load-average.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -700,24 +679,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
-<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
-<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
-<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
-<blockquote>
-<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
-</blockquote>
-<p>既然知道了原理，那么就好排查问题了。</p>
-<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
-<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
-<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
-<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
-<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
-<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/04/12/site-be-hacked-again.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -809,36 +778,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>最近新上了个java应用，部署到服务器上之后发现运行一段时间之后服务器cpu的占用率会很高。排查了一遍之后，发现网上这篇文章的思路可以解决我遇到的问题，遂转载过来留存。</p>
-<p>【转载】</p>
-<p>一个应用占用CPU很高，除了确实是计算密集型应用之外，通常原因都是出现了死循环。</p>
-<p>以我们最近出现的一个实际故障为例，介绍怎么定位和解决这类问题。</p>
-<p><img data-src="http://www.blogjava.net/images/blogjava_net/hankchen/windowslivewriter/cpu_121da/clip_image002_thumb.jpg"></p>
-<p>根据top命令，发现PID为28555的Java进程占用CPU高达200%，出现故障。</p>
-<p>通过ps aux | grep PID命令，可以进一步确定是tomcat进程出现了问题。但是，怎么定位到具体线程或者代码呢？</p>
-<p><strong>首先显示线程列表:</strong></p>
-<p><span style="color:#FF0000;">ps&amp;nbsp;-mp&amp;nbsp;pid&amp;nbsp;-o&amp;nbsp;THREAD,tid,time</span></p>
-<p><img data-src="http://www.blogjava.net/images/blogjava_net/hankchen/WindowsLiveWriter/CPU_121DA/1_thumb.png"></p>
-<p>找到了耗时最高的线程28802，占用CPU时间快两个小时了！</p>
-<p><strong>其次将需要的线程ID转换为16进制格式：</strong></p>
-<p><span style="color:#FF0000;">printf&amp;nbsp;&quot;%x\n&quot;&amp;nbsp;tid</span></p>
-<p><img data-src="http://www.blogjava.net/images/blogjava_net/hankchen/WindowsLiveWriter/CPU_121DA/2_thumb.png"></p>
-<p><strong>最后打印线程的堆栈信息：</strong></p>
-<p><span style="color:#FF0000;">jstack&amp;nbsp;pid&amp;nbsp;|grep&amp;nbsp;tid&amp;nbsp;-A&amp;nbsp;30</span></p>
-<p><img data-src="http://www.blogjava.net/images/blogjava_net/hankchen/WindowsLiveWriter/CPU_121DA/3_thumb.png"></p>
-<p>找到出现问题的代码了！</p>
-<p>现在来分析下具体的代码：ShortSocketIO.readBytes(ShortSocketIO.java:106)</p>
-<p>ShortSocketIO是应用封装的一个用短连接Socket通信的工具类。readBytes函数的代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">byte</span>[] readBytes(<span class="type">int</span> length) <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="built_in">this</span>.socket == <span class="literal">null</span>) || (!<span class="built_in">this</span>.socket.isConnected())) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IOException</span>(<span class="string">&quot;++++ attempting to read from closed socket&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">byte</span>[] result = <span class="literal">null</span>;</span><br><span class="line">    <span class="type">ByteArrayOutputStream</span> <span class="variable">bos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ByteArrayOutputStream</span>();</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.recIndex &gt;= length) &#123;</span><br><span class="line">           bos.write(<span class="built_in">this</span>.recBuf, <span class="number">0</span>, length);</span><br><span class="line">           <span class="type">byte</span>[] newBuf = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="built_in">this</span>.recBufSize];</span><br><span class="line">           <span class="keyword">if</span> (<span class="built_in">this</span>.recIndex &gt; length) &#123;</span><br><span class="line">               System.arraycopy(<span class="built_in">this</span>.recBuf, length, newBuf, <span class="number">0</span>, <span class="built_in">this</span>.recIndex - length);</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="built_in">this</span>.recBuf = newBuf;</span><br><span class="line">           <span class="built_in">this</span>.recIndex -= length;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           <span class="type">int</span> <span class="variable">totalread</span> <span class="operator">=</span> length;</span><br><span class="line">           <span class="keyword">if</span> (<span class="built_in">this</span>.recIndex &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                totalread -= <span class="built_in">this</span>.recIndex;</span><br><span class="line">                bos.write(<span class="built_in">this</span>.recBuf, <span class="number">0</span>, <span class="built_in">this</span>.recIndex);</span><br><span class="line">                <span class="built_in">this</span>.recBuf = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="built_in">this</span>.recBufSize];</span><br><span class="line">                <span class="built_in">this</span>.recIndex = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">readCount</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (totalread &gt; <span class="number">0</span>) &#123;</span><br><span class="line">         <span class="keyword">if</span> ((readCount = <span class="built_in">this</span>.in.read(<span class="built_in">this</span>.recBuf)) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (totalread &gt; readCount) &#123;</span><br><span class="line">                      bos.write(<span class="built_in">this</span>.recBuf, <span class="number">0</span>, readCount);</span><br><span class="line">                      <span class="built_in">this</span>.recBuf = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="built_in">this</span>.recBufSize];</span><br><span class="line">                      <span class="built_in">this</span>.recIndex = <span class="number">0</span>;</span><br><span class="line">               &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                     bos.write(<span class="built_in">this</span>.recBuf, <span class="number">0</span>, totalread);</span><br><span class="line">                     <span class="type">byte</span>[] newBuf = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="built_in">this</span>.recBufSize];</span><br><span class="line">                     System.arraycopy(<span class="built_in">this</span>.recBuf, totalread, newBuf, <span class="number">0</span>, readCount - totalread);</span><br><span class="line">                     <span class="built_in">this</span>.recBuf = newBuf;</span><br><span class="line">                     <span class="built_in">this</span>.recIndex = (readCount - totalread);</span><br><span class="line">             &#125;</span><br><span class="line">             totalread -= readCount;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&amp;nbsp;</p>
-<p>问题就出在24、25行代码部分。如果this.in.read()返回的数据小于等于0时，循环就一直进行下去了。而这种情况在网络拥塞的时候是可能发生的。</p>
-<p>至于具体怎么修改就看业务逻辑应该怎么对待这种特殊情况了。</p>
-<p><strong>最后，总结下排查CPU故障的方法和技巧有哪些：</strong></p>
-<p>1、top命令：Linux命令。可以查看实时的CPU使用情况。也可以查看最近一段时间的CPU使用情况。</p>
-<p>2、PS命令：Linux命令。强大的进程状态监控命令。可以查看进程以及进程中线程的当前CPU使用情况。属于当前状态的采样数据。</p>
-<p><span style="color:#FF0000;">3、jstack：Java提供的命令。可以查看某个进程的当前线程栈运行情况。根据这个命令的输出可以定位某个进程的所有线程的当前运行状态、运行代码，以及是否死锁等等。</span></p>
-<p>4、pstack：Linux命令。可以查看某个进程的当前线程栈运行情况。<br>&amp;nbsp;</p>
-<p>原文链接：<a target="_blank" rel="noopener" href="http://www.blogjava.net/hankchen/archive/2012/05/09/377735.html">http://www.blogjava.net/hankchen/archive/2012/05/09/377735.html</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/03/18/tomcat-app-with-high-cpu-utilization.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -930,10 +877,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
-<p>由于服务器走公网解析我们域名的话，同样只有一台服务器完成功能。所以我想着是不是在不修改本机hosts的情况下，在Python脚本内实现对域名的解析。带着这个想法，终于在<a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/2236498/tell-urllib2-to-use-custom-dns">stackoverflow</a>上找到了可行的答案。</p>
-<p>大致思路是，首先定义一个函数，记录你需要自定义IP的域名，并建立一个httplib.HTTPConnection的子类，在参数传递给socket.create_connection前修改self.host以封装connection方法。然后继承HTTPHandler这个类，用上面的HTTPConnection替换httplib内自带的HTTPConnection，并重写http_open方法；最后把HTTPHandler放到自定义的opener。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> httplib</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">req_host</span>(<span class="params">host</span>):</span><br><span class="line">        <span class="keyword">if</span> host == <span class="string">&#x27;www.***.cn&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&#x27;8.8.8.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPConnection</span>(httplib.HTTPConnection):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">connect</span>(<span class="params">self</span>):</span><br><span class="line">                self.sock = socket.create_connection((req_host(self.host),self.port),self.timeout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPHandler</span>(urllib2.HTTPHandler):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">http_open</span>(<span class="params">self,req</span>):</span><br><span class="line">                <span class="keyword">return</span> self.do_open(MyHTTPConnection,req)</span><br><span class="line"></span><br><span class="line">opener = urllib2.build_opener(MyHTTPHandler)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://&#x27;</span></span><br><span class="line">f = urllib2.urlopen(url)</span><br><span class="line">req = f.read()</span><br><span class="line"><span class="built_in">print</span> req</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/03/09/python-custom-ip-resolve.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1025,55 +976,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>从事游戏服务器开发差不多两年时间，两年间参与了不少项目，学到了很多游戏服务器开发技术，参与过几个不同架构的服务器开发，就随便聊聊游戏服务器开发需要的技术。（以下所指游戏服务器更偏向于手游，因为我对端游和页游开发接触并不多）</p>
-<p><strong>一.聊聊服务器开发有哪些东西要考虑。</strong></p>
-<p><strong>1.开发语言的选择：</strong></p>
-<p>工欲善其事,必先利其器，选择一门适合的开发语法对后期开发有着事半功倍的作用。</p>
-<p>业界主要的是c&#x2F;c++ + Python&#x2F;lua模式做游戏服务器。c&#x2F;c++做网络通讯数据传输，python&#x2F;lua做业务逻辑。这样既保持了网络传输的效率(c++)，又提升开发效率(Python&#x2F;lua)，同时也支持热更新。</p>
-<p>当然，也有其他服务器开发语言，erlang(没用过，页游公司用的多),c#(大棒子国喜欢用，神奇的民族),Java(第一次听说时我惊呆了),node.js(少量游戏用的,还有一个node.js写的引擎叫pemolo),php(做http协议通讯的游戏时php+mysql也不失为一种好选择),…</p>
-<p>看过两个游戏服务器引擎&amp;nbsp;</p>
-<p>1.firefly(9秒社团开发的一款python游戏服务器框架)&amp;nbsp;<a target="_blank" rel="noopener" href="https://github.com/9miao/Firefly">https://github.com/9miao/Firefly</a></p>
-<p>2.kbengine(作者说他按bigworld的架构来设计的,c++ + python的)&amp;nbsp;<a target="_blank" rel="noopener" href="https://github.com/kbengine/kbengine">https://github.com/kbengine/kbengine</a></p>
-<p><strong>2.数据库</strong></p>
-<p>现在比较流行的两种数据库，关系型数据库mysql和非关系型数据库mongodb。这是我用的最多的两个数据库。</p>
-<p>关于两者之间的各种比较，网上有很多，当然你也可以用其他数据库，至于sql server,不怕被坑你就用吧(我向来对微软的东西没好感)。</p>
-<p><strong>3.服务端架构</strong></p>
-<p>讲一下我用过的其中一种架构模型，也是公司按着bigworld架构设计的：</p>
-<p>1.Gate:首先要有一个Gate(网关)服务器，负责客户端连接及消息转发到Game(游戏服),保持客户端到服务端的连接</p>
-<p>没有任何逻辑，只做消息加密和解密，以及客户端和服务器消息的转发(相当于两者之间的桥梁).</p>
-<p>2.GameServer:GameServer是游戏进程,提供游戏逻辑功能(采用单进程(或者单线程)模型,游戏服务器的瓶颈从来不在CPU,所以只做逻辑功能的话单线程足够了,在这里没必要用多线程或多进程)。</p>
-<p>3.DBManager:实现数据库的读写，方便Game服务器异步读写数据库的数据(有些把数据库读写放在游戏服，没有单独的服务器，那恐怕游戏服单进程就不够用了)。</p>
-<p>4.GameManager:负责管理所有的GameServer，GameServer之间消息转发，提供广播到所有Game的功能。</p>
-<p><strong>4.协议</strong></p>
-<p>客户端与服务器之间协议通信，可以用tcp或者http。主要看游戏模型，如果是那种弱联网单机玩法，用http足够了，像天天酷跑之类，只在需要的时候处理一条http请求响应。</p>
-<p>不过tcp用的比较还是比较多的。现在的网络游戏大多数都是tcp，像MMORPG类游戏。我们现在的游戏就是同时用了http和tcp，客户端和游戏服采用http协议。只有多人战斗转向战斗服才采用tcp长链接。</p>
-<p>udp:其实游戏是有udp的，在一些高效率的场景下比如pvp即时战斗,tcp的拥塞控制和超时重传并不适合，有些就用的udp,然后自己做丢包重发，拿网络公平性换游戏局部的效率。</p>
-<p>现在参与开发的游戏就同时使用了http协议和tcp协议，在游戏服是单机玩法用http协议,战斗服需要长连接保存协议状态，用的tcp。</p>
-<p><strong>5.存盘</strong></p>
-<p>有数据库就肯定有数据库读写操作，最主要的还是存盘(save),周期存盘还是即时存盘</p>
-<p>即时存盘就是每一次操作数据都进行存到数据库，当然这样会导致对数据库的操作过于频繁，毕竟这是效率的瓶颈之一。</p>
-<p>周期存盘也叫固定存盘，就是每隔固定时间存盘一次，比如10秒或者15秒，这样数据库的压力就会小很多，当然自己就要在内存中做好数据操作，防止数据污染或者存盘不上导致回档。</p>
-<p><strong>二.开发一个游戏服务器需要掌握的开源技术</strong></p>
-<p>1.libevent,boost.asio等网络库，网上有很多开源网络库，与其自己造轮子，不如就用开源网络库作为自己服务器的通讯库。最出名的就属libevent和boost.asio了。</p>
-<p>Boost的ASIO是一个异步IO库，封装了对Socket的常用操作，简化了基于socket程序的开发。支持跨平台。</p>
-<p>libevent是一个C语言写的事件驱动的开源网络库,具体见:<a target="_blank" rel="noopener" href="http://blog.csdn.net/majianfei1023/article/details/46485705">http://blog.csdn.net/majianfei1023/article/details/46485705</a></p>
-<p>至于二者之间的效率，仁者见仁。</p>
-<p>当然还有很多:比如云风写的skynet(c + lua),陈硕写的muduo(c++)。都写得很好,云风写的东西简单好用，陈硕在秀他的c++技术。</p>
-<p>2.protobuf:全称Google Protocol Buffers，是google开发的的一套用于数据存储，网络通信时用于协议编解码的工具库。它和XML或者JSON差不多，也就是把某种数据结构的信息，以某种格式（XML，JSON）保存起来，</p>
-<p>protobuf与XML和JSON不同在于，protobuf是基于二进制的。主要用于数据存储、传输协议格式等场合。具体见:<a target="_blank" rel="noopener" href="http://blog.csdn.net/majianfei1023/article/details/45112415">http://blog.csdn.net/majianfei1023/article/details/45112415</a></p>
-<p>protobuf他的优势是对于传输比较大的数据产生的数据很紧凑很小，可以明显减小传输量。</p>
-<p>而且处理速度也比较快，又有各种编程语言的实现，例如C++,Java,PHP等等。</p>
-<p>缺点是不能明文编辑(数据是二进制的)。</p>
-<p>用protobuf rpc进行数据传输很方便，所以是一个不错的选择。google protobuf只负责消息的打包和解包,并不包含RPC的实现，所以需要自己实现。</p>
-<p>3.zeromq:消息队列,一个稳健，简洁的多进程通讯方案的基础。ZeroMQ 并不是一个对socket的封装，不能用它去实现已有的网络协议。它有自己的模式，不同于更底层的点对点通讯模式。它有比 tcp 协议更高一级的协议。（当然 ZeroMQ 不一定基于 TCP 协议，它也可以用于进程间和进程内通讯。）它改变了通讯都基于一对一的连接这个假设。</p>
-<p>在这里它更适合服务器与服务器之间的通信，比如逻辑服和战斗服之间进行通信。</p>
-<p>4.memcached:一个高性能的分布式内存对象缓存系统，用于动态Web应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提高动态、数据库驱动网站的速度。</p>
-<p>可以用来做缓存，比如客户端本来每次操作都需要操作数据库，会严重影响效率，这时在中间加一层缓存系统，就提升了性能。基于http协议的通信用memcached是一个不错的选择，如果是tcp长链接，直接维护一个在线的内存对象就可以了。</p>
-<p>类似的技术还有redis等。</p>
-<p>5.glog&#x2F;zlog:你肯定需要记录日志,看爱好喽。</p>
-<p>6.tcmalloc:内存性能分析</p>
-<p>7.distcc:分布式编译工具，之前每次修改代码都要make半个小时,用distcc进行多台电脑同时帮你编译，快很多。</p>
-<p>原文链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/majianfei1023/article/details/46716073">http://blog.csdn.net/majianfei1023/article/details/46716073</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/03/09/gameserver-development.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1164,41 +1074,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ul>
-<li>系统环境</li>
-</ul>
-<p>CentOS 6.4 x64</p>
-<ul>
-<li>部署zookeeper集群（集群环境最少3台服务器起步）</li>
-</ul>
-<p>安装jdk环境，需jdk1.6或以上版本</p>
-<p>下载zookeeper并解压，在conf文件夹下新建配置文件zoo.cfg。以下为示例内容，按需修改。</p>
-<blockquote>
-<p>tickTime&#x3D;2000<br>dataDir&#x3D;&#x2F;var&#x2F;lib&#x2F;zookeeper&#x2F;<br>dataLogDir&#x3D;&#x2F;var&#x2F;lib&#x2F;zooklog<br>clientPort&#x3D;2181<br>initLimit&#x3D;5<br>syncLimit&#x3D;2<br>server.1&#x3D;zoo1:2888:3888<br>server.2&#x3D;zoo2:2888:3888<br>server.3&#x3D;zoo3:2888:3888</pre></p>
-</blockquote>
-<p>手动创建dataDir以及dataLogDir文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /var/lib/zookpeer &amp;&amp; <span class="built_in">mkdir</span> /var/lib/zooklog</span><br></pre></td></tr></table></figure>
-
-<p>在dataDir下新建文件myid，在该文件中只需插入一行，填写该服务器的编号。</p>
-<p>启动zookeeper</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/zkServer.sh start</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装Qconf所需依赖</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc gcc-c++ byacc bison texinfo cmake</span><br><span class="line"><span class="comment">#安装autoconf-2.69以及automake-1.14</span></span><br><span class="line">wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz</span><br><span class="line">tar xzf autoconf-2.69.tar.gz</span><br><span class="line"><span class="built_in">cd</span> autoconf-2.69</span><br><span class="line">./configure</span><br><span class="line">make &amp;amp;&amp;amp; make install</span><br><span class="line">wget http://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz</span><br><span class="line">tar xzf automake-1.14.tar.gz</span><br><span class="line"><span class="built_in">cd</span> automake-1.14</span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>编译安装QConf</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> QConf</span><br><span class="line"><span class="built_in">mkdir</span> build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">cmake .. -DCMAKE_INSTALL_PREFIX=/install/prefix</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>小结</li>
-</ul>
-<p>实际应用中，首先建立zookeeper集群，其次在应用服务器安装QConf客户端，并在客户端中配置idc.conf及localidc，以便应用调用不同集群的配置信息。</p>
-<p>之后补上QConf正式应用后的体验。</p>
-
+          <p> </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/02/12/install-qconf.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1290,23 +1174,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>每次安装ftp服务的时候，我都得折腾很长时间，可是需求本身很简单，配置文件的修改项也很少。所以还是记录一下安装配置流程，假如以后还需要再装呢。</p>
-<p>首先说明一下需求：为服务器安装一个ftp服务，让开发可以看指定目录的日志，禁止从该目录跳转至其他文件夹</p>
-<p>安装ftp</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install vsftpd -y</span><br></pre></td></tr></table></figure>
-
-<p>编辑配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">anonymous_enable=YES   <span class="comment">#修改为NO，禁止匿名用户登陆</span></span><br><span class="line">write_enable=YES  <span class="comment">#修改为NO，禁止上传</span></span><br><span class="line">local_root=/   <span class="comment">#使用该设置项可以修改用户默认登陆路径，这里我将值设置为日志路径</span></span><br><span class="line"><span class="comment">#chroot_local_user=YES   #取消该设置项的注释，可以禁止ftp登陆用户访问local_root以外的文件夹</span></span><br></pre></td></tr></table></figure>
-
-<p>重启vsftp使修改生效</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd restart</span><br></pre></td></tr></table></figure>
-
-<p>若使用系统自带的ftp用户登陆，则不需要修改selinux。若新建了一个带家目录的nologin用户，则需要修改selinux设置，否则登陆时会报500错误</p>
-<p>500 OOPS: cannot change directory:XXXXX</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#修改selinux限制</span></span><br><span class="line">service vsftpd stop</span><br><span class="line">setsebool ftp_home_dir on</span><br><span class="line">service vsftpd start</span><br><span class="line"><span class="comment">#或者直接关闭selinux</span></span><br><span class="line">setenforce 0</span><br></pre></td></tr></table></figure>
-
-<p>另外需要注意的是，nologin的用户需要有家目录，否则即使设置好了selinux，同样会报500错误，因为当家目录不存在时，它不知道从哪里可以跳至local_root</p>
-<p>更多内容可参考：<a target="_blank" rel="noopener" href="http://www.hi-linux.com/2016/07/25/VSftpd%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEFTP%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7%E5%AE%9E%E8%B7%B5/">VSftpd安装和配置FTP虚拟用户实践</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2016/01/04/a-note-with-vsftp.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

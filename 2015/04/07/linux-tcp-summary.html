@@ -21,12 +21,10 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yvanz.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"style":null,"show_result":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="锋寒 技术保障 基础平台 技术专家 &amp;nbsp; 在Linux上做网络应用的性能优化时，一般都会对TCP相关的内核参数进行调节，特别是和缓冲、队列有关的参数。网上搜到的文章会告诉你需要修改哪些参数，但我们经常是知其然而不知其所以然，每次照抄过来后，可能很快就忘记或混淆了它们的含义。本文尝试总结TCP队列缓冲相关的内核参数，从协议栈的角度梳理它们，希望可以更容易的理解和记忆。注意，本文内容均">
-<meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="Linux TCP队列相关参数的总结">
 <meta property="og:url" content="https://www.yvanz.com/2015/04/07/linux-tcp-summary.html">
 <meta property="og:site_name" content="Yvanの平行时空">
-<meta property="og:description" content="锋寒 技术保障 基础平台 技术专家 &amp;nbsp; 在Linux上做网络应用的性能优化时，一般都会对TCP相关的内核参数进行调节，特别是和缓冲、队列有关的参数。网上搜到的文章会告诉你需要修改哪些参数，但我们经常是知其然而不知其所以然，每次照抄过来后，可能很快就忘记或混淆了它们的含义。本文尝试总结TCP队列缓冲相关的内核参数，从协议栈的角度梳理它们，希望可以更容易的理解和记忆。注意，本文内容均">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://img4.tbcdn.cn/L1/461/1/33c6ebe8e3f20cbe799ff483bec551d0d0cdf798">
 <meta property="og:image" content="http://img3.tbcdn.cn/L1/461/1/73d01c4c8164ae8642ff09d5d3fe0548d4162874">
@@ -44,7 +42,7 @@
 <meta property="og:image" content="http://img2.tbcdn.cn/L1/461/1/fae4d502f54dea93565e0facd4fb9686e27d16de">
 <meta property="og:image" content="http://img4.tbcdn.cn/L1/461/1/b682793c235a93fe9a588c7892895659bbdd4111">
 <meta property="article:published_time" content="2015-04-07T04:01:00.000Z">
-<meta property="article:modified_time" content="2023-06-16T05:43:56.725Z">
+<meta property="article:modified_time" content="2023-06-19T01:56:31.697Z">
 <meta property="article:author" content="Yvan">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="转载学习">
@@ -247,7 +245,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="Linux TCP队列相关参数的总结 | Yvanの平行时空">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content=" ">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -291,6 +289,7 @@
   
 </div>
 
+            <div class="post-description"> </div>
         </div>
       </header>
 
@@ -298,7 +297,6 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>锋寒 技术保障 基础平台 技术专家</p>
-<p>&amp;nbsp;</p>
 <p>在Linux上做网络应用的性能优化时，一般都会对TCP相关的内核参数进行调节，特别是和缓冲、队列有关的参数。网上搜到的文章会告诉你需要修改哪些参数，但我们经常是知其然而不知其所以然，每次照抄过来后，可能很快就忘记或混淆了它们的含义。本文尝试总结TCP队列缓冲相关的内核参数，从协议栈的角度梳理它们，希望可以更容易的理解和记忆。注意，本文内容均来源于参考文档，没有去读相关的内核源码做验证，不能保证内容严谨正确。作为Java程序员没读过内核源码是硬伤。</p>
 <p>下面我以server端为视角，从&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">连接建立</span>、&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">数据包接收</span>&amp;nbsp;<wbr />和&amp;nbsp;<wbr /><span style="word-wrap: normal; word-break: normal; line-height: 24px; box-sizing: border-box; font-weight: 700;">数据包发送</span>&amp;nbsp;<wbr />这3条路径对参数进行归类梳理。</p>
 <p>一、连接建立</p>
