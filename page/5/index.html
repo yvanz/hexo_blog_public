@@ -479,91 +479,14 @@
     <div class="post-body" itemprop="articleBody">
           <p><strong><span style="font-size:12px;">全文翻译自zabbix官方文档</span><a target="_blank" rel="noopener" href="https://www.zabbix.com/documentation/2.4/manual/quickstart/login">https://www.zabbix.com/documentation/2.4/manual/quickstart/login</a></strong></p>
 <p><strong><span style="font-size:12px;">并有删改编辑</span></strong></p>
-<p>&amp;nbsp;</p>
-<p>在这一节，我们将了解如何登陆并且在zabbix中设置一个系统账户。</p>
-<p>使用Admin以及密码zabbix以zabbix的super admin登陆。zabbix的用户分如下几种类型</p>
-<table border="1" cellpadding="0" cellspacing="0">
-    <tbody>
-        <tr>
-            <td>
-
-<pre><code>                用户类型
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                描述
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Zabbix User
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                The user has access to the Monitoring menu. The user has no access to any resources by default. Any permissions to host groups must be explicitly assigned
-
-                该用户可以查看监测项，但没有进入任何资源的权限。并且只有配置权限后才能进入相应主机组
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Zabbix Admin
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                The user has access to the Monitoring and Configuration menus. The user has no access to any host groups by default. Any permissions to host groups must be explicitly given.
-
-                该用户可以查看监测和设置项，但默认没有进入任何主机组的权限，必须后期设置权限才可读
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;
-
-                Zabbix Super Admin
-
-        &lt;/td&gt;
-        &lt;td&gt;
-
-                The user has access to everything: Monitoring, Configuration and Administration menus. The user has a read-write access to all host groups. Permissions cannot be revoked by denying access to specific host groups.
-
-                该用户可以进入监测、设置以及管理等所有项目，该用户对所有主机组可读写，并且权限不能被阻止进入的特殊主机组所撤销。
-
-        &lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
-</code></pre>
-</table>
-&nbsp;
-
-<p>登陆成功之后，我们可以在网页右下角看到&amp;ldquo;Connected as Admin&amp;rdquo;，该用户可以进入设置和管理项。</p>
-<p>保护免受暴力攻击</p>
-<p>连续五次登陆失败，zabbix登录页会暂停登陆30秒，以此阻止暴力攻击以及字典破解。而登陆失败的IP地址，在下次成功登陆后会及时显示。<br>&amp;nbsp;</p>
-<p><strong>新增用户</strong></p>
-<p>需要查看所有用户的相关信息，可以在Administration&amp;rarr;Users菜单查看</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-adduser1.png"></p>
-<p>按上图点击顺序，可得到下图的详细信息</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-adduser2.png"></p>
-<p>若需要新增用户，可以点击右侧的Create user，并在新页面中填写新用户信息</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-adduser3.png"></p>
-<p>默认情况下，新建用户没有设置媒介（通知送达方式），所以需要跳转至Media菜单并点击Add，在弹窗中为新用户设置Email地址</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-adduser4.png"></p>
-<p>信息填写完毕，点击Add确认新增。此时就可以在用户列表看到新建的用户了。</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-adduser5.png"><br>&amp;nbsp;</p>
-<p><strong>新增权限</strong></p>
-<p>系统默认新建用户没有权限访问hosts。若需要设置用户权限，可以单击用户行所在的Groups列（例如这里点击Zabbix administrators），并在新页面点击Permissions。</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-adduser6.png"></p>
-<p>例如该用户只有对Linux servers组的Read-only权限，则先点击Read only下的Add，并在弹窗中勾选Linux servers</p>
-<p><img data-src="https://statics.yvanz.com/zabbix-adduser7.png"></p>
-<p>然后点击Select，便可以看到Linux servers在Read only分组中。最后点击Update更新设置使其生效。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/11/25/zabbix-adduser.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -655,98 +578,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>zabbix的使用，是基于LAMP或者LNMP架构运行的，所以在安装zabbix之前必须先安装好Apache&#x2F;Nginx、MySQL以及PHP。其中Apache&#x2F;Nginx和MySQL的安装没有什么特别的，这里只梳理一下PHP的安装。</p>
-<p>下载php源码并解压缩，然后yum安装所需组件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gd-devel libjpeg-devel libpng-devel libxml2-devel bzip2-devel libcurl-devel -y</span><br></pre></td></tr></table></figure>
-
-<p><strong>编译安装php</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-iconv-dir=/usr/local/iconv --with-freetype-dir=/usr/local --with-jpeg-dir=/usr/local --with-png-dir=/usr/local --with-zlib --with-libxml-dir=/usr/local --enable-xml --disable-rpath --enable-bcmath --enable-sysvsem --enable-inline-optimization --with-curl --enable-mbregex --enable-fpm --enable-mbstring --with-gd --enable-gd-native-ttf --with-openssl --with-mhash --enable-pcntl --with-xmlrpc --enable-zip --enable-mysqlnd --enable-wddx --enable-ftp --enable-calendar --with-libdir=lib64 --with-gettext --enable-sockets --with-apxs2=/usr/local/apache2/bin/apxs </span><br><span class="line">make &amp;&amp; make install </span><br><span class="line"><span class="built_in">cp</span> php.ini-production /usr/local/php/etc/php.ini</span><br></pre></td></tr></table></figure>
-
-<p>注：因为我的系统是64位，所以我在后面的参数中添加了–with-libdir&#x3D;lib64，并且我使用Apache与php搭配，所以还添加了Apache的参数–with-apxs2&#x3D;&#x2F;usr&#x2F;local&#x2F;apache2&#x2F;bin&#x2F;apxs</p>
-<p>按照zabbix要求配置php.ini，修改如下参数。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">memory_limit=128MB</span><br><span class="line">post_max_size=16MB</span><br><span class="line">upload_max_filesize=2M</span><br><span class="line">max_execution_time=300</span><br><span class="line">max_input_time=300</span><br><span class="line">always_populate_raw_post_data = -1（如果php版本是5.6.0及以上，这一项也需要修改）</span><br><span class="line">date.timezone=Asia/Shanghai</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装zabbix_server</strong></p>
-<p>下载zabbix源码压缩包并解压。</p>
-<p>创建zabbix用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupadd zabbix</span><br><span class="line">useradd -g zabbix zabbix</span><br></pre></td></tr></table></figure>
-
-<p>创建zabbix相关MySQL库（只有zabbix_server以及zabbix_proxy需要创建数据库）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br><span class="line">mysql&gt; create database zabbix character <span class="built_in">set</span> utf8 collate utf8_bin;</span><br><span class="line">mysql&gt; grant all privileges on zabbix.* to zabbix@localhost identified by <span class="string">&quot;zabbix&quot;</span>;</span><br><span class="line">mysql&gt; <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<p>进入zabbix源码的database&#x2F;mysql&#x2F;目录，按如下顺序导入三个sql文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot zabbix &lt; schema.sql</span><br><span class="line">mysql -uroot zabbix &lt; images.sql</span><br><span class="line">mysql -uroot zabbix &lt; data.sql</span><br></pre></td></tr></table></figure>
-
-<p>注：如果配置安装的是zabbix_server，则按照上述顺序导入sql文件，若安装的是zabbix_proxy，则只需要导入第一个文件schema.sql</p>
-<p>返回zabbix源码根目录，输入以下编译条件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/zabbix --enable-server --enable-agent --enable-proxy --with-mysql --with-net-snmp --with-libcurl</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>注：若只开启zabbix的server功能，可以在编译条件中删除–enable-agent –enable-proxy，上面我只是做演示用，具体还是以实际应用环境为主。</p>
-<p>安装好zabbix_server，便可以进sbin目录下运行zabbix_server。我在运行的时候还报了个错error while loading shared libraries: libmysqlclient.so.18。于是我妥妥的在MySQL的lib目录下找到了libmysqlclient.so.18，并软连到&#x2F;usr&#x2F;lib64，暂时解决。</p>
-<p><strong>安装zabbix_agent（Linux）</strong></p>
-<p>下载zabbix源码压缩包并解压。</p>
-<p>创建zabbix用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd zabbix</span><br></pre></td></tr></table></figure>
-
-<p>进入zabbix源码根目录，输入以下编译条件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/zabbix --enable-agent</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>编辑zabbix_agentd.conf，根据实际情况修改Server、ServerActive的IP以及Hostname</p>
-<p>运行客户端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/zabbix_agentd</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装zabbix_agente（Windows）</strong></p>
-<p>下载Zabbix pre-compiled agents中的windows平台客户端</p>
-<p>解压至监控主机C盘根目录</p>
-<p>复制解压目录中conf&#x2F;下的zabbix_agentd.win.conf到C盘根目录并改名zabbix_agentd.conf（路径可自定义）</p>
-<p>打开命令行，进入刚刚解压的zabbix_agent的目录，根据自己的操作系统，选择进入bin&#x2F;win32或者bin&#x2F;win64</p>
-<p>如果确定使用默认的配置文件路径，则直接输入命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zabbix_agentd.exe --install</span><br></pre></td></tr></table></figure>
-
-<p>若需要自定义zabbix_agentd.conf的路径，则安装命令为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zabbix_agentd.exe --config&lt;你的配置文件路径&gt; --install</span><br></pre></td></tr></table></figure>
-
-<p>安装成功后可以运行命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zabbix_agentd.exe --start</span><br></pre></td></tr></table></figure>
-
-<p>运行agent服务，或者在windows服务面板中开启该服务。</p>
-<p>若需要卸载该服务，则运行命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zabbix_agentd.exe --uninstall</span><br></pre></td></tr></table></figure>
-
-<p>至于zabbix_agentd.conf配置文件的编辑，则与上面Linux下的编辑内容一致。</p>
-<p><strong>安装zabbix web interface</strong></p>
-<p>因为zabbix的前端文件是用php写的，所以需要用支持php的web服务器，我选用的是Apache。所谓安装就是将zabbix源码根目录中frontends&#x2F;php下的所有文件复制到Apache的网站根目录，我偷了个懒，直接复制到Apache下htdocs了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> -r frontends/php /usr/local/apache/htdocs</span><br></pre></td></tr></table></figure>
-
-<p>复制完成后，在浏览器输入服务器的ip地址，开始在网页上跑一遍安装向导</p>
-<p><img data-src="https://statics.yvanz.com/zabbix1.png"></p>
-<p>第二步</p>
-<p>确定所有的软件先决条件是达标的。</p>
-<p><img data-src="https://statics.yvanz.com/zabbix2.png"></p>
-<p>第三步</p>
-<p>输入数据库的详细连接信息并连接成功（zabbix数据库必须是新建完成的）</p>
-<p><img data-src="https://statics.yvanz.com/zabbix3.png"></p>
-<p>第四步</p>
-<p>输入zabbix服务器的详细信息</p>
-<p><img data-src="https://statics.yvanz.com/zabbix4.png"></p>
-<p>第五步</p>
-<p>再次确认刚刚输入的信息</p>
-<p><img data-src="https://statics.yvanz.com/zabbix5.png"></p>
-<p>第六步</p>
-<p>Download the configuration file，然后上传至zabbix网页下conf&#x2F;文件夹中，比如我的zabbix网页存放在&#x2F;usr&#x2F;local&#x2F;apache&#x2F;htdocs&#x2F;，那么就需要将下载下来的文件存放至&#x2F;usr&#x2F;local&#x2F; apache&#x2F;htdocs&#x2F;conf&#x2F;</p>
-<p><img data-src="https://statics.yvanz.com/zabbix6.png"></p>
-<p>第七步</p>
-<p>完成安装。</p>
-<p><img data-src="https://statics.yvanz.com/zabbix7.png"></p>
-<p>第八步</p>
-<p>zabbix前端安装完毕，现在可以使用默认用户和密码登录了</p>
-<p>Username：Admin</p>
-<p>Password：zabbix</p>
-<p><img data-src="https://statics.yvanz.com/zabbix8.png"></p>
-<p><img data-src="https://statics.yvanz.com/zabbix9.1.png"></p>
-<p>更新启动脚本</p>
-<p>安装完毕后，按需在客户端和服务端复制启动脚本至&#x2F;etc&#x2F;init.d</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> zabbix源码目录/misc/init.d/fedora/core/zabbix_server /etc/init.d/zabbix_server</span><br><span class="line"><span class="built_in">cp</span> zabbix源码目录/misc/init.d/fedora/core/zabbix_agentd /etc/init.d/zabbix_agentd</span><br><span class="line"></span><br><span class="line">\<span class="comment">#给这两个文件加可执行权限</span></span><br><span class="line"><span class="built_in">chmod</span> +x /etc/init.d/zabbix_server</span><br><span class="line"><span class="built_in">chmod</span> +x /etc/init.d/zabbix_agentd</span><br><span class="line"></span><br><span class="line">\<span class="comment">#修改脚本文件的BASEDIR为zabbix实际安装目录并启动</span></span><br><span class="line">service zabbix_server start</span><br><span class="line">service zabbix_agentd start</span><br><span class="line">\<span class="comment">#加入开机启动项</span></span><br><span class="line">chkconfig zabbix_server on</span><br><span class="line">chkconfig zabbix_agentd on</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/10/24/zabbix-ins.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -937,38 +776,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>大家好我又来科（zhuang）普（bility）了。偶然林俊杰官网的密码泄露风波四起，想想有必要聊聊这方面的问题。</p>
-<p>首先我们生活在一个怎样的网络世界呢？来看个链接吧。</p>
-<p><a target="_blank" rel="noopener" href="http://www.wooyun.org/bugs/">http://www.wooyun.org/bugs/</a></p>
-<p>wooyuu所为何物？他们官方的介绍是这样的</p>
-<blockquote>
-<p>WooYun是一个位于厂商和安全研究者之间的安全问题反馈平台，在对安全问题进行反馈处理跟进的同时，为互联网安全研究者提供一个公益、学习、交流和研究的平台。其名字来源于目前互联网上的“云”，在这个不做“云”不好意思和人家打招呼的时代，网络安全相关的，无论是技术还是思路都会有点黑色的感觉，所以自然出现了乌云。</p>
-<p>你可以叫他乌云，或者巫云，或者我晕，但是我们坚信它是汇聚互联网安全研究者力量的，将带来暴风雨清洗一切的乌云。</p>
-</blockquote>
-<p>如果你点进链接大致浏览一遍，你就会发现几乎所有常用的互联网应用，都多多少少被爆过漏洞。这里不是想说网站存在漏洞是理所当然，而是想解释网站存在漏洞这个可能性在所难免，攻与防往往是相对发展的。加上互联网发达的今天，所谓的黑客技术门槛已然有所降低，有些零基础的有心之人拿着下载到的工具在线搜寻漏洞，然后根据漏洞再进行入侵已经变得不像想象中的那么困难。</p>
-<p>在这里我应该可以拿图举证：</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked1.jpg" alt="hacked1"></p>
-<p>这是我某一天例行检查服务器日志的时候看到的记录，这里有位仁兄在凌晨12点半的时候花了一个多小时的时间通过各种方式想找到我们服务器的漏洞（这大半夜的不睡觉想必也是蛮拼的），虽然无功而返，可是能发现漏洞信息交换的便捷，当某一个系统组件被爆出漏洞时，这些人就会根据自己掌握的这些信息在互联网上广撒网，如果网站的运维人员不及时跟进相关的漏洞信息，就容易让有心之人得逞。所以这需要网站背后的公司或个人进行持续的资金与人力投入，成本可谓大大的。</p>
-<p>接下来进入正题。</p>
-<p>虽然我不知道黑林俊杰官网的人是出于什么目的，但是大致有以下几个方面：</p>
-<ol>
-<li><p>对于自己所掌握的技术的自豪感，驱使有些人想通过拿下别人的网站获得自我认同。</p>
-</li>
-<li><p>增加自己手中用户数据库的内容</p>
-</li>
-<li><p>帮助网站寻找漏洞并提供解决方案，升级网站安全性</p>
-</li>
-</ol>
-<p>这里就主要说说第二点吧。不出意外的情况下，国内各种黑客的手中都有一些记录了别人账号和密码等敏感信息的数据库，他们拿着这些隐私数据能做很多事情，比如进你的网银花你的钱，用你的微信勾搭你的妹子（以上场景纯属虚构，如有雷同我不负责&#x3D;。&#x3D;）。如果顺利拿到林俊杰官网的用户数据，可以增加自己的数据库内容，因为很多用户的习惯是所有网站都使用相同的用户名和密码，如果顺利，黑客们就能用拿到的林俊杰官网的数据去撞库，测试他们想要的网站的信息。所以一再强调，我们要养成密码分级以及勤改密码的好习惯。</p>
-<p>比如你会遇到这样的场景：我一个很久很久没用的QQ号，为什么今天登陆上去被提示密码错误？没错啦，大致就是你的一些信息在别的地方被别人窃取，然后试出了你QQ的密码然后被修改了。</p>
-<p>更多密码泄露的原因可以点这里了解：<a target="_blank" rel="noopener" href="http://blog.unnoo.com/?p=2181">http://blog.unnoo.com/?p=2181</a></p>
-<p>最后，据说林俊杰官网泄露的数据是去年关站维护之前被拿到的数据，里面只包括用户名和密码。理论上不必有太大的恐慌。不过因为关站维护之后更新官网网站程序，用的数据库包含了旧官网的数据，所以维护好之后的新官网我们可以用之前注册的账号密码进行登陆。具体猜测可见我去年的一条微博，链接为<a target="_blank" rel="noopener" href="http://weibo.com/1686295857/Al296qPTI" title="http://weibo.com/1686295857/Al296qPTI">http://weibo.com/1686295857/Al296qPTI</a></p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked3.jpg" alt="hacked3"></p>
-<p>大概也是因为知道旧官网有被拖库吧，所以新官网开放之后，在我们登陆网站进入会员中心，时常提示修改密码，不知道各位还有没有印象。<br>&amp;nbsp;</p>
-<p>题外话：</p>
-<p>国内的环境是当有网站被爆出漏洞，一般容易开启某些不相关人员的嘲讽模式，可是嘲讽从来都不能解决问题，因为某一天你所依附的网络也有可能被入侵，被拖库，毕竟一般人用的网站程序，都是别人写好公布在网上的。</p>
-<p>如果你不作为，那么在那些有所作为的黑客面前，你将一无所有。这里的“你”包括所有互联网用户以及网站维护人员，peace~</p>
-<p>（本文如有技术逻辑错误，欢迎拍砖）</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/08/08/you-are-hacked.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.yvanz.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"style":null,"show_result":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言  一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。 谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。 马年春晚又格外引人注目，不仅仅是因为冯小刚亲自坐镇，担当总导演，更值得一提的是本届春晚">
+    <meta name="description" content="前言  一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。 谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微博春晚背后的技术故事">
 <meta property="og:url" content="https://www.yvanz.com/2015/04/01/technical-story-behind-the-spring-festival-weibo.html">
 <meta property="og:site_name" content="Yvanの平行时空">
-<meta property="og:description" content="前言  一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。 谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。 马年春晚又格外引人注目，不仅仅是因为冯小刚亲自坐镇，担当总导演，更值得一提的是本届春晚">
+<meta property="og:description" content="前言  一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。 谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2015-04-01T15:55:29.000Z">
-<meta property="article:modified_time" content="2023-06-16T05:43:56.728Z">
+<meta property="article:modified_time" content="2023-06-19T02:30:49.955Z">
 <meta property="article:author" content="Yvan">
 <meta property="article:tag" content="转载学习">
 <meta property="article:tag" content="运维">
@@ -286,6 +286,8 @@
 </ul>
 <p>一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。</p>
 <p>谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。</p>
+<span id="more"></span>
+
 <p>马年春晚又格外引人注目，不仅仅是因为冯小刚亲自坐镇，担当总导演，更值得一提的是本届春晚首次将社交平台作为其与观众互动的主要途径，而新浪微博更是成为官方二维码独家合作方。在节目播出时，用户通用手机客户端，扫描屏幕右下角的官方二维码，即可参与春晚的话题讨论。不仅如此，参与讨论的观众，还可以免费获得微博红包，抽大奖的机会。如此一来，大大的提升了微博的活跃度瞬间提升，同时在线人数翻了几倍，给微博系统带来前所未有的访问压力。</p>
 <p>根据以往统计的数据，春晚期间微博的访问量将激增到日常水平的数倍之多，而瞬时发表量更是飙升数十倍，如此场景丝毫不亚于淘宝双11和12306抢票时的“盛况”。</p>
 <p>而最后的统计数据结果表明，马年春晚直播期间，微博的访问量和发表量都再创新高，而我们系统也自始至终平稳运行，经受住了此次高峰的考验。这成功的背后，是我们的工程师将近一个月的努力。其间面临了哪些问题，又是如何解决的呢？下面，我们一一为大家揭秘。</p>
