@@ -291,12 +291,12 @@
       overflow-x: hidden
     }
 
-     ::-moz-selection {
+    ::-moz-selection {
       background: #161920;
       color: #fff
     }
 
-     ::selection {
+    ::selection {
       background: #161920;
       color: #fff
     }
@@ -662,6 +662,7 @@
         display: -ms-flexbox;
         display: flex
       }
+
       .profile-block>div {
         width: 50%
       }
@@ -686,6 +687,7 @@
     }
 
     @media screen and (min-width: 40em) {
+
       .home .page__header,
       .profile .page__header,
       .work .page__header {
@@ -694,6 +696,7 @@
     }
 
     @media screen and (min-width: 40em) {
+
       .home .page__title,
       .home .page__meta,
       .profile .page__title,
@@ -750,6 +753,7 @@
         -webkit-transform: translateY(-30px);
         transform: translateY(-30px)
       }
+
       to {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -763,6 +767,7 @@
         -webkit-transform: translateY(-30px);
         transform: translateY(-30px)
       }
+
       to {
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -775,6 +780,7 @@
         -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
         transform: matrix(1, 0, 0, 1, 0, 0)
       }
+
       to {
         -webkit-transform: matrix(1.2, 0, 0, 1.2, 5, 0);
         transform: matrix(1.2, 0, 0, 1.2, 5, 0)
@@ -786,6 +792,7 @@
         -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
         transform: matrix(1, 0, 0, 1, 0, 0)
       }
+
       to {
         -webkit-transform: matrix(1.2, 0, 0, 1.2, 5, 0);
         transform: matrix(1.2, 0, 0, 1.2, 5, 0)
@@ -842,6 +849,7 @@
       from {
         -webkit-filter: hue-rotate(0deg)
       }
+
       to {
         -webkit-filter: hue-rotate(360deg)
       }
@@ -875,6 +883,7 @@
         box-shadow: 0 16px 16px rgba(0, 0, 0, 0.05);
         height: 220px
       }
+
       .stream-item:hover {
         box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1)
       }
@@ -969,6 +978,7 @@
       from {
         -webkit-filter: hue-rotate(0deg)
       }
+
       to {
         -webkit-filter: hue-rotate(360deg)
       }
@@ -1007,13 +1017,20 @@
   <footer class="footer" role="contentinfo">
     <div class="grid">
       <hr><span class="footer__copy" itemscope itemtype="http://schema.org/Organization">
+        <script type="text/javascript">
+          copyright = new Date();
+          update = copyright.getFullYear();
+          document.write("&copy; 2012 - " + update);
+        </script>
         <link itemprop="url" href="https://yvanz.com">&copy; 2012 - 2017
         <div class="powered-by">
           Power by <a class="theme-link" href="https://hexo.io">Hexo</a>
         </div>
-      </span></div>
+      </span>
+    </div>
   </footer>
-  <link type="text/css" rel="stylesheet" href="https://statics.yvanz.com/404/white/white-base.css" media="screen," handheld="true">
+  <link type="text/css" rel="stylesheet" href="https://statics.yvanz.com/404/white/white-base.css" media="screen,"
+    handheld="true">
 </body>
 
 </html>
