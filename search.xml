@@ -26,6 +26,48 @@
       </categories>
   </entry>
   <entry>
+    <title>2015，我若忙忙便是晴天</title>
+    <url>/2016/01/01/2015-in-busy.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>好像《<a href="http://www.yvanz.com/2015/08/01/half-year-note.html">半年记</a>》的时候把很多东西都写掉了。而且八月开始，整个工作节奏都提高了不知道多少个级别，连七夕都在加班，虽然好像那天跟我没什么关系。所以2015的下半年，恐怕一个大写的【忙】足以概括了。</p>
+<span id="more"></span>
+
+<p>以下大概是流水账吧：</p>
+<p>八月开始先折腾了会儿IP电话，中途自己当了逃兵就去干网站的事情了。九月把几个老站梳理了一遍，顺便给它们换了新家，接着就是一通优化和解决问题的过程。</p>
+<p>十月底因为网站被攻击挂马，整个部门就没再好受过了，公司的小伙伴基本都是连轴转。这种基础建设完善过程中的杂乱无章差不多是最让人痛苦的吧。服务器架构在调整，而调整的过程中将项目硬生生搬到集群环境里，在运维平台没有搭建起来的情况下，我们日常的维护工作就会增加一倍的工作量，若碰到线上项目出问题，简直就是雪上加霜。同时一众新项目如雨后春笋般面世，对资源的需求追赶着你要及时响应并提供资源支撑。boss们还希望在应对未来的场景时，提前储备好新的技术能力，所以我们还得分配一部分时间去学习文档和测试。</p>
+<p>我想我并不是一个抗压能力很好的员工，时时崩溃牢骚，想必我主管有我这样的员工，应该也是蛮心累的。只不过这半年也的确在基础技能上有长足的认识。毕竟我在合肥，学习到更多的是飘渺的技术概念和趋势，对于基础排障缺乏亲身的经历和处理经验。而基础排障对于技术概念的落地是一种必不可少的方法论。</p>
+<p>总的来说，SMM的IT转型还有很长的路要走，走在这条路上，应该还会经历很多很有趣的事情吧。希望明年可以让运维部门的能力更加分布式，让开发的项目也更加可移植。Nice future maybe.</p>
+<p>当然生活有得有失，下半年密集的工作让自己的身体开始有点小抗议，大概也是一种警示吧。而长期的技术实践，让自己闷骚文艺的一面竟退化的有些无以言表。希望2016年可以多读诗多听歌，不能瞎了生活里的小乐事。</p>
+<p>时间匆忙，大致只能回忆起过去一年的工作经历了，等春节的时候，好好想想其他想说的话吧，毕竟本命年还没彻底结束呢，晚安。</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>牢骚</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2016，好像一点都不6呢</title>
+    <url>/2017/01/01/2016-filled-with-trouble.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>现在回顾起来，倘若本命年必须遇到一些点儿背的事情的话，那从某种角度来说，2015年重新回来因为自以为的顺风顺水而沾沾自喜却放缓了学习和提高的脚步，大概是最麻痹自己的点儿背吧。</p>
+<span id="more"></span>
+
+<p>而这种点背，带来最直接的后果大概就是年初因为公司变动，当我想跳槽时，挑了几个有模有样的公司投了简历却拿不到offer吧。在那个被现实教训了一顿的当下，甚至联想到那些人到中年，肩上背负巨大责任却突遭不顺畅的职业生涯时，会有怎样的心情去面对这些挫折呢。</p>
+<p>下半年还是不可避免的因为年初的变动，自己变更了部门，也换了领导。只是从第一天过去便充满着压抑。而这种压抑，大概来自嗅到的一股不信任吧。</p>
+<p><img data-src="https://statics.yvanz.com/such_fun.png"></p>
+<p>这种事无巨细对我的怀疑以及平时对很多工作的不放权，让我从心底里觉得格格不入。只是这样的变化，终于不再是我记忆里的SMM，当然也不存在什么怀念和愚蠢的卖力。不过谈妥了所有的交易，的确是两不相欠。而我这一年积攒的能量，就去约好的地方发光发热啦。</p>
+<p>记得国庆假期从家回上海，在县城打了辆出租车去芜湖火车站。我只是惯例的跟司机说不用再带人了我包车走，他竟然很开心的样子，在微信里约朋友说回程遇到包车的了，中午回到了芜湖请车友们吃饭。而且跟我说路上有人招手遇到顺路的一起带上，他们的钱付给我为我省点车费。我付钱的时候建议我尽量支付宝转账，说支付宝上绑定了自己老婆的银行卡，可以直接提现到她卡里，这样不用让老婆担心自己留了私房钱。这些真性情的话给我很深刻的印象，一时间竟有些羡慕这位司机，希望自己在忙碌和迷茫时，有他那份平实和怡然自得。有时候回想起这些话，会想着，或许这才是一直努力工作和生活最该有的态度。</p>
+<p>总之除了一些生活上的小惊喜，这一整年还是充满的历练和波折。好在我还有一些些时间，不能一直沉湎于这样的情绪，得奋起直追了啊。林俊杰有一张专辑叫学不会，专辑介绍里有一句恍如reset。希望去新公司，我的整个工作状态和工作激情，也可以恍如reset。</p>
+<p>Peace.</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>牢骚</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git 服务器基于nginx配置http(s)协议</title>
     <url>/2016/06/01/Git-server-with-http(s)-protocol.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Git-HTTP协议简介"><a href="#Git-HTTP协议简介" class="headerlink" title="Git HTTP协议简介"></a>Git HTTP协议简介</h2><p>从git官方文档上看，git实现http(s)协议有两种方式</p>
@@ -70,27 +112,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2015，我若忙忙便是晴天</title>
-    <url>/2016/01/01/2015-in-busy.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>好像《<a href="http://www.yvanz.com/2015/08/01/half-year-note.html">半年记</a>》的时候把很多东西都写掉了。而且八月开始，整个工作节奏都提高了不知道多少个级别，连七夕都在加班，虽然好像那天跟我没什么关系。所以2015的下半年，恐怕一个大写的【忙】足以概括了。</p>
-<span id="more"></span>
-
-<p>以下大概是流水账吧：</p>
-<p>八月开始先折腾了会儿IP电话，中途自己当了逃兵就去干网站的事情了。九月把几个老站梳理了一遍，顺便给它们换了新家，接着就是一通优化和解决问题的过程。</p>
-<p>十月底因为网站被攻击挂马，整个部门就没再好受过了，公司的小伙伴基本都是连轴转。这种基础建设完善过程中的杂乱无章差不多是最让人痛苦的吧。服务器架构在调整，而调整的过程中将项目硬生生搬到集群环境里，在运维平台没有搭建起来的情况下，我们日常的维护工作就会增加一倍的工作量，若碰到线上项目出问题，简直就是雪上加霜。同时一众新项目如雨后春笋般面世，对资源的需求追赶着你要及时响应并提供资源支撑。boss们还希望在应对未来的场景时，提前储备好新的技术能力，所以我们还得分配一部分时间去学习文档和测试。</p>
-<p>我想我并不是一个抗压能力很好的员工，时时崩溃牢骚，想必我主管有我这样的员工，应该也是蛮心累的。只不过这半年也的确在基础技能上有长足的认识。毕竟我在合肥，学习到更多的是飘渺的技术概念和趋势，对于基础排障缺乏亲身的经历和处理经验。而基础排障对于技术概念的落地是一种必不可少的方法论。</p>
-<p>总的来说，SMM的IT转型还有很长的路要走，走在这条路上，应该还会经历很多很有趣的事情吧。希望明年可以让运维部门的能力更加分布式，让开发的项目也更加可移植。Nice future maybe.</p>
-<p>当然生活有得有失，下半年密集的工作让自己的身体开始有点小抗议，大概也是一种警示吧。而长期的技术实践，让自己闷骚文艺的一面竟退化的有些无以言表。希望2016年可以多读诗多听歌，不能瞎了生活里的小乐事。</p>
-<p>时间匆忙，大致只能回忆起过去一年的工作经历了，等春节的时候，好好想想其他想说的话吧，毕竟本命年还没彻底结束呢，晚安。</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>牢骚</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vsftp安装配置小记</title>
     <url>/2016/01/04/a-note-with-vsftp.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>每次安装ftp服务的时候，我都得折腾很长时间，可是需求本身很简单，配置文件的修改项也很少。所以还是记录一下安装配置流程，假如以后还需要再装呢。</p>
@@ -116,78 +137,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2016，好像一点都不6呢</title>
-    <url>/2017/01/01/2016-filled-with-trouble.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>现在回顾起来，倘若本命年必须遇到一些点儿背的事情的话，那从某种角度来说，2015年重新回来因为自以为的顺风顺水而沾沾自喜却放缓了学习和提高的脚步，大概是最麻痹自己的点儿背吧。</p>
-<span id="more"></span>
-
-<p>而这种点背，带来最直接的后果大概就是年初因为公司变动，当我想跳槽时，挑了几个有模有样的公司投了简历却拿不到offer吧。在那个被现实教训了一顿的当下，甚至联想到那些人到中年，肩上背负巨大责任却突遭不顺畅的职业生涯时，会有怎样的心情去面对这些挫折呢。</p>
-<p>下半年还是不可避免的因为年初的变动，自己变更了部门，也换了领导。只是从第一天过去便充满着压抑。而这种压抑，大概来自嗅到的一股不信任吧。</p>
-<p><img data-src="https://statics.yvanz.com/such_fun.png"></p>
-<p>这种事无巨细对我的怀疑以及平时对很多工作的不放权，让我从心底里觉得格格不入。只是这样的变化，终于不再是我记忆里的SMM，当然也不存在什么怀念和愚蠢的卖力。不过谈妥了所有的交易，的确是两不相欠。而我这一年积攒的能量，就去约好的地方发光发热啦。</p>
-<p>记得国庆假期从家回上海，在县城打了辆出租车去芜湖火车站。我只是惯例的跟司机说不用再带人了我包车走，他竟然很开心的样子，在微信里约朋友说回程遇到包车的了，中午回到了芜湖请车友们吃饭。而且跟我说路上有人招手遇到顺路的一起带上，他们的钱付给我为我省点车费。我付钱的时候建议我尽量支付宝转账，说支付宝上绑定了自己老婆的银行卡，可以直接提现到她卡里，这样不用让老婆担心自己留了私房钱。这些真性情的话给我很深刻的印象，一时间竟有些羡慕这位司机，希望自己在忙碌和迷茫时，有他那份平实和怡然自得。有时候回想起这些话，会想着，或许这才是一直努力工作和生活最该有的态度。</p>
-<p>总之除了一些生活上的小惊喜，这一整年还是充满的历练和波折。好在我还有一些些时间，不能一直沉湎于这样的情绪，得奋起直追了啊。林俊杰有一张专辑叫学不会，专辑介绍里有一句恍如reset。希望去新公司，我的整个工作状态和工作激情，也可以恍如reset。</p>
-<p>Peace.</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>牢骚</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅析电子邮件的发送</title>
-    <url>/2014/05/14/email-post.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/1.jpg" alt="1"></p>
-<p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
-<p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
-<p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
-<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#115;&#101;&#114;&#118;&#105;&#99;&#x65;&#64;&#x6a;&#106;&#x6c;&#105;&#x6e;&#46;&#x63;&#x6f;&#109;">&#115;&#101;&#114;&#118;&#105;&#99;&#x65;&#64;&#x6a;&#106;&#x6c;&#105;&#x6e;&#46;&#x63;&#x6f;&#109;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
-<p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
-<p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
-<p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
-<p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
-<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#x73;&#101;&#114;&#118;&#105;&#99;&#x65;&#64;&#106;&#106;&#108;&#x69;&#x6e;&#46;&#x63;&#111;&#x6d;">&#x73;&#101;&#114;&#118;&#105;&#99;&#x65;&#64;&#106;&#106;&#108;&#x69;&#x6e;&#46;&#x63;&#111;&#x6d;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
-<p>尾巴：</p>
-<p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
-<p>而我这么做的目的只有一个，那就是尽量保证入会的歌迷，在基本的邮件操作上是没有问题的，否则之后因为邮件发送不到位导致无法正常参加活动，最后责怪我们暗箱操作或者其他阴谋论指责，我个人是受不了的。</p>
-<p>最后尤其想要吐槽的就是，当事人觉得只要有组织就一定会有猫腻，只要有组织就有贪污。而我所在的某分支组织，目前为止的几年中，其表现可能会颠覆您的这种世界观。</p>
-<p>没办法，谁叫my big is always so high。哦，翻译过来就是我的逼格总是如此の高</p>
-<p>Peace~</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>装逼遭雷劈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新地球</title>
-    <url>/2014/12/01/brave-new-world.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
-<p><embed src="http://www.tudou.com/v/ijKdeiuKNI8/&bid=05&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></p>
-<p>完整歌词</p>
-<blockquote>
-<p>是一种蓝色的哀愁<br>我醒在荒凉的地球<br>纽约在海底的角落<br>阳光把大地变沙漠</p>
-<p><em>Rap：变了味道 人们才开始哀悼 讽刺的是空气很好 烟囱在水里无声飘摇 没了情调 人们为三餐奔跑</em><br><em>一切的爱恨都在自寻烦恼</em></p>
-<p>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
-<p>灰色的土地很枯燥<br>人们的娱乐好无聊<br>转圈圈不停转圈圈 然后摔倒<br>地平线眺望地平线 默默祈祷<br>没有飓风就好</p>
-<p>新地球他们跑不了 像是个圈套 只能庸庸碌碌到老<br>新地球 他们的监牢 只是眼神 悲伤难以去掉<br>新地球 从头来一遭 过去的错误不能一起重弹老调<br>新地球 我只想回到<br>那一年 那年 被遗忘的小岛<br>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
       </tags>
   </entry>
   <entry>
@@ -228,19 +177,33 @@
       </categories>
   </entry>
   <entry>
-    <title>伟大的渺小 —— Ever Cry, Never Life</title>
-    <url>/2017/12/29/ever-cry-never-life.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="开题"><a href="#开题" class="headerlink" title="开题"></a>开题</h2><p>两年，终于终于林俊杰发新作品了。从官宣开始知道了这张专辑想要传达概念，便在期待着全碟的发行。这次尝试一下根据每首歌对这次的作品做一个简单的介绍。<br>许久没写过这么多字了，见笑见笑。</p>
-<span id="more"></span>
-<h2 id="短悟"><a href="#短悟" class="headerlink" title="短悟"></a>短悟</h2><p>打开专辑，首先袭来的是林俊杰少有的 EDM 风格作品。初见歌单时，觉得《圣所》这样一个宗教感很强的名字，会不会只是一段大气的 melody ，为我们走进专辑而做铺陈。毕竟这样的方式，在以前的作品中已经出现过很多次。可是初听这首歌，即被反复且坚定的 Just follow me 所吸引，再细看歌词，显然对我们交待了整张专辑的主旨，“这支离破碎的部落哪里是初衷的圣所。Just follow me 我要带你前往圣所的地方”。<br>紧接着的便是全专的核心曲目——《伟大的渺小》，奠定着这张作品在诉说的中心思想：生活里基于爱的渺小举动，会有伟大的效应。<br>叙事性最强的暗黑三部曲，由起手式《穿越》开头，在沉睡中如重生一般穿越到出道的那个二零零三年，那个走入你我世界的那一年。穿越回这段时间，似乎想用自以为正确的事情来抹去一些犯过的错误。只是这轮回的伤害还是“因为爱我你选择离开我”。不过更绝望的恐怕是面对这样的情况，不想做任何挽回，“就让整个穿越变成一场误会 不能化解”吧。<br>再穿越回二零一六年，也就是这一年，林俊杰停下了脚步，宣布这一年不再有新专辑，取而代之的是一部纪录片和一首主题曲，开始主动 “走出” 你我的世界。然而即使这样内心也不见平复，从穿越梦中痛苦的醒来，夜不能寐的来到《四点四十四》。面对着这些年遭遇的一切，不知道自己是选择墨菲斯的红色药丸去追寻真理还是选择蓝色药丸继续安于现状。<br>一切找不到出口的不安感，甚至想到让别人“将我从悬崖推下”。内心的自己和现实的自己互相博弈，左脑和右脑彼此争吵，弥漫着无力痛苦的气氛。只是突然传来的钢琴声，好似上天指引了一个出口，而林俊杰给出的答案便是《我继续》，决定“抛开过去 跟自己为敌”，此时的歌声，充满着激昂和勇气，真好。<br>拜别三部曲，这张专辑为我们呈上了一首唱腔温暖的《剪云者》。虽然叙述的是一件憾事，可是这样有温度的唱法，让人听着不自觉的会扬起嘴角，神奇。<br>只是没有让我们“轻松”多久，又一首感情浓烈的《黑夜问白天》开始刺痛着我们的内心。作为第二主打，首播伊始众多歌迷就非常好奇是什么样的境遇，可以让林俊杰写出这么掏空自己的一首歌，甚至发布会的时候主持人也当面提问过。只是这些提问都被他逐一“搪塞”过去了。鉴于这样的三缄其口，看来这首歌背后的情绪我们实在是不要再去追问了吧。不过作为情绪的宣泄，就算跑调也好，破音也好，我们去唱这首歌的话，应该会有一种很酣畅的感觉吧，还是蛮期待以后去 KTV 和小伙伴们玩这首歌的。顺便提及一句，感觉这首歌所透露的情感，和他写给张惠妹的《身后》有很多相似之处，这两首歌大概是姐妹篇吧。<br>再来就是插播了他和徒弟们的《丹宁执着》。唔，早早曝光的一首歌，期待一下跨年他和徒弟们同台的表演。<br>摇滚之后是两首伴有悠扬管弦乐音色的歌曲，而且都以波澜大海为背景。只不过《身为风帆》更多的是忧郁心境下的顺其自然，而《小瓶子》则透露着平凡生活里点点滴滴的温暖。<br>最后整张专辑用《Until The Day》做点睛之笔。传达着，生活里面伤痛与幸福周而复始，只要有爱，一切就不会太糟。</p>
-<h2 id="尾巴"><a href="#尾巴" class="headerlink" title="尾巴"></a>尾巴</h2><p>这张专辑应该是林俊杰第二张侧重展示自己内心阴暗和挣扎的作品了，第一次向我们袒露还是十年前的《西界》。不过那一次作为歌迷的我来说，其实并没有太领情这种“掏心掏肺”，记得当初我在 QQ 空间写下了诸如“失望”的言辞。现在想起实在觉得惭愧，或许是我们把他框在了一个固定的区域进而禁锢了他的创作。好在十年过去了，现在的他行走的更在稳健和自信，你看，这张专辑已经鲜有芭乐曲调的作品了。而十年后的我们，也该跟上他变化的脚步了。<br>“未曾长夜哭恸，不足以语人生”，听过了他的《四点四十四》，对这句话便愈发的有共鸣。也许因为实实在在经历过那段日子，所以对人生的感悟才这么深刻吧：人生里面那么多坎坷，实在不应该一直沉溺在不幸的部分，而忘却另一部分美好的东西。<br>希望这张专辑可以给更多人温暖。</p>
-<p>Peace.</p>
+    <title>浅析电子邮件的发送</title>
+    <url>/2014/05/14/email-post.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先先看一下我们发出邮件后，一系列的邮件发送动作（图片来自网络）</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/1.jpg" alt="1"></p>
+<p>如图所示，文字表述就是：我们写好邮件后由1（Mail User Agent）</p>
+<p>负责投递到我们注册邮箱的邮箱服务器（Mail Transfer Agent），这时候我们的邮箱服务器判断投递目的地是本服务器还是别的邮箱服务器，这里我们抢林距离门票的邮件，当然都是从我们的MTA发送到jjlin.com的MTA。</p>
+<p>其次具体说明一下抢票邮件从我们的MTA到jjlin.com的MTA相关流程</p>
+<p>1.我们从QQ邮箱发送邮件至<a href="mailto:&#x73;&#x65;&#114;&#118;&#x69;&#99;&#101;&#x40;&#x6a;&#106;&#x6c;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x65;&#114;&#118;&#x69;&#99;&#101;&#x40;&#x6a;&#106;&#x6c;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#109;</a>时，因为两者用的是不同的MTA，所以QQ邮箱发出去之前，得通过DNS服务器查询jjlin.com的MX记录，如下图所示</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/2.jpg" alt="2"></p>
+<p>根据preference高低，选择对应的mail exchanger。这里jjlin.com只有一个mail exchanger，遂没有特别的选择。</p>
+<p>2.通过DNS服务器查询ms.jjlin.com的A记录，即具体到该mail exchanger的IP地址。</p>
+<p>3.如果连接失败，则返回不发连接异常（有的系统会有重试或者软弹回）</p>
+<p>4.如果连接成功，则使用SMTP协议发送到jjlin.com的MTA。这时候我们的抢票邮件就争先恐后的游到了版工的邮箱服务器，而我们的先后顺序在这一步就差不多定下来了。</p>
+<p>5.jjlin.com的MTA收到邮件后通过本身的Mail&amp;nbsp;Delivery&amp;nbsp;Agent分发到<a href="mailto:&#115;&#x65;&#x72;&#x76;&#105;&#99;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#46;&#x63;&#x6f;&#109;">&#115;&#x65;&#x72;&#x76;&#105;&#99;&#x65;&#x40;&#x6a;&#106;&#x6c;&#x69;&#110;&#46;&#x63;&#x6f;&#109;</a>。分发的过程中可能会再一次对前面安排好的顺序进行微调。当然这些调整都是人工干预不了的，请放心。所以我们常说的抢票拼人品，就是指的这些。</p>
+<p>尾巴：</p>
+<p>从这件事的当事人发布的一些质疑来看，首先有这么几个问题，当事人微博说道&amp;ldquo;用的腾讯微博的定时发送，后来又确认了无数次是八点发过去的&amp;rdquo;。可是我在腾讯微博的相关功能里面，没有找到腾讯微博可以定时发送邮件的功能，不知当事人可否在其QQ邮箱中查到相关的抢票邮件，以及投递状态。另外一个问题就是看到当事人的一些评论中表示林距离微博下面的评论也有其他歌迷没有抢到票，于是质疑&amp;ldquo;既然開始的時候名單就不夠，為什麼還會有沒搶到的情況&amp;rdquo;。这里我觉得有必要引出另外一个可能性，即是否按照规范发送了抢票邮件，众所周知我们的抢票都有相应的邮件主题格式以及内容要求。有些人可能觉得犯这种错误的人在少数，但事实是在我管理的某分会邮箱，却时常见到有些需要登记的歌迷没有按照规定主题发送登记邮件。而我采取的一种稍微极端的措施是对所有发送来的邮件制定规则自动分组，凡是不在&amp;ldquo;入会登记&amp;rdquo;文件夹的新邮件我都不会查看，只会直接删除，详见下图</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/3.jpg" alt="3"></p>
+<p>而我这么做的目的只有一个，那就是尽量保证入会的歌迷，在基本的邮件操作上是没有问题的，否则之后因为邮件发送不到位导致无法正常参加活动，最后责怪我们暗箱操作或者其他阴谋论指责，我个人是受不了的。</p>
+<p>最后尤其想要吐槽的就是，当事人觉得只要有组织就一定会有猫腻，只要有组织就有贪污。而我所在的某分支组织，目前为止的几年中，其表现可能会颠覆您的这种世界观。</p>
+<p>没办法，谁叫my big is always so high。哦，翻译过来就是我的逼格总是如此の高</p>
+<p>Peace~</p>
 ]]></content>
       <categories>
-        <category>文艺范</category>
+        <category>技术宅</category>
       </categories>
       <tags>
-        <tag>林俊杰</tag>
+        <tag>装逼遭雷劈</tag>
       </tags>
   </entry>
   <entry>
@@ -258,6 +221,43 @@
       <categories>
         <category>文艺范</category>
       </categories>
+  </entry>
+  <entry>
+    <title>新地球</title>
+    <url>/2014/12/01/brave-new-world.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>林俊杰2014年最新专辑《新地球》首播主打歌《新地球》，全球首播电台版</p>
+<p><embed src="http://www.tudou.com/v/ijKdeiuKNI8/&bid=05&resourceId=0_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed></p>
+<p>完整歌词</p>
+<blockquote>
+<p>是一种蓝色的哀愁<br>我醒在荒凉的地球<br>纽约在海底的角落<br>阳光把大地变沙漠</p>
+<p><em>Rap：变了味道 人们才开始哀悼 讽刺的是空气很好 烟囱在水里无声飘摇 没了情调 人们为三餐奔跑</em><br><em>一切的爱恨都在自寻烦恼</em></p>
+<p>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
+<p>灰色的土地很枯燥<br>人们的娱乐好无聊<br>转圈圈不停转圈圈 然后摔倒<br>地平线眺望地平线 默默祈祷<br>没有飓风就好</p>
+<p>新地球他们跑不了 像是个圈套 只能庸庸碌碌到老<br>新地球 他们的监牢 只是眼神 悲伤难以去掉<br>新地球 从头来一遭 过去的错误不能一起重弹老调<br>新地球 我只想回到<br>那一年 那年 被遗忘的小岛<br>新地球他们这么叫 脸上没有笑说着一口陌生腔调<br>新地球他们很骄傲 只是眼神有意无意的逃<br>新地球星星很闪耀 遥远海平面总是一条直线单调<br>新地球永远回不到<br>那一年 那年 被遗忘的小岛</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>伟大的渺小 —— Ever Cry, Never Life</title>
+    <url>/2017/12/29/ever-cry-never-life.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="开题"><a href="#开题" class="headerlink" title="开题"></a>开题</h2><p>两年，终于终于林俊杰发新作品了。从官宣开始知道了这张专辑想要传达概念，便在期待着全碟的发行。这次尝试一下根据每首歌对这次的作品做一个简单的介绍。<br>许久没写过这么多字了，见笑见笑。</p>
+<span id="more"></span>
+<h2 id="短悟"><a href="#短悟" class="headerlink" title="短悟"></a>短悟</h2><p>打开专辑，首先袭来的是林俊杰少有的 EDM 风格作品。初见歌单时，觉得《圣所》这样一个宗教感很强的名字，会不会只是一段大气的 melody ，为我们走进专辑而做铺陈。毕竟这样的方式，在以前的作品中已经出现过很多次。可是初听这首歌，即被反复且坚定的 Just follow me 所吸引，再细看歌词，显然对我们交待了整张专辑的主旨，“这支离破碎的部落哪里是初衷的圣所。Just follow me 我要带你前往圣所的地方”。<br>紧接着的便是全专的核心曲目——《伟大的渺小》，奠定着这张作品在诉说的中心思想：生活里基于爱的渺小举动，会有伟大的效应。<br>叙事性最强的暗黑三部曲，由起手式《穿越》开头，在沉睡中如重生一般穿越到出道的那个二零零三年，那个走入你我世界的那一年。穿越回这段时间，似乎想用自以为正确的事情来抹去一些犯过的错误。只是这轮回的伤害还是“因为爱我你选择离开我”。不过更绝望的恐怕是面对这样的情况，不想做任何挽回，“就让整个穿越变成一场误会 不能化解”吧。<br>再穿越回二零一六年，也就是这一年，林俊杰停下了脚步，宣布这一年不再有新专辑，取而代之的是一部纪录片和一首主题曲，开始主动 “走出” 你我的世界。然而即使这样内心也不见平复，从穿越梦中痛苦的醒来，夜不能寐的来到《四点四十四》。面对着这些年遭遇的一切，不知道自己是选择墨菲斯的红色药丸去追寻真理还是选择蓝色药丸继续安于现状。<br>一切找不到出口的不安感，甚至想到让别人“将我从悬崖推下”。内心的自己和现实的自己互相博弈，左脑和右脑彼此争吵，弥漫着无力痛苦的气氛。只是突然传来的钢琴声，好似上天指引了一个出口，而林俊杰给出的答案便是《我继续》，决定“抛开过去 跟自己为敌”，此时的歌声，充满着激昂和勇气，真好。<br>拜别三部曲，这张专辑为我们呈上了一首唱腔温暖的《剪云者》。虽然叙述的是一件憾事，可是这样有温度的唱法，让人听着不自觉的会扬起嘴角，神奇。<br>只是没有让我们“轻松”多久，又一首感情浓烈的《黑夜问白天》开始刺痛着我们的内心。作为第二主打，首播伊始众多歌迷就非常好奇是什么样的境遇，可以让林俊杰写出这么掏空自己的一首歌，甚至发布会的时候主持人也当面提问过。只是这些提问都被他逐一“搪塞”过去了。鉴于这样的三缄其口，看来这首歌背后的情绪我们实在是不要再去追问了吧。不过作为情绪的宣泄，就算跑调也好，破音也好，我们去唱这首歌的话，应该会有一种很酣畅的感觉吧，还是蛮期待以后去 KTV 和小伙伴们玩这首歌的。顺便提及一句，感觉这首歌所透露的情感，和他写给张惠妹的《身后》有很多相似之处，这两首歌大概是姐妹篇吧。<br>再来就是插播了他和徒弟们的《丹宁执着》。唔，早早曝光的一首歌，期待一下跨年他和徒弟们同台的表演。<br>摇滚之后是两首伴有悠扬管弦乐音色的歌曲，而且都以波澜大海为背景。只不过《身为风帆》更多的是忧郁心境下的顺其自然，而《小瓶子》则透露着平凡生活里点点滴滴的温暖。<br>最后整张专辑用《Until The Day》做点睛之笔。传达着，生活里面伤痛与幸福周而复始，只要有爱，一切就不会太糟。</p>
+<h2 id="尾巴"><a href="#尾巴" class="headerlink" title="尾巴"></a>尾巴</h2><p>这张专辑应该是林俊杰第二张侧重展示自己内心阴暗和挣扎的作品了，第一次向我们袒露还是十年前的《西界》。不过那一次作为歌迷的我来说，其实并没有太领情这种“掏心掏肺”，记得当初我在 QQ 空间写下了诸如“失望”的言辞。现在想起实在觉得惭愧，或许是我们把他框在了一个固定的区域进而禁锢了他的创作。好在十年过去了，现在的他行走的更在稳健和自信，你看，这张专辑已经鲜有芭乐曲调的作品了。而十年后的我们，也该跟上他变化的脚步了。<br>“未曾长夜哭恸，不足以语人生”，听过了他的《四点四十四》，对这句话便愈发的有共鸣。也许因为实实在在经历过那段日子，所以对人生的感悟才这么深刻吧：人生里面那么多坎坷，实在不应该一直沉溺在不幸的部分，而忘却另一部分美好的东西。<br>希望这张专辑可以给更多人温暖。</p>
+<p>Peace.</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
   </entry>
   <entry>
     <title>Facebook如何实现PB级别数据库自动化备份</title>
@@ -308,6 +308,55 @@
         <tag>转载学习</tag>
         <tag>运维</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>【草稿】GoAccess安装与使用</title>
+    <url>/2014/07/23/goaccess.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
+<p>首先在goaccess官方网站<a href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
+<p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
+<p>现在对下载的源码进行解压并编译</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --enable-geoip --enable-utf8 --没有安装geoip的话可以不选enable-geoip</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">安装完毕可以直接使用goaccess命令查看Apache日志，一般配合如下参数</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">goaccess -a -f &lt;日志文件路径&gt;</span><br></pre></td></tr></table></figure>
+
+<p>更多参数可以参见man goaccess或者<a href="http://goaccess.io/man">http://goaccess.io/man</a></p>
+<p>当然goaccess最吸引我的是可以生成html、csv、jscon之类的文件。直接在读取数据的时候导出成html等格式便可，如</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">goaccess -a -f &amp;lt;日志文件路径&amp;gt; &amp;gt; test.html</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的前提是必须设置好goaccess日志格式，配置文件默认路径为&#x2F;usr&#x2F;local&#x2F;etc&#x2F;goaccess.conf。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#date-format %d/%b/%Y</span></span><br><span class="line"><span class="comment">#log-format %h %^[%d:%^] &quot;%r&quot; %s %b</span></span><br><span class="line"><span class="comment">##删除上述两行前面#并保存即可</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>GoAccess</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你给我听好</title>
+    <url>/2014/06/07/gaokao2014.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
+
+<p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
+<p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
+<p>嗯？为什么今天家里没人？为什么我看的电视里放着一部电影？我就算看电视也应该在看喜羊羊的啊。不过我没有追究完这么多为什么，因为我似乎被电影的剧情吸引了。说起来也奇怪，这其实是一部在我觉得很老套的文艺片，里面女主对男主爱的死去活来，只不过男主感受不到。这样的情节不应该引起我的注意才对。</p>
+<p>而冗杂的电影里面，我现在只记得女主最后实在忍受不了跟男主争吵的桥段，大意不过是在控诉为何自己付出那么多却得不到自己想要的关心和爱护。</p>
+<p>或许是在看别人故事的缘故吧，我好像大致能懂这对纠结情侣之间的问题：其实看得出男主对女主是有感情的，相处的时候男主做的很多细节也体现了对女主的关心。可是男主比较委婉，不曾将这些细节和盘托出，所以女主也就没有切身的体会到被爱。而女主则比较简单直接，没有那么多委婉。她觉得什么方式是好的，就在用什么方式对待男主，时刻希望男主能感觉到她就在身边。可是这种自以为的方式，不过是她自己最能接受的方式罢了。换句话说就是，当别人用她的这种方式来关心她时，她才能感觉的到自己是有人爱护的。</p>
+<p>所以其实两个人都没有错的吧，不过是频段不一样，加上两个人在沟通之前都想表达自己其实更在乎对方，可没想到的是，这些话到了嘴边却变成了谁更伤害对方的现实。</p>
+<p>而这一切的美中不足，大概就是还没等我看到结局，就被开门声吵醒了。原来那部电影是个梦，我在看喜羊羊的时候睡着了……更悲催的是趁家里没人偷看电视这一行径被抓个现行又挨批了。只不过这时候我似乎想通了之前的问题：其实长辈们没错，他们教育我的时候有自己的既定立场，因为他们已经替我们经历过了未来我们可能经历过的事，所以有那些教育我的角度。理虽明白，可是我亦只有一个一生，我虽然希望能顺着长辈们的好意，按着他们的期望走下去，但其实我更想把我的一生定义成我想要的样子。也许未来的某个桥段我会出现差错，可是这出戏演起来，经历的更多我才能收获的更多吧。当然我也相信，等到我年纪老迈之时，可能对晚辈也会“指指点点”，因为我们总是用自以为最好的方式要求着别人。无他，这是表达爱意的一种方式。</p>
+<hr>
+<p>此段文与作文主体无关：</p>
+<p>写这作文不过是突发奇想，希望把我理解的安徽高考今年的作文题跟大家交流一下。而关于作文本身，希望轻吐槽，毕竟从09年到现在，时代也有点久远了，而且虽然努力回忆我高考时的心态来写这作文，可是好像引那样的故事也不太合适，哈哈。</p>
+<p>其实我还是很怀念那段高考时光的。因为好像全世界对我们都很关心，很宽容。印象最深的是有一次在后期冲刺阶段，我买了一本书之后打车回学校，司机看我拿着复习材料便问：“快高考了吧”。我简单的回了一句“是的”，笑一笑，便没了下文。没想到的是这位司机蜀黍在送我到学校之后很关心的叫我好好加油，别太累。还有一次便是考英语那天下午，我从家准备打车去考场，在招出租的时候有点争抢的意味，结果司机阿姨说带我吧，先把我送到考场要紧。</p>
+<p>当然最怀念的还是那段时间朋友们的鼓励和陪伴，也因为舍不得，所以甚至把当年六月份的短信都保留了下来发到了空间的日志上面。链接应该在<a href="http://user.qzone.qq.com/494732898/blog/1246375900">这里</a></p>
+<p>而远离高考这么多年，对我改变最大的应该是喜欢上了用笔在纸上写字的感觉。虽然当年作为母语是汉语的我，整个高中的语文考试几乎没及格过，唯一记得及格的就是高考的语文考试，但这不妨碍我现在喜欢那种笔尖在纸上婆娑的样子。唯一的缺点就是字略丑影响美感，哈哈。有图有真相~</p>
+<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019-759x1024.jpg" alt="IMG_20140607_205019"></a></p>
+<p>Peace.</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
   </entry>
   <entry>
     <title>手游服务器开发技术详解</title>
@@ -370,55 +419,6 @@
       </tags>
   </entry>
   <entry>
-    <title>你给我听好</title>
-    <url>/2014/06/07/gaokao2014.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="52" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=28432673&amp;auto=1&amp;height=32" width="298"></iframe>
-
-<p>嘿，最近快高考了，家里长辈的一些声音总是不绝于耳：别玩电脑了，快去复习，现在这么要求你是为了你好。</p>
-<p>是这样的吧，长辈都是关心我的，所以我照做肯定没有错。可是为什么心里却有很多压抑，总觉得自己这样的人生是不是就如同复制出来的人生，那么我自己又在什么地方呢？我总是爱冥想，想着一些莫名其妙的问题……</p>
-<p>嗯？为什么今天家里没人？为什么我看的电视里放着一部电影？我就算看电视也应该在看喜羊羊的啊。不过我没有追究完这么多为什么，因为我似乎被电影的剧情吸引了。说起来也奇怪，这其实是一部在我觉得很老套的文艺片，里面女主对男主爱的死去活来，只不过男主感受不到。这样的情节不应该引起我的注意才对。</p>
-<p>而冗杂的电影里面，我现在只记得女主最后实在忍受不了跟男主争吵的桥段，大意不过是在控诉为何自己付出那么多却得不到自己想要的关心和爱护。</p>
-<p>或许是在看别人故事的缘故吧，我好像大致能懂这对纠结情侣之间的问题：其实看得出男主对女主是有感情的，相处的时候男主做的很多细节也体现了对女主的关心。可是男主比较委婉，不曾将这些细节和盘托出，所以女主也就没有切身的体会到被爱。而女主则比较简单直接，没有那么多委婉。她觉得什么方式是好的，就在用什么方式对待男主，时刻希望男主能感觉到她就在身边。可是这种自以为的方式，不过是她自己最能接受的方式罢了。换句话说就是，当别人用她的这种方式来关心她时，她才能感觉的到自己是有人爱护的。</p>
-<p>所以其实两个人都没有错的吧，不过是频段不一样，加上两个人在沟通之前都想表达自己其实更在乎对方，可没想到的是，这些话到了嘴边却变成了谁更伤害对方的现实。</p>
-<p>而这一切的美中不足，大概就是还没等我看到结局，就被开门声吵醒了。原来那部电影是个梦，我在看喜羊羊的时候睡着了……更悲催的是趁家里没人偷看电视这一行径被抓个现行又挨批了。只不过这时候我似乎想通了之前的问题：其实长辈们没错，他们教育我的时候有自己的既定立场，因为他们已经替我们经历过了未来我们可能经历过的事，所以有那些教育我的角度。理虽明白，可是我亦只有一个一生，我虽然希望能顺着长辈们的好意，按着他们的期望走下去，但其实我更想把我的一生定义成我想要的样子。也许未来的某个桥段我会出现差错，可是这出戏演起来，经历的更多我才能收获的更多吧。当然我也相信，等到我年纪老迈之时，可能对晚辈也会“指指点点”，因为我们总是用自以为最好的方式要求着别人。无他，这是表达爱意的一种方式。</p>
-<hr>
-<p>此段文与作文主体无关：</p>
-<p>写这作文不过是突发奇想，希望把我理解的安徽高考今年的作文题跟大家交流一下。而关于作文本身，希望轻吐槽，毕竟从09年到现在，时代也有点久远了，而且虽然努力回忆我高考时的心态来写这作文，可是好像引那样的故事也不太合适，哈哈。</p>
-<p>其实我还是很怀念那段高考时光的。因为好像全世界对我们都很关心，很宽容。印象最深的是有一次在后期冲刺阶段，我买了一本书之后打车回学校，司机看我拿着复习材料便问：“快高考了吧”。我简单的回了一句“是的”，笑一笑，便没了下文。没想到的是这位司机蜀黍在送我到学校之后很关心的叫我好好加油，别太累。还有一次便是考英语那天下午，我从家准备打车去考场，在招出租的时候有点争抢的意味，结果司机阿姨说带我吧，先把我送到考场要紧。</p>
-<p>当然最怀念的还是那段时间朋友们的鼓励和陪伴，也因为舍不得，所以甚至把当年六月份的短信都保留了下来发到了空间的日志上面。链接应该在<a href="http://user.qzone.qq.com/494732898/blog/1246375900">这里</a></p>
-<p>而远离高考这么多年，对我改变最大的应该是喜欢上了用笔在纸上写字的感觉。虽然当年作为母语是汉语的我，整个高中的语文考试几乎没及格过，唯一记得及格的就是高考的语文考试，但这不妨碍我现在喜欢那种笔尖在纸上婆娑的样子。唯一的缺点就是字略丑影响美感，哈哈。有图有真相~</p>
-<p><a href="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019.jpg"><img data-src="http://www.yvanz.com/wp-content/uploads/2014/06/IMG_20140607_205019-759x1024.jpg" alt="IMG_20140607_205019"></a></p>
-<p>Peace.</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>【草稿】GoAccess安装与使用</title>
-    <url>/2014/07/23/goaccess.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天发现Linux服务器上面Apache的日志有点疑问，很多不知名的IP从我的服务器上get别的网站。在查找原因的过程中，也顺便把Apache日志分析工具搭起来了。这里我选的是goaccess。趁着没下班整理一下大概，有空再补充完善</p>
-<p>首先在goaccess官方网站<a href="http://goaccess.io/">http://goaccess.io/</a> 下载最新的源码进行安装</p>
-<p>在安装之前需要ncurses-devel以及ncurses-devel的支持。同时如果需要加入解析IP的功能，可以安装geoip-devel（不过我在试图安装geoip的过程中遇到了点疑惑，没有安装该组件）。</p>
-<p>现在对下载的源码进行解压并编译</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --enable-geoip --enable-utf8 --没有安装geoip的话可以不选enable-geoip</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">安装完毕可以直接使用goaccess命令查看Apache日志，一般配合如下参数</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">goaccess -a -f &lt;日志文件路径&gt;</span><br></pre></td></tr></table></figure>
-
-<p>更多参数可以参见man goaccess或者<a href="http://goaccess.io/man">http://goaccess.io/man</a></p>
-<p>当然goaccess最吸引我的是可以生成html、csv、jscon之类的文件。直接在读取数据的时候导出成html等格式便可，如</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">goaccess -a -f &amp;lt;日志文件路径&amp;gt; &amp;gt; test.html</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的前提是必须设置好goaccess日志格式，配置文件默认路径为&#x2F;usr&#x2F;local&#x2F;etc&#x2F;goaccess.conf。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#date-format %d/%b/%Y</span></span><br><span class="line"><span class="comment">#log-format %h %^[%d:%^] &quot;%r&quot; %s %b</span></span><br><span class="line"><span class="comment">##删除上述两行前面#并保存即可</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>GoAccess</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>无冕歌王——林俊杰</title>
     <url>/2014/06/29/golden-melody-jjlin.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -454,23 +454,6 @@
 ]]></content>
       <categories>
         <category>一开始</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>半年记</title>
-    <url>/2015/08/01/half-year-note.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=27560017&amp;auto=1&amp;height=66" width="330"></iframe>
-
-<p>如我六月初申请离职时谈到的，自己总是一个对时间点比较在意的人：上半年的决定，总是希望能在上半年结束掉。所以很感激合肥公司的领导能理解我的固执，在六月的尾巴帮我成功离职了。</p>
-<p>说到这家合肥的公司，我总是抱以最大的期许希望她能成功。因为我希望我的合肥有更多说得上的互联网公司（乐堂就不提了，瞧不上之）；因为我曾参与其中，亲眼见证了一个产品诞生路上的坎坷。我也庆幸自己曾参与于这样一个创业团队，在这里我实实在在的开拓了视野。虽然因为自己个人的原因中途从中掉队，但离开后却不妨碍我祝福她。而最真切的祝福大概就是希望她发展的好到我以后会为我当下的决定后悔吧。</p>
-<p>每天无事可做但工资尚可的上半年，自己陷入了一个很惶恐的心境。而从合肥离职后，算是结束了这样的生活。可能自己生来就是工作狂吧，竟发现13年在上海时，每天自己留下来加班的生活是最让自己热血沸腾的时候。所以赋闲下来之后，当上海的领导来找我时，我犹豫了一些日子最终答应了重新回来折腾一番。</p>
-<p>回来的这段时间，果不其然有满满的工作安排，尤记得入职第一天面临扑面而来的任务时，内心亢奋的感觉，用一句话比喻就像是天晴了雨停了感觉自己又行了。就像后来调侃似的说，在这里两个星期做的事情，完全相当于在合肥待两年做的事情。只不过这里的忙碌也剥夺了平时学习的时间和热情，而且在推进工作计划过程中还会因为一些突发事件打乱自己的节奏。目前更多的是感觉自己像个消防员，工作起来还是很被动，没办法专注于自己的计划。希望接下来能适应这种节奏，然后看能不能改变公司现在面临的这种尴尬，不能总想着灭火才是。而对于另一个回来的原因，希望自己能如当初跟朋友聊天时所说的那样，保留好最初的想法，希望不会因为冲动而坏了念想。</p>
-<p>寡欢清淡的上半年，和可想而知充实到死的下半年。这样的本命年还真的是让人印象深刻，也希望下一个本命年能因为现在的决定而变得更不一样。</p>
-<p>2015.08.01</p>
-<p>于上海</p>
-]]></content>
-      <categories>
-        <category>文艺范</category>
       </categories>
   </entry>
   <entry>
@@ -520,33 +503,41 @@
       </tags>
   </entry>
   <entry>
-    <title>开启HTTPS加密连接</title>
-    <url>/2014/09/26/https-connect.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为在弄心脏滴血的漏洞修复，于是兴起试了试网站的https连接，麻溜把步骤记下来。</p>
-<p>首先准备https连接必须要的组件openssl。因为修复漏洞，我直接在<a href="http://www.openssl.org/">官网</a>下载最新版然后源码安装，源码安装三大金刚命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/config --prefix=/usr/local/openssl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+    <title>半年记</title>
+    <url>/2015/08/01/half-year-note.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=27560017&amp;auto=1&amp;height=66" width="330"></iframe>
 
-<p>安装完毕配置成本机命令：重命名已有的openssl命令，并在profile文件夹中添加&#x2F;usr&#x2F;local&#x2F;openssl，同时创建软连到&#x2F;usr&#x2F;bin&#x2F;openssl</p>
-<p>其次修改Apache配置文件：</p>
-<p>启用组件mod_ssl.so和mod_socache_shmcb.so</p>
-<p>启用配置文件conf&#x2F;extra&#x2F;httpd-ssl.conf</p>
-<p>生成ssl证书</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#生成私钥key文件</span></span><br><span class="line">openssl genrsa -des3 -out server.key 1024</span><br><span class="line"><span class="comment">#生成证书签名请求csr文件，并按要求填写相关信息</span></span><br><span class="line">openssl req -new -key server.key -out server.csr</span><br><span class="line"><span class="comment">#自签证。或者省略这一步，将csr文件和key文件提交给权威证书颁发机构</span></span><br><span class="line">openssl x509 -req -days 700 -<span class="keyword">in</span> server.csr -signkey server.key -out server.crt</span><br></pre></td></tr></table></figure>
+<p>如我六月初申请离职时谈到的，自己总是一个对时间点比较在意的人：上半年的决定，总是希望能在上半年结束掉。所以很感激合肥公司的领导能理解我的固执，在六月的尾巴帮我成功离职了。</p>
+<p>说到这家合肥的公司，我总是抱以最大的期许希望她能成功。因为我希望我的合肥有更多说得上的互联网公司（乐堂就不提了，瞧不上之）；因为我曾参与其中，亲眼见证了一个产品诞生路上的坎坷。我也庆幸自己曾参与于这样一个创业团队，在这里我实实在在的开拓了视野。虽然因为自己个人的原因中途从中掉队，但离开后却不妨碍我祝福她。而最真切的祝福大概就是希望她发展的好到我以后会为我当下的决定后悔吧。</p>
+<p>每天无事可做但工资尚可的上半年，自己陷入了一个很惶恐的心境。而从合肥离职后，算是结束了这样的生活。可能自己生来就是工作狂吧，竟发现13年在上海时，每天自己留下来加班的生活是最让自己热血沸腾的时候。所以赋闲下来之后，当上海的领导来找我时，我犹豫了一些日子最终答应了重新回来折腾一番。</p>
+<p>回来的这段时间，果不其然有满满的工作安排，尤记得入职第一天面临扑面而来的任务时，内心亢奋的感觉，用一句话比喻就像是天晴了雨停了感觉自己又行了。就像后来调侃似的说，在这里两个星期做的事情，完全相当于在合肥待两年做的事情。只不过这里的忙碌也剥夺了平时学习的时间和热情，而且在推进工作计划过程中还会因为一些突发事件打乱自己的节奏。目前更多的是感觉自己像个消防员，工作起来还是很被动，没办法专注于自己的计划。希望接下来能适应这种节奏，然后看能不能改变公司现在面临的这种尴尬，不能总想着灭火才是。而对于另一个回来的原因，希望自己能如当初跟朋友聊天时所说的那样，保留好最初的想法，希望不会因为冲动而坏了念想。</p>
+<p>寡欢清淡的上半年，和可想而知充实到死的下半年。这样的本命年还真的是让人印象深刻，也希望下一个本命年能因为现在的决定而变得更不一样。</p>
+<p>2015.08.01</p>
+<p>于上海</p>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【转载】删除并禁用历史修订功能</title>
+    <url>/2014/05/22/hisedit.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此为转载文章，原链接：<a href="http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html">http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html</a></p>
+<p>1.禁用 WordPress 文章修订历史功能</p>
+<p>打开 WordPress 根目录下的 wp-config.php 文件，添加下面的代码即可：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="title function_ invoke__">define</span>(<span class="string">&quot;WP_POST_REVISIONS&quot;</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
 
-<p>将生成好的server.crt以及server.key复制到httpd-ssl.conf配置文件中记录的位置。因为我除了servername之外没修改httpd-ssl.conf中其他的设置项，所以复制到了它默认的conf文件夹下。</p>
-<p>准备工作就绪之后重启Apache使上面的配置生效，如此在不出意外的情况下，就能使用HTTPS协议访问网页了。当然，因为我们的网站证书没有注册，所以打开网页的时候IE浏览器会提示网站安全证书存在问题。</p>
-<p>Nginx配置</p>
-<p>将以下放入server段</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line"><span class="comment">#定义证书crt文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate</span> /root/server.crt;</span><br><span class="line"><span class="comment">#定义私钥key文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate_key</span> /root/server.key;</span><br></pre></td></tr></table></figure>
+<p>2.删除 WordPress 已有的文章修订记录</p>
+<p>上面也说过，WordPress 文章的修订记录，都是被写入了数据库，所以我们需要删除MySQL数据库中有关的语句SQL 如下（直接删除即可）：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_postmeta <span class="keyword">WHERE</span> post_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type <span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_term_relationships <span class="keyword">WHERE</span> object_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
-<p><strong>附：<a href="http://netkiller.github.io/cryptography/openssl/format.html">常见SSL证书格式转换</a></strong></p>
+<p>OK，搞定了，操作完上面的两部，以后在wordpress写文，将不会产生历史修订，所以数据库也不会变的庞大！</p>
 ]]></content>
       <categories>
         <category>技术宅</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>Apache</tag>
+        <tag>Wordpress</tag>
       </tags>
   </entry>
   <entry>
@@ -574,24 +565,33 @@
       </tags>
   </entry>
   <entry>
-    <title>【转载】删除并禁用历史修订功能</title>
-    <url>/2014/05/22/hisedit.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此为转载文章，原链接：<a href="http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html">http://www.aips.me/disable-and-delete-wordpress-revision-history-of-a-method.html</a></p>
-<p>1.禁用 WordPress 文章修订历史功能</p>
-<p>打开 WordPress 根目录下的 wp-config.php 文件，添加下面的代码即可：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="title function_ invoke__">define</span>(<span class="string">&quot;WP_POST_REVISIONS&quot;</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+    <title>开启HTTPS加密连接</title>
+    <url>/2014/09/26/https-connect.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为在弄心脏滴血的漏洞修复，于是兴起试了试网站的https连接，麻溜把步骤记下来。</p>
+<p>首先准备https连接必须要的组件openssl。因为修复漏洞，我直接在<a href="http://www.openssl.org/">官网</a>下载最新版然后源码安装，源码安装三大金刚命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/config --prefix=/usr/local/openssl</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 
-<p>2.删除 WordPress 已有的文章修订记录</p>
-<p>上面也说过，WordPress 文章的修订记录，都是被写入了数据库，所以我们需要删除MySQL数据库中有关的语句SQL 如下（直接删除即可）：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_postmeta <span class="keyword">WHERE</span> post_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type <span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_term_relationships <span class="keyword">WHERE</span> object_id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>);</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> wp_posts <span class="keyword">WHERE</span> post_type<span class="operator">=</span><span class="string">&#x27;revision&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>安装完毕配置成本机命令：重命名已有的openssl命令，并在profile文件夹中添加&#x2F;usr&#x2F;local&#x2F;openssl，同时创建软连到&#x2F;usr&#x2F;bin&#x2F;openssl</p>
+<p>其次修改Apache配置文件：</p>
+<p>启用组件mod_ssl.so和mod_socache_shmcb.so</p>
+<p>启用配置文件conf&#x2F;extra&#x2F;httpd-ssl.conf</p>
+<p>生成ssl证书</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#生成私钥key文件</span></span><br><span class="line">openssl genrsa -des3 -out server.key 1024</span><br><span class="line"><span class="comment">#生成证书签名请求csr文件，并按要求填写相关信息</span></span><br><span class="line">openssl req -new -key server.key -out server.csr</span><br><span class="line"><span class="comment">#自签证。或者省略这一步，将csr文件和key文件提交给权威证书颁发机构</span></span><br><span class="line">openssl x509 -req -days 700 -<span class="keyword">in</span> server.csr -signkey server.key -out server.crt</span><br></pre></td></tr></table></figure>
 
-<p>OK，搞定了，操作完上面的两部，以后在wordpress写文，将不会产生历史修订，所以数据库也不会变的庞大！</p>
+<p>将生成好的server.crt以及server.key复制到httpd-ssl.conf配置文件中记录的位置。因为我除了servername之外没修改httpd-ssl.conf中其他的设置项，所以复制到了它默认的conf文件夹下。</p>
+<p>准备工作就绪之后重启Apache使上面的配置生效，如此在不出意外的情况下，就能使用HTTPS协议访问网页了。当然，因为我们的网站证书没有注册，所以打开网页的时候IE浏览器会提示网站安全证书存在问题。</p>
+<p>Nginx配置</p>
+<p>将以下放入server段</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line"><span class="comment">#定义证书crt文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate</span> /root/server.crt;</span><br><span class="line"><span class="comment">#定义私钥key文件位置</span></span><br><span class="line"><span class="attribute">ssl_certificate_key</span> /root/server.key;</span><br></pre></td></tr></table></figure>
+
+<p><strong>附：<a href="http://netkiller.github.io/cryptography/openssl/format.html">常见SSL证书格式转换</a></strong></p>
 ]]></content>
       <categories>
         <category>技术宅</category>
       </categories>
       <tags>
-        <tag>Wordpress</tag>
+        <tag>Linux</tag>
+        <tag>Apache</tag>
       </tags>
   </entry>
   <entry>
@@ -736,26 +736,6 @@
       </tags>
   </entry>
   <entry>
-    <title>本地YUM源</title>
-    <url>/2015/07/16/local-yumrepo.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>建立本地YUM源的初衷是按照自己的需求打包rpm包并在内网装机时直接部署。所以先来介绍一下RPM包的打包工具，我选择的是FPM来打包。</p>
-<p>FPM on&amp;nbsp;github：<a href="https://github.com/jordansissel/fpm">https://github.com/jordansissel/fpm</a></p>
-<p>FPM安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#FPM基于ruby开发，所以先yum安装ruby以及rubygems</span></span><br><span class="line">yum install ruby rubygems ruby-devel ruby-rdoc rpm-build gcc -y</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除默认RubyGems源并添加使用淘宝的RubyGems源</span></span><br><span class="line">gem sources --remove http://rubygems.org/</span><br><span class="line">gem sources -a https://ruby.taobao.org/</span><br><span class="line">gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://ruby.taobao.org</span><br><span class="line"><span class="comment"># 请确保只有 ruby.taobao.org</span></span><br><span class="line"></span><br><span class="line">gem install fpm  <span class="comment">#使用gem安装fpm</span></span><br></pre></td></tr></table></figure>
-
-<p>FPM使用编译好的软件目录打包RPM，所以在打包之前，需要先编译好软件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FPM常用打包命令解析（更多命令请fpm --<span class="built_in">help</span>）：</span><br><span class="line">fpm -s <span class="built_in">dir</span> \  <span class="comment">#定义导入的是何种类型</span></span><br><span class="line">-t rpm \  <span class="comment">#定义输出的包是何种类型</span></span><br><span class="line">-n smm-nginx \  <span class="comment">#定义包的名称</span></span><br><span class="line">-v 1.8.0 \  <span class="comment">#定义版本信息</span></span><br><span class="line">--iteration 1 \  <span class="comment">#定义周期版本号</span></span><br><span class="line">-d <span class="string">&#x27;pcre &gt;= 7.8&#x27;</span> \  <span class="comment">#定义依赖，可多次使用该参数</span></span><br><span class="line">-d <span class="string">&#x27;pcre-static &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;pcre-devel &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-perl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-static &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-devel &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl098e &gt;= 0.9.8e&#x27;</span> \</span><br><span class="line">-m  \  <span class="comment">#定义维护者，一般留邮箱</span></span><br><span class="line">--vendor SMM IT \  <span class="comment">#定义RPM包的提供者</span></span><br><span class="line">--description SMM Nginx Version \  <span class="comment">#定义包的描述</span></span><br><span class="line">--url http://www.smm.cn \  <span class="comment">#定义链接</span></span><br><span class="line">--before-install pre-nginx.sh \  <span class="comment">#定义安装前运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--after-remove \  <span class="comment">#定义卸载后运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--rpm-init nginx \  <span class="comment">#定义安装后需要键入系统服务的运行脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">/usr/local/webserver/nginx/  <span class="comment">#定义编译后的程序路径</span></span><br></pre></td></tr></table></figure>
-
-<p>有了自定义的RPM之后，就可以自建本地yum源了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install createrepo -y</span><br><span class="line">createrepo -p -d -o /yum/Packages/ /yum/Packages/   <span class="comment">#新建源</span></span><br><span class="line">createrepo --update /yum/Packages   <span class="comment">#更新源</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LVS详解及基于LVS实现web服务器负载均衡</title>
     <url>/2015/06/02/lvs-info-lvs-web.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>LVS(Linux Virtual Server)Linux虚拟服务器，是一个虚拟的服务器集群系统。本项目在1998年5月由章文嵩博士成立，是中国国内最早出现的自由软件项目之一。通过LVS提供的负载均衡技术和Linux操作系统可实现一个高性能、高可用的服务器群集，从而以低成本实现最优的服务性能。</p>
@@ -857,6 +837,26 @@
       </tags>
   </entry>
   <entry>
+    <title>本地YUM源</title>
+    <url>/2015/07/16/local-yumrepo.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>建立本地YUM源的初衷是按照自己的需求打包rpm包并在内网装机时直接部署。所以先来介绍一下RPM包的打包工具，我选择的是FPM来打包。</p>
+<p>FPM on&amp;nbsp;github：<a href="https://github.com/jordansissel/fpm">https://github.com/jordansissel/fpm</a></p>
+<p>FPM安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#FPM基于ruby开发，所以先yum安装ruby以及rubygems</span></span><br><span class="line">yum install ruby rubygems ruby-devel ruby-rdoc rpm-build gcc -y</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除默认RubyGems源并添加使用淘宝的RubyGems源</span></span><br><span class="line">gem sources --remove http://rubygems.org/</span><br><span class="line">gem sources -a https://ruby.taobao.org/</span><br><span class="line">gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://ruby.taobao.org</span><br><span class="line"><span class="comment"># 请确保只有 ruby.taobao.org</span></span><br><span class="line"></span><br><span class="line">gem install fpm  <span class="comment">#使用gem安装fpm</span></span><br></pre></td></tr></table></figure>
+
+<p>FPM使用编译好的软件目录打包RPM，所以在打包之前，需要先编译好软件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FPM常用打包命令解析（更多命令请fpm --<span class="built_in">help</span>）：</span><br><span class="line">fpm -s <span class="built_in">dir</span> \  <span class="comment">#定义导入的是何种类型</span></span><br><span class="line">-t rpm \  <span class="comment">#定义输出的包是何种类型</span></span><br><span class="line">-n smm-nginx \  <span class="comment">#定义包的名称</span></span><br><span class="line">-v 1.8.0 \  <span class="comment">#定义版本信息</span></span><br><span class="line">--iteration 1 \  <span class="comment">#定义周期版本号</span></span><br><span class="line">-d <span class="string">&#x27;pcre &gt;= 7.8&#x27;</span> \  <span class="comment">#定义依赖，可多次使用该参数</span></span><br><span class="line">-d <span class="string">&#x27;pcre-static &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;pcre-devel &gt;= 7.8&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-perl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-static &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl-devel &gt;= 1.0.1e&#x27;</span> \</span><br><span class="line">-d <span class="string">&#x27;openssl098e &gt;= 0.9.8e&#x27;</span> \</span><br><span class="line">-m  \  <span class="comment">#定义维护者，一般留邮箱</span></span><br><span class="line">--vendor SMM IT \  <span class="comment">#定义RPM包的提供者</span></span><br><span class="line">--description SMM Nginx Version \  <span class="comment">#定义包的描述</span></span><br><span class="line">--url http://www.smm.cn \  <span class="comment">#定义链接</span></span><br><span class="line">--before-install pre-nginx.sh \  <span class="comment">#定义安装前运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--after-remove \  <span class="comment">#定义卸载后运行的脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">--rpm-init nginx \  <span class="comment">#定义安装后需要键入系统服务的运行脚本，按需添加（此处需使用完整路径）</span></span><br><span class="line">/usr/local/webserver/nginx/  <span class="comment">#定义编译后的程序路径</span></span><br></pre></td></tr></table></figure>
+
+<p>有了自定义的RPM之后，就可以自建本地yum源了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install createrepo -y</span><br><span class="line">createrepo -p -d -o /yum/Packages/ /yum/Packages/   <span class="comment">#新建源</span></span><br><span class="line">createrepo --update /yum/Packages   <span class="comment">#更新源</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL二进制日志安全删除</title>
     <url>/2014/05/30/mysql-bin-log.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一、Reset master</p>
@@ -899,6 +899,53 @@
 <p>expire_logs_days＝5 &amp;nbsp;&amp;nbsp;–表示自动删除5天以前的日志</p>
 <p>备注：当有备机的时候一定要注意master对slave的影响。</p>
 ]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL主从复制</title>
+    <url>/2014/05/30/mysql-master-slave.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
+<ul>
+<li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
+<p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
+</li>
+<li><p>修改从数据库配置文件my.cnf（or my.ini）</p>
+<p>设置server_id&#x3D;2 重启从服务器MySQL服务</p>
+</li>
+<li><p>在主数据库新建一个用来复制的用户（下划线处可自定义）</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%（此处也可定义为自己的从服务器IP）&#x27;</span>IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;slavepass&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在新建数据快照或者开启复制进程之前，需要定位主服务器二进制日志的坐标</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; FLUSH TABLES WITH READ LOCK;    --对于InnoDB表，该操作还会锁定commit操作</span><br><span class="line">mysql&gt; SHOW MASTER STATUS;    --记录file和position的值。这条命令最好新建一个会话再执行。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>若你的主数据库已经存有数据，并且你希望从服务器同步这些数据。那么你需要新建一个数据快照。一般新建数据快照的方式有两种：MySQLdump；直接拷贝数据文件。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysqldump --all-databases --master-data &gt; dbdump.db --该事例表示将所有数据库导出到一个名为dbdump.db的文件中，附加的 --master-data命令，官方文档解释了一大堆，看着似懂非懂，反正都加上吧-。- 如果你的数据库比较大，那么将原始数据文件直接复制到从服务器比使用mysqldump要效率很多。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>解锁主数据库</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; UNLOCK TABLES;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将主数据库的dump出的文件导入到从服务器</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysql &lt; dbdump.db</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在从服务器开启复制进程</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE;  <span class="comment">--一般情况下是启动不了的，必须先change master to </span></span><br><span class="line">mysql<span class="operator">&gt;</span> CHANGE MASTER <span class="keyword">TO</span></span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_HOST<span class="operator">=</span><span class="string">&#x27;master_host_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_USER<span class="operator">=</span><span class="string">&#x27;replication_user_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;replication_password&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_FILE<span class="operator">=</span><span class="string">&#x27;recorded_log_file_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_POS<span class="operator">=</span>recorded_log_position;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE; </span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> slave status \G <span class="comment">--检查Slave_IO_Running以及Slave_SQL_Running，如果都为yes则主从复制配置成功。若不成功，该命令可以看到相关报错。</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>技术宅</category>
       </categories>
@@ -1098,53 +1145,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL主从复制</title>
-    <url>/2014/05/30/mysql-master-slave.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>配置主从复制的前提，是主从两个MySQL版本号最好一致。然后我们来看看如何配置：</p>
-<ul>
-<li><p>修改主数据库配置文件my.cnf（or my.ini）</p>
-<p>开启二进制日志 设置server_id&#x3D;1 重启主服务器MySQL服务</p>
-</li>
-<li><p>修改从数据库配置文件my.cnf（or my.ini）</p>
-<p>设置server_id&#x3D;2 重启从服务器MySQL服务</p>
-</li>
-<li><p>在主数据库新建一个用来复制的用户（下划线处可自定义）</p>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%（此处也可定义为自己的从服务器IP）&#x27;</span>IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;slavepass&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在新建数据快照或者开启复制进程之前，需要定位主服务器二进制日志的坐标</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; FLUSH TABLES WITH READ LOCK;    --对于InnoDB表，该操作还会锁定commit操作</span><br><span class="line">mysql&gt; SHOW MASTER STATUS;    --记录file和position的值。这条命令最好新建一个会话再执行。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>若你的主数据库已经存有数据，并且你希望从服务器同步这些数据。那么你需要新建一个数据快照。一般新建数据快照的方式有两种：MySQLdump；直接拷贝数据文件。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysqldump --all-databases --master-data &gt; dbdump.db --该事例表示将所有数据库导出到一个名为dbdump.db的文件中，附加的 --master-data命令，官方文档解释了一大堆，看着似懂非懂，反正都加上吧-。- 如果你的数据库比较大，那么将原始数据文件直接复制到从服务器比使用mysqldump要效率很多。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>解锁主数据库</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql&gt; UNLOCK TABLES;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>将主数据库的dump出的文件导入到从服务器</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shell&gt; mysql &lt; dbdump.db</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在从服务器开启复制进程</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE;  <span class="comment">--一般情况下是启动不了的，必须先change master to </span></span><br><span class="line">mysql<span class="operator">&gt;</span> CHANGE MASTER <span class="keyword">TO</span></span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_HOST<span class="operator">=</span><span class="string">&#x27;master_host_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_USER<span class="operator">=</span><span class="string">&#x27;replication_user_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;replication_password&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_FILE<span class="operator">=</span><span class="string">&#x27;recorded_log_file_name&#x27;</span>,</span><br><span class="line"><span class="operator">-</span><span class="operator">&gt;</span>     MASTER_LOG_POS<span class="operator">=</span>recorded_log_position;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">START</span> SLAVE; </span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> slave status \G <span class="comment">--检查Slave_IO_Running以及Slave_SQL_Running，如果都为yes则主从复制配置成功。若不成功，该命令可以看到相关报错。</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PHP连接sql server</title>
     <url>/2014/06/25/php-sql-server.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这两天公司因为计划将网页追溯系统迁移到电话追溯系统的sql server 2000数据库，于是我苦逼的开始了将PHP连接sql server数据库的任务。</p>
@@ -1196,6 +1196,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Python脚本内自定义域名解析的IP</title>
+    <url>/2016/03/09/python-custom-ip-resolve.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
+<p>由于服务器走公网解析我们域名的话，同样只有一台服务器完成功能。所以我想着是不是在不修改本机hosts的情况下，在Python脚本内实现对域名的解析。带着这个想法，终于在<a href="http://stackoverflow.com/questions/2236498/tell-urllib2-to-use-custom-dns">stackoverflow</a>上找到了可行的答案。</p>
+<p>大致思路是，首先定义一个函数，记录你需要自定义IP的域名，并建立一个httplib.HTTPConnection的子类，在参数传递给socket.create_connection前修改self.host以封装connection方法。然后继承HTTPHandler这个类，用上面的HTTPConnection替换httplib内自带的HTTPConnection，并重写http_open方法；最后把HTTPHandler放到自定义的opener。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> httplib</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">req_host</span>(<span class="params">host</span>):</span><br><span class="line">        <span class="keyword">if</span> host == <span class="string">&#x27;www.***.cn&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&#x27;8.8.8.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPConnection</span>(httplib.HTTPConnection):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">connect</span>(<span class="params">self</span>):</span><br><span class="line">                self.sock = socket.create_connection((req_host(self.host),self.port),self.timeout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPHandler</span>(urllib2.HTTPHandler):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">http_open</span>(<span class="params">self,req</span>):</span><br><span class="line">                <span class="keyword">return</span> self.do_open(MyHTTPConnection,req)</span><br><span class="line"></span><br><span class="line">opener = urllib2.build_opener(MyHTTPHandler)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://&#x27;</span></span><br><span class="line">f = urllib2.urlopen(url)</span><br><span class="line">req = f.read()</span><br><span class="line"><span class="built_in">print</span> req</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>系统端口也是稀缺资源呐</title>
     <url>/2016/11/16/port-is-also-a-kind-of-resourse.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="直面问题"><a href="#直面问题" class="headerlink" title="直面问题"></a>直面问题</h2><p>上午的时候，公司的一个网站因为激发流量，服务有些不稳定。通过一个监控页面显示memcached已经无法连接，但是memcached进程明明是存活的。于是好奇的<code>telnet</code>了一下，果然有些问题，给我反馈了一个<code>Cannot assign requested address</code>。然而当时也没有多想，单纯的以为端口不通了，索性就重启了memcached，可是发现并没有解决问题。而且看到端口也是在监听状态，并且用本机IP的连接11211端口是可以连通的。</p>
@@ -1214,21 +1229,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python脚本内自定义域名解析的IP</title>
-    <url>/2016/03/09/python-custom-ip-resolve.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天因为网站上有一个小功能，原先单台服务器时执行一条url即可完成功能，但目前执行URL只会作用在某一台服务器。遂想着用Python写一段脚本然后放在集中管理平台上对所有服务器下发。其实这种情形，用shell脚本执行curl也可实现相同效果。</p>
-<p>由于服务器走公网解析我们域名的话，同样只有一台服务器完成功能。所以我想着是不是在不修改本机hosts的情况下，在Python脚本内实现对域名的解析。带着这个想法，终于在<a href="http://stackoverflow.com/questions/2236498/tell-urllib2-to-use-custom-dns">stackoverflow</a>上找到了可行的答案。</p>
-<p>大致思路是，首先定义一个函数，记录你需要自定义IP的域名，并建立一个httplib.HTTPConnection的子类，在参数传递给socket.create_connection前修改self.host以封装connection方法。然后继承HTTPHandler这个类，用上面的HTTPConnection替换httplib内自带的HTTPConnection，并重写http_open方法；最后把HTTPHandler放到自定义的opener。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> httplib</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">req_host</span>(<span class="params">host</span>):</span><br><span class="line">        <span class="keyword">if</span> host == <span class="string">&#x27;www.***.cn&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">&#x27;8.8.8.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPConnection</span>(httplib.HTTPConnection):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">connect</span>(<span class="params">self</span>):</span><br><span class="line">                self.sock = socket.create_connection((req_host(self.host),self.port),self.timeout)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyHTTPHandler</span>(urllib2.HTTPHandler):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">http_open</span>(<span class="params">self,req</span>):</span><br><span class="line">                <span class="keyword">return</span> self.do_open(MyHTTPConnection,req)</span><br><span class="line"></span><br><span class="line">opener = urllib2.build_opener(MyHTTPHandler)</span><br><span class="line">urllib2.install_opener(opener)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://&#x27;</span></span><br><span class="line">f = urllib2.urlopen(url)</span><br><span class="line">req = f.read()</span><br><span class="line"><span class="built_in">print</span> req</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1453,36 +1453,6 @@
       </tags>
   </entry>
   <entry>
-    <title>哎呀，网站又被黑了</title>
-    <url>/2016/04/12/site-be-hacked-again.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
-<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
-<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
-<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
-<blockquote>
-<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
-</blockquote>
-<p>既然知道了原理，那么就好排查问题了。</p>
-<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
-<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
-<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
-<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
-<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
-<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Rewrite</title>
     <url>/2015/02/01/rewrite.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>nginx for wordpress</p>
@@ -1585,94 +1555,32 @@
       </tags>
   </entry>
   <entry>
-    <title>The Fault</title>
-    <url>/2015/08/19/the-fault.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/the-fault-1.jpg"></p>
-<p>灯光暗灭，前奏响起。那场执念多年的演唱会终于拉开了帷幕。</p>
-<p>如我在开场时发的微博，那天虽然忙碌，可是安心坐下来的时候仍然怀疑他在合肥的演唱会真的能开始了吗，这场景本应存在于梦里才对。</p>
-<p>演唱会当天仍然不可避免的忙碌。虽淡出许久，可是对于安徽的活动总是有些牵挂。而至于这份牵挂的由来，可能要追溯回2010年跟小伙伴们相识的年份吧。那一年的一场商演，我误打误撞的认识了那样的一群人。那时候的安徽分会，也在那群人秉承着的某种意志下建立起来了。</p>
-<p>虽然那一年的商演最后由他的一句“不见不散”，变成了“因病缺席”。可是这一群人却变成了我年少时期几乎所有幸福的源头。于是他们所坚守的“安徽”也渐渐成为了我的执念。</p>
-<p>故事的开头总是美好的，故事的结局也总是被想象的很美好。原本大家约定安排妥当后借着一场活动完美告别。可是因为一些不解与愤慨，最后这场告别以一群人的裸退收场。而当我面对这样一个大家曾经那么用心经营的地方时，心里却满满的惋惜。想着让它茁壮成长下去才对得起他们那么多年那么多的用心吧。虽然刚开始的那半年忍受过多不解，可是最后也算坚持下来了。而且经过这场演唱会的验收，的确现在那些年轻的孩子们已经做的很棒很让人欣慰了。</p>
-<p>记得在这场演唱会只是公布行程的时候，就期待着能在奥体举办。因为他对这座场馆说过太多次的“不见不散”，但最终又因为各种说辞未能如约。甚至这场演唱会在开始前的一个月，都因为主办与经济公司之间的沟通不悦差点夭折，所以格外珍惜着最终的时线。更何况我曾听过从这座场馆里拨出的那么暖心连线的五月天，亲眼见过满场粉海的周杰伦，所以对于能在这里看到紫海便更加执念。</p>
-<p>所谓圆梦与遗憾，大体是人生里面最磨人的小妖精了吧。这场看似圆梦的演唱会，也因为一些遗憾，让我更深刻的纪念着。</p>
-<p><img data-src="https://statics.yvanz.com/the-fault-2.jpg"></p>
-<p>嗯，也谢谢今天所有的生日快乐。Love U U.</p>
-<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850682&amp;auto=1&amp;height=66" width="330"></iframe>
-]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>微博春晚背后的技术故事</title>
-    <url>/2015/04/01/technical-story-behind-the-spring-festival-weibo.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
-<li>前言</li>
-</ul>
-<p>一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。</p>
-<p>谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。</p>
-<p>马年春晚又格外引人注目，不仅仅是因为冯小刚亲自坐镇，担当总导演，更值得一提的是本届春晚首次将社交平台作为其与观众互动的主要途径，而新浪微博更是成为官方二维码独家合作方。在节目播出时，用户通用手机客户端，扫描屏幕右下角的官方二维码，即可参与春晚的话题讨论。不仅如此，参与讨论的观众，还可以免费获得微博红包，抽大奖的机会。如此一来，大大的提升了微博的活跃度瞬间提升，同时在线人数翻了几倍，给微博系统带来前所未有的访问压力。</p>
-<p>根据以往统计的数据，春晚期间微博的访问量将激增到日常水平的数倍之多，而瞬时发表量更是飙升数十倍，如此场景丝毫不亚于淘宝双11和12306抢票时的“盛况”。</p>
-<p>而最后的统计数据结果表明，马年春晚直播期间，微博的访问量和发表量都再创新高，而我们系统也自始至终平稳运行，经受住了此次高峰的考验。这成功的背后，是我们的工程师将近一个月的努力。其间面临了哪些问题，又是如何解决的呢？下面，我们一一为大家揭秘。</p>
-<ul>
-<li>挑战1：如何应对数倍于日常访问量的压力？</li>
-</ul>
-<p>每年春运抢票时，12306都会崩溃；淘宝双11时，也会有短暂的购买失败的情况。究其原因还是，有限的服务器资源难以承受上千万人同时在线访问。同样，春晚的时候，微博的访问量也会激增，同时在线人数到达日常的数倍之多。面对突然增长的访问压力，大部分互联网公司都会临时扩容来加以应对，同样我们也需要进行扩容。那么如何进行扩容？哪些部分需要扩容？具体扩容多少？这都是厄需解决的问题。</p>
-<p>需要提到一点的是，微博目前线上部署了几千台服务器，来保障日常的正常访问。假如面对原来数倍的访问压力时，如果简单粗暴通过线性扩容来应对的话，需要部署原来数倍的服务器，也就是需要上万台服务器。无论从硬件成本还是从管理成本上，这都是不可接受的。那么，又该如何做呢？</p>
-<p>在线压测，找极限，最小化扩容前端机</p>
-<p>众所周知，为了尽可能的保障线上运行的服务器的稳定，资源都是有一定冗余度的，一般安全值在30%以上。在面临5倍的访问量时，出于成本的考虑，单纯的扩容难以令人接受。这个时候，就要充分利用每台服务器，在不影响业务性能的前提下，使每台服务器的利用率发挥到极限，可以极大的降低资源扩容的数量。如何评估服务器的承受极限是其中的关键，为此我们在业务低峰时期，对线上的服务器进行了实际的压测。具体方法如下：</p>
-<p>假如线上一个服务池里有300台 tomcat服务器在提供API服务，正常情况下，每台服务器的负载都小于1（为了简化模型，我们这里只提到了系统load这个指标，实际情况要比这个复杂的多，还要考虑CPU 利用率、带宽、io延迟等）。通过运维系统，我们以10%、20%、30%、40%、50%等比例逐步将该服务池里的300台 tomcat 机器503，通过观察一台 tomcat 服务器的负载以及 API 服务的接口性能，当服务器的负载达到极限或者 API 服务的接口性能达到阈值时，假设此时服务池里正常状态的 tomcat 服务器的数量是100台，那么我们就可以推断出该服务池，极限情况下可以承受3倍与日常的访问压力。同理，为了承担5倍的访问量，只需再扩容一倍机器即可。</p>
-<ul>
-<li>挑战2：如何应对瞬时可达几万&#x2F;s 的发表量？</li>
-</ul>
-<p>互联网应用有个显著特点，就是读多写少。针对读多有很多成熟的解决方案，比如可以通过cache 来缓存热数据来降低数据库的压力等方式来解决。而对于写多的情况，由于数据库本身写入性能瓶颈，相对较难解决。</p>
-<p>微博系统在处理发表微博时，采用了异步消息队列。具体来讲，就是用户发表微博时，不是直接去更新数据库和缓存，而是先写入到 mcq消息队列中。再通过队列机处理程序读取消息队列中的消息，再写入到数据库和缓存中。那么，如何保证消息队列的读写性能，以及如何保证队列机处理程序的性能，是系统的关键所在。</p>
-<p>按消息大小设置双重队列，保证写入速度。</p>
-<p>众所知之，微博最大长度不超过140个字，而大部分用户实际发表的微博长度都比较小。为了提高写入消息队列的速度，我们针对不同长度的微博消息，写入不同大小的消息队列。比如以512字节为分界线，大于512字节的写入长队列，小于512字节的写入短队列，其中短队列的单机写入性能要远远高于长队列。实际在线结果表明，短队列的QPS 在万&#x2F;s 级别，长队列的QPS 在千&#x2F;s 级别，而99%的微博消息长度均小于512字节。这种优化，大大提高了微博消息的写入和读取性能。</p>
-<p>堵塞队列，压队列机极限处理能力。</p>
-<p>为了验证队列机处理程序的极限处理能力，我们在业务低峰时期，对线上队列机进行了实际的压测，具体方法如下：</p>
-<p>通过开关控制，使队列机处理程序停止读取消息，从而堵塞消息队列，使堆积的消息分别达到10万，20万，30万，60万，100万，然后再打开开关，使队列机重新开始处理消息，整个过程类似于大坝蓄水，然后开闸泄洪，可想而知，瞬间涌来的消息对队列机将产生极大的压力。通过分析日志，来查找队列机处理程序最慢的地方，也就是瓶颈所在。</p>
-<p>通过两次实际的压测模拟，出乎意料的是，我们发现系统在极限压力下，首先达到瓶颈的并非是数据库写入，而是缓存更新。因此，为了提高极限压力下，队列机处理程序的吞吐量，我们对一部分缓存更新进行了优化。</p>
-<ul>
-<li>挑战3：如何保证系统的可靠性？</li>
-</ul>
-<p>无论是发微博，还是刷 feed，在微博系统内的处理过程都十分复杂，依赖着各种内部资源和外部服务，保证系统的可靠性显得尤为困难。</p>
-<p>为此，我们内部开发了代号为试金石&amp;mdash;&amp;mdash;TouchStone的压测系统，对系统的可靠性进行全面检测。</p>
-<p>首先，我们对微博的各个接口进行了服务依赖和资源依赖的梳理，并针对每个服务和资源定义了相应的 SLA 和降级开关。然后，模拟资源或者服务出现异常，再来查看其对接口性能的影响。以 redis资源为例， 假设系统定义了redis的 SLA是300ms，相应的端口是6379，通过 TouchStone，使该端口不可用，从而模拟 redis 资源出现异常，然后验证依赖该资源的接口的性能，确保 SLA 。同时，通过降级开关，对该资源进行降级，验证降级开关的有效。</p>
-<p>基于以上方法，对系统进行了全面的检测，并对各个服务和资源的 SLA 和降级开关进行梳理，总结成业务降级手册，保证在出现问题时，运维人员无需开发的介入，也能第一时间根据降级手册进行降级，确保问题能够尽快解决。</p>
-<ul>
-<li>挑战4：如何保证核心系统的稳定性？</li>
-</ul>
-<p>任何一个系统，都包含核心系统和非核心系统。在出现异常的情况下，弃车保帅，只保障核心系统的稳定性也是可以接受的。</p>
-<p>为此，我们降核心接口和非核心接口拆分，部分部署到不同的应用池子当中，确保非核心业务不会影响核心业务。比如发微博和刷 feed 属于核心业务，而评论，赞属于非核心业务，所以两者应当部署到不同的应用池中。在评论或者赞出现异常时，发微博和刷 feed 就不会受到影响，从而保障系统核心业务的稳定性。</p>
-<p>同样，对于一个业务，也要区分核心逻辑和非核心逻辑。以发微博为例，更新缓存和写数据库属于核心逻辑，而给其它业务部门推送数据则属于非核心逻辑。因此，可以将推送数据进行异步化处理，交给单独的线程池处理，在出现异常时，不会对更新缓存和写数据库造成影响。</p>
-<ul>
-<li>挑战5：如何做到异地容灾？</li>
-</ul>
-<p>近些年来，异地容灾成为全球性互联网企业面临的难题之一。无论是在国内，以微信为例，还是在国外，以 twitter 为例，都曾经出现过全球性宕机的事故。由此可见，异地容灾仍旧是一个挑战。</p>
-<p>微博早在2010年就开始了多机房的部署，如今已经具备三大机房（分别针对联通、电信和海外用户）。</p>
-<p>由于人为或者天气等不可抗拒因素，网络故障近年来时有发生。微博的三个机房，各自独立承担了一部分用户的访问。在一个机房出现故障或者压力过大的时候，通过DNS切换等手段，将流量迁移到另外两个机房，从而确保该访问该机房的用户不受影响。一个现实的情况例子，在马年春晚直播期间，由于观看人群的地域分布的特点，出现了联通机房的访问量突增，同时在线人数的增长超过了电信机房和广州机房，我们通过切换一部分联通机房的流量到电信机房，使得联通机房的负载降到了安全值的范围。</p>
-<ul>
-<li>挑战6：如何实时监控系统状态？</li>
-</ul>
-<p>我们都知道，地震的发生都是有前兆的，比如一些动物的异常反应。同样，系统中的任何问题出现之前，也是有线索可寻的。这就需要对系统的关键指标做实时的监控，当指标出现异常时，能够第一时间发出报警信息。</p>
-<p>为此，我们基于实时流处理系统 Storm 开发了一套监控系统——dashboard。有别于以往的监控系统，它能实时处理系统产生的海量日志，绘制出更加直观的曲线，方便运维进行管理。通过 dashborad，我们能够了解系统的实时状态，主要包括feed的访问量、微博的发表量、队列机的处理性能，消息队列的堆积量等指标。当某个监控指标出现异常时，能够第一时间在 dashboard 中反映出来，从而第一时间采取措施，解决问题，避免问题扩大化。</p>
-<ul>
-<li>后记</li>
-</ul>
-<p>春晚已经过去一个月了，渐渐成为回忆。但春晚背后，我们的工程师所付出的巨大的努力所产生的价值，却是一笔宝贵的财富，希望这篇文章能给大家带来启发甚至帮助，也在此向为微博春晚默默贡献的工程师们致敬！</p>
-<ul>
-<li>关于作者</li>
-</ul>
-<p>胡忠想（微博昵称：@古月中心相心），目前任职于新浪微博的平台研发部门，主要负责微博 Feed 服务相关工作，曾先后参与微博 Feed 存储、微博计数器、微博阅读数等重大业务产品的开发。2012年3月份毕业于北京航空航天大学计算系，同年4月份，加入新浪微博并工作至今。业余爱好户 外，曾徒步过贡嘎、雨崩，攀登过四姑娘三峰。</p>
-<p>感谢张凯峰对本文的审校。</p>
-<p>原文链接：<a href="http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo">http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo</a></p>
+    <title>哎呀，网站又被黑了</title>
+    <url>/2016/04/12/site-be-hacked-again.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>早上莫名收到运营的一封邮件，反映网站又被黑了。</p>
+<p>唉，只好乖乖按照邮件里附的百度快照链接开始排查这次遇到的是什么玩意儿。</p>
+<p>从百度快照的原链接点过来，发现的确有大量违禁信息。但是换一台电脑从百度快照访问原链接，竟然只有一个404。再用原先的电脑不经过百度快照直接访问原链接，也是404的页面。这会儿我大写加粗的懵逼了3秒钟。压压惊对比看了一下原先电脑上，从百度快照访问原链接，和直接访问源链接时的http头信息。发觉当http头信息里包含百度cache的Referer信息时，就可以看到违禁信息。于是定位可能跟百度有关，且只有网站的某些服务器中招。</p>
+<p>整理一下目前已知的现象，祭出百度好好搜了一番，发现还真有这样的攻击姿势：搜索引擎劫持</p>
+<blockquote>
+<p>劫持的原理是通过代码，去执行判断，当一个网站被加入了快照劫持代码，如果是用户正常访问，不会做出任何改变。此时，如果是搜索引擎的制作来访问后（代码判断是蜘蛛来访后），就会执行判断，是蜘蛛来访，则给出你设置的网址让蜘蛛抓取，此时蜘蛛抓取的快照是你设置的，快照显示也会显示出你设置的快照，达到了快照的劫持。</p>
+</blockquote>
+<p>既然知道了原理，那么就好排查问题了。</p>
+<p>首先对比了一下线上被感染的程序，发现index.php里有一行诡异的代码</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">@<span class="title function_ invoke__">INCLUDE_ONCE</span>(<span class="title function_ invoke__">PACK</span>(<span class="string">&#x27;H*&#x27;</span>,<span class="string">&#x27;2f746d702f7365737212&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p>百度了解到这个写法是16进制字符串，翻译成人类语言之后，确定了引用文件的路径。将被include的文件下载到本地之后删除之，并阅读源码，对照上面的定义确定就是这个被包含的文件以及那串代码导致的。删除代码之后，再次从百度快照跳转到原链接，发现已经看不到违禁信息了。可以说劫持问题顺利解决。</p>
+<p>接下来就得排查index.php被修改，以及突然多出那么一个文件的原因了。</p>
+<p>stat查看多出来文件的时间，按照这个时间检查了这个站点的访问日志，但是并没有看到异常的POST请求。正当一筹莫展的时候，想起来仔细检查这台服务器每天发送的文件变更通知邮件，发现案发日这台服务器上另外一个站点程序目录下新生成了两个文件。于是检查了另一个站点的访问日志，果然发现了蛛丝马迹，并且顺利定位了黑客上传的webshell，尊容见下图</p>
+<p><img data-src="https://statics.yvanz.com/be-hacked-webshell.jpg"></p>
+<p>因为被黑客所利用的这个站点，使用的开源框架比较古老，且相关开发人员人手不足。所以此次被黑客利用的程序漏洞仍未修复，最后只是把这些黑客上传进来的文件保存到本地留存后删除，以免二次伤害。</p>
+<p>并且为了防止黑客再次进行攻击，果断的修改了nginx配置文件，对这个可上传文件的文件夹限制php程序运行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">location ~ ^/file/.*.(php|php5).*$ &#123;</span><br><span class="line">deny all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>技术宅</category>
       </categories>
       <tags>
-        <tag>转载学习</tag>
+        <tag>Linux</tag>
         <tag>运维</tag>
       </tags>
   </entry>
@@ -1757,6 +1665,121 @@
       </tags>
   </entry>
   <entry>
+    <title>微博春晚背后的技术故事</title>
+    <url>/2015/04/01/technical-story-behind-the-spring-festival-weibo.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
+<li>前言</li>
+</ul>
+<p>一年一度的春晚再次落下帷幕，而微博也顺利地陪伴大家度过除夕之夜。</p>
+<p>谈及马年春晚，人们首先想到的不是春晚上精彩的节目，而是微博上的吐槽，边看春晚，边刷微博，边吐槽，已经成了国人的习惯。看春晚不再是为了看节目，而是为了能够在微博上吐槽，知道大家在吐槽什么，更有人戏称不是春晚成就了微博，而是微博拯救了春晚。</p>
+<p>马年春晚又格外引人注目，不仅仅是因为冯小刚亲自坐镇，担当总导演，更值得一提的是本届春晚首次将社交平台作为其与观众互动的主要途径，而新浪微博更是成为官方二维码独家合作方。在节目播出时，用户通用手机客户端，扫描屏幕右下角的官方二维码，即可参与春晚的话题讨论。不仅如此，参与讨论的观众，还可以免费获得微博红包，抽大奖的机会。如此一来，大大的提升了微博的活跃度瞬间提升，同时在线人数翻了几倍，给微博系统带来前所未有的访问压力。</p>
+<p>根据以往统计的数据，春晚期间微博的访问量将激增到日常水平的数倍之多，而瞬时发表量更是飙升数十倍，如此场景丝毫不亚于淘宝双11和12306抢票时的“盛况”。</p>
+<p>而最后的统计数据结果表明，马年春晚直播期间，微博的访问量和发表量都再创新高，而我们系统也自始至终平稳运行，经受住了此次高峰的考验。这成功的背后，是我们的工程师将近一个月的努力。其间面临了哪些问题，又是如何解决的呢？下面，我们一一为大家揭秘。</p>
+<ul>
+<li>挑战1：如何应对数倍于日常访问量的压力？</li>
+</ul>
+<p>每年春运抢票时，12306都会崩溃；淘宝双11时，也会有短暂的购买失败的情况。究其原因还是，有限的服务器资源难以承受上千万人同时在线访问。同样，春晚的时候，微博的访问量也会激增，同时在线人数到达日常的数倍之多。面对突然增长的访问压力，大部分互联网公司都会临时扩容来加以应对，同样我们也需要进行扩容。那么如何进行扩容？哪些部分需要扩容？具体扩容多少？这都是厄需解决的问题。</p>
+<p>需要提到一点的是，微博目前线上部署了几千台服务器，来保障日常的正常访问。假如面对原来数倍的访问压力时，如果简单粗暴通过线性扩容来应对的话，需要部署原来数倍的服务器，也就是需要上万台服务器。无论从硬件成本还是从管理成本上，这都是不可接受的。那么，又该如何做呢？</p>
+<p>在线压测，找极限，最小化扩容前端机</p>
+<p>众所周知，为了尽可能的保障线上运行的服务器的稳定，资源都是有一定冗余度的，一般安全值在30%以上。在面临5倍的访问量时，出于成本的考虑，单纯的扩容难以令人接受。这个时候，就要充分利用每台服务器，在不影响业务性能的前提下，使每台服务器的利用率发挥到极限，可以极大的降低资源扩容的数量。如何评估服务器的承受极限是其中的关键，为此我们在业务低峰时期，对线上的服务器进行了实际的压测。具体方法如下：</p>
+<p>假如线上一个服务池里有300台 tomcat服务器在提供API服务，正常情况下，每台服务器的负载都小于1（为了简化模型，我们这里只提到了系统load这个指标，实际情况要比这个复杂的多，还要考虑CPU 利用率、带宽、io延迟等）。通过运维系统，我们以10%、20%、30%、40%、50%等比例逐步将该服务池里的300台 tomcat 机器503，通过观察一台 tomcat 服务器的负载以及 API 服务的接口性能，当服务器的负载达到极限或者 API 服务的接口性能达到阈值时，假设此时服务池里正常状态的 tomcat 服务器的数量是100台，那么我们就可以推断出该服务池，极限情况下可以承受3倍与日常的访问压力。同理，为了承担5倍的访问量，只需再扩容一倍机器即可。</p>
+<ul>
+<li>挑战2：如何应对瞬时可达几万&#x2F;s 的发表量？</li>
+</ul>
+<p>互联网应用有个显著特点，就是读多写少。针对读多有很多成熟的解决方案，比如可以通过cache 来缓存热数据来降低数据库的压力等方式来解决。而对于写多的情况，由于数据库本身写入性能瓶颈，相对较难解决。</p>
+<p>微博系统在处理发表微博时，采用了异步消息队列。具体来讲，就是用户发表微博时，不是直接去更新数据库和缓存，而是先写入到 mcq消息队列中。再通过队列机处理程序读取消息队列中的消息，再写入到数据库和缓存中。那么，如何保证消息队列的读写性能，以及如何保证队列机处理程序的性能，是系统的关键所在。</p>
+<p>按消息大小设置双重队列，保证写入速度。</p>
+<p>众所知之，微博最大长度不超过140个字，而大部分用户实际发表的微博长度都比较小。为了提高写入消息队列的速度，我们针对不同长度的微博消息，写入不同大小的消息队列。比如以512字节为分界线，大于512字节的写入长队列，小于512字节的写入短队列，其中短队列的单机写入性能要远远高于长队列。实际在线结果表明，短队列的QPS 在万&#x2F;s 级别，长队列的QPS 在千&#x2F;s 级别，而99%的微博消息长度均小于512字节。这种优化，大大提高了微博消息的写入和读取性能。</p>
+<p>堵塞队列，压队列机极限处理能力。</p>
+<p>为了验证队列机处理程序的极限处理能力，我们在业务低峰时期，对线上队列机进行了实际的压测，具体方法如下：</p>
+<p>通过开关控制，使队列机处理程序停止读取消息，从而堵塞消息队列，使堆积的消息分别达到10万，20万，30万，60万，100万，然后再打开开关，使队列机重新开始处理消息，整个过程类似于大坝蓄水，然后开闸泄洪，可想而知，瞬间涌来的消息对队列机将产生极大的压力。通过分析日志，来查找队列机处理程序最慢的地方，也就是瓶颈所在。</p>
+<p>通过两次实际的压测模拟，出乎意料的是，我们发现系统在极限压力下，首先达到瓶颈的并非是数据库写入，而是缓存更新。因此，为了提高极限压力下，队列机处理程序的吞吐量，我们对一部分缓存更新进行了优化。</p>
+<ul>
+<li>挑战3：如何保证系统的可靠性？</li>
+</ul>
+<p>无论是发微博，还是刷 feed，在微博系统内的处理过程都十分复杂，依赖着各种内部资源和外部服务，保证系统的可靠性显得尤为困难。</p>
+<p>为此，我们内部开发了代号为试金石&amp;mdash;&amp;mdash;TouchStone的压测系统，对系统的可靠性进行全面检测。</p>
+<p>首先，我们对微博的各个接口进行了服务依赖和资源依赖的梳理，并针对每个服务和资源定义了相应的 SLA 和降级开关。然后，模拟资源或者服务出现异常，再来查看其对接口性能的影响。以 redis资源为例， 假设系统定义了redis的 SLA是300ms，相应的端口是6379，通过 TouchStone，使该端口不可用，从而模拟 redis 资源出现异常，然后验证依赖该资源的接口的性能，确保 SLA 。同时，通过降级开关，对该资源进行降级，验证降级开关的有效。</p>
+<p>基于以上方法，对系统进行了全面的检测，并对各个服务和资源的 SLA 和降级开关进行梳理，总结成业务降级手册，保证在出现问题时，运维人员无需开发的介入，也能第一时间根据降级手册进行降级，确保问题能够尽快解决。</p>
+<ul>
+<li>挑战4：如何保证核心系统的稳定性？</li>
+</ul>
+<p>任何一个系统，都包含核心系统和非核心系统。在出现异常的情况下，弃车保帅，只保障核心系统的稳定性也是可以接受的。</p>
+<p>为此，我们降核心接口和非核心接口拆分，部分部署到不同的应用池子当中，确保非核心业务不会影响核心业务。比如发微博和刷 feed 属于核心业务，而评论，赞属于非核心业务，所以两者应当部署到不同的应用池中。在评论或者赞出现异常时，发微博和刷 feed 就不会受到影响，从而保障系统核心业务的稳定性。</p>
+<p>同样，对于一个业务，也要区分核心逻辑和非核心逻辑。以发微博为例，更新缓存和写数据库属于核心逻辑，而给其它业务部门推送数据则属于非核心逻辑。因此，可以将推送数据进行异步化处理，交给单独的线程池处理，在出现异常时，不会对更新缓存和写数据库造成影响。</p>
+<ul>
+<li>挑战5：如何做到异地容灾？</li>
+</ul>
+<p>近些年来，异地容灾成为全球性互联网企业面临的难题之一。无论是在国内，以微信为例，还是在国外，以 twitter 为例，都曾经出现过全球性宕机的事故。由此可见，异地容灾仍旧是一个挑战。</p>
+<p>微博早在2010年就开始了多机房的部署，如今已经具备三大机房（分别针对联通、电信和海外用户）。</p>
+<p>由于人为或者天气等不可抗拒因素，网络故障近年来时有发生。微博的三个机房，各自独立承担了一部分用户的访问。在一个机房出现故障或者压力过大的时候，通过DNS切换等手段，将流量迁移到另外两个机房，从而确保该访问该机房的用户不受影响。一个现实的情况例子，在马年春晚直播期间，由于观看人群的地域分布的特点，出现了联通机房的访问量突增，同时在线人数的增长超过了电信机房和广州机房，我们通过切换一部分联通机房的流量到电信机房，使得联通机房的负载降到了安全值的范围。</p>
+<ul>
+<li>挑战6：如何实时监控系统状态？</li>
+</ul>
+<p>我们都知道，地震的发生都是有前兆的，比如一些动物的异常反应。同样，系统中的任何问题出现之前，也是有线索可寻的。这就需要对系统的关键指标做实时的监控，当指标出现异常时，能够第一时间发出报警信息。</p>
+<p>为此，我们基于实时流处理系统 Storm 开发了一套监控系统——dashboard。有别于以往的监控系统，它能实时处理系统产生的海量日志，绘制出更加直观的曲线，方便运维进行管理。通过 dashborad，我们能够了解系统的实时状态，主要包括feed的访问量、微博的发表量、队列机的处理性能，消息队列的堆积量等指标。当某个监控指标出现异常时，能够第一时间在 dashboard 中反映出来，从而第一时间采取措施，解决问题，避免问题扩大化。</p>
+<ul>
+<li>后记</li>
+</ul>
+<p>春晚已经过去一个月了，渐渐成为回忆。但春晚背后，我们的工程师所付出的巨大的努力所产生的价值，却是一笔宝贵的财富，希望这篇文章能给大家带来启发甚至帮助，也在此向为微博春晚默默贡献的工程师们致敬！</p>
+<ul>
+<li>关于作者</li>
+</ul>
+<p>胡忠想（微博昵称：@古月中心相心），目前任职于新浪微博的平台研发部门，主要负责微博 Feed 服务相关工作，曾先后参与微博 Feed 存储、微博计数器、微博阅读数等重大业务产品的开发。2012年3月份毕业于北京航空航天大学计算系，同年4月份，加入新浪微博并工作至今。业余爱好户 外，曾徒步过贡嘎、雨崩，攀登过四姑娘三峰。</p>
+<p>感谢张凯峰对本文的审校。</p>
+<p>原文链接：<a href="http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo">http://www.infoq.com/cn/articles/technical-story-behind-the-spring-festival-weibo</a></p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>转载学习</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Fault</title>
+    <url>/2015/08/19/the-fault.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="https://statics.yvanz.com/the-fault-1.jpg"></p>
+<p>灯光暗灭，前奏响起。那场执念多年的演唱会终于拉开了帷幕。</p>
+<p>如我在开场时发的微博，那天虽然忙碌，可是安心坐下来的时候仍然怀疑他在合肥的演唱会真的能开始了吗，这场景本应存在于梦里才对。</p>
+<p>演唱会当天仍然不可避免的忙碌。虽淡出许久，可是对于安徽的活动总是有些牵挂。而至于这份牵挂的由来，可能要追溯回2010年跟小伙伴们相识的年份吧。那一年的一场商演，我误打误撞的认识了那样的一群人。那时候的安徽分会，也在那群人秉承着的某种意志下建立起来了。</p>
+<p>虽然那一年的商演最后由他的一句“不见不散”，变成了“因病缺席”。可是这一群人却变成了我年少时期几乎所有幸福的源头。于是他们所坚守的“安徽”也渐渐成为了我的执念。</p>
+<p>故事的开头总是美好的，故事的结局也总是被想象的很美好。原本大家约定安排妥当后借着一场活动完美告别。可是因为一些不解与愤慨，最后这场告别以一群人的裸退收场。而当我面对这样一个大家曾经那么用心经营的地方时，心里却满满的惋惜。想着让它茁壮成长下去才对得起他们那么多年那么多的用心吧。虽然刚开始的那半年忍受过多不解，可是最后也算坚持下来了。而且经过这场演唱会的验收，的确现在那些年轻的孩子们已经做的很棒很让人欣慰了。</p>
+<p>记得在这场演唱会只是公布行程的时候，就期待着能在奥体举办。因为他对这座场馆说过太多次的“不见不散”，但最终又因为各种说辞未能如约。甚至这场演唱会在开始前的一个月，都因为主办与经济公司之间的沟通不悦差点夭折，所以格外珍惜着最终的时线。更何况我曾听过从这座场馆里拨出的那么暖心连线的五月天，亲眼见过满场粉海的周杰伦，所以对于能在这里看到紫海便更加执念。</p>
+<p>所谓圆梦与遗憾，大体是人生里面最磨人的小妖精了吧。这场看似圆梦的演唱会，也因为一些遗憾，让我更深刻的纪念着。</p>
+<p><img data-src="https://statics.yvanz.com/the-fault-2.jpg"></p>
+<p>嗯，也谢谢今天所有的生日快乐。Love U U.</p>
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850682&amp;auto=1&amp;height=66" width="330"></iframe>
+]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>浪漫血液</title>
+    <url>/2015/01/01/the-romantic.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
+</div>
+&nbsp;
+
+<p>又到了交待这一年的时候了。</p>
+<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
+<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
+<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
+<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
+<div style="text-align: right;">
+——2015，我们值得更幸福
+</div>]]></content>
+      <categories>
+        <category>文艺范</category>
+      </categories>
+      <tags>
+        <tag>林俊杰</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The Old Classmate</title>
     <url>/2014/05/21/the-old-classmate.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
@@ -1806,29 +1829,6 @@ Posted at 2014.6.14
       </categories>
   </entry>
   <entry>
-    <title>浪漫血液</title>
-    <url>/2015/01/01/the-romantic.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div style="text-align: right;">
-<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="http://music.163.com/outchain/player?type=2&amp;id=29850683&amp;auto=1&amp;height=66" width="310"></iframe>
-</div>
-&nbsp;
-
-<p>又到了交待这一年的时候了。</p>
-<p>去年写这样的文时待业在合肥，虽对未来有点方向，但却没有底气。而今年三月开始上班到现在，虽然换过一份工作，但是底气越来越足，最近开始工作压力逐渐变大，而且能亲眼看见一个产品逐渐成形，以后经过我手让更多的人接触和体验它，这种紧张和喜悦恐怕也是其他事情无法类比的。我想这才是工作该有的样子，我愿意为了这种事情不停的工作下去，也不怪有的人说我其实是个工作狂。</p>
-<p>如果说工作上的认同感都是今年这第二份工作给予的，那么工作中遇到的朋友，就都来自于第一份工作了。可能那时候大家都比较清闲，所以一个团队有了更多的时间沟通相处。尤其现在还会怀念那时候一起共事的时间，因为会让人觉得，其实我不是一个人在战斗，大家可以为了一个工作目标一起使劲，那感觉，爽呆。</p>
-<p>似乎除了工作，我的这一年就没有别的可说的了，出行的足迹也没超过华东的范围。然后就是那几次屈指可数的外出，经历的事情却印象深刻，端午杭州行跟小伙伴们笑的神经都不好了，还有西湖上的雨，和南宋御街上的那家咖啡屋。九月南京行的呃。。。发烧？总之起码能让每个假期都有能回忆起来的回忆，足矣。</p>
-<p>晚上跟老妈打电话的时候，她说道后天又有我儿时的朋友举行婚礼了，然后细数了一下目前我身边谁谁谁都已经进入育子的阶段。想来这一年我在这方面又近一片空白。于是我细想了一遍我对感情的态度。曾经年少时总觉得，对别人的付出可能到了一个程度并失败之后，就很难再对生命长河里后来之人唤醒那颗敏感的心了。只不过自己亲历才发现，原来我依然可以服从感性，抗拒理性，把自己最赤裸的热情不留余地的表现出来。然而对我这样一个感情洁癖晚期患者而言，却也坚持着无论再久还是牢记，无论再远还是关心，凡是爱过就会烙印在记忆里的想法，想来也是冲突讽刺。这种想法可能来自于自己泛滥的热情，或者说不愿意与之前有过接触的人过于制造疏远。这样总结的话，可能自己的身上的确流淌着一股浪漫血液，庆幸有它，支撑着我一直相信终有一天，我会得到我想要的。我也祝福那些痴心的眼泪，必有一天会倾城。</p>
-<div style="text-align: right;">
-——2015，我们值得更幸福
-</div>]]></content>
-      <categories>
-        <category>文艺范</category>
-      </categories>
-      <tags>
-        <tag>林俊杰</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一场值得纪念的战役</title>
     <url>/2016/07/19/this-is-miracle-truly.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img data-src="http://ww4.sinaimg.cn/large/6482d531gw1f5pwcysmz4j20hp0a642d.jpg"></p>
@@ -1851,25 +1851,6 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
-    <title>Web server常用应用版本号隐藏</title>
-    <url>/2014/07/25/version-hidden.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Apache版本号隐藏：</p>
-<p>1.修改Apache主配置文件httpd.conf，将#Include conf&#x2F;extra&#x2F;httpd-default.conf前的#去掉。</p>
-<p>2.修改extra&#x2F;httpd-default.conf，找到</p>
-<p>ServerTokens Full修改成ServerTokens Prod</p>
-<p>ServerSignature On修改成ServerSignature Off</p>
-<p>3.重启Apache使配置生效</p>
-<p>PHP版本号隐藏：</p>
-<p>编辑配置文件php.ini，将expose_php &#x3D; On改为off</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>致父亲</title>
     <url>/2023/06/18/to-father.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>之前自己曾经在朋友圈转发过这样一条内容，现在这个时日重新再看的话，特别是自己配的那个表情，显得尤其的天真了。</p>
@@ -1888,12 +1869,12 @@ Posted at 2014.6.14
 <img style="margin: auto;" data-src="https://statics.yvanz.com/2023/nio-remember.gif">
 
 
-        <div id="aplayer-AxRWiaCK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+        <div id="aplayer-dXRvCQSf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-AxRWiaCK"),
+            element: document.getElementById("aplayer-dXRvCQSf"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -1954,6 +1935,25 @@ Posted at 2014.6.14
       </categories>
       <tags>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web server常用应用版本号隐藏</title>
+    <url>/2014/07/25/version-hidden.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Apache版本号隐藏：</p>
+<p>1.修改Apache主配置文件httpd.conf，将#Include conf&#x2F;extra&#x2F;httpd-default.conf前的#去掉。</p>
+<p>2.修改extra&#x2F;httpd-default.conf，找到</p>
+<p>ServerTokens Full修改成ServerTokens Prod</p>
+<p>ServerSignature On修改成ServerSignature Off</p>
+<p>3.重启Apache使配置生效</p>
+<p>PHP版本号隐藏：</p>
+<p>编辑配置文件php.ini，将expose_php &#x3D; On改为off</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2046,6 +2046,49 @@ Posted at 2014.6.14
       </tags>
   </entry>
   <entry>
+    <title>You are hacked</title>
+    <url>/2014/08/08/you-are-hacked.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>大家好我又来科（zhuang）普（bility）了。偶然林俊杰官网的密码泄露风波四起，想想有必要聊聊这方面的问题。</p>
+<p>首先我们生活在一个怎样的网络世界呢？来看个链接吧。</p>
+<p><a href="http://www.wooyun.org/bugs/">http://www.wooyun.org/bugs/</a></p>
+<p>wooyuu所为何物？他们官方的介绍是这样的</p>
+<blockquote>
+<p>WooYun是一个位于厂商和安全研究者之间的安全问题反馈平台，在对安全问题进行反馈处理跟进的同时，为互联网安全研究者提供一个公益、学习、交流和研究的平台。其名字来源于目前互联网上的“云”，在这个不做“云”不好意思和人家打招呼的时代，网络安全相关的，无论是技术还是思路都会有点黑色的感觉，所以自然出现了乌云。</p>
+<p>你可以叫他乌云，或者巫云，或者我晕，但是我们坚信它是汇聚互联网安全研究者力量的，将带来暴风雨清洗一切的乌云。</p>
+</blockquote>
+<p>如果你点进链接大致浏览一遍，你就会发现几乎所有常用的互联网应用，都多多少少被爆过漏洞。这里不是想说网站存在漏洞是理所当然，而是想解释网站存在漏洞这个可能性在所难免，攻与防往往是相对发展的。加上互联网发达的今天，所谓的黑客技术门槛已然有所降低，有些零基础的有心之人拿着下载到的工具在线搜寻漏洞，然后根据漏洞再进行入侵已经变得不像想象中的那么困难。</p>
+<p>在这里我应该可以拿图举证：</p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked1.jpg" alt="hacked1"></p>
+<p>这是我某一天例行检查服务器日志的时候看到的记录，这里有位仁兄在凌晨12点半的时候花了一个多小时的时间通过各种方式想找到我们服务器的漏洞（这大半夜的不睡觉想必也是蛮拼的），虽然无功而返，可是能发现漏洞信息交换的便捷，当某一个系统组件被爆出漏洞时，这些人就会根据自己掌握的这些信息在互联网上广撒网，如果网站的运维人员不及时跟进相关的漏洞信息，就容易让有心之人得逞。所以这需要网站背后的公司或个人进行持续的资金与人力投入，成本可谓大大的。</p>
+<p>接下来进入正题。</p>
+<p>虽然我不知道黑林俊杰官网的人是出于什么目的，但是大致有以下几个方面：</p>
+<ol>
+<li><p>对于自己所掌握的技术的自豪感，驱使有些人想通过拿下别人的网站获得自我认同。</p>
+</li>
+<li><p>增加自己手中用户数据库的内容</p>
+</li>
+<li><p>帮助网站寻找漏洞并提供解决方案，升级网站安全性</p>
+</li>
+</ol>
+<p>这里就主要说说第二点吧。不出意外的情况下，国内各种黑客的手中都有一些记录了别人账号和密码等敏感信息的数据库，他们拿着这些隐私数据能做很多事情，比如进你的网银花你的钱，用你的微信勾搭你的妹子（以上场景纯属虚构，如有雷同我不负责&#x3D;。&#x3D;）。如果顺利拿到林俊杰官网的用户数据，可以增加自己的数据库内容，因为很多用户的习惯是所有网站都使用相同的用户名和密码，如果顺利，黑客们就能用拿到的林俊杰官网的数据去撞库，测试他们想要的网站的信息。所以一再强调，我们要养成密码分级以及勤改密码的好习惯。</p>
+<p>比如你会遇到这样的场景：我一个很久很久没用的QQ号，为什么今天登陆上去被提示密码错误？没错啦，大致就是你的一些信息在别的地方被别人窃取，然后试出了你QQ的密码然后被修改了。</p>
+<p>更多密码泄露的原因可以点这里了解：<a href="http://blog.unnoo.com/?p=2181">http://blog.unnoo.com/?p=2181</a></p>
+<p>最后，据说林俊杰官网泄露的数据是去年关站维护之前被拿到的数据，里面只包括用户名和密码。理论上不必有太大的恐慌。不过因为关站维护之后更新官网网站程序，用的数据库包含了旧官网的数据，所以维护好之后的新官网我们可以用之前注册的账号密码进行登陆。具体猜测可见我去年的一条微博，链接为<a href="http://weibo.com/1686295857/Al296qPTI" title="http://weibo.com/1686295857/Al296qPTI">http://weibo.com/1686295857/Al296qPTI</a></p>
+<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked3.jpg" alt="hacked3"></p>
+<p>大概也是因为知道旧官网有被拖库吧，所以新官网开放之后，在我们登陆网站进入会员中心，时常提示修改密码，不知道各位还有没有印象。<br>&amp;nbsp;</p>
+<p>题外话：</p>
+<p>国内的环境是当有网站被爆出漏洞，一般容易开启某些不相关人员的嘲讽模式，可是嘲讽从来都不能解决问题，因为某一天你所依附的网络也有可能被入侵，被拖库，毕竟一般人用的网站程序，都是别人写好公布在网上的。</p>
+<p>如果你不作为，那么在那些有所作为的黑客面前，你将一无所有。这里的“你”包括所有互联网用户以及网站维护人员，peace~</p>
+<p>（本文如有技术逻辑错误，欢迎拍砖）</p>
+]]></content>
+      <categories>
+        <category>技术宅</category>
+      </categories>
+      <tags>
+        <tag>装逼遭雷劈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信红包系统设计 &amp; 优化</title>
     <url>/2015/04/01/weixin-red-envelope.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>编者按：经过2014年一年的酝酿，2015微信红包总量创下历史新高，峰值1400万次&#x2F;秒，8.1亿次每分钟，微信红包收发达10.1亿次，系统整体运行平稳, 在这里我分享下微信红包背后的技术。</p>
@@ -2120,49 +2163,6 @@ Posted at 2014.6.14
       <tags>
         <tag>转载学习</tag>
         <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>You are hacked</title>
-    <url>/2014/08/08/you-are-hacked.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>大家好我又来科（zhuang）普（bility）了。偶然林俊杰官网的密码泄露风波四起，想想有必要聊聊这方面的问题。</p>
-<p>首先我们生活在一个怎样的网络世界呢？来看个链接吧。</p>
-<p><a href="http://www.wooyun.org/bugs/">http://www.wooyun.org/bugs/</a></p>
-<p>wooyuu所为何物？他们官方的介绍是这样的</p>
-<blockquote>
-<p>WooYun是一个位于厂商和安全研究者之间的安全问题反馈平台，在对安全问题进行反馈处理跟进的同时，为互联网安全研究者提供一个公益、学习、交流和研究的平台。其名字来源于目前互联网上的“云”，在这个不做“云”不好意思和人家打招呼的时代，网络安全相关的，无论是技术还是思路都会有点黑色的感觉，所以自然出现了乌云。</p>
-<p>你可以叫他乌云，或者巫云，或者我晕，但是我们坚信它是汇聚互联网安全研究者力量的，将带来暴风雨清洗一切的乌云。</p>
-</blockquote>
-<p>如果你点进链接大致浏览一遍，你就会发现几乎所有常用的互联网应用，都多多少少被爆过漏洞。这里不是想说网站存在漏洞是理所当然，而是想解释网站存在漏洞这个可能性在所难免，攻与防往往是相对发展的。加上互联网发达的今天，所谓的黑客技术门槛已然有所降低，有些零基础的有心之人拿着下载到的工具在线搜寻漏洞，然后根据漏洞再进行入侵已经变得不像想象中的那么困难。</p>
-<p>在这里我应该可以拿图举证：</p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked1.jpg" alt="hacked1"></p>
-<p>这是我某一天例行检查服务器日志的时候看到的记录，这里有位仁兄在凌晨12点半的时候花了一个多小时的时间通过各种方式想找到我们服务器的漏洞（这大半夜的不睡觉想必也是蛮拼的），虽然无功而返，可是能发现漏洞信息交换的便捷，当某一个系统组件被爆出漏洞时，这些人就会根据自己掌握的这些信息在互联网上广撒网，如果网站的运维人员不及时跟进相关的漏洞信息，就容易让有心之人得逞。所以这需要网站背后的公司或个人进行持续的资金与人力投入，成本可谓大大的。</p>
-<p>接下来进入正题。</p>
-<p>虽然我不知道黑林俊杰官网的人是出于什么目的，但是大致有以下几个方面：</p>
-<ol>
-<li><p>对于自己所掌握的技术的自豪感，驱使有些人想通过拿下别人的网站获得自我认同。</p>
-</li>
-<li><p>增加自己手中用户数据库的内容</p>
-</li>
-<li><p>帮助网站寻找漏洞并提供解决方案，升级网站安全性</p>
-</li>
-</ol>
-<p>这里就主要说说第二点吧。不出意外的情况下，国内各种黑客的手中都有一些记录了别人账号和密码等敏感信息的数据库，他们拿着这些隐私数据能做很多事情，比如进你的网银花你的钱，用你的微信勾搭你的妹子（以上场景纯属虚构，如有雷同我不负责&#x3D;。&#x3D;）。如果顺利拿到林俊杰官网的用户数据，可以增加自己的数据库内容，因为很多用户的习惯是所有网站都使用相同的用户名和密码，如果顺利，黑客们就能用拿到的林俊杰官网的数据去撞库，测试他们想要的网站的信息。所以一再强调，我们要养成密码分级以及勤改密码的好习惯。</p>
-<p>比如你会遇到这样的场景：我一个很久很久没用的QQ号，为什么今天登陆上去被提示密码错误？没错啦，大致就是你的一些信息在别的地方被别人窃取，然后试出了你QQ的密码然后被修改了。</p>
-<p>更多密码泄露的原因可以点这里了解：<a href="http://blog.unnoo.com/?p=2181">http://blog.unnoo.com/?p=2181</a></p>
-<p>最后，据说林俊杰官网泄露的数据是去年关站维护之前被拿到的数据，里面只包括用户名和密码。理论上不必有太大的恐慌。不过因为关站维护之后更新官网网站程序，用的数据库包含了旧官网的数据，所以维护好之后的新官网我们可以用之前注册的账号密码进行登陆。具体猜测可见我去年的一条微博，链接为<a href="http://weibo.com/1686295857/Al296qPTI" title="http://weibo.com/1686295857/Al296qPTI">http://weibo.com/1686295857/Al296qPTI</a></p>
-<p><img data-src="http://www.yvanz.com/wp-content/uploads/2014/08/hacked3.jpg" alt="hacked3"></p>
-<p>大概也是因为知道旧官网有被拖库吧，所以新官网开放之后，在我们登陆网站进入会员中心，时常提示修改密码，不知道各位还有没有印象。<br>&amp;nbsp;</p>
-<p>题外话：</p>
-<p>国内的环境是当有网站被爆出漏洞，一般容易开启某些不相关人员的嘲讽模式，可是嘲讽从来都不能解决问题，因为某一天你所依附的网络也有可能被入侵，被拖库，毕竟一般人用的网站程序，都是别人写好公布在网上的。</p>
-<p>如果你不作为，那么在那些有所作为的黑客面前，你将一无所有。这里的“你”包括所有互联网用户以及网站维护人员，peace~</p>
-<p>（本文如有技术逻辑错误，欢迎拍砖）</p>
-]]></content>
-      <categories>
-        <category>技术宅</category>
-      </categories>
-      <tags>
-        <tag>装逼遭雷劈</tag>
       </tags>
   </entry>
   <entry>
